@@ -1,0 +1,8 @@
+node_modules/
+
+# IDE
+.idea
+.ijwb
+.vscode
+*.sublime-*
+.DS_Store
