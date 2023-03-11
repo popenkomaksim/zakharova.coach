@@ -11,17 +11,17 @@ const StyledDiv = styled.div`
   font-weight: bold;
 
   color: transparent;
-  font-size: ${(props) => props.fontSize};
+  font-size: ${(props) => props.$fontSize};
   font-weight: 900;
 
-  width: 100%;
+  padding: 0;
   display: flex;
   justify-content: center;
   text-align: center;
 `;
 
 const StyledSpan = styled.span`
-  background: url(${(props) => props.imageUrl}) repeat;
+  background: url(${(props) => props.$imageUrl}) repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: block;
@@ -29,11 +29,11 @@ const StyledSpan = styled.span`
 
 const TransparentBoxText = ({
   text,
-  fontSize = "12vw",
-  imageUrl = "https://images.pexels.com/photos/2593143/pexels-photo-2593143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  $fontSize = "12vw",
+  $imageUrl = "https://images.pexels.com/photos/2593143/pexels-photo-2593143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 }) => (
-  <StyledDiv fontSize={fontSize}>
-    <StyledSpan imageUrl={imageUrl}>{text}</StyledSpan>
+  <StyledDiv $fontSize={$fontSize}>
+    <StyledSpan $imageUrl={$imageUrl}>{text}</StyledSpan>
   </StyledDiv>
 );
 

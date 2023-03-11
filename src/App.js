@@ -1,9 +1,20 @@
 import "@fontsource/montserrat";
 import "./App.css";
-import { FaInstagram } from "react-icons/fa";
+import styled from "styled-components";
+import { FaInstagram, FaTelegram } from "react-icons/fa";
 import { Col, Row, Divider, Typography, Image, Card } from "antd";
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
+
+const StyledInstagram = styled(FaInstagram)`
+  margin: 0 0.5em;
+  top: -0.4em;
+`;
+
+const StyledTelegram = styled(FaTelegram)`
+  margin: 0 0.5em;
+  top: -0.4em;
+`;
 
 const App = () => {
   return (
@@ -11,42 +22,69 @@ const App = () => {
       <Header />
       <TransparentBoxText text="Твій тренувальний план" />
       <Divider />
-      <Row justify="center" gutter={16}>
-        <Col span={4} className="gutter-row">
+      <Row justify="center">
+        <Col xxs={24} xl={4} className="gutter-row" gutter={16}>
           <Image
             src="./polina.jpg"
-            style={{ borderRadius: "50%" }}
+            style={{ borderRadius: "50%", maxWidth: "50vw" }}
             preview={false}
           />
-          {/* <Avatar src={"./polina.jpg"} size={"100%"}/> */}
         </Col>
-        <Col span={8} className="gutter-row">
-          <Typography.Title
-            level={2}
-            style={{ margin: 0, paddingBottom: "4vh" }}
-          >
+        <Col xs={24} xl={8} style={{ padding: "2em" }}>
+          <Divider />
+          <Typography.Title level={2} style={{ margin: 0 }}>
             Я тренер Поліна Захарова.
           </Typography.Title>
-          <Typography.Text>
+          <Typography.Text style={{ padding: "2em" }}>
             Я майстер спорту міжнародного класу з Рогейну, майстер спорту
             України з легкої атлетики, чемпіонка і призерка Чемпіонатів Світу та
             Європи з Рогейну. Також, я тренер з трейлового бігу. Чим я живу
-            можна подивитись в інстаграмі <FaInstagram />, але через кляту русню
-            останній рік не наповлений постами. UTMB –
-            https://utmb.world/runner/2176979.polina.zakharova
+            можна подивитись в{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/polina.zakharova94/"
+            >
+              <StyledInstagram /> інстаграмі
+            </a>
+            , але через кляту русню останній рік не наповлений постами.
           </Typography.Text>
+          <Typography.Title level={3} style={{ margin: 0, padding: "2vh 0" }}>
+            Все одно будете шукати:
+          </Typography.Title>
+
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://utmb.world/runner/2176979.polina.zakharova"
+          >
+            UTMB
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/polina.zakharova94/"
+          >
+            <StyledInstagram size="4em" color="#8a3ab9" />
+          </a>
+          <a href="https://t.me/PolinaCouch">
+            <StyledTelegram size="4em" color="#229ED9" />
+          </a>
+
+          <Divider />
         </Col>
       </Row>
-      <Image
-        src="./ski2.jpg"
-        preview={false}
-        style={{ marginTop: "3vh", marginBottom: "3hv" }}
-      />
+
+      <Image src="./ski2.jpg" preview={false} style={{ margin: "3vh 0" }} />
       <Row justify="space-around">
-        <Col span={10}>
-          <Image src="./polina2.jpg" preview={false} />
+        <Col xxs={24} xl={10}>
+          <Image
+            src="./polina2.jpg"
+            preview={false}
+            style={{ maxWidth: "50vw" }}
+          />
         </Col>
-        <Col span={10}>
+        <Col xs={24} xl={10}>
           <Typography.Text>
             Якщо тебе цікавить щось з цього списку:
             <ul>
@@ -91,7 +129,7 @@ const App = () => {
         </Col>
       </Row>
       <Row>
-        <Col span={8}>
+        <Col xs={24} span={8}>
           <Card title="Щомісячний персональний план - 25 євро" size="big">
             <p>
               Даний пакет, найкраще підійде для тих, хто має біговий досвід та
@@ -104,7 +142,7 @@ const App = () => {
             </p>
           </Card>
         </Col>
-        <Col span={8}>
+        <Col xs={24} span={8}>
           Щотижневий персональний план - 40 євро Саме ций пакет послуг, найкраще
           підійде для бігунів, які люблять готуватись, чи вперше готуються до
           Trail, Ultra-trail, Sky race та OCR від 5 до 80 км або довше. У цьому
@@ -116,7 +154,7 @@ const App = () => {
           гонки; зворотній зв”язок тренера раз на тиждень через додаток
           TRAININGPEAKS. відеозустріч із тренером раз на місяць.
         </Col>
-        <Col span={8}>
+        <Col xs={24} span={8}>
           Елітний план - 60 євро Ідеально підходить для елітних бігунів або дуже
           амбітних бігунів, які люблять готуватися до Trail, Ultra-trail, Sky
           race та OCR від 5 до 150 км або довше. У цьому пакеті ви отримаєте:
