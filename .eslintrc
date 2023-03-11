@@ -31,13 +31,11 @@
       "react",
       "prettier",
       "styled-components-varname",
-      "cypress",
       "react-perf",
       "jest",
       "react-hooks"
     ],
     "env": {
-      "cypress/globals": true,
       "browser": true,
       "jest": true,
       "node": true
