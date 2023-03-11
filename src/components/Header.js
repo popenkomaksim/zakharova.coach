@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { Col, Row, Divider } from "antd";
+import { Divider } from "antd";
 
-const Text = styled.span`
+const StyledText = styled.span`
   font-weight: 900;
   color: #353935;
 `;
 
 const Header = () => (
   <Divider orientation="left">
-    <Text>Polina Zakharova</Text>
+    <StyledText>Polina Zakharova</StyledText>
   </Divider>
 );
 
