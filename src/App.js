@@ -164,14 +164,7 @@ const App = () => {
       <TransparentBoxText text="Трейл — це завжди правда" />
       <Divider />
       <Row style={{ marginBottom: "2em" }}>
-        <Col span={22} gutter={-2}>
-          <Typography.Title
-            level={2}
-            style={{ margin: 0, textAlign: "center" }}
-          >
-            Умови твого тренувального плана
-          </Typography.Title>
-        </Col>
+        
       </Row>
       <Row
         style={{
@@ -179,6 +172,14 @@ const App = () => {
             "url(./Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg) repeat",
         }}
       >
+        <Col span={24}>
+          <Typography.Title
+            level={2}
+            style={{ margin: "  ", textAlign: "center", color: "white" }}
+          >
+            Умови твого тренувального плана
+          </Typography.Title>
+        </Col>
         <Col xs={24} xl={8}>
           <Card
             title="Щомісячний персональний план - 25 євро, оплата помісячна"
