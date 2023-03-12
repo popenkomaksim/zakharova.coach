@@ -15,6 +15,10 @@ import {
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 
+const rateEURtoUAH = 40.5;
+
+const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
+
 const StyledInstagram = styled(FaInstagram)`
   margin: 0 0.5em;
   top: -0.4em;
@@ -61,7 +65,7 @@ const App = () => {
             , але через кляту русню останній рік не наповлений постами.
           </Typography.Text>
           <Typography.Title level={3} style={{ margin: 0, padding: "2vh 0" }}>
-            Все одно будете шукати:
+            Все одно знайдете:
           </Typography.Title>
 
           <a
@@ -105,7 +109,7 @@ const App = () => {
         </Col>
         <Col xs={24} xl={10} style={{ padding: "2em" }}>
           <Typography.Text>
-            Якщо тебе цікавить щось з цього списку:
+            Якщо тебе цікавить:
             <ul>
               <li>План підготовки до старту (щотижневий)</li>
               <li>План підготовки до старту + супорт на старті</li>
@@ -118,8 +122,8 @@ const App = () => {
               <li>Стратегія гонки</li>
               <li>Глобальну переодизацію до твого старту</li>
             </ul>
-            Напиши мені вже сьогодні, і, можливо, нам з тобою по дорозі. Зі мною
-            можна домовитись.
+            <a href="https://t.me/PolinaCouch">Напиши мені</a> вже сьогодні, і,
+            можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Text>
         </Col>
       </Row>
@@ -148,21 +152,22 @@ const App = () => {
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Avatar.Group>
-            <Avatar src="https://joesch.moe/api/v1/random?key=1" />
-            <Avatar src="https://joesch.moe/api/v1/random?key=2" />
-            <Avatar src="https://joesch.moe/api/v1/random?key=3sdf" />
-            <Avatar src="https://joesch.moe/api/v1/random?key=4" />
-            <a href="https://www.kilianjornet.cat/en">
-              <Avatar scr="./K_Jornet_Burgada.jpg" />
+            <Avatar src="./babii.jpg" />
+            <Avatar src="./tamara.jpg" />
+            <Avatar src="./max.jpg" />
+            <Avatar src="./viktor.jpg" />
+            <a href="https://t.me/PolinaCouch">
+              <Avatar>+</Avatar>
             </a>
-            <Avatar>+</Avatar>
           </Avatar.Group>
           <br />
           Десятки учнів займаються зараз
         </Col>
       </Row>
-      <TransparentBoxText text="Трейл — це завжди правда" />
-      <Divider />
+      <TransparentBoxText
+        text="Трейл — це завжди правда"
+        style={{ margin: "1em 0" }}
+      />
       <Row
         style={{
           background:
@@ -179,7 +184,7 @@ const App = () => {
         </Col>
         <Col xs={24} xl={8}>
           <Card
-            title="Щомісячний персональний план - 25 євро, оплата помісячна"
+            title="Щомісячний персональний план"
             size="small"
             style={{ margin: "2em" }}
           >
@@ -198,11 +203,20 @@ const App = () => {
                 </li>
               </ul>
             </Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(25)}
+              <span style={{ color: "#878787" }}> / €25</span> на місяць
+            </Divider>
+            <Divider orientation="center">
+              <a href="https://t.me/PolinaCouch">
+                <StyledTelegram size="2em" color="#229ED9" />
+              </a>
+            </Divider>
           </Card>
         </Col>
         <Col xs={24} xl={8}>
           <Card
-            title="Щотижневий персональний план - 40 євро, оплата помісячна"
+            title="Щотижневий персональний план"
             size="small"
             style={{ margin: "2em" }}
           >
@@ -230,15 +244,20 @@ const App = () => {
                 <li>відеозустріч із тренером раз на місяць.</li>
               </ul>
             </Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(40)}
+              <span style={{ color: "#878787" }}> / €40</span> на місяць
+            </Divider>
+            <Divider orientation="center">
+              <a href="https://t.me/PolinaCouch">
+                <StyledTelegram size="2em" color="#229ED9" />
+              </a>
+            </Divider>
           </Card>
         </Col>
         <Col xs={24} xl={8}>
-          <Card
-            title="Елітний план - 60 євро, оплата помісячна"
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <p>
+          <Card title="Елітний план" size="small" style={{ margin: "2em" }}>
+            <Typography.Text>
               Ідеально підходить для елітних бігунів або дуже амбітних бігунів,
               які люблять готуватися до Trail, Ultra-trail, Sky race та OCR від
               5 до 150 км або довше.
@@ -258,14 +277,24 @@ const App = () => {
                 </li>
                 <li>відеозустріч із тренером раз на тиждень.</li>
               </ul>
-            </p>
+            </Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(60)}
+              <span style={{ color: "#878787" }}> / €60</span> на місяць
+            </Divider>
+            <Divider orientation="center">
+              <a href="https://t.me/PolinaCouch">
+                <StyledTelegram size="2em" color="#229ED9" />
+              </a>
+            </Divider>
           </Card>
         </Col>
       </Row>
 
-      <TransparentBoxText text="haters gonna hate" />
-
-      <Divider />
+      <TransparentBoxText
+        text="haters gonna hate"
+        style={{ marginTop: "4em" }}
+      />
 
       <Row style={{ marginBottom: "2em" }}>
         <Col span={22} gutter={-2}>
@@ -280,7 +309,7 @@ const App = () => {
       <Row>
         <Col xs={24} xl={8}>
           <Card
-            title="Розбір та розкладка гонки - 25 євро"
+            title="Розбір та розкладка гонки"
             size="small"
             style={{ margin: "2em" }}
           >
@@ -291,26 +320,38 @@ const App = () => {
                 <li>планування пробігання гонки</li>
               </ul>
             </Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(25)}
+              <span style={{ color: "#878787" }}> / €25</span>
+            </Divider>
           </Card>
         </Col>
         <Col xs={24} xl={8}>
           <Card
-            title="Персональне тренування, до 2,5годин — 40 євро"
+            title="Персональне тренування"
             size="small"
             style={{ margin: "2em" }}
           >
             <Typography.Text>
               Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
             </Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(40)}
+              <span style={{ color: "#878787" }}> / €40</span> за 2,5 години
+            </Divider>
           </Card>
         </Col>
         <Col xs={24} xl={8}>
           <Card
-            title="Персональний фітнес тренер (одне тренування) — 1000 євро"
+            title="Персональний фітнес тренер"
             size="small"
             style={{ margin: "2em" }}
           >
             <Typography.Text>Буду допомагати морально.</Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(1000)}
+              <span style={{ color: "#878787" }}> / €1000</span> за тренування
+            </Divider>
           </Card>
         </Col>
       </Row>
@@ -325,12 +366,11 @@ const App = () => {
             </Typography.Title>
 
             <Typography.Title level={4}>
-              Чи в ти дійсно набираєш сотні атлетів?
+              Чи ти дійсно набираєш сотні атлетів?
             </Typography.Title>
             <Typography.Text>
               Абсолютно точно — ні. В мене не конвеерний підхід, а
-              індивідуальний, тому я обмежую кількість атлетів з котрими
-              займаюсь.
+              індивідуальний, тому я обмежую кількість атлетів котрих треную.
             </Typography.Text>
 
             <Typography.Title level={4}>
@@ -382,6 +422,8 @@ const App = () => {
             <Typography.Text>
               Зв&apos;яжись зі мною в робочі години.
             </Typography.Text>
+            <br />
+            <br />
             <br />
             <a href="https://t.me/PolinaCouch">
               <StyledTelegram size="4em" color="#229ED9" />
