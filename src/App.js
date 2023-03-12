@@ -163,9 +163,6 @@ const App = () => {
       </Row>
       <TransparentBoxText text="Трейл — це завжди правда" />
       <Divider />
-      <Row style={{ marginBottom: "2em" }}>
-        
-      </Row>
       <Row
         style={{
           background:
