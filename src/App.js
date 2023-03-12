@@ -125,28 +125,28 @@ const App = () => {
       </Row>
       <Divider />
       <Row justify="space-around" style={{ margin: "1em" }}>
-        <Col xs={24} xl={3}>
+        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic
             title="Кілометрів подолали мої учні до 2022"
             value={112893}
           />
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic title="Персональних рекордів" value="100+" />
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic
             title="Персональний рекорд на половинці для атлета 55+"
             value={1}
           />
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic title="Фінішерів на забігах 200+км" value="10+" />
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic title="Спалених сердець" value="1млн+" />
         </Col>
-        <Col xs={24} xl={3}>
+        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Avatar.Group>
             <Avatar src="https://joesch.moe/api/v1/random?key=1" />
             <Avatar src="https://joesch.moe/api/v1/random?key=2" />
