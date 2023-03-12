@@ -40,7 +40,10 @@ const App = () => {
           />
         </Col>
         <Col xs={24} xl={8} style={{ padding: "2em" }}>
-          <Typography.Title level={2} style={{ margin: "1em 0", textAlign: "center" }}>
+          <Typography.Title
+            level={2}
+            style={{ margin: "1em 0", textAlign: "center" }}
+          >
             Я тренер Поліна Захарова.
           </Typography.Title>
           <Typography.Text>
@@ -129,16 +132,19 @@ const App = () => {
           />
         </Col>
         <Col xs={24} xl={3}>
-          <Statistic title="Персональних рекордів" value={"100+"} />
+          <Statistic title="Персональних рекордів" value="100+" />
         </Col>
         <Col xs={24} xl={3}>
-          <Statistic title="Персональний рекорд на половинці для атлета 55+" value={1} />
+          <Statistic
+            title="Персональний рекорд на половинці для атлета 55+"
+            value={1}
+          />
         </Col>
         <Col xs={24} xl={3}>
-          <Statistic title="Фінішерів на забігах 200+км" value={"10+"} />
+          <Statistic title="Фінішерів на забігах 200+км" value="10+" />
         </Col>
         <Col xs={24} xl={3}>
-          <Statistic title="Спалених сердець" value={"1млн+"} />
+          <Statistic title="Спалених сердець" value="1млн+" />
         </Col>
         <Col xs={24} xl={3}>
           <Avatar.Group>
@@ -147,11 +153,11 @@ const App = () => {
             <Avatar src="https://joesch.moe/api/v1/random?key=3sdf" />
             <Avatar src="https://joesch.moe/api/v1/random?key=4" />
             <a href="https://www.kilianjornet.cat/en">
-              <Avatar scr="./K_Jornet_Burgada.jpg" />  
+              <Avatar scr="./K_Jornet_Burgada.jpg" />
             </a>
             <Avatar>+</Avatar>
           </Avatar.Group>
-          <br/>
+          <br />
           Десятки учнів займаються зараз
         </Col>
       </Row>
@@ -167,13 +173,17 @@ const App = () => {
           </Typography.Title>
         </Col>
       </Row>
-      <Row style={{ background: "url(./Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg) repeat" }}>
+      <Row
+        style={{
+          background:
+            "url(./Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg) repeat",
+        }}
+      >
         <Col xs={24} xl={8}>
           <Card
             title="Щомісячний персональний план - 25 євро, оплата помісячна"
             size="small"
             style={{ margin: "2em" }}
-
           >
             <Typography.Text>
               Даний пакет, найкраще підійде для тих, хто має біговий досвід та
@@ -291,7 +301,9 @@ const App = () => {
             size="small"
             style={{ margin: "2em" }}
           >
-            <Typography.Text></Typography.Text>
+            <Typography.Text>
+              Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
+            </Typography.Text>
           </Card>
         </Col>
         <Col xs={24} xl={8}>
@@ -300,7 +312,7 @@ const App = () => {
             size="small"
             style={{ margin: "2em" }}
           >
-            <Typography.Text></Typography.Text>
+            <Typography.Text>Буду допомагати морально.</Typography.Text>
           </Card>
         </Col>
       </Row>
@@ -369,7 +381,9 @@ const App = () => {
               Залишились питання?
             </Typography.Title>
             <br />
-            <Typography.Text>Зв'яжись зі мною в робочі години.</Typography.Text>
+            <Typography.Text>
+              Зв&apos;яжись зі мною в робочі години.
+            </Typography.Text>
             <br />
             <a href="https://t.me/PolinaCouch">
               <StyledTelegram size="4em" color="#229ED9" />
