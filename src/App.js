@@ -48,7 +48,7 @@ const App = () => {
             level={2}
             style={{ margin: "1em 0", textAlign: "center" }}
           >
-            Я тренер Поліна Захарова.
+            Я не тренер Поліна Захарова.
           </Typography.Title>
           <Typography.Text>
             Я майстер спорту міжнародного класу з Рогейну, майстер спорту
@@ -92,8 +92,8 @@ const App = () => {
       </Row>
 
       <Image src="./ski2.jpg" preview={false} style={{ margin: "3vh 0" }} />
-      <Row style={{ margin: "2em" }}>
-        <Col span={22} gutter={-2}>
+      <Row style={{ margin: "2em" }} justify="space-around">
+        <Col span={18}>
           <Typography.Title
             level={2}
             style={{ margin: 0, textAlign: "center" }}
@@ -269,7 +269,7 @@ const App = () => {
                 </li>
                 <li>преміум акаунт в TRAININGPEAKS</li>
                 <li>допомогу з вибором стартів та підготовку до стартів</li>
-                <li>аналіз 3 пройдешніх та майбутніх перегонів А</li>
+                <li>аналіз 3 пройдешніх та майбутніх перегонів на рік</li>
                 <li>рекомендації щодо харчування під час гонки</li>
                 <li>
                   зворотній зв”язок тренера тричі на тиждень через додаток
@@ -321,8 +321,8 @@ const App = () => {
               </ul>
             </Typography.Text>
             <Divider orientation="center">
-              ₴{convert(25)}
-              <span style={{ color: "#878787" }}> / €25</span>
+              ₴{convert(50)}
+              <span style={{ color: "#878787" }}> / €50</span>
             </Divider>
           </Card>
         </Col>
