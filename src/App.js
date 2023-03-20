@@ -48,6 +48,12 @@ const App = () => {
             level={2}
             style={{ margin: "1em 0", textAlign: "center" }}
           >
+            Вітання 👋
+          </Typography.Title>
+          <Typography.Title
+            level={2}
+            style={{ margin: "1em 0", textAlign: "center" }}
+          >
             Я не тренер Поліна Захарова.
           </Typography.Title>
           <Typography.Text>
