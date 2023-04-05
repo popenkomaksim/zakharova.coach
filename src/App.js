@@ -54,7 +54,7 @@ const App = () => {
             level={2}
             style={{ margin: "1em 0", textAlign: "center" }}
           >
-            Я не тренер Поліна Захарова.
+            Я тренер Поліна Захарова.
           </Typography.Title>
           <Typography.Text>
             Я майстер спорту міжнародного класу з Рогейну, майстер спорту
