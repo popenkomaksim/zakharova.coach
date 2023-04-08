@@ -15,6 +15,21 @@ import {
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 
+import Odesa from "./odesa.mp4";
+import DzembronyaTrailRunningCamp from "./DzembronyaTrailRunningCamp.mp4";
+import BorzhavaTrailRunningCamp2021 from "./BorzhavaTrailRunningCamp2021.mp4";
+
+const StyledVideoDiv = styled.div`
+  width: 100%;
+  height: 100;
+`;
+
+const StyledVideo = styled.video`
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+`;
+
 const rateEURtoUAH = 40.5;
 
 const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
@@ -109,6 +124,11 @@ const App = () => {
           </Typography.Title>
         </Col>
       </Row>
+      <Row style={{ margin: "6em 0" }}>
+        <StyledVideoDiv>
+          <StyledVideo src={Odesa} autoPlay loop muted />
+        </StyledVideoDiv>
+      </Row>
       <Row justify="space-around">
         <Col xs={24} xl={10}>
           <Image src="./gutyn.jpg" preview={false} />
@@ -132,6 +152,11 @@ const App = () => {
             можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Text>
         </Col>
+      </Row>
+      <Row style={{ margin: "6em 0" }}>
+        <StyledVideoDiv>
+          <StyledVideo src={DzembronyaTrailRunningCamp} autoPlay loop muted />
+        </StyledVideoDiv>
       </Row>
       <Divider />
       <Row justify="space-around" style={{ margin: "1em" }}>
@@ -360,6 +385,12 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
+      </Row>
+
+      <Row style={{ margin: "6em 0" }}>
+        <StyledVideoDiv>
+          <StyledVideo src={BorzhavaTrailRunningCamp2021} autoPlay loop muted />
+        </StyledVideoDiv>
       </Row>
 
       <Divider />
