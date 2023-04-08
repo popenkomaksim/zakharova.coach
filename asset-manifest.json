@@ -1,8 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.c286111c.css",
-    "main.js": "/static/js/main.fd8c94f5.js",
+    "main.js": "/static/js/main.1a75ad71.js",
     "static/js/787.24852cc4.chunk.js": "/static/js/787.24852cc4.chunk.js",
+    "static/media/BorzhavaTrailRunningCamp2021.mp4": "/static/media/BorzhavaTrailRunningCamp2021.64ddd44f844aa69a9bc3.mp4",
+    "static/media/DzembronyaTrailRunningCamp.mp4": "/static/media/DzembronyaTrailRunningCamp.187b63ef1f1b939cbfac.mp4",
+    "static/media/odesa.mp4": "/static/media/odesa.215751942f55c7a4188b.mp4",
     "static/media/montserrat-all-400-normal.woff": "/static/media/montserrat-all-400-normal.327fab0afc997a2d9b16.woff",
     "static/media/montserrat-latin-400-normal.woff2": "/static/media/montserrat-latin-400-normal.acb6629fe45c43ad5d8b.woff2",
     "static/media/montserrat-latin-ext-400-normal.woff2": "/static/media/montserrat-latin-ext-400-normal.0204ec08a4b574088f02.woff2",
@@ -11,11 +14,11 @@
     "static/media/montserrat-vietnamese-400-normal.woff2": "/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "index.html": "/index.html",
     "main.c286111c.css.map": "/static/css/main.c286111c.css.map",
-    "main.fd8c94f5.js.map": "/static/js/main.fd8c94f5.js.map",
+    "main.1a75ad71.js.map": "/static/js/main.1a75ad71.js.map",
     "787.24852cc4.chunk.js.map": "/static/js/787.24852cc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c286111c.css",
-    "static/js/main.fd8c94f5.js"
+    "static/js/main.1a75ad71.js"
   ]
 }
