@@ -89,7 +89,7 @@ const App = () => {
             Все одно знайдете:
           </Typography.Title>
 
-          <a href="https://t.me/PolinaCouch">
+          <a href="https://t.me/ZakharovaPolina">
             <StyledTelegram size="4em" color="#229ED9" />
           </a>
           <a
@@ -202,7 +202,7 @@ const App = () => {
           </Typography.Paragraph>
 
           <Typography.Paragraph>
-            <a href="https://t.me/PolinaCouch">Напиши мені</a> вже сьогодні, і,
+            <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже сьогодні, і,
             можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Paragraph>
         </Col>
@@ -236,7 +236,7 @@ const App = () => {
             <Avatar src="./tamara.jpg" />
             <Avatar src="./max.jpg" />
             <Avatar src="./viktor.jpg" />
-            <a href="https://t.me/PolinaCouch">
+            <a href="https://t.me/ZakharovaPolina">
               <Avatar>+</Avatar>
             </a>
           </Avatar.Group>
@@ -285,7 +285,7 @@ const App = () => {
               <span style={{ color: "#878787" }}> / €25</span> на місяць
             </Divider>
             <Divider orientation="center">
-              <a href="https://t.me/PolinaCouch">
+              <a href="https://t.me/ZakharovaPolina">
                 <StyledTelegram size="2em" color="#229ED9" />
               </a>
             </Divider>
@@ -326,7 +326,7 @@ const App = () => {
               <span style={{ color: "#878787" }}> / €40</span> на місяць
             </Divider>
             <Divider orientation="center">
-              <a href="https://t.me/PolinaCouch">
+              <a href="https://t.me/ZakharovaPolina">
                 <StyledTelegram size="2em" color="#229ED9" />
               </a>
             </Divider>
@@ -360,7 +360,7 @@ const App = () => {
               <span style={{ color: "#878787" }}> / €60</span> на місяць
             </Divider>
             <Divider orientation="center">
-              <a href="https://t.me/PolinaCouch">
+              <a href="https://t.me/ZakharovaPolina">
                 <StyledTelegram size="2em" color="#229ED9" />
               </a>
             </Divider>
@@ -499,7 +499,7 @@ const App = () => {
             <br />
             <br />
             <br />
-            <a href="https://t.me/PolinaCouch">
+            <a href="https://t.me/ZakharovaPolina">
               <StyledTelegram size="4em" color="#229ED9" />
             </a>
           </div>
