@@ -89,13 +89,8 @@ const App = () => {
             Все одно знайдете:
           </Typography.Title>
 
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://utmb.world/runner/2176979.polina.zakharova"
-            style={{ fontSize: "4em" }}
-          >
-            UTMB
+          <a href="https://t.me/PolinaCouch">
+            <StyledTelegram size="4em" color="#229ED9" />
           </a>
           <a
             target="_blank"
@@ -104,8 +99,13 @@ const App = () => {
           >
             <StyledInstagram size="4em" color="#8a3ab9" />
           </a>
-          <a href="https://t.me/PolinaCouch">
-            <StyledTelegram size="4em" color="#229ED9" />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://utmb.world/runner/2176979.polina.zakharova"
+            style={{ fontSize: "3.5em", position: "absolute" }}
+          >
+            UTMB
           </a>
 
           <Divider />
@@ -185,8 +185,6 @@ const App = () => {
               <li>Стратегія гонки</li>
               <li>Глобальну переодизацію до твого старту</li>
             </ul>
-            <a href="https://t.me/PolinaCouch">Напиши мені</a> вже сьогодні, і,
-            можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Text>
           <Typography.Paragraph>
             Я наполягаю на різно манітності, коли справа стосується тренувань.
@@ -201,6 +199,11 @@ const App = () => {
             частиною мого успіху. Мої спортсмени мають регулярні альтернативні
             тренування в своїх планах, щоб урізноманітнити своє життя та
             підтримувати любов до бігу.
+          </Typography.Paragraph>
+
+          <Typography.Paragraph>
+            <a href="https://t.me/PolinaCouch">Напиши мені</a> вже сьогодні, і,
+            можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Paragraph>
         </Col>
       </Row>
@@ -502,20 +505,23 @@ const App = () => {
           </div>
         </Col>
       </Row>
-      {/* <Row style={{ margin: "6em 0" }}>
+
+      {/* <Row>
+        <Col xs={24} xl={8}>
         <StyledVideoDiv>
-          <StyledVideo src={BorzhavaTrailRunningCamp2021} autoPlay loop muted />
+          <StyledVideo src={DzembronyaTrailRunningCamp} loop muted />
         </StyledVideoDiv>
-      </Row>
-      <Row style={{ margin: "6em 0" }}>
+        </Col>
+        <Col xs={24} xl={8}>
+          <StyledVideoDiv>
+            <StyledVideo src={BorzhavaTrailRunningCamp2021} loop muted />
+          </StyledVideoDiv>
+        </Col>
+        <Col xs={24} xl={8}>
         <StyledVideoDiv>
-          <StyledVideo src={DzembronyaTrailRunningCamp} autoPlay loop muted />
+          <StyledVideo src={Odesa} loop muted />
         </StyledVideoDiv>
-      </Row>
-      <Row style={{ margin: "6em 0" }}>
-        <StyledVideoDiv>
-          <StyledVideo src={Odesa} autoPlay loop muted />
-        </StyledVideoDiv>
+        </Col>
       </Row> */}
 
       <Divider style={{ marginTop: "4em" }}>
