@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
   font-size: ${(props) => props.$fontSize};
   font-weight: 900;
 
-  padding: 0;
+  padding: ${(props) => props.$padding};;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -29,10 +29,11 @@ const StyledSpan = styled.span`
 
 const TransparentBoxText = ({
   text,
+  $padding = "0",
   $fontSize = "12vw",
   $imageUrl = "https://images.pexels.com/photos/2593143/pexels-photo-2593143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 }) => (
-  <StyledDiv $fontSize={$fontSize}>
+  <StyledDiv $fontSize={$fontSize} $padding={$padding}>
     <StyledSpan $imageUrl={$imageUrl}>{text}</StyledSpan>
   </StyledDiv>
 );

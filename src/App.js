@@ -15,20 +15,20 @@ import {
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 
-import Odesa from "./odesa.mp4";
-import DzembronyaTrailRunningCamp from "./DzembronyaTrailRunningCamp.mp4";
-import BorzhavaTrailRunningCamp2021 from "./BorzhavaTrailRunningCamp2021.mp4";
+// import Odesa from "./odesa.mp4";
+// import DzembronyaTrailRunningCamp from "./DzembronyaTrailRunningCamp.mp4";
+// import BorzhavaTrailRunningCamp2021 from "./BorzhavaTrailRunningCamp2021.mp4";
 
-const StyledVideoDiv = styled.div`
-  width: 100%;
-  height: 100;
-`;
+// const StyledVideoDiv = styled.div`
+//   width: 100%;
+//   height: 100;
+// `;
 
-const StyledVideo = styled.video`
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-`;
+// const StyledVideo = styled.video`
+//   width: 100%;
+//   height: 100vh;
+//   object-fit: cover;
+// `;
 
 const rateEURtoUAH = 40.5;
 
@@ -112,7 +112,18 @@ const App = () => {
         </Col>
       </Row>
 
-      <Image src="./ski2.jpg" preview={false} style={{ margin: "3vh 0" }} />
+      <Image
+        src="./borzhava_2023.jpg"
+        preview={false}
+        style={{ margin: "3vh 0" }}
+      />
+      {/* 
+      <Image
+        src="./Polina_Altra_run_2.gif"
+        preview={false}
+        style={{ margin: "3vh 0", width:"100%" }}
+      /> */}
+
       <Row style={{ margin: "2em" }} justify="space-around">
         <Col span={18}>
           <Typography.Title
@@ -122,13 +133,38 @@ const App = () => {
             Якщо в тебе є крейзі-кардіо думка, є шанс, що ми зрозуміємо тебе і
             допоможемо її реалізувати.
           </Typography.Title>
+          <Typography.Paragraph>
+            Послідовність, життєвий баланс і розвиваючі тренування є важливими
+            факторами, при розробці плану тренувань для моїх спортсменів.
+            Розвиток сили, швидкості та витривалості є ключовим фактором для
+            того, щоб ви залишалися здоровими та довгостроково отримували успіх
+            у бігу. Я вірю в послідовність; щоб добре бігати, ви повинні бути
+            послідовними у своїх тренуваннях. Я вважаю, що послідовності можна
+            досягти за допомогою програми навчання, яка є практичною,
+            індивідуальною та прогресивною.
+          </Typography.Paragraph>
+          <Typography.Paragraph>
+            Практичною тим, що вона розроблена спеціально для часу та ресурсів,
+            доступних вам на цьому етапі вашого життя.
+          </Typography.Paragraph>
+          <Typography.Paragraph>
+            Індивідуальною, оскільки вона обслуговує ваш унікальний рівень
+            фізичної підготовки, цілі та стиль тренувань.
+          </Typography.Paragraph>
+          <Typography.Paragraph>
+            Прогресивною в тому, що вона ретельно розроблена, щоб просунути вас
+            з того місця, де ви є, до того, де ви хочете бути.
+          </Typography.Paragraph>
+          <Typography.Paragraph>
+            Незалежно від того, чи ви починаєте бігати вперше, чи намагаєтесь
+            скоротити свої особисті рекорди на кілька хвилин, я можу допомогти
+            вам досягти ваших цілей, запропонувавши програму тренувань, яка є
+            практичною, індивідуальною та прогресивною. Я щиро рада працювати з
+            усіма, хто хоче стати кращим!
+          </Typography.Paragraph>
         </Col>
       </Row>
-      <Row style={{ margin: "6em 0" }}>
-        <StyledVideoDiv>
-          <StyledVideo src={Odesa} autoPlay loop muted />
-        </StyledVideoDiv>
-      </Row>
+
       <Row justify="space-around">
         <Col xs={24} xl={10}>
           <Image src="./gutyn.jpg" preview={false} />
@@ -140,6 +176,7 @@ const App = () => {
               <li>План підготовки до старту (щотижневий)</li>
               <li>План підготовки до старту + супорт на старті</li>
               <li>Групові тренування (контроль, мотивація, допомога)</li>
+              <li>Бігова підготовка до OCR</li>
               <li>Персональні тренування</li>
               <li>
                 Збори: навчально-тренувальні, загально-підготовчі,
@@ -151,12 +188,21 @@ const App = () => {
             <a href="https://t.me/PolinaCouch">Напиши мені</a> вже сьогодні, і,
             можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Text>
+          <Typography.Paragraph>
+            Я наполягаю на різно манітності, коли справа стосується тренувань.
+            Щоб досягти успіху, вам потрібно насолоджуватися бігом, а це означає
+            модернізувати тренування. Місця тренування, формати тренувань, види
+            активності - має постійно варіювати. На сьогодні список моїх
+            активностей постійно зростає. Так, я обожнюю біг і це моя провідна
+            активність, та я не відмовляю собі в інших, не менш прекрасних
+            забавах, як плавання, скітурінг, бігові лижі, гірські лижі,
+            лижіроллери, шосейний велосипед, МТБ :), байдарка, ролики,
+            скеледром, спортивне орієнтування. Це є частиною моїх тренування,
+            частиною мого успіху. Мої спортсмени мають регулярні альтернативні
+            тренування в своїх планах, щоб урізноманітнити своє життя та
+            підтримувати любов до бігу.
+          </Typography.Paragraph>
         </Col>
-      </Row>
-      <Row style={{ margin: "6em 0" }}>
-        <StyledVideoDiv>
-          <StyledVideo src={DzembronyaTrailRunningCamp} autoPlay loop muted />
-        </StyledVideoDiv>
       </Row>
       <Divider />
       <Row justify="space-around" style={{ margin: "1em" }}>
@@ -195,10 +241,7 @@ const App = () => {
           Десятки учнів займаються зараз
         </Col>
       </Row>
-      <TransparentBoxText
-        text="Трейл — це завжди правда"
-        style={{ margin: "1em 0" }}
-      />
+      <TransparentBoxText text="Трейл — це завжди правда" $padding="1em 0" />
       <Row
         style={{
           background:
@@ -322,10 +365,7 @@ const App = () => {
         </Col>
       </Row>
 
-      <TransparentBoxText
-        text="haters gonna hate"
-        style={{ marginTop: "4em" }}
-      />
+      <TransparentBoxText text="haters gonna hate" $padding="1em 0" />
 
       <Row style={{ marginBottom: "2em" }}>
         <Col span={22} gutter={-2}>
@@ -385,12 +425,6 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
-      </Row>
-
-      <Row style={{ margin: "6em 0" }}>
-        <StyledVideoDiv>
-          <StyledVideo src={BorzhavaTrailRunningCamp2021} autoPlay loop muted />
-        </StyledVideoDiv>
       </Row>
 
       <Divider />
@@ -468,6 +502,21 @@ const App = () => {
           </div>
         </Col>
       </Row>
+      {/* <Row style={{ margin: "6em 0" }}>
+        <StyledVideoDiv>
+          <StyledVideo src={BorzhavaTrailRunningCamp2021} autoPlay loop muted />
+        </StyledVideoDiv>
+      </Row>
+      <Row style={{ margin: "6em 0" }}>
+        <StyledVideoDiv>
+          <StyledVideo src={DzembronyaTrailRunningCamp} autoPlay loop muted />
+        </StyledVideoDiv>
+      </Row>
+      <Row style={{ margin: "6em 0" }}>
+        <StyledVideoDiv>
+          <StyledVideo src={Odesa} autoPlay loop muted />
+        </StyledVideoDiv>
+      </Row> */}
 
       <Divider style={{ marginTop: "4em" }}>
         Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
