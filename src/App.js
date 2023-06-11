@@ -202,8 +202,8 @@ const App = () => {
           </Typography.Paragraph>
 
           <Typography.Paragraph>
-            <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже сьогодні, і,
-            можливо, нам з тобою по дорозі. Зі мною можна домовитись.
+            <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже сьогодні,
+            і, можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Paragraph>
         </Col>
       </Row>
