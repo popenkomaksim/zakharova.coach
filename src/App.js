@@ -418,7 +418,7 @@ const App = () => {
         </Col>
         <Col xs={24} xl={8}>
           <Card
-            title="Персональний фітнес тренер"
+            title="Групове тренування"
             size="small"
             style={{ margin: "2em" }}
           >
