@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
   font-size: ${(props) => props.$fontSize};
   font-weight: 900;
 
-  padding: ${(props) => props.$padding};;
+  padding: ${(props) => props.$padding};
   display: flex;
   justify-content: center;
   text-align: center;

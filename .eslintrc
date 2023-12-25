@@ -1,143 +1,142 @@
 {
-    "root": true,
-    "parser": "@babel/eslint-parser",
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "extensions": [".js", ".jsx", ".ts", ".tsx"],
-          "moduleDirectory": ["node_modules", "src/"]
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb",
+    "react-app/jest",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/strict",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "prettier",
+    "styled-components-varname",
+    "react-perf",
+    "jest",
+    "react-hooks"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ForInStatement",
+        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "[iI]gnore"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "react/require-default-props": [0],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/prefer-stateless-function": 1,
+    "react/jsx-uses-react": "off",
+    "arrow-body-style": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/destructuring-assignment": 0,
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": false,
+        "object": true
+      }
+    ],
+    "import/no-anonymous-default-export": [2, { "allowObject": true }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          ".storybook/**",
+          "*/**/*.stories.js",
+          "stories/**",
+          "**/*.test.js"
+        ]
+      }
+    ],
+    "import/no-unresolved": [2, { "ignore": ["@storybook/react"] }],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["draft"]
+      }
+    ],
+    "id-length": [
+      2,
+      {
+        "min": 3,
+        "exceptions": ["i", "j", "tx", "id", "_", "fs"],
+        "properties": "never"
+      }
+    ],
+    "no-underscore-dangle": [2, { "allow": ["_id"] }],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomInput"],
+        "depth": 3
+      }
+    ],
+    "styled-components-varname/varname": [
+      2,
+      {
+        "tagStyle": {
+          "prefix": "Styled"
+        },
+        "extendedStyle": {
+          "prefix": "Styled"
         }
       }
-    },
-    "parserOptions": {
-      "requireConfigFile": false,
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "extends": [
-      "airbnb",
-      "react-app/jest",
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:jsx-a11y/strict",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "react",
-      "prettier",
-      "styled-components-varname",
-      "react-perf",
-      "jest",
-      "react-hooks"
-    ],
-    "env": {
-      "browser": true,
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "no-restricted-syntax": [
-        "error",
-        {
-          "selector": "ForInStatement",
-          "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
-        },
-        {
-          "selector": "LabeledStatement",
-          "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
-        },
-        {
-          "selector": "WithStatement",
-          "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
-        }
-      ],
-      "no-unused-vars": [
-        "error",
-        {
-          "varsIgnorePattern": "[iI]gnore"
-        }
-      ],
-      "prettier/prettier": [
-        "error",
-        {
-          "endOfLine": "auto"
-        }
-      ],
-      "react/require-default-props": [0],
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/jsx-filename-extension": 0,
-      "react/jsx-props-no-spreading": 0,
-      "react/prefer-stateless-function": 1,
-      "react/jsx-uses-react": "off",
-      "arrow-body-style": "off",
-      "react/react-in-jsx-scope": "off",
-      "react/destructuring-assignment": 0,
-      "react/function-component-definition": [
-        2,
-        { "namedComponents": "arrow-function" }
-      ],
-      "prefer-destructuring": [
-        "error",
-        {
-          "array": false,
-          "object": true
-        }
-      ],
-      "import/no-anonymous-default-export": [2, { "allowObject": true }],
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": [
-            ".storybook/**",
-            "*/**/*.stories.js",
-            "stories/**",
-            "**/*.test.js"
-          ]
-        }
-      ],
-      "import/no-unresolved": [2, { "ignore": ["@storybook/react"] }],
-      "no-param-reassign": [
-        "error",
-        {
-          "props": true,
-          "ignorePropertyModificationsFor": ["draft"]
-        }
-      ],
-      "id-length": [
-        2,
-        {
-          "min": 3,
-          "exceptions": ["i", "j", "tx", "id", "_", "fs"],
-          "properties": "never"
-        }
-      ],
-      "no-underscore-dangle": [2, { "allow": ["_id"] }],
-      "jsx-a11y/label-has-associated-control": [
-        2,
-        {
-          "labelComponents": ["CustomInputLabel"],
-          "labelAttributes": ["label"],
-          "controlComponents": ["CustomInput"],
-          "depth": 3
-        }
-      ],
-      "styled-components-varname/varname": [
-        2,
-        {
-          "tagStyle": {
-            "prefix": "Styled"
-          },
-          "extendedStyle": {
-            "prefix": "Styled"
-          }
-        }
-      ]
-    }
+    ]
   }
-  
+}

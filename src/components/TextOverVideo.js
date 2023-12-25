@@ -33,8 +33,8 @@ const TransparentBoxText = ({
   $imageUrl = "https://images.pexels.com/photos/2593143/pexels-photo-2593143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 }) => (
   <StyledVideoDiv>
-          <StyledVideo src={Odesa} autoPlay loop muted />
-        </StyledVideoDiv>
+    <StyledVideo src={Odesa} autoPlay loop muted />
+  </StyledVideoDiv>
   // <StyledDiv $fontSize={$fontSize}>
   //   <StyledSpan $imageUrl={$imageUrl}>{text}</StyledSpan>
   // </StyledDiv>

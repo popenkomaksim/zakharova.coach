@@ -11,9 +11,36 @@ import {
   Card,
   Statistic,
   Avatar,
+  List,
 } from "antd";
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
+
+function getWeekNumber(inputData) {
+  // Copy date so don't modify original
+  const data = new Date(+inputData);
+  data.setHours(0, 0, 0, 0);
+  // Set to nearest Thursday: current date + 4 - current day number
+  // Make Sunday's day number 7
+  data.setDate(data.getDate() + 4 - (data.getDay() || 7));
+  // Get first day of year
+  const yearStart = new Date(data.getFullYear(), 0, 1);
+  // Calculate full weeks to nearest Thursday
+  const weekNo = Math.ceil(((data - yearStart) / 86400000 + 1) / 7);
+  // Return array of year and week number
+  return weekNo;
+}
+
+const listItems = [
+  "чемпіонка Чемпіонатів Світу з рогейну (2019, 2023)",
+  "чемпіонка Чемпіонату Європи з рогейну (2017)",
+  "учасниця чемпіонатіу Світу зі скі-альпінізму (2023)",
+  "майстер спорту міжнародного класу з орієнтування",
+  "майстер спорту України з легкої атлетики",
+  "призерка Mountains Hard Ultra Trail 35 км (Франція 2022), MIUT 85 км (Португалія 2019)",
+  "переможниця Chornohora Sky Marathon 60 км (Україна 2018, 2019, 2020),",
+  "переможниця в абсолюті «Bojko Trail» 46 км (Україна 2018)",
+];
 
 // import Odesa from "./odesa.mp4";
 // import DzembronyaTrailRunningCamp from "./DzembronyaTrailRunningCamp.mp4";
@@ -30,7 +57,7 @@ import Header from "./components/Header";
 //   object-fit: cover;
 // `;
 
-const rateEURtoUAH = 40.5;
+const rateEURtoUAH = 41.95;
 
 const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
 
@@ -58,7 +85,7 @@ const App = () => {
             preview={false}
           />
         </Col>
-        <Col xs={24} xl={8} style={{ padding: "2em" }}>
+        <Col xs={24} xl={12} style={{ padding: "2em" }}>
           <Typography.Title
             level={2}
             style={{ margin: "1em 0", textAlign: "center" }}
@@ -71,25 +98,20 @@ const App = () => {
           >
             Я Поліна Захарова &mdash; тренер та атлет
           </Typography.Title>
+        </Col>
+      </Row>
+      <Row justify="space-around">
+        <Col xs={22} xl={10} style={{ marginTop: "2em" }}>
           <Typography.Text>
-            Я магістр з фізичної культури і спорту та реабілітації. Я майстер
-            спорту міжнародного класу з Рогейну, майстер спорту України з легкої
-            атлетики, чемпіонка і призерка Чемпіонатів Світу та Європи з
-            Рогейну. Також, я тренер з трейлового бігу. Чим я живу можна
-            подивитись в{" "}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.instagram.com/polina.zakharova94/"
-            >
-              <StyledInstagram /> інстаграмі
-            </a>
-            , але через кляту русню останній рік не наповлений постами.
+            Привіт! Мене звуть Поліна Захарова, я професійний атлет і тренер. І
+            я не уявляю життя без лісу та гір. Значну частину своєї спортивної
+            кар&apos;єри я присвятила орієнтуванню та рогейну. Останні 6 років
+            перелік моїх спортивних вподобань значно розширився - я насолождуюсь
+            скі-альпінізмом, трейловим бігом та ділюсь цією пристрастю зі своіми
+            учнями. 15 років досвіду, десятки тисяч кілометрів, набіганих по
+            всьому світу, впевнили мене в тому, що трейл - це свобода.
           </Typography.Text>
-          <Typography.Title level={3} style={{ margin: 0, padding: "2vh 0" }}>
-            Все одно знайдете:
-          </Typography.Title>
-
+          <Divider orientation="left">Все одно знайдете:</Divider>
           <a href="https://t.me/ZakharovaPolina">
             <StyledTelegram size="4em" color="#229ED9" />
           </a>
@@ -108,10 +130,20 @@ const App = () => {
           >
             UTMB
           </a>
-
-          <Divider />
+        </Col>
+        <Col xs={24} xl={10} style={{ padding: "0em" }}>
+          <Divider orientation="left">Спортивні досягнення:</Divider>
+          <List
+            size="small"
+            // header={<div>Header</div>}
+            // footer={<div>Footer</div>}
+            dataSource={listItems}
+            renderItem={(item) => <List.Item>{item}</List.Item>}
+          />
         </Col>
       </Row>
+
+      <Divider />
 
       <Image
         src="./borzhava_2023.jpg"
@@ -129,40 +161,29 @@ const App = () => {
         <Col span={18}>
           <Typography.Title
             level={2}
-            style={{ margin: 0, textAlign: "center" }}
+            style={{ margin: 0, textAlign: "center", paddingBottom: "1em" }}
           >
-            Якщо в тебе є крейзі-кардіо думка, є шанс, що ми зрозуміємо тебе і
-            допоможемо її реалізувати.
+            Баланс. Послідовність. Практичність.
           </Typography.Title>
-          <Typography.Paragraph>
-            Послідовність, життєвий баланс і розвиваючі тренування є важливими
-            факторами, при розробці плану тренувань для моїх спортсменів.
-            Розвиток сили, швидкості та витривалості є ключовим фактором для
-            того, щоб ви залишалися здоровими та довгостроково отримували успіх
-            у бігу. Я вірю в послідовність; щоб добре бігати, ви повинні бути
-            послідовними у своїх тренуваннях. Я вважаю, що послідовності можна
-            досягти за допомогою програми навчання, яка є практичною,
-            індивідуальною та прогресивною.
-          </Typography.Paragraph>
-          <Typography.Paragraph>
-            Практичною тим, що вона розроблена спеціально для часу та ресурсів,
-            доступних вам на цьому етапі вашого життя.
-          </Typography.Paragraph>
-          <Typography.Paragraph>
-            Індивідуальною, оскільки вона обслуговує ваш унікальний рівень
-            фізичної підготовки, цілі та стиль тренувань.
-          </Typography.Paragraph>
-          <Typography.Paragraph>
-            Прогресивною в тому, що вона ретельно розроблена, щоб просунути вас
-            з того місця, де ви є, до того, де ви хочете бути.
-          </Typography.Paragraph>
-          <Typography.Paragraph>
-            Незалежно від того, чи ви починаєте бігати вперше, чи намагаєтесь
-            скоротити свої особисті рекорди на кілька хвилин, я можу допомогти
-            вам досягти ваших цілей, запропонувавши програму тренувань, яка є
-            практичною, індивідуальною та прогресивною. Я щиро рада працювати з
-            усіма, хто хоче стати кращим!
-          </Typography.Paragraph>
+          <Typography.Text>
+            Мій підхід до тренувального процесу базується на 3 приниципах:
+            <ul>
+              <li>
+                життєвий баланс - гармонійне поєднання особистого, професійного
+                життя та хоббі, яке присносить задоволення та дарує покращення
+                фізичного стану
+              </li>
+              <li>
+                дисципліна та послідовність - дотримання плану та еволюційний
+                розвиток створюють фундаментальну базу для довготривалих
+                відносин зі спортом
+              </li>
+              <li>
+                індивідуальність та практичність - врахування рівня фізичної
+                підготовки та реальної доступності ресурсів
+              </li>
+            </ul>
+          </Typography.Text>
         </Col>
       </Row>
 
@@ -172,37 +193,18 @@ const App = () => {
         </Col>
         <Col xs={24} xl={10} style={{ padding: "2em" }}>
           <Typography.Text>
-            Якщо тебе цікавить:
+            Мої учні, як початківці, аматори, так й про-аматори обирають різні
+            формати співпраці:
             <ul>
-              <li>План підготовки до старту (щотижневий)</li>
-              <li>План підготовки до старту + супорт на старті</li>
-              <li>Групові тренування (контроль, мотивація, допомога)</li>
-              <li>Бігова підготовка до OCR</li>
-              <li>Персональні тренування</li>
-              <li>
-                Збори: навчально-тренувальні, загально-підготовчі,
-                спеціально-підготовчі
-              </li>
-              <li>Стратегія гонки</li>
-              <li>Глобальну переодизацію до твого старту</li>
+              <li>моделювання профілю атлета</li>
+              <li>довготривале стратегічне планування</li>
+              <li>персональні тренування</li>
+              <li>супровід на гонці</li>
+              <li>навчально-тренувальні/спеціально-підготовчі збори</li>
             </ul>
           </Typography.Text>
           <Typography.Paragraph>
-            Я наполягаю на різно манітності, коли справа стосується тренувань.
-            Щоб досягти успіху, вам потрібно насолоджуватися бігом, а це означає
-            модернізувати тренування. Місця тренування, формати тренувань, види
-            активності - має постійно варіювати. На сьогодні список моїх
-            активностей постійно зростає. Так, я обожнюю біг і це моя провідна
-            активність, та я не відмовляю собі в інших, не менш прекрасних
-            забавах, як плавання, скітурінг, бігові лижі, гірські лижі,
-            лижіроллери, шосейний велосипед, МТБ :), байдарка, ролики,
-            скеледром, спортивне орієнтування. Це є частиною моїх тренування,
-            частиною мого успіху. Мої спортсмени мають регулярні альтернативні
-            тренування в своїх планах, щоб урізноманітнити своє життя та
-            підтримувати любов до бігу.
-          </Typography.Paragraph>
-
-          <Typography.Paragraph>
+            Я щиро рада працювати з усіма, хто хоче стати кращою версією себе.
             <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже сьогодні,
             і, можливо, нам з тобою по дорозі. Зі мною можна домовитись.
           </Typography.Paragraph>
@@ -212,31 +214,23 @@ const App = () => {
       <Row justify="space-around" style={{ margin: "1em" }}>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic
-            title="Кілометрів подолали мої учні до 2022"
-            value={112893}
+            title="Кілометрів подолали мої учні"
+            value={Math.ceil(
+              288750 + (getWeekNumber(new Date()) / 52) * (37 * 20)
+            )}
           />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic title="Персональних рекордів" value="100+" />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
-          <Statistic
-            title="Персональний рекорд на половинці для атлета 55+"
-            value={1}
-          />
-        </Col>
-        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
-          <Statistic title="Фінішерів на забігах 200+км" value="10+" />
-        </Col>
-        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
-          <Statistic title="Спалених сердець" value="1млн+" />
+          <Statistic title="Фінішерів на забігах 160+км" value="10+" />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Avatar.Group>
-            <Avatar src="./babii.jpg" />
+            <Avatar src="./zhenya.jpg" />
             <Avatar src="./tamara.jpg" />
-            <Avatar src="./max.jpg" />
-            <Avatar src="./viktor.jpg" />
+            <Avatar src="./babii.jpg" />
             <a href="https://t.me/ZakharovaPolina">
               <Avatar>+</Avatar>
             </a>
@@ -261,24 +255,17 @@ const App = () => {
           </Typography.Title>
         </Col>
         <Col xs={24} xl={8}>
-          <Card
-            title="Щомісячний персональний план"
-            size="small"
-            style={{ margin: "2em" }}
-          >
+          <Card title="BASIC" size="small" style={{ margin: "2em" }}>
             <Typography.Text>
               Даний пакет, найкраще підійде для тих, хто має біговий досвід та
               готуватися до стартів “з метою активно провести час, не схлопотать
               травм на рівному місці і звичайно - зробити гарні фото”.
               <Divider>У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
-                <li>унікальний тренувальний план раз на місяць</li>
-                <li>“акаунт/безкоштовний акаунт” в TRAININGPEAKS</li>
-                <li>допомогу з вибором стартів та підготовку до стартів</li>
-                <li>
-                  зворотній зв”язок тренера раз на місяць через додаток
-                  TRAININGPEAKS
-                </li>
+                <li>акаунт в TRAININGPEAKS</li>
+                <li>персоналізований план на місяць</li>
+                <li>консультація з вибором цільових стартів</li>
+                <li>зворотній зв&apos;язок через TRAININGPEAKS</li>
               </ul>
             </Typography.Text>
             <Divider orientation="center">
@@ -293,32 +280,21 @@ const App = () => {
           </Card>
         </Col>
         <Col xs={24} xl={8}>
-          <Card
-            title="Щотижневий персональний план"
-            size="small"
-            style={{ margin: "2em" }}
-          >
+          <Card title="EXPERIENCED" size="small" style={{ margin: "2em" }}>
             <Typography.Text>
               Саме ций пакет послуг, найкраще підійде для бігунів, які люблять
               готуватись, чи вперше готуються до Trail, Ultra-trail, Sky race та
               OCR від 5 до 80 км або довше.
               <Divider>У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
-                <li>
-                  унікальний тренувальний план раз на тиждень, який адаптується
-                  до особистих, сімейних і професійних потреб
-                </li>
-                <li>“акаунт/безкоштовний акаунт” в TRAININGPEAKS</li>
-                <li>допомогу з вибором стартів та підготовку до стартів</li>
-                <li>
-                  аналіз 1 прийдешньої гонки та розбір майбутнього старту класу
-                  А
-                </li>
-                <li>рекомендації щодо харчування під час гонки</li>
-                <li>
-                  зворотній зв”язок тренера раз на тиждень через додаток
-                  TRAININGPEAKS
-                </li>
+                <li>акаунт в TRAININGPEAKS</li>
+                <li>щотижневий персоналізований план</li>
+                <li>можливість ситуативного коригування плану</li>
+                <li>консультація з вибором цільових стартів</li>
+                <li>аналіз 1 прийдешнього старту</li>
+                <li>аналіз та планування 1 старту в сезон</li>
+                <li>рекомендації щодо харчування на гонках</li>
+                <li>зворотній зв&apos;язок через додаток TRAININGPEAKS</li>
                 <li>відеозустріч із тренером раз на місяць.</li>
               </ul>
             </Typography.Text>
@@ -334,26 +310,22 @@ const App = () => {
           </Card>
         </Col>
         <Col xs={24} xl={8}>
-          <Card title="Елітний план" size="small" style={{ margin: "2em" }}>
+          <Card title="PRO" size="small" style={{ margin: "2em" }}>
             <Typography.Text>
               Ідеально підходить для елітних бігунів або дуже амбітних бігунів,
               які люблять готуватися до Trail, Ultra-trail, Sky race та OCR від
               5 до 150 км або довше.
               <Divider>У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
-                <li>
-                  унікальний тренувальний план раз на тиждень, який адаптується
-                  до особистих, сімейних і професійних потреб
-                </li>
-                <li>преміум акаунт в TRAININGPEAKS</li>
-                <li>допомогу з вибором стартів та підготовку до стартів</li>
-                <li>аналіз 3 пройдешніх та майбутніх перегонів на рік</li>
-                <li>рекомендації щодо харчування під час гонки</li>
-                <li>
-                  зворотній зв”язок тренера тричі на тиждень через додаток
-                  TRAININGPEAKS
-                </li>
-                <li>відеозустріч із тренером раз на тиждень.</li>
+                <li>pro-акаунт в TRAININGPEAKS з доступом до аналітики</li>
+                <li>щотижневий персоналізований план</li>
+                <li>можливість ситуативного коригування плану</li>
+                <li>консультація з вибором цільових стартів</li>
+                <li>аналіз 3 прийдешніх стартів</li>
+                <li>аналіз та планування 3 стартів в сезон</li>
+                <li>рекомендації щодо харчування на гонках</li>
+                <li>зворотній зв&apos;язок через додаток TRAININGPEAKS</li>
+                <li>відеозустріч 1 раз на тиждень</li>
               </ul>
             </Typography.Text>
             <Divider orientation="center">
@@ -369,10 +341,8 @@ const App = () => {
         </Col>
       </Row>
 
-      <TransparentBoxText text="haters gonna hate" $padding="1em 0" />
-
-      <Row style={{ marginBottom: "2em" }}>
-        <Col span={22} gutter={-2}>
+      <Row style={{ margin: "2em 0" }}>
+        <Col span={22}>
           <Typography.Title
             level={2}
             style={{ margin: 0, textAlign: "center" }}
@@ -382,7 +352,7 @@ const App = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={24} xl={8}>
+        <Col xs={24} xl={6}>
           <Card
             title="Розбір та розкладка гонки"
             size="small"
@@ -390,7 +360,7 @@ const App = () => {
           >
             <Typography.Text>
               <ul style={{ listStyle: "" }}>
-                <li>аналіз трьох пройдешніх гонок;</li>
+                <li>аналіз трьох пройдешніх гонок</li>
                 <li>розбір стартового треку</li>
                 <li>планування пробігання гонки</li>
               </ul>
@@ -401,7 +371,25 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
-        <Col xs={24} xl={8}>
+        <Col xs={24} xl={6}>
+          <Card
+            title="Аналіз та планування сезону"
+            size="small"
+            style={{ margin: "2em" }}
+          >
+            <Typography.Text>
+              <ul style={{ listStyle: "" }}>
+                <li>розбір цілей сезону</li>
+                <li>планування</li>
+              </ul>
+            </Typography.Text>
+            <Divider orientation="center">
+              ₴{convert(50)}
+              <span style={{ color: "#878787" }}> / €50</span>
+            </Divider>
+          </Card>
+        </Col>
+        <Col xs={24} xl={6}>
           <Card
             title="Персональне тренування"
             size="small"
@@ -416,16 +404,18 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
-        <Col xs={24} xl={8}>
+        <Col xs={24} xl={6}>
           <Card
             title="Групове тренування"
             size="small"
             style={{ margin: "2em" }}
           >
-            <Typography.Text>Буду допомагати морально.</Typography.Text>
+            <Typography.Text>
+              Весело і корисно. Какао після не в подарунок.
+            </Typography.Text>
             <Divider orientation="center">
-              ₴{convert(1000)}
-              <span style={{ color: "#878787" }}> / €1000</span> за тренування
+              ₴{convert(15)}
+              <span style={{ color: "#878787" }}> / €15</span> за тренування
             </Divider>
           </Card>
         </Col>
@@ -434,52 +424,6 @@ const App = () => {
       <Divider />
 
       <Row justify="space-around">
-        <Col xs={24} xl={10}>
-          <div style={{ margin: "0 2em" }}>
-            <Typography.Title level={3} style={{ margin: 0 }}>
-              FAQ
-            </Typography.Title>
-
-            <Typography.Title level={4}>
-              Чи ти дійсно набираєш сотні атлетів?
-            </Typography.Title>
-            <Typography.Text>
-              Абсолютно точно — ні. В мене не конвеерний підхід, а
-              індивідуальний, тому я обмежую кількість атлетів котрих треную.
-            </Typography.Text>
-
-            <Typography.Title level={4}>
-              Я граю в шахи — чи можнеш ти мене тренувати?
-            </Typography.Title>
-            <Typography.Text>
-              Я спеціалізуюсь на ендуранс видах спорту, тому скоріш за все нам
-              буде не по дорозі.
-            </Typography.Text>
-
-            <Typography.Title level={4}>
-              В мене ідея для старту, котрий не біг жодний українець, звідки в
-              тебе будуть відповіді для мене?
-            </Typography.Title>
-            <Typography.Text>Побачиш :-)</Typography.Text>
-
-            <Typography.Title level={4}>
-              Можна я буду пропускати всі силові і стречінг тренування в надії
-              на покращення витривалості?
-            </Typography.Title>
-            <Typography.Text>Ні.</Typography.Text>
-
-            <Typography.Title level={4}>
-              Можна я буду самостійно собі назначати тренування, чи самостійно
-              тягати тренування в TRAININGPEAKS?
-            </Typography.Title>
-            <Typography.Text>Ні.</Typography.Text>
-
-            <Typography.Title level={4}>
-              Чи контролюєш ти, що я буду їсти в повсякденному житті?
-            </Typography.Title>
-            <Typography.Text>Ні.</Typography.Text>
-          </div>
-        </Col>
         <Col xs={24} xl={10}>
           <Image src="./Polina_Altra_optimized.gif" preview={false} />
         </Col>
