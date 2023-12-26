@@ -12,7 +12,6 @@ import {
   Statistic,
   Avatar,
   List,
-  Calendar,
 } from "antd";
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
@@ -31,6 +30,11 @@ function getWeekNumber(inputData) {
   // Return array of year and week number
   return weekNo;
 }
+
+// const CALENDAR_ID =
+// "9c74162dbd0be8f75f345c77b9136b24f559d1be6fd2e2b3f38ec042560cce63@group.calendar.google.com";
+// const API_KEY = "AIzaSyBQecHDQILFWxrq73s1ZNyMl-wkTiK-89c";
+// let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
 
 const listItems = [
   "чемпіонка Чемпіонатів Світу з рогейну (2019, 2023)",
@@ -147,15 +151,24 @@ const App = () => {
 
       <div style={{ width: "100%", margin: "3em 0" }}>
         <img
-          alt="Polina do running"
-          src="./polina_run.gif"
+          alt="Polina do smile"
+          src="./Polina_Altra_optimized.gif"
           style={{ width: "100%", display: "block", margin: "3em 0" }}
         />
       </div>
 
       <Row justify="center">
         <Divider orientation="left">Майбутні кемпи:</Divider>
-        <Calendar />
+        {/* <Calendar /> */}
+        <iframe
+          title="Calendar"
+          src="https://calendar.google.com/calendar/embed?src=9c74162dbd0be8f75f345c77b9136b24f559d1be6fd2e2b3f38ec042560cce63%40group.calendar.google.com&ctz=Europe%2FKiev"
+          style={{ border: 0 }}
+          width="800"
+          height="600"
+          frameBorder="0"
+          scrolling="no"
+        />
       </Row>
 
       <Image
@@ -428,15 +441,13 @@ const App = () => {
         </Col>
       </Row>
 
-      <Divider />
-
-      <Row justify="space-around">
-        <Col xs={24} xl={10}>
-          <Image src="./Polina_Altra_optimized.gif" preview={false} />
-        </Col>
-      </Row>
-
-      <Divider />
+      <div style={{ width: "100%", margin: "3em 0" }}>
+        <img
+          alt="Polina do running"
+          src="./polina_run.gif"
+          style={{ width: "100%", display: "block", margin: "3em 0" }}
+        />
+      </div>
 
       <Row justify="space-around">
         <Col xs={24} xl={10}>
