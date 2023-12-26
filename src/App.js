@@ -12,6 +12,7 @@ import {
   Statistic,
   Avatar,
   List,
+  Calendar,
 } from "antd";
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
@@ -103,8 +104,9 @@ const App = () => {
       <Row justify="space-around">
         <Col xs={22} xl={10} style={{ marginTop: "2em" }}>
           <Typography.Text>
-            Привіт! Мене звуть Поліна Захарова, я професійний атлет і тренер. І
-            я не уявляю життя без лісу та гір. Значну частину своєї спортивної
+            Привіт!{"\n"}
+            Мене звуть Поліна Захарова, я професійний атлет і тренер. І я не
+            уявляю життя без лісу та гір. Значну частину своєї спортивної
             кар&apos;єри я присвятила орієнтуванню та рогейну. Останні 6 років
             перелік моїх спортивних вподобань значно розширився - я насолождуюсь
             скі-альпінізмом, трейловим бігом та ділюсь цією пристрастю зі своіми
@@ -143,21 +145,26 @@ const App = () => {
         </Col>
       </Row>
 
-      <Divider />
+      <div style={{ width: "100%", margin: "3em 0" }}>
+        <img
+          alt="Polina do running"
+          src="./polina_run.gif"
+          style={{ width: "100%", display: "block", margin: "3em 0" }}
+        />
+      </div>
+
+      <Row justify="center">
+        <Divider orientation="left">Майбутні кемпи:</Divider>
+        <Calendar/>
+      </Row>
 
       <Image
         src="./borzhava_2023.jpg"
         preview={false}
         style={{ margin: "3vh 0" }}
       />
-      {/* 
-      <Image
-        src="./Polina_Altra_run_2.gif"
-        preview={false}
-        style={{ margin: "3vh 0", width:"100%" }}
-      /> */}
 
-      <Row style={{ margin: "2em" }} justify="space-around">
+      <Row style={{ margin: "2em 0" }} justify="space-around">
         <Col span={18}>
           <Typography.Title
             level={2}
