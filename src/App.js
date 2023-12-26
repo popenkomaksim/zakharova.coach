@@ -155,7 +155,7 @@ const App = () => {
 
       <Row justify="center">
         <Divider orientation="left">Майбутні кемпи:</Divider>
-        <Calendar/>
+        <Calendar />
       </Row>
 
       <Image
