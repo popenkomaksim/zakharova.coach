@@ -16,19 +16,16 @@ import {
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 
-function getWeekNumber(inputData) {
-  // Copy date so don't modify original
-  const data = new Date(+inputData);
-  data.setHours(0, 0, 0, 0);
-  // Set to nearest Thursday: current date + 4 - current day number
-  // Make Sunday's day number 7
-  data.setDate(data.getDate() + 4 - (data.getDay() || 7));
-  // Get first day of year
-  const yearStart = new Date(data.getFullYear(), 0, 1);
-  // Calculate full weeks to nearest Thursday
-  const weekNo = Math.ceil(((data - yearStart) / 86400000 + 1) / 7);
-  // Return array of year and week number
-  return weekNo;
+function daysOfTraining() {
+  var now = new Date();
+  var start = new Date(2019, 0, 0);
+  var diff = now - start;
+  var oneDay = 1000 * 60 * 60 * 24;
+  return Math.floor(diff / oneDay);
+}
+
+function getKmAmount (){
+  return Math.ceil(daysOfTraining() * (20 * 8.5))
 }
 
 // const CALENDAR_ID =
@@ -235,9 +232,7 @@ const App = () => {
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Statistic
             title="Кілометрів подолали мої учні"
-            value={Math.ceil(
-              288750 + (getWeekNumber(new Date()) / 52) * (37 * 20)
-            )}
+            value={getKmAmount()}
           />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
