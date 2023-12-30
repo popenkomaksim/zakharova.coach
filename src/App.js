@@ -386,8 +386,8 @@ const App = () => {
               </ul>
             </Typography.Text>
             <Divider orientation="center">
-              ₴{convert(50)}
-              <span style={{ color: "#878787" }}> / €50</span>
+              ₴{convert(40)}
+              <span style={{ color: "#878787" }}> / €40</span>
             </Divider>
           </Card>
         </Col>
@@ -404,8 +404,8 @@ const App = () => {
               </ul>
             </Typography.Text>
             <Divider orientation="center">
-              ₴{convert(50)}
-              <span style={{ color: "#878787" }}> / €50</span>
+              ₴{convert(40)}
+              <span style={{ color: "#878787" }}> / €40</span>
             </Divider>
           </Card>
         </Col>
@@ -419,8 +419,8 @@ const App = () => {
               Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
             </Typography.Text>
             <Divider orientation="center">
-              ₴{convert(40)}
-              <span style={{ color: "#878787" }}> / €40</span> за 2,5 години
+              ₴{convert(20)}
+              <span style={{ color: "#878787" }}> / €20</span> за 1 годину
             </Divider>
           </Card>
         </Col>
@@ -434,8 +434,8 @@ const App = () => {
               Весело і корисно. Какао після не в подарунок.
             </Typography.Text>
             <Divider orientation="center">
-              ₴{convert(15)}
-              <span style={{ color: "#878787" }}> / €15</span> за тренування
+              ₴{convert(12)}
+              <span style={{ color: "#878787" }}> / €12</span> за тренування
             </Divider>
           </Card>
         </Col>
