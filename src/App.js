@@ -168,11 +168,7 @@ const App = () => {
         />
       </Row>
 
-      <Image
-        src="./borzhava_2023.jpg"
-        preview={false}
-        style={{ margin: "3vh 0" }}
-      />
+      <Image src="./vin01.jpg" preview={false} style={{ margin: "3vh 0" }} />
 
       <Row style={{ margin: "2em 0" }} justify="space-around">
         <Col span={18}>
@@ -206,7 +202,7 @@ const App = () => {
 
       <Row justify="space-around">
         <Col xs={24} xl={10}>
-          <Image src="./gutyn.jpg" preview={false} />
+          <Image src="./vin02.jpg" preview={false} />
         </Col>
         <Col xs={24} xl={10} style={{ padding: "2em" }}>
           <Typography.Text>
