@@ -24,8 +24,8 @@ function daysOfTraining() {
   return Math.floor(diff / oneDay);
 }
 
-function getKmAmount (){
-  return Math.ceil(daysOfTraining() * (20 * 8.5))
+function getKmAmount() {
+  return Math.ceil(daysOfTraining() * (20 * 8.5));
 }
 
 // const CALENDAR_ID =
@@ -159,7 +159,7 @@ const App = () => {
         {/* <Calendar /> */}
         <iframe
           title="Calendar"
-          src="https://calendar.google.com/calendar/embed?src=9c74162dbd0be8f75f345c77b9136b24f559d1be6fd2e2b3f38ec042560cce63%40group.calendar.google.com&ctz=Europe%2FKiev"
+          src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
           style={{ border: 0 }}
           width="800"
           height="600"
