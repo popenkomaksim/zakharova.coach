@@ -17,10 +17,10 @@ import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 
 function daysOfTraining() {
-  var now = new Date();
-  var start = new Date(2019, 0, 0);
-  var diff = now - start;
-  var oneDay = 1000 * 60 * 60 * 24;
+  const now = new Date();
+  const start = new Date(2019, 0, 0);
+  const diff = now - start;
+  const oneDay = 1000 * 60 * 60 * 24;
   return Math.floor(diff / oneDay);
 }
 
