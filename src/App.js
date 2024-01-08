@@ -2,7 +2,7 @@ import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
-import PropTypes from "prop-types";
+
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
 import {
   Col,
@@ -10,7 +10,6 @@ import {
   Divider,
   Typography,
   Image,
-  Card,
   Statistic,
   Avatar,
   List,
@@ -18,10 +17,8 @@ import {
 } from "antd";
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
-
-const rateEURtoUAH = 41.95;
-
-const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
+import PlanCard from "./components/PlanCard";
+import ExtraServiceCard from "./components/ExtraServiceCard";
 
 function daysOfTraining() {
   const now = new Date();
@@ -36,55 +33,6 @@ const formatter = (value) => <CountUp end={value} separator="," />;
 function getKmAmount() {
   return Math.ceil(daysOfTraining() * (20 * 8.5));
 }
-
-const CustomCard = ({ name, price, ListOfThingth }) => (
-  <Card
-    title={
-      <div
-        style={{
-          textAlign: "center",
-          fontSize: "3em",
-          fontWeight: "bold",
-          color: "rgb(59 59 59 / 88%)",
-        }}
-      >
-        {name}
-      </div>
-    }
-    size="small"
-    style={{ margin: "2em" }}
-  >
-    <Typography.Title
-      style={{
-        fontSize: "1.175em",
-      }}
-    >
-      У цьому пакеті ви отримаєте:
-    </Typography.Title>
-    <Typography.Text>{ListOfThingth}</Typography.Text>
-    <Typography.Text
-      style={{
-        justifyContent: "center",
-        fontSize: "1.25em",
-        display: "flex",
-      }}
-    >
-      ₴{convert(price)}
-      <span style={{ color: "#878787" }}> / €60</span>&nbsp;на місяць
-    </Typography.Text>
-    <Divider orientation="center">
-      <a href="https://t.me/ZakharovaPolina">
-        <StyledTelegram size="2em" color="#229ED9" />
-      </a>
-    </Divider>
-  </Card>
-);
-
-CustomCard.propTypes = {
-  name: PropTypes.string,
-  price: PropTypes.number,
-  ListOfThingth: PropTypes.elementType,
-};
 
 // function useMediaQuery(query) {
 //   const [matches, setMatches] = React.useState(false);
@@ -299,9 +247,6 @@ const App = () => {
         style={{
           margin: "5em 0",
           display: "flex",
-          // "@media only screen and (max-width: 900px)": {
-          //   order: "revert",
-          // },
         }}
       >
         <StyledCol
@@ -372,7 +317,7 @@ const App = () => {
           }}
         >
           <div style={{ maxWidth: "400px" }}>
-            <Typography.Text>
+            <Typography.Text style={{ fontSize: "1.5em" }}>
               Мої учні, як початківці, аматори, так й про-аматори обирають різні
               формати співпраці:
               <ul>
@@ -413,14 +358,14 @@ const App = () => {
           }}
         >
           <div style={{ maxWidth: "400px" }}>
-            <Typography.Paragraph>
+            <Typography.Text style={{ fontSize: "1.5em" }}>
               Я щиро рада працювати з усіма, хто хоче стати кращою версією
               себе.&nbsp;
               <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже
               сьогодні, і, можливо, нам з тобою по дорозі.
               <br />
               Зі мною можна домовитись.
-            </Typography.Paragraph>
+            </Typography.Text>
           </div>
         </Col>
       </Row>
@@ -481,7 +426,7 @@ const App = () => {
           </Typography.Title>
         </Col>
         <Col xs={24} lg={8}>
-          <CustomCard
+          <PlanCard
             name="BASIC"
             price="25"
             ListOfThingth={
@@ -495,7 +440,7 @@ const App = () => {
           />
         </Col>
         <Col xs={24} lg={8}>
-          <CustomCard
+          <PlanCard
             name="EXPERIENCED"
             price="40"
             ListOfThingth={
@@ -514,7 +459,7 @@ const App = () => {
           />
         </Col>
         <Col xs={24} lg={8}>
-          <CustomCard
+          <PlanCard
             name="PRO"
             price="60"
             ListOfThingth={
@@ -546,71 +491,51 @@ const App = () => {
       </Row>
       <Row>
         <Col xs={24} md={6}>
-          <Card
-            title="Розбір та розкладка гонки"
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Text>
+          <ExtraServiceCard
+            name="Розбір та розкладка гонки"
+            price="40"
+            ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>аналіз трьох пройдешніх гонок</li>
                 <li>розбір стартового треку</li>
                 <li>планування пробігання гонки</li>
               </ul>
-            </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(40)}
-              <span style={{ color: "#878787" }}> / €40</span>
-            </Divider>
-          </Card>
+            }
+          />
         </Col>
         <Col xs={24} md={6}>
-          <Card
-            title="Аналіз та планування сезону"
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Text>
+          <ExtraServiceCard
+            name="Аналіз та планування сезону"
+            price="40"
+            ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>розбір цілей сезону</li>
                 <li>планування</li>
               </ul>
-            </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(40)}
-              <span style={{ color: "#878787" }}> / €40</span>
-            </Divider>
-          </Card>
+            }
+          />
         </Col>
         <Col xs={24} md={6}>
-          <Card
-            title="Персональне тренування"
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Text>
-              Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
-            </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(20)}
-              <span style={{ color: "#878787" }}> / €20</span> за 1 годину
-            </Divider>
-          </Card>
+          <ExtraServiceCard
+            name="Персональне тренування"
+            price="20"
+            ListOfThingth={
+              <Typography.Text>
+                Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
+              </Typography.Text>
+            }
+          />
         </Col>
         <Col xs={24} md={6}>
-          <Card
-            title="Групове тренування"
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Text>
-              Весело і корисно. Какао після не в подарунок.
-            </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(12)}
-              <span style={{ color: "#878787" }}> / €12</span> за тренування
-            </Divider>
-          </Card>
+          <ExtraServiceCard
+            name="Групове тренування"
+            price="12"
+            ListOfThingth={
+              <Typography.Text>
+                Весело і корисно. Какао після не в подарунок.
+              </Typography.Text>
+            }
+          />
         </Col>
       </Row>
 
