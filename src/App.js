@@ -144,7 +144,7 @@ const App = () => {
       <TransparentBoxText text="Твій тренувальний план" />
       <Divider />
       <Row justify="center">
-        <Col xl={4} className="gutter-row" gutter={16}>
+        <Col lg={8} xl={6}>
           <Image
             src="./polina.jpg"
             style={{ borderRadius: "50%", maxWidth: "75vw" }}
@@ -376,14 +376,26 @@ const App = () => {
         </Col>
 
         <Col xs={24} md={12}>
-          <Image src="./vin02.jpg" preview={false} style={{ filter: "grayscale(1)" }}/>
+          <Image
+            src="./vin02.jpg"
+            preview={false}
+            style={{ filter: "grayscale(1)" }}
+          />
         </Col>
       </Row>
       <Row justify="space-around">
         <StyledCol xs={24} md={12}>
-          <Image src="./IMG_1182.jpg" preview={false} style={{ filter: "grayscale(1)" }}/>
+          <Image
+            src="./IMG_1182.jpg"
+            preview={false}
+            style={{ filter: "grayscale(1)" }}
+          />
         </StyledCol>
-        <Col xs={24} md={12} style={{ padding: "2em", justifyContent: "center", display: "flex" }}>
+        <Col
+          xs={24}
+          md={12}
+          style={{ padding: "2em", justifyContent: "center", display: "flex" }}
+        >
           <Typography.Paragraph>
             Я щиро рада працювати з усіма, хто хоче стати кращою версією
             себе.&nbsp;
