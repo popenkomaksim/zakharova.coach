@@ -132,7 +132,7 @@ const StyledTelegram = styled(FaTelegram)`
 `;
 
 const StyledCol = styled(Col)`
-  @media (max-width: 1200px) {
+  @media (max-width: 768px) {
     order: 2;
   }
 `;
@@ -343,8 +343,25 @@ const App = () => {
         </Col>
       </Row>
 
+      <Image
+        src="./Grand_Canyon_Panorama.jpeg"
+        preview={false}
+        style={{ margin: "3vh 0 0 0", filter: "grayscale(1)" }}
+      />
+
+      <Row style={{ margin: "2em 0" }} justify="space-around">
+        <Col span={18}>
+          <Typography.Title
+            level={2}
+            style={{ margin: 0, textAlign: "center" }}
+          >
+            Формати співпраці
+          </Typography.Title>
+        </Col>
+      </Row>
+
       <Row justify="space-around">
-        <Col xs={24} md={10} style={{ padding: "2em" }} order={2}>
+        <Col xs={24} md={12} style={{ padding: "2em" }}>
           <Typography.Text>
             Мої учні, як початківці, аматори, так й про-аматори обирають різні
             формати співпраці:
@@ -356,6 +373,17 @@ const App = () => {
               <li>навчально-тренувальні/спеціально-підготовчі збори</li>
             </ul>
           </Typography.Text>
+        </Col>
+
+        <Col xs={24} md={12}>
+          <Image src="./vin02.jpg" preview={false} style={{ filter: "grayscale(1)" }}/>
+        </Col>
+      </Row>
+      <Row justify="space-around">
+        <StyledCol xs={24} md={12}>
+          <Image src="./IMG_1182.jpg" preview={false} style={{ filter: "grayscale(1)" }}/>
+        </StyledCol>
+        <Col xs={24} md={12} style={{ padding: "2em", justifyContent: "center", display: "flex" }}>
           <Typography.Paragraph>
             Я щиро рада працювати з усіма, хто хоче стати кращою версією
             себе.&nbsp;
@@ -364,10 +392,6 @@ const App = () => {
             <br />
             Зі мною можна домовитись.
           </Typography.Paragraph>
-        </Col>
-
-        <Col xs={24} md={10}>
-          <Image src="./vin02.jpg" preview={false} />
         </Col>
       </Row>
       <Divider />
