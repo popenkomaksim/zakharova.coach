@@ -131,6 +131,12 @@ const StyledTelegram = styled(FaTelegram)`
   top: -0.4em;
 `;
 
+const StyledCol = styled(Col)`
+  @media (max-width: 1200px) {
+    order: 2;
+  }
+`;
+
 const App = () => {
   return (
     <>
@@ -145,7 +151,7 @@ const App = () => {
             preview={false}
           />
         </Col>
-        <Col xs={24} xl={12} style={{ padding: "2em" }}>
+        <Col xs={24} md={12} style={{ padding: "2em" }}>
           <Typography.Title
             level={1}
             style={{
@@ -170,7 +176,7 @@ const App = () => {
         </Col>
       </Row>
       <Row justify="space-around">
-        <Col xs={22} xl={10} style={{ marginTop: "2em" }}>
+        <Col xs={22} md={10} style={{ marginTop: "2em" }}>
           <Typography.Text>
             Я професійний атлет і тренер. І я не уявляю життя без лісу та гір.
             Значну частину своєї спортивної кар&apos;єри я присвятила
@@ -200,7 +206,7 @@ const App = () => {
             UTMB
           </a>
         </Col>
-        <Col xs={24} xl={10} style={{ padding: "0em" }}>
+        <Col xs={24} md={10} style={{ padding: "0em" }}>
           <Divider orientation="left">Спортивні досягнення:</Divider>
           <List size="small">
             <List.Item>
@@ -263,7 +269,7 @@ const App = () => {
         <Col span={18}>
           <Typography.Title
             level={2}
-            style={{ margin: 0, textAlign: "center", paddingBottom: "1em" }}
+            style={{ margin: 0, textAlign: "center" }}
           >
             Мій підхід до тренувального процесу базується на 3 приниципах:
           </Typography.Title>
@@ -271,14 +277,14 @@ const App = () => {
       </Row>
 
       <Row justify="center" align="middle" style={{ margin: "5em 0" }}>
-        <Col xs={24} xl={12} className="gutter-row">
+        <Col xs={24} md={12}>
           <TransparentBoxText
             text="Баланс"
             $fontSize="6vw"
             $imageUrl="./ski.jpg"
           />
         </Col>
-        <Col xs={24} xl={12} className="gutter-row" style={{ padding: "2em" }}>
+        <Col xs={24} md={12} style={{ padding: "2em" }}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             життєвий баланс &mdash; гармонійне поєднання особистого,
             професійного життя та хоббі, яке присносить задоволення та дарує
@@ -298,15 +304,11 @@ const App = () => {
           // },
         }}
       >
-        <Col
+        <StyledCol
           xs={24}
-          xl={12}
+          md={12}
           style={{
-            // backgroundColor: "red",
             padding: "2em",
-            "@media (max-width: 600px)": {
-              order: 2,
-            },
           }}
         >
           <Typography.Text style={{ fontSize: "1.75em" }}>
@@ -314,9 +316,9 @@ const App = () => {
             розвиток створюють фундаментальну базу для довготривалих відносин зі
             спортом
           </Typography.Text>
-        </Col>
+        </StyledCol>
 
-        <Col xs={24} xl={12}>
+        <Col xs={24} md={12}>
           <TransparentBoxText
             text="Послідовність"
             $fontSize="6vw"
@@ -326,14 +328,14 @@ const App = () => {
       </Row>
 
       <Row justify="center" align="middle" style={{ margin: "5em 0" }}>
-        <Col xs={24} xl={12}>
+        <Col xs={24} md={12}>
           <TransparentBoxText
             text="Практичність"
             $fontSize="6vw"
             $imageUrl="./ski.jpg"
           />
         </Col>
-        <Col xs={24} xl={12} style={{ padding: "2em" }}>
+        <Col xs={24} md={12} style={{ padding: "2em" }}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             індивідуальність та практичність &mdash; врахування рівня фізичної
             підготовки та реальної доступності ресурсів
@@ -342,7 +344,7 @@ const App = () => {
       </Row>
 
       <Row justify="space-around">
-        <Col xs={24} xl={10} style={{ padding: "2em" }} order={2}>
+        <Col xs={24} md={10} style={{ padding: "2em" }} order={2}>
           <Typography.Text>
             Мої учні, як початківці, аматори, так й про-аматори обирають різні
             формати співпраці:
@@ -364,34 +366,34 @@ const App = () => {
           </Typography.Paragraph>
         </Col>
 
-        <Col xs={24} xl={10}>
+        <Col xs={24} md={10}>
           <Image src="./vin02.jpg" preview={false} />
         </Col>
       </Row>
       <Divider />
       <Row justify="space-around" style={{ margin: "1em" }}>
-        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
+        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
           <Statistic
             title="Кілометрів подолали мої учні"
             value={getKmAmount()}
             formatter={formatter}
           />
         </Col>
-        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
+        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
           <Statistic
             title="Персональних рекордів"
             value="100"
             formatter={formatter}
           />
         </Col>
-        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
+        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
           <Statistic
             title="Фінішерів на забігах 160+км"
             value="10"
             formatter={formatter}
           />
         </Col>
-        <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
+        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
           <Avatar.Group>
             <Avatar src="./zhenya.jpg" />
             <Avatar src="./tamara.jpg" />
@@ -424,7 +426,7 @@ const App = () => {
             Умови твого тренувального плану
           </Typography.Title>
         </Col>
-        <Col xs={24} xl={8}>
+        <Col xs={24} lg={8}>
           <CustomCard
             name="BASIC"
             price="25"
@@ -438,7 +440,7 @@ const App = () => {
             }
           />
         </Col>
-        <Col xs={24} xl={8}>
+        <Col xs={24} lg={8}>
           <CustomCard
             name="EXPERIENCED"
             price="40"
@@ -457,7 +459,7 @@ const App = () => {
             }
           />
         </Col>
-        <Col xs={24} xl={8}>
+        <Col xs={24} lg={8}>
           <CustomCard
             name="PRO"
             price="60"
@@ -489,7 +491,7 @@ const App = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={24} xl={6}>
+        <Col xs={24} md={6}>
           <Card
             title="Розбір та розкладка гонки"
             size="small"
@@ -508,7 +510,7 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
-        <Col xs={24} xl={6}>
+        <Col xs={24} md={6}>
           <Card
             title="Аналіз та планування сезону"
             size="small"
@@ -526,7 +528,7 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
-        <Col xs={24} xl={6}>
+        <Col xs={24} md={6}>
           <Card
             title="Персональне тренування"
             size="small"
@@ -541,7 +543,7 @@ const App = () => {
             </Divider>
           </Card>
         </Col>
-        <Col xs={24} xl={6}>
+        <Col xs={24} md={6}>
           <Card
             title="Групове тренування"
             size="small"
@@ -567,7 +569,7 @@ const App = () => {
       </div>
 
       <Row justify="space-around">
-        <Col xs={24} xl={10}>
+        <Col xs={24} md={10}>
           <div style={{ margin: "0 2em", textAlign: "center" }}>
             <Typography.Title level={3} style={{ margin: 0 }}>
               Залишились питання?

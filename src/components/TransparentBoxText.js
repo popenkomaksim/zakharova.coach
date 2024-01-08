@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
 const StyledSpan = styled.span`
   background: url(${(props) => props.$imageUrl}) repeat;
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
   display: block;
 `;
 
