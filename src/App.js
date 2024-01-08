@@ -290,7 +290,7 @@ const App = () => {
       <Row
         style={{
           background:
-            "url(./Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg) repeat",
+            "url(./blue_mountains.jpg) repeat",
           paddingBottom: "4em",
         }}
       >
