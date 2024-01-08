@@ -2,6 +2,7 @@ import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
+import PropTypes from "prop-types";
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
 import {
   Col,
@@ -18,6 +19,10 @@ import {
 import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 
+const rateEURtoUAH = 41.95;
+
+const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
+
 function daysOfTraining() {
   const now = new Date();
   const start = new Date(2019, 0, 0);
@@ -31,6 +36,70 @@ const formatter = (value) => <CountUp end={value} separator="," />;
 function getKmAmount() {
   return Math.ceil(daysOfTraining() * (20 * 8.5));
 }
+
+const CustomCard = ({ name, price, ListOfThingth }) => (
+  <Card
+    title={
+      <div
+        style={{
+          textAlign: "center",
+          fontSize: "3em",
+          fontWeight: "bold",
+          color: "rgb(59 59 59 / 88%)",
+        }}
+      >
+        {name}
+      </div>
+    }
+    size="small"
+    style={{ margin: "2em" }}
+  >
+    <Typography.Title
+      style={{
+        fontSize: "1.175em",
+      }}
+    >
+      У цьому пакеті ви отримаєте:
+    </Typography.Title>
+    <Typography.Text>{ListOfThingth}</Typography.Text>
+    <Typography.Text
+      style={{
+        justifyContent: "center",
+        fontSize: "1.25em",
+        display: "flex",
+      }}
+    >
+      ₴{convert(price)}
+      <span style={{ color: "#878787" }}> / €60</span>&nbsp;на місяць
+    </Typography.Text>
+    <Divider orientation="center">
+      <a href="https://t.me/ZakharovaPolina">
+        <StyledTelegram size="2em" color="#229ED9" />
+      </a>
+    </Divider>
+  </Card>
+);
+
+CustomCard.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.number,
+  ListOfThingth: PropTypes.elementType,
+};
+
+// function useMediaQuery(query) {
+//   const [matches, setMatches] = React.useState(false);
+//   React.useEffect(() => {
+//     const matchQueryList = window.matchMedia(query);
+//     function handleChange(e) {
+//       setMatches(e.matches);
+//     }
+//     matchQueryList.addEventListener("change", handleChange);
+//     return () => {
+//       matchQueryList.removeEventListener("change", handleChange);
+//     };
+//   }, [query]);
+//   return matches;
+// }
 
 // const CALENDAR_ID =
 // "9c74162dbd0be8f75f345c77b9136b24f559d1be6fd2e2b3f38ec042560cce63@group.calendar.google.com";
@@ -51,10 +120,6 @@ function getKmAmount() {
 //   height: 100vh;
 //   object-fit: cover;
 // `;
-
-const rateEURtoUAH = 41.95;
-
-const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
 
 const StyledInstagram = styled(FaInstagram)`
   margin: 0 0.5em;
@@ -200,35 +265,84 @@ const App = () => {
             level={2}
             style={{ margin: 0, textAlign: "center", paddingBottom: "1em" }}
           >
-            Баланс. Послідовність. Практичність.
-          </Typography.Title>
-          <Typography.Text>
             Мій підхід до тренувального процесу базується на 3 приниципах:
-            <ul>
-              <li>
-                життєвий баланс - гармонійне поєднання особистого, професійного
-                життя та хоббі, яке присносить задоволення та дарує покращення
-                фізичного стану
-              </li>
-              <li>
-                дисципліна та послідовність - дотримання плану та еволюційний
-                розвиток створюють фундаментальну базу для довготривалих
-                відносин зі спортом
-              </li>
-              <li>
-                індивідуальність та практичність - врахування рівня фізичної
-                підготовки та реальної доступності ресурсів
-              </li>
-            </ul>
+          </Typography.Title>
+        </Col>
+      </Row>
+
+      <Row justify="center" align="middle" style={{ margin: "5em 0" }}>
+        <Col xs={24} xl={12} className="gutter-row">
+          <TransparentBoxText
+            text="Баланс"
+            $fontSize="6vw"
+            $imageUrl="./ski.jpg"
+          />
+        </Col>
+        <Col xs={24} xl={12} className="gutter-row" style={{ padding: "2em" }}>
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            життєвий баланс &mdash; гармонійне поєднання особистого,
+            професійного життя та хоббі, яке присносить задоволення та дарує
+            покращення фізичного стану
+          </Typography.Text>
+        </Col>
+      </Row>
+
+      <Row
+        justify="center"
+        align="middle"
+        style={{
+          margin: "5em 0",
+          display: "flex",
+          // "@media only screen and (max-width: 900px)": {
+          //   order: "revert",
+          // },
+        }}
+      >
+        <Col
+          xs={24}
+          xl={12}
+          style={{
+            // backgroundColor: "red",
+            padding: "2em",
+            "@media (max-width: 600px)": {
+              order: 2,
+            },
+          }}
+        >
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            дисципліна та послідовність &mdash; дотримання плану та еволюційний
+            розвиток створюють фундаментальну базу для довготривалих відносин зі
+            спортом
+          </Typography.Text>
+        </Col>
+
+        <Col xs={24} xl={12}>
+          <TransparentBoxText
+            text="Послідовність"
+            $fontSize="6vw"
+            $imageUrl="./ski.jpg"
+          />
+        </Col>
+      </Row>
+
+      <Row justify="center" align="middle" style={{ margin: "5em 0" }}>
+        <Col xs={24} xl={12}>
+          <TransparentBoxText
+            text="Практичність"
+            $fontSize="6vw"
+            $imageUrl="./ski.jpg"
+          />
+        </Col>
+        <Col xs={24} xl={12} style={{ padding: "2em" }}>
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            індивідуальність та практичність &mdash; врахування рівня фізичної
+            підготовки та реальної доступності ресурсів
           </Typography.Text>
         </Col>
       </Row>
 
       <Row justify="space-around">
-        <Col xs={24} xl={10}>
-          <Image src="./vin02.jpg" preview={false} />
-        </Col>
-        <Col xs={24} xl={10} style={{ padding: "2em" }}>
+        <Col xs={24} xl={10} style={{ padding: "2em" }} order={2}>
           <Typography.Text>
             Мої учні, як початківці, аматори, так й про-аматори обирають різні
             формати співпраці:
@@ -248,6 +362,10 @@ const App = () => {
             <br />
             Зі мною можна домовитись.
           </Typography.Paragraph>
+        </Col>
+
+        <Col xs={24} xl={10}>
+          <Image src="./vin02.jpg" preview={false} />
         </Col>
       </Row>
       <Divider />
@@ -289,8 +407,7 @@ const App = () => {
       <TransparentBoxText text="Трейл — це завжди правда" $padding="1em 0" />
       <Row
         style={{
-          background:
-            "url(./blue_mountains.jpg) repeat",
+          background: "url(./blue_mountains.jpg) repeat",
           paddingBottom: "4em",
         }}
       >
@@ -308,79 +425,24 @@ const App = () => {
           </Typography.Title>
         </Col>
         <Col xs={24} xl={8}>
-          <Card
-            title={
-              <div
-                style={{
-                  textAlign: "center",
-                  fontSize: "3em",
-                  fontWeight: "bold",
-                  color: "rgb(59 59 59 / 88%)",
-                }}
-              >
-                BASIC
-              </div>
-            }
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Title
-              style={{
-                fontSize: "1.175em",
-              }}
-            >
-              У цьому пакеті ви отримаєте:
-            </Typography.Title>
-            <Typography.Text>
+          <CustomCard
+            name="BASIC"
+            price="25"
+            ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
                 <li>персоналізований план на місяць</li>
                 <li>консультація з вибором цільових стартів</li>
                 <li>зворотній зв&apos;язок через TRAININGPEAKS</li>
               </ul>
-            </Typography.Text>
-            <Typography.Text
-              style={{
-                justifyContent: "center",
-                fontSize: "1.25em",
-                display: "flex",
-              }}
-            >
-              &nbsp;₴{convert(25)}
-              <span style={{ color: "#878787" }}> / €25</span>&nbsp;на місяць
-            </Typography.Text>
-            <Divider orientation="center">
-              <a href="https://t.me/ZakharovaPolina">
-                <StyledTelegram size="2em" color="#229ED9" />
-              </a>
-            </Divider>
-          </Card>
+            }
+          />
         </Col>
         <Col xs={24} xl={8}>
-          <Card
-            title={
-              <div
-                style={{
-                  textAlign: "center",
-                  fontSize: "3em",
-                  fontWeight: "bold",
-                  color: "rgb(59 59 59 / 88%)",
-                }}
-              >
-                EXPERIENCED
-              </div>
-            }
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Title
-              style={{
-                fontSize: "1.175em",
-              }}
-            >
-              У цьому пакеті ви отримаєте:
-            </Typography.Title>
-            <Typography.Text>
+          <CustomCard
+            name="EXPERIENCED"
+            price="40"
+            ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
                 <li>щотижневий персоналізований план</li>
@@ -392,49 +454,14 @@ const App = () => {
                 <li>зворотній зв&apos;язок через додаток TRAININGPEAKS</li>
                 <li>відеозустріч із тренером раз на місяць.</li>
               </ul>
-            </Typography.Text>
-            <Typography.Text
-              style={{
-                justifyContent: "center",
-                fontSize: "1.25em",
-                display: "flex",
-              }}
-            >
-              &nbsp;₴{convert(40)}
-              <span style={{ color: "#878787" }}> / €40</span>&nbsp;на місяць
-            </Typography.Text>
-            <Divider orientation="center">
-              <a href="https://t.me/ZakharovaPolina">
-                <StyledTelegram size="2em" color="#229ED9" />
-              </a>
-            </Divider>
-          </Card>
+            }
+          />
         </Col>
         <Col xs={24} xl={8}>
-          <Card
-            title={
-              <div
-                style={{
-                  textAlign: "center",
-                  fontSize: "3em",
-                  fontWeight: "bold",
-                  color: "rgb(59 59 59 / 88%)",
-                }}
-              >
-                PRO
-              </div>
-            }
-            size="small"
-            style={{ margin: "2em" }}
-          >
-            <Typography.Title
-              style={{
-                fontSize: "1.175em",
-              }}
-            >
-              У цьому пакеті ви отримаєте:
-            </Typography.Title>
-            <Typography.Text>
+          <CustomCard
+            name="PRO"
+            price="60"
+            ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>pro-акаунт в TRAININGPEAKS з доступом до аналітики</li>
                 <li>щотижневий персоналізований план</li>
@@ -446,23 +473,8 @@ const App = () => {
                 <li>зворотній зв&apos;язок через додаток TRAININGPEAKS</li>
                 <li>відеозустріч 1 раз на тиждень</li>
               </ul>
-            </Typography.Text>
-            <Typography.Text
-              style={{
-                justifyContent: "center",
-                fontSize: "1.25em",
-                display: "flex",
-              }}
-            >
-              ₴{convert(60)}
-              <span style={{ color: "#878787" }}> / €60</span>&nbsp;на місяць
-            </Typography.Text>
-            <Divider orientation="center">
-              <a href="https://t.me/ZakharovaPolina">
-                <StyledTelegram size="2em" color="#229ED9" />
-              </a>
-            </Divider>
-          </Card>
+            }
+          />
         </Col>
       </Row>
 
