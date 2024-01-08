@@ -535,7 +535,7 @@ const App = () => {
       </Row>
 
       <Row style={{ margin: "2em 0" }}>
-        <Col span={22}>
+        <Col span={24}>
           <Typography.Title
             level={2}
             style={{ margin: 0, textAlign: "center" }}
