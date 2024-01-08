@@ -1,6 +1,7 @@
 import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
+import CountUp from "react-countup";
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
 import {
   Col,
@@ -24,6 +25,8 @@ function daysOfTraining() {
   const oneDay = 1000 * 60 * 60 * 24;
   return Math.floor(diff / oneDay);
 }
+
+const formatter = (value) => <CountUp end={value} separator="," />;
 
 function getKmAmount() {
   return Math.ceil(daysOfTraining() * (20 * 8.5));
@@ -136,8 +139,8 @@ const App = () => {
           <Divider orientation="left">Спортивні досягнення:</Divider>
           <List size="small">
             <List.Item>
-              <Tag>Finland 2019</Tag>
-              <Tag>USA 023</Tag>чемпіонка Чемпіонатів Світу з рогейну
+              <Tag>Фінляндія 2019</Tag>
+              <Tag>США 023</Tag>чемпіонка Чемпіонатів Світу з рогейну
             </List.Item>
             <List.Item>
               <Tag>2017</Tag>чемпіонка Чемпіонату Європи з рогейну
@@ -149,7 +152,8 @@ const App = () => {
               <Tag>Франція 2022</Tag>призерка Mountains Hard Ultra Trail 35 км
             </List.Item>
             <List.Item>
-              <Tag>Португалія 2019</Tag>Madeira Island Ultra Trail 85 км
+              <Tag>Португалія 2019</Tag>призерка Madeira Island Ultra Trail 85
+              км
             </List.Item>
             <List.Item>
               <Tag>Україна 2018, 2019, 2020</Tag>переможниця Chornohora Sky
@@ -240,7 +244,9 @@ const App = () => {
             Я щиро рада працювати з усіма, хто хоче стати кращою версією
             себе.&nbsp;
             <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже сьогодні,
-            і, можливо, нам з тобою по дорозі. Зі мною можна домовитись.
+            і, можливо, нам з тобою по дорозі.
+            <br />
+            Зі мною можна домовитись.
           </Typography.Paragraph>
         </Col>
       </Row>
@@ -250,13 +256,22 @@ const App = () => {
           <Statistic
             title="Кілометрів подолали мої учні"
             value={getKmAmount()}
+            formatter={formatter}
           />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
-          <Statistic title="Персональних рекордів" value="100+" />
+          <Statistic
+            title="Персональних рекордів"
+            value="100"
+            formatter={formatter}
+          />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
-          <Statistic title="Фінішерів на забігах 160+км" value="10+" />
+          <Statistic
+            title="Фінішерів на забігах 160+км"
+            value="10"
+            formatter={formatter}
+          />
         </Col>
         <Col xs={24} xl={3} style={{ marginTop: "2em" }}>
           <Avatar.Group>
@@ -276,20 +291,41 @@ const App = () => {
         style={{
           background:
             "url(./Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg) repeat",
+          paddingBottom: "4em",
         }}
       >
         <Col span={24}>
           <Typography.Title
             level={2}
-            style={{ margin: "  ", textAlign: "center", color: "white" }}
+            style={{
+              margin: "  ",
+              textAlign: "center",
+              color: "white",
+              fontSize: "4em",
+            }}
           >
-            Умови твого тренувального плана
+            Умови твого тренувального плану
           </Typography.Title>
         </Col>
         <Col xs={24} xl={8}>
-          <Card title="BASIC" size="small" style={{ margin: "2em" }}>
+          <Card
+            title={
+              <div
+                style={{
+                  textAlign: "center",
+                  fontSize: "3em",
+                  fontWeight: "bold",
+                  color: "rgb(59 59 59 / 88%)",
+                }}
+              >
+                BASIC
+              </div>
+            }
+            size="small"
+            style={{ margin: "2em" }}
+          >
             <Typography.Text>
-              <Divider>У цьому пакеті ви отримаєте:</Divider>
+              <Divider orientation="left">У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
                 <li>персоналізований план на місяць</li>
@@ -309,9 +345,24 @@ const App = () => {
           </Card>
         </Col>
         <Col xs={24} xl={8}>
-          <Card title="EXPERIENCED" size="small" style={{ margin: "2em" }}>
+          <Card
+            title={
+              <div
+                style={{
+                  textAlign: "center",
+                  fontSize: "3em",
+                  fontWeight: "bold",
+                  color: "rgb(59 59 59 / 88%)",
+                }}
+              >
+                EXPERIENCED
+              </div>
+            }
+            size="small"
+            style={{ margin: "2em" }}
+          >
             <Typography.Text>
-              <Divider>У цьому пакеті ви отримаєте:</Divider>
+              <Divider orientation="left">У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
                 <li>щотижневий персоналізований план</li>
@@ -336,9 +387,24 @@ const App = () => {
           </Card>
         </Col>
         <Col xs={24} xl={8}>
-          <Card title="PRO" size="small" style={{ margin: "2em" }}>
+          <Card
+            title={
+              <div
+                style={{
+                  textAlign: "center",
+                  fontSize: "3em",
+                  fontWeight: "bold",
+                  color: "rgb(59 59 59 / 88%)",
+                }}
+              >
+                PRO
+              </div>
+            }
+            size="small"
+            style={{ margin: "2em" }}
+          >
             <Typography.Text>
-              <Divider>У цьому пакеті ви отримаєте:</Divider>
+              <Divider orientation="left">У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
                 <li>pro-акаунт в TRAININGPEAKS з доступом до аналітики</li>
                 <li>щотижневий персоналізований план</li>
