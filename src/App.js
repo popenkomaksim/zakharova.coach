@@ -324,8 +324,14 @@ const App = () => {
             size="small"
             style={{ margin: "2em" }}
           >
+            <Typography.Title
+              style={{
+                fontSize: "1.175em",
+              }}
+            >
+              У цьому пакеті ви отримаєте:
+            </Typography.Title>
             <Typography.Text>
-              <Divider orientation="left">У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
                 <li>персоналізований план на місяць</li>
@@ -333,10 +339,16 @@ const App = () => {
                 <li>зворотній зв&apos;язок через TRAININGPEAKS</li>
               </ul>
             </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(25)}
+            <Typography.Text
+              style={{
+                justifyContent: "center",
+                fontSize: "1.25em",
+                display: "flex",
+              }}
+            >
+              &nbsp;₴{convert(25)}
               <span style={{ color: "#878787" }}> / €25</span> на місяць
-            </Divider>
+            </Typography.Text>
             <Divider orientation="center">
               <a href="https://t.me/ZakharovaPolina">
                 <StyledTelegram size="2em" color="#229ED9" />
@@ -361,8 +373,14 @@ const App = () => {
             size="small"
             style={{ margin: "2em" }}
           >
+            <Typography.Title
+              style={{
+                fontSize: "1.175em",
+              }}
+            >
+              У цьому пакеті ви отримаєте:
+            </Typography.Title>
             <Typography.Text>
-              <Divider orientation="left">У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
                 <li>щотижневий персоналізований план</li>
@@ -375,10 +393,16 @@ const App = () => {
                 <li>відеозустріч із тренером раз на місяць.</li>
               </ul>
             </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(40)}
+            <Typography.Text
+              style={{
+                justifyContent: "center",
+                fontSize: "1.25em",
+                display: "flex",
+              }}
+            >
+              &nbsp;₴{convert(40)}
               <span style={{ color: "#878787" }}> / €40</span> на місяць
-            </Divider>
+            </Typography.Text>
             <Divider orientation="center">
               <a href="https://t.me/ZakharovaPolina">
                 <StyledTelegram size="2em" color="#229ED9" />
@@ -403,8 +427,14 @@ const App = () => {
             size="small"
             style={{ margin: "2em" }}
           >
+            <Typography.Title
+              style={{
+                fontSize: "1.175em",
+              }}
+            >
+              У цьому пакеті ви отримаєте:
+            </Typography.Title>
             <Typography.Text>
-              <Divider orientation="left">У цьому пакеті ви отримаєте:</Divider>
               <ul style={{ listStyle: "" }}>
                 <li>pro-акаунт в TRAININGPEAKS з доступом до аналітики</li>
                 <li>щотижневий персоналізований план</li>
@@ -417,10 +447,16 @@ const App = () => {
                 <li>відеозустріч 1 раз на тиждень</li>
               </ul>
             </Typography.Text>
-            <Divider orientation="center">
-              ₴{convert(60)}
+            <Typography.Text
+              style={{
+                justifyContent: "center",
+                fontSize: "1.25em",
+                display: "flex",
+              }}
+            >
+              &nbsp;₴{convert(60)}
               <span style={{ color: "#878787" }}> / €60</span> на місяць
-            </Divider>
+            </Typography.Text>
             <Divider orientation="center">
               <a href="https://t.me/ZakharovaPolina">
                 <StyledTelegram size="2em" color="#229ED9" />
