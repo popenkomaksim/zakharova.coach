@@ -361,18 +361,29 @@ const App = () => {
       </Row>
 
       <Row justify="space-around">
-        <Col xs={24} md={12} style={{ padding: "2em" }}>
-          <Typography.Text>
-            Мої учні, як початківці, аматори, так й про-аматори обирають різні
-            формати співпраці:
-            <ul>
-              <li>моделювання профілю атлета</li>
-              <li>довготривале стратегічне планування</li>
-              <li>персональні тренування</li>
-              <li>супровід на гонці</li>
-              <li>навчально-тренувальні/спеціально-підготовчі збори</li>
-            </ul>
-          </Typography.Text>
+        <Col
+          xs={24}
+          md={12}
+          style={{
+            padding: "2em",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ maxWidth: "400px" }}>
+            <Typography.Text>
+              Мої учні, як початківці, аматори, так й про-аматори обирають різні
+              формати співпраці:
+              <ul>
+                <li>моделювання профілю атлета</li>
+                <li>довготривале стратегічне планування</li>
+                <li>персональні тренування</li>
+                <li>супровід на гонці</li>
+                <li>навчально-тренувальні/спеціально-підготовчі збори</li>
+              </ul>
+            </Typography.Text>
+          </div>
         </Col>
 
         <Col xs={24} md={12}>
@@ -394,16 +405,23 @@ const App = () => {
         <Col
           xs={24}
           md={12}
-          style={{ padding: "2em", justifyContent: "center", display: "flex" }}
+          style={{
+            padding: "2em",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <Typography.Paragraph>
-            Я щиро рада працювати з усіма, хто хоче стати кращою версією
-            себе.&nbsp;
-            <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже сьогодні,
-            і, можливо, нам з тобою по дорозі.
-            <br />
-            Зі мною можна домовитись.
-          </Typography.Paragraph>
+          <div style={{ maxWidth: "400px" }}>
+            <Typography.Paragraph>
+              Я щиро рада працювати з усіма, хто хоче стати кращою версією
+              себе.&nbsp;
+              <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже
+              сьогодні, і, можливо, нам з тобою по дорозі.
+              <br />
+              Зі мною можна домовитись.
+            </Typography.Paragraph>
+          </div>
         </Col>
       </Row>
       <Divider />
