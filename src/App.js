@@ -347,7 +347,7 @@ const App = () => {
               }}
             >
               &nbsp;₴{convert(25)}
-              <span style={{ color: "#878787" }}> / €25</span> на місяць
+              <span style={{ color: "#878787" }}> / €25</span>&nbsp;на місяць
             </Typography.Text>
             <Divider orientation="center">
               <a href="https://t.me/ZakharovaPolina">
@@ -401,7 +401,7 @@ const App = () => {
               }}
             >
               &nbsp;₴{convert(40)}
-              <span style={{ color: "#878787" }}> / €40</span> на місяць
+              <span style={{ color: "#878787" }}> / €40</span>&nbsp;на місяць
             </Typography.Text>
             <Divider orientation="center">
               <a href="https://t.me/ZakharovaPolina">
@@ -454,8 +454,8 @@ const App = () => {
                 display: "flex",
               }}
             >
-              &nbsp;₴{convert(60)}
-              <span style={{ color: "#878787" }}> / €60</span> на місяць
+              ₴{convert(60)}
+              <span style={{ color: "#878787" }}> / €60</span>&nbsp;на місяць
             </Typography.Text>
             <Divider orientation="center">
               <a href="https://t.me/ZakharovaPolina">
