@@ -228,6 +228,7 @@ const App = () => {
         <video
           alt="Polina do smile"
           autoPlay
+          playsInline
           loop
           muted
           style={{ width: "100%", display: "block", margin: "3em 0" }}
@@ -606,6 +607,7 @@ const App = () => {
           alt="Polina do running"
           autoPlay
           loop
+          playsInline
           muted
           style={{ width: "100%", display: "block", margin: "3em 0" }}
         >
