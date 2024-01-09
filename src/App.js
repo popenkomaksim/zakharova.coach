@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
+import axios from "axios";
 
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
 import {
@@ -85,10 +87,51 @@ const StyledCol = styled(Col)`
   }
 `;
 
+function parseTSV(csvText) {
+  const rows = csvText.split(/\r?\n/); // Split CSV text into rows, handling '\r' characters
+  const headers = rows[0].split("\t"); // Extract headers (assumes the first row is the header row)
+  const data = []; // Initialize an array to store parsed data
+
+  // eslint-disable-next-line  no-plusplus
+  for (let i = 1; i < rows.length; i++) {
+    const rowData = rows[i].split("\t"); // Split the row, handling '\r' characters
+    const rowObject = {};
+
+    // eslint-disable-next-line  no-plusplus
+    for (let j = 0; j < headers.length; j++) {
+      rowObject[headers[j]] = rowData[j];
+    }
+    data.push(rowObject);
+  }
+  return data;
+}
+
 const App = () => {
+  const [csvData, setCsvData] = useState([]);
+
+  const fetchCSVData = () => {
+    const googleSpreadSheetExportLink =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8UB0YKh5h4McE-tfSypnOYEbwtnW3dwat-OwQlPtPgZsXVDIFw_OZ2bEwvujf9XfRfQcsAeA2e5RC/pub?gid=956084020&single=true&output=tsv";
+    axios
+      .get(googleSpreadSheetExportLink)
+      .then((response) => {
+        const parsedCsvData = parseTSV(response.data);
+        setCsvData(parsedCsvData);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error("Error fetching CSV data:", error);
+      });
+  };
+
+  useEffect(() => {
+    fetchCSVData();
+  }, []);
+
   return (
     <>
       <Header />
+      <pre>{JSON.stringify(csvData, null, 2)}</pre>
       <TransparentBoxText text="Твій тренувальний план" />
       <Divider />
       <Row justify="center">
@@ -198,17 +241,26 @@ const App = () => {
       </div>
 
       <Row justify="center">
-        <Divider orientation="left">Майбутні кемпи:</Divider>
-        {/* <Calendar /> */}
-        <iframe
-          title="Calendar"
-          src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
-          style={{ border: 0 }}
-          width="800"
-          height="600"
-          frameBorder="0"
-          scrolling="no"
-        />
+        <Col span={8} type="flex" align="left" style={{ padding: "0 4em" }}>
+          <Divider orientation="left">Майбутні події:</Divider>
+          {csvData.map((csvDataItem) => (
+            <Typography.Paragraph key={csvDataItem.name}>
+              <Tag>{csvDataItem.tag}</Tag> {csvDataItem.name} <br />
+              {csvDataItem.dateStart} {csvDataItem.dateEnd}
+            </Typography.Paragraph>
+          ))}
+        </Col>
+        <Col span={16} type="flex" align="middle">
+          <iframe
+            title="Calendar"
+            src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
+            style={{ border: 0 }}
+            width="800"
+            height="600"
+            frameBorder="0"
+            scrolling="no"
+          />
+        </Col>
       </Row>
 
       <Image src="./vin01.jpg" preview={false} style={{ margin: "3vh 0" }} />
