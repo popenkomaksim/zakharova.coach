@@ -3,7 +3,6 @@ import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
 import axios from "axios";
 
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
@@ -442,12 +441,11 @@ const App = () => {
           {/* <div style={{ maxWidth: "4000px",  }}> */}
 
           <Statistic
-              title="Кілометрів подолали мої учні"
-              value={getKmAmount()}
-              formatter={formatter}
-            />
+            title="Кілометрів подолали мої учні"
+            value={getKmAmount()}
+            formatter={formatter}
+          />
 
-          
           <Statistic title="Персональних рекордів" value="100" />
           <Statistic title="Фінішерів на забігах 160+км" value="10" />
           <div>
