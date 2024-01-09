@@ -3,6 +3,7 @@ import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 import axios from "axios";
 
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
@@ -166,7 +167,7 @@ const App = () => {
         </Col>
       </Row>
       <Row justify="space-around">
-        <Col xs={24} md={8} style={{ margin: "2em 0 0 4em" }}>
+        <Col xs={24} md={8} style={{ padding: "2em 2em 0 2em" }}>
           <Typography.Paragraph>
             Я професійний атлет і тренер. І я не уявляю життя без лісу та гір.
             Значну частину своєї спортивної кар&apos;єри я присвятила
@@ -349,16 +350,10 @@ const App = () => {
         style={{ margin: "3vh 0 0 0", filter: "grayscale(1)" }}
       />
 
-      <Row style={{ margin: "2em 0" }} justify="space-around">
-        <Col span={18}>
-          <Typography.Title
-            level={2}
-            style={{ margin: 0, textAlign: "center" }}
-          >
-            Формати співпраці
-          </Typography.Title>
-        </Col>
-      </Row>
+      <TransparentBoxText
+        text="Трейл — це завжди правда"
+        $padding="1em 0 1.5em 0"
+      />
 
       <Row justify="space-around">
         <Col
@@ -372,6 +367,9 @@ const App = () => {
           }}
         >
           <div style={{ maxWidth: "400px" }}>
+            <Typography.Title level={2} style={{ textAlign: "center" }}>
+              Формати співпраці
+            </Typography.Title>
             <Typography.Text style={{ fontSize: "1.5em" }}>
               Мої учні, як початківці, аматори, так й про-аматори обирають різні
               формати співпраці:
@@ -394,6 +392,7 @@ const App = () => {
           />
         </Col>
       </Row>
+
       <Row justify="space-around">
         <StyledCol xs={24} md={12}>
           <Image
@@ -424,43 +423,58 @@ const App = () => {
           </div>
         </Col>
       </Row>
-      <Divider />
-      <Row justify="space-around" style={{ margin: "1em" }}>
-        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
+
+      <Row justify="space-around">
+        <Col
+          xs={24}
+          md={12}
+          style={{
+            padding: "2em",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "10px",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gridAutoRows: "1fr",
+          }}
+        >
+          {/* <div style={{ maxWidth: "4000px",  }}> */}
+
           <Statistic
-            title="Кілометрів подолали мої учні"
-            value={getKmAmount()}
-            formatter={formatter}
+              title="Кілометрів подолали мої учні"
+              value={getKmAmount()}
+              formatter={formatter}
+            />
+
+          
+          <Statistic title="Персональних рекордів" value="100" />
+          <Statistic title="Фінішерів на забігах 160+км" value="10" />
+          <div>
+            <Avatar.Group>
+              <Avatar src="./zhenya.jpg" />
+              <Avatar src="./tamara.jpg" />
+              <Avatar src="./babii.jpg" />
+              <a href="https://t.me/ZakharovaPolina">
+                <Avatar>+</Avatar>
+              </a>
+            </Avatar.Group>
+            <br />
+            Десятки учнів займаються зараз
+          </div>
+          {/* </div> */}
+        </Col>
+        <StyledCol xs={24} md={12}>
+          <Image
+            src="./kazbek.jpg"
+            preview={false}
+            style={{ filter: "grayscale(1)" }}
           />
-        </Col>
-        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
-          <Statistic
-            title="Персональних рекордів"
-            value="100"
-            formatter={formatter}
-          />
-        </Col>
-        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
-          <Statistic
-            title="Фінішерів на забігах 160+км"
-            value="10"
-            formatter={formatter}
-          />
-        </Col>
-        <Col xs={24} md={3} style={{ marginTop: "2em" }}>
-          <Avatar.Group>
-            <Avatar src="./zhenya.jpg" />
-            <Avatar src="./tamara.jpg" />
-            <Avatar src="./babii.jpg" />
-            <a href="https://t.me/ZakharovaPolina">
-              <Avatar>+</Avatar>
-            </a>
-          </Avatar.Group>
-          <br />
-          Десятки учнів займаються зараз
-        </Col>
+        </StyledCol>
       </Row>
-      <TransparentBoxText text="Трейл — це завжди правда" $padding="1em 0" />
+
+      <TransparentBoxText text="Хай та русня здохне" $padding="1em 0 1.5em 0" />
+
       <Row
         style={{
           background: "url(./blue_mountains.jpg) repeat",
@@ -474,7 +488,7 @@ const App = () => {
               margin: "  ",
               textAlign: "center",
               color: "white",
-              fontSize: "4em",
+              fontSize: "3.6em",
             }}
           >
             Умови твого тренувального плану

@@ -31,7 +31,7 @@ const TransparentBoxText = ({
   text,
   $padding = "0",
   $fontSize = "12vw",
-  $imageUrl = "https://images.pexels.com/photos/2593143/pexels-photo-2593143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  $imageUrl = "./tibet.jpeg",
 }) => (
   <StyledDiv $fontSize={$fontSize} $padding={$padding}>
     <StyledSpan $imageUrl={$imageUrl}>{text}</StyledSpan>

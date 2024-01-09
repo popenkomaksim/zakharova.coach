@@ -4,7 +4,21 @@ import { Divider, Typography, Card } from "antd";
 import convert from "../convert";
 
 const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
-  <Card title={name} size="small" style={{ margin: "2em" }}>
+  <Card
+    title={
+      <div
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          color: "rgb(59 59 59 / 88%)",
+        }}
+      >
+        {name}
+      </div>
+    }
+    size="small"
+    style={{ margin: "2em" }}
+  >
     <Typography.Text>{ListOfThingth}</Typography.Text>
     <Divider orientation="center">
       ₴{convert(price)}
