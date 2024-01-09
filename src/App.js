@@ -4,6 +4,7 @@ import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
 import axios from "axios";
+
 // import Calendar from "@ericz1803/react-google-calendar";
 
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
@@ -22,6 +23,9 @@ import TransparentBoxText from "./components/TransparentBoxText";
 import Header from "./components/Header";
 import PlanCard from "./components/PlanCard";
 import ExtraServiceCard from "./components/ExtraServiceCard";
+
+import PolinaRun from "./polina_run.mp4";
+import PolinaAltra from "./Polina_Altra.mp4";
 
 function daysOfTraining() {
   const now = new Date();
@@ -221,11 +225,15 @@ const App = () => {
       </Row>
 
       <div style={{ width: "100%", margin: "3em 0" }}>
-        <img
+        <video
           alt="Polina do smile"
-          src="./Polina_Altra_optimized.gif"
+          autoPlay
+          loop
+          muted
           style={{ width: "100%", display: "block", margin: "3em 0" }}
-        />
+        >
+          <source src={PolinaAltra} type="video/mp4" />
+        </video>
       </div>
 
       <Row justify="center">
@@ -594,11 +602,15 @@ const App = () => {
       </Row>
 
       <div style={{ width: "100%", margin: "3em 0" }}>
-        <img
+        <video
           alt="Polina do running"
-          src="./polina_run.gif"
+          autoPlay
+          loop
+          muted
           style={{ width: "100%", display: "block", margin: "3em 0" }}
-        />
+        >
+          <source src={PolinaRun} type="video/mp4" />
+        </video>
       </div>
 
       <Row justify="space-around">
