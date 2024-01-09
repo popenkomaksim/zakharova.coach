@@ -43,7 +43,7 @@ const PlanCard = ({ name, price, ListOfThingth }) => (
       }}
     >
       ₴{convert(price)}
-      <span style={{ color: "#878787" }}> / €60</span>&nbsp;на місяць
+      <span style={{ color: "#878787" }}> / €{price}</span>&nbsp;на місяць
     </Typography.Text>
     <Divider orientation="center">
       <a href="https://t.me/ZakharovaPolina">
