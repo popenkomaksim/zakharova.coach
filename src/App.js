@@ -131,7 +131,6 @@ const App = () => {
   return (
     <>
       <Header />
-      <pre>{JSON.stringify(csvData, null, 2)}</pre>
       <TransparentBoxText text="Твій тренувальний план" />
       <Divider />
       <Row justify="center">
@@ -167,16 +166,19 @@ const App = () => {
         </Col>
       </Row>
       <Row justify="space-around">
-        <Col xs={22} md={10} style={{ marginTop: "2em" }}>
-          <Typography.Text>
+        <Col xs={24} md={8} style={{ margin: "2em 0 0 4em" }}>
+          <Typography.Paragraph>
             Я професійний атлет і тренер. І я не уявляю життя без лісу та гір.
             Значну частину своєї спортивної кар&apos;єри я присвятила
-            орієнтуванню та рогейну. Останні 6 років перелік моїх спортивних
-            вподобань значно розширився - я насолождуюсь скі-альпінізмом,
-            трейловим бігом та ділюсь цією пристрастю зі своіми учнями. 15 років
-            досвіду, десятки тисяч кілометрів, набіганих по всьому світу,
-            впевнили мене в тому, що трейл - це свобода.
-          </Typography.Text>
+            орієнтуванню та рогейну.
+          </Typography.Paragraph>
+          <Typography.Paragraph>
+            Останні 6 років перелік моїх спортивних вподобань значно розширився
+            - я насолождуюсь скі-альпінізмом, трейловим бігом та ділюсь цією
+            пристрастю зі своіми учнями. 15 років досвіду, десятки тисяч
+            кілометрів, набіганих по всьому світу, впевнили мене в тому, що
+            трейл - це свобода.
+          </Typography.Paragraph>
           <Divider orientation="left">Все одно знайдете:</Divider>
           <a href="https://t.me/ZakharovaPolina">
             <StyledTelegram size="4em" color="#229ED9" />
@@ -241,7 +243,8 @@ const App = () => {
       </div>
 
       <Row justify="center">
-        <Col span={8} type="flex" align="left" style={{ padding: "0 4em" }}>
+
+        <Col xs="24" s="24" lg="8" style={{ padding: "0 2em" }}>
           <Divider orientation="left">Майбутні події:</Divider>
           {csvData.map((csvDataItem) => (
             <Typography.Paragraph key={csvDataItem.name}>
@@ -250,12 +253,13 @@ const App = () => {
             </Typography.Paragraph>
           ))}
         </Col>
-        <Col span={16} type="flex" align="middle">
+
+        <Col flex="auto" style={{ padding: "0 2em" }}>
           <iframe
             title="Calendar"
             src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
             style={{ border: 0 }}
-            width="800"
+            width="100%"
             height="600"
             frameBorder="0"
             scrolling="no"
