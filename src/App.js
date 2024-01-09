@@ -243,7 +243,6 @@ const App = () => {
       </div>
 
       <Row justify="center">
-
         <Col xs="24" s="24" lg="8" style={{ padding: "0 2em" }}>
           <Divider orientation="left">Майбутні події:</Divider>
           {csvData.map((csvDataItem) => (
