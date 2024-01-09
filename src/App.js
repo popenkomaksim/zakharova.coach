@@ -4,6 +4,7 @@ import "./App.css";
 import styled from "styled-components";
 import CountUp from "react-countup";
 import axios from "axios";
+// import Calendar from "@ericz1803/react-google-calendar";
 
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
 import {
@@ -36,25 +37,10 @@ function getKmAmount() {
   return Math.ceil(daysOfTraining() * (20 * 8.5));
 }
 
-// function useMediaQuery(query) {
-//   const [matches, setMatches] = React.useState(false);
-//   React.useEffect(() => {
-//     const matchQueryList = window.matchMedia(query);
-//     function handleChange(e) {
-//       setMatches(e.matches);
-//     }
-//     matchQueryList.addEventListener("change", handleChange);
-//     return () => {
-//       matchQueryList.removeEventListener("change", handleChange);
-//     };
-//   }, [query]);
-//   return matches;
-// }
-
-// const CALENDAR_ID =
-// "9c74162dbd0be8f75f345c77b9136b24f559d1be6fd2e2b3f38ec042560cce63@group.calendar.google.com";
-// const API_KEY = "AIzaSyBQecHDQILFWxrq73s1ZNyMl-wkTiK-89c";
-// let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
+// const API_KEY = "AIzaSyA_QU2-VPXeyjsXSs393ETZkgqgMJ85Gmc";
+// const calendars = [
+//   { calendarId: "60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0@group.calendar.google.com" },
+// ];
 
 // import Odesa from "./odesa.mp4";
 // import DzembronyaTrailRunningCamp from "./DzembronyaTrailRunningCamp.mp4";
@@ -260,9 +246,10 @@ const App = () => {
             style={{ border: 0 }}
             width="100%"
             height="600"
-            frameBorder="0"
-            scrolling="no"
           />
+          {/* <div style={{ width: "100%" }}>
+            <Calendar apiKey={API_KEY} calendars={calendars} />
+          </div> */}
         </Col>
       </Row>
 
@@ -495,7 +482,7 @@ const App = () => {
         <Col xs={24} lg={8}>
           <PlanCard
             name="BASIC"
-            price="25"
+            price={25}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
@@ -509,7 +496,7 @@ const App = () => {
         <Col xs={24} lg={8}>
           <PlanCard
             name="EXPERIENCED"
-            price="40"
+            price={40}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>акаунт в TRAININGPEAKS</li>
@@ -528,7 +515,7 @@ const App = () => {
         <Col xs={24} lg={8}>
           <PlanCard
             name="PRO"
-            price="60"
+            price={60}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>pro-акаунт в TRAININGPEAKS з доступом до аналітики</li>
@@ -560,7 +547,7 @@ const App = () => {
         <Col xs={24} md={6}>
           <ExtraServiceCard
             name="Розбір та розкладка гонки"
-            price="40"
+            price={40}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>аналіз трьох пройдешніх гонок</li>
@@ -573,7 +560,7 @@ const App = () => {
         <Col xs={24} md={6}>
           <ExtraServiceCard
             name="Аналіз та планування сезону"
-            price="40"
+            price={40}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
                 <li>розбір цілей сезону</li>
@@ -585,7 +572,7 @@ const App = () => {
         <Col xs={24} md={6}>
           <ExtraServiceCard
             name="Персональне тренування"
-            price="20"
+            price={20}
             ListOfThingth={
               <Typography.Text>
                 Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
@@ -596,7 +583,7 @@ const App = () => {
         <Col xs={24} md={6}>
           <ExtraServiceCard
             name="Групове тренування"
-            price="12"
+            price={12}
             ListOfThingth={
               <Typography.Text>
                 Весело і корисно. Какао після не в подарунок.
