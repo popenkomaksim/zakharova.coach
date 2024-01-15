@@ -64,11 +64,13 @@ function getKmAmount() {
 const StyledInstagram = styled(FaInstagram)`
   margin: 0 0.5em;
   top: -0.4em;
+  vertical-align: middle;
 `;
 
 const StyledTelegram = styled(FaTelegram)`
   margin: 0 0.5em;
   top: -0.4em;
+  vertical-align: middle;
 `;
 
 const StyledCol = styled(Col)`
@@ -169,7 +171,7 @@ const App = () => {
             кілометрів, набіганих по всьому світу, впевнили мене в тому, що
             трейл - це свобода.
           </Typography.Paragraph>
-          <Divider orientation="left">Все одно знайдете:</Divider>
+          <Divider orientation="left">Соц мережі:</Divider>
           <a href="https://t.me/ZakharovaPolina">
             <StyledTelegram size="4em" color="#229ED9" />
           </a>

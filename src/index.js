@@ -1,14 +1,38 @@
 // eslint-disable-file prettier/prettier
 import React from "react";
 import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Route,
+  Link,
+} from "react-router-dom";
+
 import "./index.css";
 import App from "./App";
+import Project10 from "./Project10";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "project10",
+    element: <Project10 />,
+  },
+  {
+    path: "skitour-chechlist",
+    element: <div>About</div>,
+  },
+]);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
