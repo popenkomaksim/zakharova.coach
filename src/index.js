@@ -6,24 +6,28 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Project10 from "./Project10";
+import SkiTourList from "./SkiTourList";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "project10",
-    element: <Project10 />,
-  },
-  {
-    path: "skitour-chechlist",
-    element: <div>About</div>,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "project10",
+      element: <Project10 />,
+    },
+    {
+      path: "skitour-chechlist",
+      element: <SkiTourList />,
+    },
+  ],
+  { basename: "/" }
+);
 
 root.render(
   <React.StrictMode>

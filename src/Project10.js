@@ -70,7 +70,7 @@ const Project10 = () => {
             <br />
             <a
               href="https://send.monobank.ua/jar/6CjEbkcAVP"
-              style={{ fontSize: "10em" }}
+              style={{ fontSize: "9em" }}
             >
               Банка
             </a>
