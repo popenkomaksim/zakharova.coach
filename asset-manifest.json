@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c286111c.css",
-    "main.js": "/static/js/main.e69a2cc7.js",
+    "main.js": "/static/js/main.1a435dd3.js",
     "static/js/787.24852cc4.chunk.js": "/static/js/787.24852cc4.chunk.js",
     "static/media/polina_run.mp4": "/static/media/polina_run.f8568c061369fa90c162.mp4",
     "static/media/Polina_Altra.mp4": "/static/media/Polina_Altra.fb9614cc68fb9d593644.mp4",
@@ -13,11 +13,11 @@
     "static/media/montserrat-vietnamese-400-normal.woff2": "/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "index.html": "/index.html",
     "main.c286111c.css.map": "/static/css/main.c286111c.css.map",
-    "main.e69a2cc7.js.map": "/static/js/main.e69a2cc7.js.map",
+    "main.1a435dd3.js.map": "/static/js/main.1a435dd3.js.map",
     "787.24852cc4.chunk.js.map": "/static/js/787.24852cc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c286111c.css",
-    "static/js/main.e69a2cc7.js"
+    "static/js/main.1a435dd3.js"
   ]
 }
