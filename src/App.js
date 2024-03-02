@@ -98,6 +98,11 @@ function parseTSV(csvText) {
   return data;
 }
 
+function filterOldEvents(events) {
+  const today = new Date();
+  return events.filter((event) => new Date(event.dateEnd) > today);
+}
+
 const App = () => {
   const [csvData, setCsvData] = useState([]);
 
@@ -108,7 +113,7 @@ const App = () => {
       .get(googleSpreadSheetExportLink)
       .then((response) => {
         const parsedCsvData = parseTSV(response.data);
-        setCsvData(parsedCsvData);
+        setCsvData(filterOldEvents(parsedCsvData));
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
