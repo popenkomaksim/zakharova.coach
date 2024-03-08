@@ -10,7 +10,7 @@ const StyledTelegram = styled(FaTelegram)`
   top: -0.4em;
 `;
 
-const PlanCard = ({ name, price, ListOfThingth }) => (
+const PlanCard = ({ name, price, ListOfThingth, redirectToTelegram  }) => (
   <Card
     title={
       <div
@@ -46,14 +46,15 @@ const PlanCard = ({ name, price, ListOfThingth }) => (
       <span style={{ color: "#878787" }}> / €{price}</span>&nbsp;на місяць
     </Typography.Text>
     <Divider orientation="center">
-      <a href="https://t.me/ZakharovaPolina">
+      <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
         <StyledTelegram size="2em" color="#229ED9" />
-      </a>
+      </span>
     </Divider>
   </Card>
 );
 
 PlanCard.propTypes = {
+  redirectToTelegram: PropTypes.func,
   name: PropTypes.string,
   price: PropTypes.number,
   ListOfThingth: PropTypes.elementType,

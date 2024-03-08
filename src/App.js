@@ -106,6 +106,12 @@ function filterOldEvents(events) {
 const App = () => {
   const [csvData, setCsvData] = useState([]);
 
+  const redirectToTelegram = () => {
+    // eslint-disable-next-line  
+    gtag("event", "conversion", {send_to: "AW-999571981/sZFuCK_qmJgZEI2E0dwD"});
+    window.location.href = "https://t.me/ZakharovaPolina";
+  };
+
   const fetchCSVData = () => {
     const googleSpreadSheetExportLink =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8UB0YKh5h4McE-tfSypnOYEbwtnW3dwat-OwQlPtPgZsXVDIFw_OZ2bEwvujf9XfRfQcsAeA2e5RC/pub?gid=956084020&single=true&output=tsv";
@@ -177,9 +183,9 @@ const App = () => {
             трейл - це свобода.
           </Typography.Paragraph>
           <Divider orientation="left">Соц мережі:</Divider>
-          <a href="https://t.me/ZakharovaPolina">
+          <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
             <StyledTelegram size="4em" color="#229ED9" />
-          </a>
+          </span>
           <a
             target="_blank"
             rel="noreferrer"
@@ -417,7 +423,7 @@ const App = () => {
             <Typography.Text style={{ fontSize: "1.5em" }}>
               Я щиро рада працювати з усіма, хто хоче стати кращою версією
               себе.&nbsp;
-              <a href="https://t.me/ZakharovaPolina">Напиши мені</a> вже
+              <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">Напиши мені</span> вже
               сьогодні, і, можливо, нам з тобою по дорозі.
               <br />
               Зі мною можна домовитись.
@@ -456,9 +462,9 @@ const App = () => {
               <Avatar src="./zhenya.jpg" />
               <Avatar src="./tamara.jpg" />
               <Avatar src="./babii.jpg" />
-              <a href="https://t.me/ZakharovaPolina">
+              <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
                 <Avatar>+</Avatar>
-              </a>
+              </span>
             </Avatar.Group>
             <br />
             Десятки учнів займаються зараз
@@ -635,9 +641,9 @@ const App = () => {
             <br />
             <br />
             <br />
-            <a href="https://t.me/ZakharovaPolina">
+            <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
               <StyledTelegram size="4em" color="#229ED9" />
-            </a>
+            </span>
           </div>
         </Col>
       </Row>
