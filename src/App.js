@@ -107,8 +107,10 @@ const App = () => {
   const [csvData, setCsvData] = useState([]);
 
   const redirectToTelegram = () => {
-    // eslint-disable-next-line  
-    gtag("event", "conversion", {send_to: "AW-999571981/sZFuCK_qmJgZEI2E0dwD"});
+    // eslint-disable-next-line
+    gtag("event", "conversion", {
+      send_to: "AW-999571981/sZFuCK_qmJgZEI2E0dwD",
+    });
     window.location.href = "https://t.me/ZakharovaPolina";
   };
 
@@ -183,7 +185,12 @@ const App = () => {
             трейл - це свобода.
           </Typography.Paragraph>
           <Divider orientation="left">Соц мережі:</Divider>
-          <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
+          <span
+            onClick={redirectToTelegram}
+            onKeyDown={redirectToTelegram}
+            role="link"
+            tabIndex="0"
+          >
             <StyledTelegram size="4em" color="#229ED9" />
           </span>
           <a
@@ -423,8 +430,15 @@ const App = () => {
             <Typography.Text style={{ fontSize: "1.5em" }}>
               Я щиро рада працювати з усіма, хто хоче стати кращою версією
               себе.&nbsp;
-              <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">Напиши мені</span> вже
-              сьогодні, і, можливо, нам з тобою по дорозі.
+              <span
+                onClick={redirectToTelegram}
+                onKeyDown={redirectToTelegram}
+                role="link"
+                tabIndex="0"
+              >
+                Напиши мені
+              </span>{" "}
+              вже сьогодні, і, можливо, нам з тобою по дорозі.
               <br />
               Зі мною можна домовитись.
             </Typography.Text>
@@ -462,7 +476,12 @@ const App = () => {
               <Avatar src="./zhenya.jpg" />
               <Avatar src="./tamara.jpg" />
               <Avatar src="./babii.jpg" />
-              <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
+              <span
+                onClick={redirectToTelegram}
+                onKeyDown={redirectToTelegram}
+                role="link"
+                tabIndex="0"
+              >
                 <Avatar>+</Avatar>
               </span>
             </Avatar.Group>
@@ -641,7 +660,12 @@ const App = () => {
             <br />
             <br />
             <br />
-            <span onClick={redirectToTelegram} onKeyDown={redirectToTelegram} role="link" tabIndex="0">
+            <span
+              onClick={redirectToTelegram}
+              onKeyDown={redirectToTelegram}
+              role="link"
+              tabIndex="0"
+            >
               <StyledTelegram size="4em" color="#229ED9" />
             </span>
           </div>
