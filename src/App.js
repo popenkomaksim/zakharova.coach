@@ -8,7 +8,9 @@ import axios from "axios";
 // import Calendar from "@ericz1803/react-google-calendar";
 
 import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
+import { IoMenuOutline } from "react-icons/io5";
 import {
+  Modal,
   Col,
   Row,
   Divider,
@@ -69,6 +71,11 @@ const StyledInstagram = styled(FaInstagram)`
   vertical-align: middle;
 `;
 
+const StyledText = styled.span`
+  font-weight: 900;
+  color: #353935;
+`;
+
 const StyledTelegram = styled(FaTelegram)`
   margin: 0 0.5em;
   top: -0.4em;
@@ -76,6 +83,10 @@ const StyledTelegram = styled(FaTelegram)`
 `;
 
 const StyledTooltipTelegram = styled(FaTelegram)`
+  font-size: 1em;
+`;
+
+const StyledMenuIcon = styled(IoMenuOutline)`
   font-size: 1em;
 `;
 
@@ -112,6 +123,11 @@ function filterOldEvents(events) {
 const App = () => {
   const [csvData, setCsvData] = useState([]);
 
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
   const redirectToTelegram = () => {
     // eslint-disable-next-line
     gtag("event", "conversion", {
@@ -141,16 +157,62 @@ const App = () => {
 
   return (
     <>
-      <Header />
-      <TransparentBoxText text="Твій тренувальний план" />
-      <Divider />
+      <Modal open={open} onCancel={onCloseModal} center footer={null}>
+        <Divider orientation="left">
+          <StyledText>Polina Zakharova</StyledText>
+        </Divider>
+        <List size="small">
+          <List.Item>
+            <a href="#about" onClick={onCloseModal}>
+              <Typography.Text style={{ fontSize: "1.75em" }}>
+                Про мене
+              </Typography.Text>
+            </a>
+          </List.Item>
+          <List.Item>
+            <a href="#desc-first" onClick={onCloseModal}>
+              <Typography.Text style={{ fontSize: "1.75em" }}>
+                Приниципи і підходи до тренувань
+              </Typography.Text>
+            </a>
+          </List.Item>
+          <List.Item>
+            <a href="#desc-second" onClick={onCloseModal}>
+              <Typography.Text style={{ fontSize: "1.75em" }}>
+                Формати співпраці
+              </Typography.Text>
+            </a>
+          </List.Item>
+          <List.Item>
+            <a href="#prices" onClick={onCloseModal}>
+              <Typography.Text style={{ fontSize: "1.75em" }}>
+                Види планів
+              </Typography.Text>
+            </a>
+          </List.Item>
+          <List.Item>
+            <a href="#additional-services" onClick={onCloseModal}>
+              <Typography.Text style={{ fontSize: "1.75em" }}>
+                Додаткові послуги
+              </Typography.Text>
+            </a>
+          </List.Item>
+        </List>
+      </Modal>
+
       <FloatButton
+        style={{ right: 94 }}
         onClick={redirectToTelegram}
         badge={{ count: 1 }}
         icon={<StyledTooltipTelegram />}
       />
 
-      <Row justify="center">
+      <FloatButton onClick={onOpenModal} icon={<StyledMenuIcon />} />
+
+      <Header />
+      <TransparentBoxText text="Твій тренувальний план" />
+      <Divider />
+      <Row justify="center" id="about">
         <Col lg={12} xl={12}>
           <Typography.Title
             level={1}
@@ -161,16 +223,6 @@ const App = () => {
             }}
           >
             Вітання 👋
-          </Typography.Title>
-          <Typography.Title
-            level={1}
-            style={{
-              margin: "1em 0.25em",
-              textAlign: "center",
-              color: "rgb(59 59 59 / 88%)",
-            }}
-          >
-            Я Поліна Захарова &mdash; тренер та атлет
           </Typography.Title>
         </Col>
       </Row>
@@ -184,9 +236,9 @@ const App = () => {
         </Col>
         <Col xs={24} md={12} style={{ padding: "2em" }}>
           <Typography.Paragraph style={{ fontSize: "1.75em" }}>
-            Я професійний атлет і тренер. І я не уявляю життя без лісу та гір.
-            Значну частину своєї спортивної кар&apos;єри я присвятила
-            орієнтуванню та рогейну.
+            Я Поліна Захарова &mdash; тренер та професійний атлет. І я не уявляю
+            життя без лісу та гір. Значну частину своєї спортивної кар&apos;єри
+            я присвятила орієнтуванню та рогейну.
           </Typography.Paragraph>
           <Typography.Paragraph style={{ fontSize: "1.75em" }}>
             Останні 6 років перелік моїх спортивних вподобань значно розширився
@@ -236,7 +288,7 @@ const App = () => {
         style={{ margin: "3vh 0 0 0", filter: "grayscale(1)" }}
       />
 
-      <Row style={{ margin: "2em 0" }} justify="space-around">
+      <Row style={{ margin: "2em 0" }} justify="space-around" id="desc-first">
         <Col span={18}>
           <Typography.Title
             level={2}
@@ -252,6 +304,7 @@ const App = () => {
           <TransparentBoxText
             text="Баланс"
             $fontSize="6vw"
+            $fontSizeMobile="12vw"
             $imageUrl="./ski.jpg"
           />
         </Col>
@@ -290,6 +343,7 @@ const App = () => {
           <TransparentBoxText
             text="Послідовність"
             $fontSize="6vw"
+            $fontSizeMobile="12vw"
             $imageUrl="./ski.jpg"
           />
         </Col>
@@ -300,6 +354,7 @@ const App = () => {
           <TransparentBoxText
             text="Практичність"
             $fontSize="6vw"
+            $fontSizeMobile="12vw"
             $imageUrl="./ski.jpg"
           />
         </Col>
@@ -390,7 +445,7 @@ const App = () => {
         $padding="1em 0 1.5em 0"
       />
 
-      <Row justify="space-around">
+      <Row justify="space-around" id="desc-second">
         <Col
           xs={24}
           md={12}
@@ -528,6 +583,7 @@ const App = () => {
           background: "url(./blue_mountains.jpg) repeat",
           paddingBottom: "4em",
         }}
+        id="prices"
       >
         <Col span={24}>
           <Typography.Title
@@ -596,7 +652,7 @@ const App = () => {
         </Col>
       </Row>
 
-      <Row style={{ margin: "2em 0" }}>
+      <Row style={{ margin: "2em 0" }} id="additional-services">
         <Col span={24}>
           <Typography.Title
             level={2}

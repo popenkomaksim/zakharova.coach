@@ -12,6 +12,9 @@ const StyledDiv = styled.div`
 
   color: transparent;
   font-size: ${(props) => props.$fontSize};
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.$fontSizeMobile};
+  }
   font-weight: 900;
 
   padding: ${(props) => props.$padding};
@@ -31,9 +34,14 @@ const TransparentBoxText = ({
   text,
   $padding = "0",
   $fontSize = "12vw",
+  $fontSizeMobile = "12vw",
   $imageUrl = "./tibet.jpeg",
 }) => (
-  <StyledDiv $fontSize={$fontSize} $padding={$padding}>
+  <StyledDiv
+    $fontSize={$fontSize}
+    $fontSizeMobile={$fontSizeMobile}
+    $padding={$padding}
+  >
     <StyledSpan $imageUrl={$imageUrl}>{text}</StyledSpan>
   </StyledDiv>
 );
