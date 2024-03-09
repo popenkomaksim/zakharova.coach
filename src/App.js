@@ -197,11 +197,11 @@ const App = () => {
           </Typography.Paragraph>
           <Divider orientation="left">Соц мережі:</Divider>
           <span
-            style={{ cursor: "pointer" }}
             onClick={redirectToTelegram}
             onKeyDown={redirectToTelegram}
             role="link"
             tabIndex="0"
+            style={{ cursor: "pointer" }}
           >
             <StyledTelegram size="4em" color="#229ED9" />
           </span>
@@ -455,6 +455,7 @@ const App = () => {
                 onKeyDown={redirectToTelegram}
                 role="link"
                 tabIndex="0"
+                style={{ cursor: "pointer" }}
               >
                 Напиши мені
               </span>{" "}
@@ -501,6 +502,7 @@ const App = () => {
                 onKeyDown={redirectToTelegram}
                 role="link"
                 tabIndex="0"
+                style={{ cursor: "pointer" }}
               >
                 <Avatar>+</Avatar>
               </span>
@@ -688,6 +690,7 @@ const App = () => {
               onKeyDown={redirectToTelegram}
               role="link"
               tabIndex="0"
+              style={{ cursor: "pointer" }}
             >
               <StyledTelegram size="4em" color="#229ED9" />
             </span>

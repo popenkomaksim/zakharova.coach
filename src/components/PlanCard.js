@@ -51,6 +51,7 @@ const PlanCard = ({ name, price, ListOfThingth, redirectToTelegram }) => (
         onKeyDown={redirectToTelegram}
         role="link"
         tabIndex="0"
+        style={{ cursor: "pointer" }}
       >
         <StyledTelegram size="2em" color="#229ED9" />
       </span>
