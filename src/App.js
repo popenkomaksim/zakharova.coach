@@ -601,6 +601,7 @@ const App = () => {
         <Col xs={24} lg={8}>
           <PlanCard
             name="BASIC"
+            redirectToTelegram={redirectToTelegram}
             price={25}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
@@ -615,6 +616,7 @@ const App = () => {
         <Col xs={24} lg={8}>
           <PlanCard
             name="EXPERIENCED"
+            redirectToTelegram={redirectToTelegram}
             price={40}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
@@ -634,6 +636,7 @@ const App = () => {
         <Col xs={24} lg={8}>
           <PlanCard
             name="PRO"
+            redirectToTelegram={redirectToTelegram}
             price={60}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
