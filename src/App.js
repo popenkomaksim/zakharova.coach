@@ -16,6 +16,8 @@ import {
   Image,
   Statistic,
   Avatar,
+  Button,
+  FloatButton,
   List,
   Tag,
 } from "antd";
@@ -71,6 +73,10 @@ const StyledTelegram = styled(FaTelegram)`
   margin: 0 0.5em;
   top: -0.4em;
   vertical-align: middle;
+`;
+
+const StyledTooltipTelegram = styled(FaTelegram)`
+  font-size: 1em;
 `;
 
 const StyledCol = styled(Col)`
@@ -138,19 +144,18 @@ const App = () => {
       <Header />
       <TransparentBoxText text="Твій тренувальний план" />
       <Divider />
+      <FloatButton
+        onClick={redirectToTelegram}
+        badge={{ count: 1 }}
+        icon={<StyledTooltipTelegram />}
+      />
+
       <Row justify="center">
-        <Col lg={8} xl={6}>
-          <Image
-            src="./polina.jpg"
-            style={{ borderRadius: "50%", maxWidth: "75vw" }}
-            preview={false}
-          />
-        </Col>
-        <Col xs={24} md={12} style={{ padding: "2em" }}>
+        <Col lg={12} xl={12}>
           <Typography.Title
             level={1}
             style={{
-              margin: "0.25em 0",
+              margin: "0.25em",
               textAlign: "center",
               color: "rgb(59 59 59 / 88%)",
             }}
@@ -160,24 +165,30 @@ const App = () => {
           <Typography.Title
             level={1}
             style={{
-              margin: "1em 0",
+              margin: "1em 0.25em",
               textAlign: "center",
               color: "rgb(59 59 59 / 88%)",
             }}
           >
-            Я Поліна Захарова &mdash;
-            <br /> тренер та атлет
+            Я Поліна Захарова &mdash; тренер та атлет
           </Typography.Title>
         </Col>
       </Row>
-      <Row justify="space-around">
-        <Col xs={24} md={8} style={{ padding: "2em 2em 0 2em" }}>
-          <Typography.Paragraph>
+      <Row justify="center">
+        <Col lg={8} xl={6}>
+          <Image
+            src="./polina.jpg"
+            style={{ borderRadius: "50%", maxWidth: "75vw" }}
+            preview={false}
+          />
+        </Col>
+        <Col xs={24} md={12} style={{ padding: "2em" }}>
+          <Typography.Paragraph style={{ fontSize: "1.75em" }}>
             Я професійний атлет і тренер. І я не уявляю життя без лісу та гір.
             Значну частину своєї спортивної кар&apos;єри я присвятила
             орієнтуванню та рогейну.
           </Typography.Paragraph>
-          <Typography.Paragraph>
+          <Typography.Paragraph style={{ fontSize: "1.75em" }}>
             Останні 6 років перелік моїх спортивних вподобань значно розширився
             - я насолождуюсь скі-альпінізмом, трейловим бігом та ділюсь цією
             пристрастю зі своіми учнями. 15 років досвіду, десятки тисяч
@@ -186,6 +197,7 @@ const App = () => {
           </Typography.Paragraph>
           <Divider orientation="left">Соц мережі:</Divider>
           <span
+            style={{ cursor: "pointer" }}
             onClick={redirectToTelegram}
             onKeyDown={redirectToTelegram}
             role="link"
@@ -209,80 +221,20 @@ const App = () => {
             UTMB
           </a>
         </Col>
-        <Col xs={24} md={10} style={{ padding: "0em" }}>
-          <Divider orientation="left">Спортивні досягнення:</Divider>
-          <List size="small">
-            <List.Item>
-              <Tag>Фінляндія 2019</Tag>
-              <Tag>США 2023</Tag>чемпіонка Чемпіонатів Світу з рогейну
-            </List.Item>
-            <List.Item>
-              <Tag>2017</Tag>чемпіонка Чемпіонату Європи з рогейну
-            </List.Item>
-            <List.Item>
-              <Tag>2023</Tag>учасниця чемпіонатіу Світу зі скі-альпінізму
-            </List.Item>
-            <List.Item>
-              <Tag>Франція 2022</Tag>призерка Mountains Hard Ultra Trail 35 км
-            </List.Item>
-            <List.Item>
-              <Tag>Португалія 2019</Tag>призерка Madeira Island Ultra Trail 85
-              км
-            </List.Item>
-            <List.Item>
-              <Tag>Україна 2018, 2019, 2020</Tag>переможниця Chornohora Sky
-              Marathon 60 км
-            </List.Item>
-            <List.Item>
-              <Tag>Україна 2018</Tag>переможниця в абсолюті «Bojko Trail» 46 км
-            </List.Item>
-            <List.Item>
-              майстер спорту міжнародного класу з орієнтування
-            </List.Item>
-            <List.Item>майстер спорту України з легкої атлетики</List.Item>
-          </List>
+      </Row>
+      <Row justify="center" style={{ margin: "2em 1em" }}>
+        <Col style={{ textAlign: "center" }}>
+          <Button onClick={redirectToTelegram} danger size="large">
+            Почати тренуватись зі мною
+          </Button>
         </Col>
       </Row>
 
-      <div style={{ width: "100%", margin: "3em 0" }}>
-        <video
-          alt="Polina do smile"
-          autoPlay
-          playsInline
-          loop
-          muted
-          style={{ width: "100%", display: "block", margin: "3em 0" }}
-        >
-          <source src={PolinaAltra} type="video/mp4" />
-        </video>
-      </div>
-
-      <Row justify="center">
-        <Col xs="24" s="24" lg="8" style={{ padding: "0 2em" }}>
-          <Divider orientation="left">Майбутні події:</Divider>
-          {csvData.map((csvDataItem) => (
-            <Typography.Paragraph key={csvDataItem.name}>
-              <Tag>{csvDataItem.tag}</Tag> {csvDataItem.name} <br />
-              {csvDataItem.dateStart} {csvDataItem.dateEnd}
-            </Typography.Paragraph>
-          ))}
-        </Col>
-
-        <Col flex="auto" style={{ padding: "0 2em" }}>
-          <iframe
-            title="Calendar"
-            src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
-            style={{ border: 0 }}
-            width="100%"
-            height="600"
-          />
-          {/* <div style={{ width: "100%" }}>
-            <Calendar apiKey={API_KEY} calendars={calendars} />
-          </div> */}
-        </Col>
-      </Row>
-
-      <Image src="./vin01.jpg" preview={false} style={{ margin: "3vh 0" }} />
+      <Image
+        src="./Grand_Canyon_Panorama.jpeg"
+        preview={false}
+        style={{ margin: "3vh 0 0 0", filter: "grayscale(1)" }}
+      />
 
       <Row style={{ margin: "2em 0" }} justify="space-around">
         <Col span={18}>
@@ -359,11 +311,79 @@ const App = () => {
         </Col>
       </Row>
 
-      <Image
-        src="./Grand_Canyon_Panorama.jpeg"
-        preview={false}
-        style={{ margin: "3vh 0 0 0", filter: "grayscale(1)" }}
-      />
+      <div style={{ width: "100%", margin: "3em 0" }}>
+        <video
+          alt="Polina do smile"
+          autoPlay
+          playsInline
+          loop
+          muted
+          style={{ width: "100%", display: "block", margin: "3em 0" }}
+        >
+          <source src={PolinaAltra} type="video/mp4" />
+        </video>
+      </div>
+
+      <Row justify="center">
+        <Col xs="24" s="24" lg="8" style={{ padding: "0 2em" }}>
+          <Divider orientation="left">Спортивні досягнення:</Divider>
+          <List size="small">
+            <List.Item>
+              <Tag>Фінляндія 2019</Tag>
+              <Tag>США 2023</Tag>чемпіонка Чемпіонатів Світу з рогейну
+            </List.Item>
+            <List.Item>
+              <Tag>2017</Tag>чемпіонка Чемпіонату Європи з рогейну
+            </List.Item>
+            <List.Item>
+              <Tag>2023</Tag>учасниця чемпіонатіу Світу зі скі-альпінізму
+            </List.Item>
+            <List.Item>
+              <Tag>Франція 2022</Tag>призерка Mountains Hard Ultra Trail 35 км
+            </List.Item>
+            <List.Item>
+              <Tag>Португалія 2019</Tag>призерка Madeira Island Ultra Trail 85
+              км
+            </List.Item>
+            <List.Item>
+              <Tag>Україна 2018, 2019, 2020</Tag>переможниця Chornohora Sky
+              Marathon 60 км
+            </List.Item>
+            <List.Item>
+              <Tag>Україна 2018</Tag>переможниця в абсолюті «Bojko Trail» 46 км
+            </List.Item>
+            <List.Item>
+              майстер спорту міжнародного класу з орієнтування
+            </List.Item>
+            <List.Item>майстер спорту України з легкої атлетики</List.Item>
+          </List>
+          <Divider orientation="left">Майбутні події:</Divider>
+          <List size="small">
+            {csvData.map((csvDataItem) => (
+              <List.Item key={csvDataItem.name}>
+                <Tag>{csvDataItem.tag}</Tag> {csvDataItem.name} <br />
+                {csvDataItem.dateStart} {csvDataItem.dateEnd}
+              </List.Item>
+            ))}
+          </List>
+          <Divider />
+        </Col>
+
+        <Col flex="auto" style={{ padding: "0 2em" }}>
+          <iframe
+            title="Calendar"
+            src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
+            style={{ border: 0 }}
+            width="100%"
+            height="600"
+          />
+          {/* <div style={{ width: "100%" }}>
+            <Calendar apiKey={API_KEY} calendars={calendars} />
+          </div> */}
+        </Col>
+      </Row>
+
+      <Image src="./vin01.jpg" preview={false} style={{ margin: "3vh 0" }} />
 
       <TransparentBoxText
         text="Трейл — це завжди правда"
@@ -650,11 +670,14 @@ const App = () => {
       <Row justify="space-around">
         <Col xs={24} md={10}>
           <div style={{ margin: "0 2em", textAlign: "center" }}>
-            <Typography.Title level={3} style={{ margin: 0 }}>
+            <Typography.Title
+              level={3}
+              style={{ margin: 0, fontSize: "2.25em" }}
+            >
               Залишились питання?
             </Typography.Title>
             <br />
-            <Typography.Text>
+            <Typography.Text style={{ fontSize: "1.75em" }}>
               Зв&apos;яжись зі мною в робочі години.
             </Typography.Text>
             <br />
