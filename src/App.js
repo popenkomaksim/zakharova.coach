@@ -382,7 +382,7 @@ const App = () => {
       </div>
 
       <Row justify="center">
-        <Col xs="24" s="24" lg="10" style={{ padding: "0 2em" }}>
+        <Col xs="24" s="24" lg="12" style={{ padding: "0 2em" }}>
           <Divider orientation="left">Майбутні події:</Divider>
           <List size="small">
             {csvData.map((csvDataItem) => (
@@ -395,7 +395,7 @@ const App = () => {
           <Divider />
         </Col>
 
-        <Col xs="24" s="24" lg="10" style={{ padding: "0 2em" }}>
+        <Col xs="24" s="24" lg="12" style={{ padding: "0 2em" }}>
           <Divider orientation="left">Спортивні досягнення:</Divider>
           <List size="small">
             <List.Item>
