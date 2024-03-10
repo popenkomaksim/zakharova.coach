@@ -117,7 +117,9 @@ function parseTSV(csvText) {
 
 function filterOldEvents(events) {
   const today = new Date();
-  return events.filter((event) => new Date(event.dateEnd) > today);
+  return events
+    .filter((event) => new Date(event.dateEnd) > today)
+    .sort((first, second) => (first.dateStart > second.dateStart ? 1 : -1));
 }
 
 const App = () => {
