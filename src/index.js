@@ -7,6 +7,7 @@ import "./index.css";
 import App from "./App";
 import Project10 from "./Project10";
 import SkiTourList from "./SkiTourList";
+import Calendar from "./Calendar";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
     {
       path: "skitour-chechlist",
       element: <SkiTourList />,
+    },
+    {
+      path: "calendar",
+      element: <Calendar />,
     },
   ],
   { basename: "/" }

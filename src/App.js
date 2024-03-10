@@ -210,7 +210,9 @@ const App = () => {
       <FloatButton onClick={onOpenModal} icon={<StyledMenuIcon />} />
 
       <Header />
-      <TransparentBoxText text="Твій тренувальний план" />
+      <a href="#prices" style={{ textDecoration: "none" }}>
+        <TransparentBoxText text="Твій тренувальний план" />
+      </a>
       <Divider />
       <Row justify="center" id="about">
         <Col lg={12} xl={12}>
@@ -380,7 +382,20 @@ const App = () => {
       </div>
 
       <Row justify="center">
-        <Col xs="24" s="24" lg="8" style={{ padding: "0 2em" }}>
+        <Col xs="24" s="24" lg="10" style={{ padding: "0 2em" }}>
+          <Divider orientation="left">Майбутні події:</Divider>
+          <List size="small">
+            {csvData.map((csvDataItem) => (
+              <List.Item key={csvDataItem.name}>
+                <Tag>{csvDataItem.tag}</Tag> {csvDataItem.name} <br />
+                {csvDataItem.dateStart} {csvDataItem.dateEnd}
+              </List.Item>
+            ))}
+          </List>
+          <Divider />
+        </Col>
+
+        <Col xs="24" s="24" lg="10" style={{ padding: "0 2em" }}>
           <Divider orientation="left">Спортивні досягнення:</Divider>
           <List size="small">
             <List.Item>
@@ -412,29 +427,6 @@ const App = () => {
             </List.Item>
             <List.Item>майстер спорту України з легкої атлетики</List.Item>
           </List>
-          <Divider orientation="left">Майбутні події:</Divider>
-          <List size="small">
-            {csvData.map((csvDataItem) => (
-              <List.Item key={csvDataItem.name}>
-                <Tag>{csvDataItem.tag}</Tag> {csvDataItem.name} <br />
-                {csvDataItem.dateStart} {csvDataItem.dateEnd}
-              </List.Item>
-            ))}
-          </List>
-          <Divider />
-        </Col>
-
-        <Col flex="auto" style={{ padding: "0 2em" }}>
-          <iframe
-            title="Calendar"
-            src="https://calendar.google.com/calendar/embed?src=60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0%40group.calendar.google.com&ctz=Europe%2FKiev"
-            style={{ border: 0 }}
-            width="100%"
-            height="600"
-          />
-          {/* <div style={{ width: "100%" }}>
-            <Calendar apiKey={API_KEY} calendars={calendars} />
-          </div> */}
         </Col>
       </Row>
 
