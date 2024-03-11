@@ -7,7 +7,7 @@ import axios from "axios";
 
 // import Calendar from "@ericz1803/react-google-calendar";
 
-import { FaInstagram, FaTelegram, FaHeart } from "react-icons/fa";
+import { FaInstagram, FaTelegram, FaHeart, FaWhatsapp } from "react-icons/fa";
 import { IoMenuOutline } from "react-icons/io5";
 import {
   Modal,
@@ -82,6 +82,12 @@ const StyledTelegram = styled(FaTelegram)`
   vertical-align: middle;
 `;
 
+const StyledWhatsapp = styled(FaWhatsapp)`
+  margin: 0 0.5em;
+  top: -0.4em;
+  vertical-align: middle;
+`;
+
 const StyledTooltipTelegram = styled(FaTelegram)`
   font-size: 1em;
 `;
@@ -138,6 +144,14 @@ const App = () => {
     window.location.href = "https://t.me/ZakharovaPolina";
   };
 
+  const redirectToWhatsup = () => {
+    // eslint-disable-next-line
+    gtag("event", "conversion", {
+      send_to: "AW-999571981/zy2UCKrrmJgZEI2E0dwD",
+    });
+    window.location.href = "https://wa.me/380633862021";
+  };
+
   const fetchCSVData = () => {
     const googleSpreadSheetExportLink =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8UB0YKh5h4McE-tfSypnOYEbwtnW3dwat-OwQlPtPgZsXVDIFw_OZ2bEwvujf9XfRfQcsAeA2e5RC/pub?gid=956084020&single=true&output=tsv";
@@ -168,6 +182,13 @@ const App = () => {
             <a href="#about" onClick={onCloseModal}>
               <Typography.Text style={{ fontSize: "1.75em" }}>
                 Про мене
+              </Typography.Text>
+            </a>
+          </List.Item>
+          <List.Item>
+            <a href="#contacts" onClick={onCloseModal}>
+              <Typography.Text style={{ fontSize: "1.75em" }}>
+                Контакти
               </Typography.Text>
             </a>
           </List.Item>
@@ -251,7 +272,9 @@ const App = () => {
             кілометрів, набіганих по всьому світу, впевнили мене в тому, що
             трейл - це свобода.
           </Typography.Paragraph>
-          <Divider orientation="left">Соц мережі:</Divider>
+          <Divider orientation="left" id="contacts">
+            Контакти:
+          </Divider>
           <span
             onClick={redirectToTelegram}
             onKeyDown={redirectToTelegram}
@@ -260,6 +283,15 @@ const App = () => {
             style={{ cursor: "pointer" }}
           >
             <StyledTelegram size="4em" color="#229ED9" />
+          </span>
+          <span
+            onClick={redirectToWhatsup}
+            onKeyDown={redirectToWhatsup}
+            role="link"
+            tabIndex="0"
+            style={{ cursor: "pointer" }}
+          >
+            <StyledWhatsapp size="4em" color="#25D366" />
           </span>
           <a
             target="_blank"
@@ -596,6 +628,7 @@ const App = () => {
           <PlanCard
             name="BASIC"
             redirectToTelegram={redirectToTelegram}
+            redirectToWhatsup={redirectToWhatsup}
             price={25}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
@@ -746,6 +779,15 @@ const App = () => {
               style={{ cursor: "pointer" }}
             >
               <StyledTelegram size="4em" color="#229ED9" />
+            </span>
+            <span
+              onClick={redirectToWhatsup}
+              onKeyDown={redirectToWhatsup}
+              role="link"
+              tabIndex="0"
+              style={{ cursor: "pointer" }}
+            >
+              <StyledWhatsapp size="4em" color="#25D366" />
             </span>
           </div>
         </Col>

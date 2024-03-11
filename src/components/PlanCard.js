@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Divider, Typography, Card } from "antd";
-import { FaTelegram } from "react-icons/fa";
+import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
 import convert from "../convert";
 
@@ -10,7 +10,18 @@ const StyledTelegram = styled(FaTelegram)`
   top: -0.4em;
 `;
 
-const PlanCard = ({ name, price, ListOfThingth, redirectToTelegram }) => (
+const StyledWhatsapp = styled(FaWhatsapp)`
+  margin: 0 0.5em;
+  top: -0.4em;
+`;
+
+const PlanCard = ({
+  name,
+  price,
+  ListOfThingth,
+  redirectToTelegram,
+  redirectToWhatsup,
+}) => (
   <Card
     title={
       <div
@@ -55,12 +66,22 @@ const PlanCard = ({ name, price, ListOfThingth, redirectToTelegram }) => (
       >
         <StyledTelegram size="2em" color="#229ED9" />
       </span>
+      <span
+        onClick={redirectToWhatsup}
+        onKeyDown={redirectToWhatsup}
+        role="link"
+        tabIndex="0"
+        style={{ cursor: "pointer" }}
+      >
+        <StyledWhatsapp size="2em" color="#25D366" />
+      </span>
     </Divider>
   </Card>
 );
 
 PlanCard.propTypes = {
   redirectToTelegram: PropTypes.func,
+  redirectToWhatsup: PropTypes.func,
   name: PropTypes.string,
   price: PropTypes.number,
   ListOfThingth: PropTypes.elementType,
