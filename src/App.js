@@ -644,6 +644,7 @@ const App = () => {
           <PlanCard
             name="EXPERIENCED"
             redirectToTelegram={redirectToTelegram}
+            redirectToWhatsup={redirectToWhatsup}
             price={40}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
@@ -664,6 +665,7 @@ const App = () => {
           <PlanCard
             name="PRO"
             redirectToTelegram={redirectToTelegram}
+            redirectToWhatsup={redirectToWhatsup}
             price={60}
             ListOfThingth={
               <ul style={{ listStyle: "" }}>
