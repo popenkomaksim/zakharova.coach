@@ -273,6 +273,27 @@ const App = () => {
             трейл - це свобода.
           </Typography.Paragraph>
           <Divider orientation="left" id="contacts">
+            Партнери:
+          </Divider>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://travel-extreme.com.ua/torq/"
+          >
+            <Image
+              src="./Torq-logo-square.webp"
+              preview={false}
+              width="100px"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.x-zone.com.ua/ua/proizvoditeli/kailas.html"
+          >
+            <Image src="./kailas_logo.png" preview={false} width="100px" />
+          </a>
+          <Divider orientation="left" id="contacts">
             Контакти:
           </Divider>
           <span
