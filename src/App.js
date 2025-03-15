@@ -234,7 +234,7 @@ const App = () => {
 
       <Header />
       <a href="#prices" style={{ textDecoration: "none" }}>
-        <TransparentBoxText text="Твій тренувальний план" />
+        <TransparentBoxText text="Рух – це життя, а життя – це рух!" />
       </a>
       <Divider />
       <Row justify="center" id="about">
