@@ -293,6 +293,9 @@ const App = () => {
           >
             <Image src="./kailas_logo.png" preview={false} width="100px" />
           </a>
+          <a target="_blank" rel="noreferrer" href="https://www.x-zone.com.ua/">
+            <Image src="./xzone.png" preview={false} width="100px" />
+          </a>
           <Divider orientation="left" id="contacts">
             Контакти:
           </Divider>
