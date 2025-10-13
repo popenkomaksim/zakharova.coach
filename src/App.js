@@ -457,7 +457,7 @@ const App = () => {
           <Divider orientation="left">Спортивні досягнення:</Divider>
           <List size="small">
             <List.Item>
-              <Tag>Фінляндія 2019</Tag>
+              <Tag>Іспанія 2019</Tag>
               <Tag>США 2023</Tag>чемпіонка Чемпіонатів Світу з рогейну
             </List.Item>
             <List.Item>
