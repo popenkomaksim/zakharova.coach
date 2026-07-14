@@ -118,7 +118,7 @@ const Project10 = () => {
             <br />
             <br />
             <br />
-            <a href="https://t.me/ZakharovaPolina">
+            <a href="https://telegram.me/ZakharovaPolina">
               <StyledTelegram size="4em" color="#229ED9" />
             </a>
           </div>

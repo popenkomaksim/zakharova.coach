@@ -141,7 +141,7 @@ const App = () => {
     gtag("event", "conversion", {
       send_to: "AW-999571981/sZFuCK_qmJgZEI2E0dwD",
     });
-    window.location.href = "https://t.me/ZakharovaPolina";
+    window.location.href = "https://telegram.me/ZakharovaPolina";
   };
 
   const redirectToWhatsup = () => {
@@ -839,7 +839,7 @@ const App = () => {
 
       <Divider style={{ marginTop: "4em" }}>
         Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
-        Ukraine © {new Date().getFullYear()}
+        Ukraine © 2023 &mdash; {new Date().getFullYear()}
       </Divider>
     </>
   );
