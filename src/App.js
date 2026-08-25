@@ -5,8 +5,6 @@ import styled from "styled-components";
 import CountUp from "react-countup";
 import axios from "axios";
 
-// import Calendar from "@ericz1803/react-google-calendar";
-
 import { FaInstagram, FaTelegram, FaHeart, FaWhatsapp } from "react-icons/fa";
 import { IoMenuOutline } from "react-icons/io5";
 import {
@@ -44,26 +42,6 @@ const formatter = (value) => <CountUp end={value} separator="," />;
 function getKmAmount() {
   return Math.ceil(daysOfTraining() * (20 * 8.5));
 }
-
-// const API_KEY = "AIzaSyA_QU2-VPXeyjsXSs393ETZkgqgMJ85Gmc";
-// const calendars = [
-//   { calendarId: "60f2ac3e5a00a821fa841b3b4d27dbba2d162aa119a67f4b20c878195d13e8c0@group.calendar.google.com" },
-// ];
-
-// import Odesa from "./odesa.mp4";
-// import DzembronyaTrailRunningCamp from "./DzembronyaTrailRunningCamp.mp4";
-// import BorzhavaTrailRunningCamp2021 from "./BorzhavaTrailRunningCamp2021.mp4";
-
-// const StyledVideoDiv = styled.div`
-//   width: 100%;
-//   height: 100;
-// `;
-
-// const StyledVideo = styled.video`
-//   width: 100%;
-//   height: 100vh;
-//   object-fit: cover;
-// `;
 
 const StyledInstagram = styled(FaInstagram)`
   margin: 0 0.5em;
@@ -587,8 +565,6 @@ const App = () => {
             gridAutoRows: "1fr",
           }}
         >
-          {/* <div style={{ maxWidth: "4000px",  }}> */}
-
           <Statistic
             title="Кілометрів подолали мої учні"
             value={getKmAmount()}
@@ -615,7 +591,6 @@ const App = () => {
             <br />
             Десятки учнів займаються зараз
           </div>
-          {/* </div> */}
         </Col>
         <StyledCol xs={24} md={12}>
           <Image
@@ -818,24 +793,6 @@ const App = () => {
           </div>
         </Col>
       </Row>
-
-      {/* <Row>
-        <Col xs={24} xl={8}>
-        <StyledVideoDiv>
-          <StyledVideo src={DzembronyaTrailRunningCamp} loop muted />
-        </StyledVideoDiv>
-        </Col>
-        <Col xs={24} xl={8}>
-          <StyledVideoDiv>
-            <StyledVideo src={BorzhavaTrailRunningCamp2021} loop muted />
-          </StyledVideoDiv>
-        </Col>
-        <Col xs={24} xl={8}>
-        <StyledVideoDiv>
-          <StyledVideo src={Odesa} loop muted />
-        </StyledVideoDiv>
-        </Col>
-      </Row> */}
 
       <Divider style={{ marginTop: "4em" }}>
         Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
