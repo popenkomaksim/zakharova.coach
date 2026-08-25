@@ -12,7 +12,7 @@ A single marketing/landing site (Ukrainian language) for a trail-running/ski-mou
 - `npm run build` — production build to `build/`, then copies `build/index.html` to `build/404.html` (needed for client-side routing on GitHub Pages)
 - `npm test` — CRA/Jest test runner in watch mode; pass a file/name pattern as an extra arg to scope it (e.g. `npm test -- App.test`), or `CI=true npm test` for a single non-watch run
 - `npm run deploy` — publishes `build/` to GitHub Pages via `gh-pages` (runs `predeploy`/`build` first)
-- `npx eslint src` — lint (ESLint config lives in `.eslintrc`, extends `airbnb` + `prettier`)
+- Linting (config in `.eslintrc`, extends `airbnb` + `prettier`) runs via CRA's internal `eslint-webpack-plugin` during `npm start` / `npm run build` — there's no root babel config, so a bare `npx eslint src` fails on every file with a JSX parsing error; don't use it standalone
 
 ## Architecture
 
