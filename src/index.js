@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
-import Project10 from "./Project10";
 import SkiTourList from "./SkiTourList";
 import Calendar from "./Calendar";
 import reportWebVitals from "./reportWebVitals";
@@ -16,10 +15,6 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <App />,
-    },
-    {
-      path: "project10",
-      element: <Project10 />,
     },
     {
       path: "skitour-chechlist",
