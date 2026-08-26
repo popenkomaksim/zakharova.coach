@@ -47,7 +47,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
           кілометрів, набіганих по всьому світу, впевнили мене в тому, що трейл
           - це свобода.
         </Typography.Paragraph>
-        <Divider orientation="left" id="contacts">
+        <Divider orientation="left" id="partners">
           Партнери:
         </Divider>
         <a
