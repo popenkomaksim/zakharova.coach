@@ -6,6 +6,9 @@ import "./index.css";
 import App from "./App";
 import SkiTourList from "./SkiTourList";
 import Calendar from "./Calendar";
+import About from "./About";
+import Contact from "./Contact";
+import Privacy from "./Privacy";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -23,6 +26,18 @@ const router = createBrowserRouter(
     {
       path: "calendar",
       element: <Calendar />,
+    },
+    {
+      path: "about",
+      element: <About />,
+    },
+    {
+      path: "contact",
+      element: <Contact />,
+    },
+    {
+      path: "privacy",
+      element: <Privacy />,
     },
   ],
   { basename: "/" }
