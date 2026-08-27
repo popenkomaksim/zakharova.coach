@@ -1,13 +1,26 @@
+import { useState } from "react";
 import "@fontsource/montserrat";
 import "./App.css";
 
 import { FaHeart } from "react-icons/fa";
 import { Divider } from "antd";
 import Header from "./components/Header";
+import NavModal from "./components/NavModal";
+import FloatingActions from "./components/FloatingActions";
+import useContactRedirects from "./hooks/useContactRedirects";
 
 const Project10 = () => {
+  const [navOpen, setNavOpen] = useState(false);
+  const { redirectToTelegram } = useContactRedirects();
+
   return (
     <>
+      <NavModal open={navOpen} onClose={() => setNavOpen(false)} />
+      <FloatingActions
+        redirectToTelegram={redirectToTelegram}
+        onMenuClick={() => setNavOpen(true)}
+      />
+
       <Header />
       <iframe
         title="Calendar"
