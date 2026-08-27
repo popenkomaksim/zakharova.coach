@@ -7,6 +7,8 @@ import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
 import HeroBanner from "./components/HeroBanner";
 import HeroSection from "./components/HeroSection";
+import CollaborationSection from "./components/CollaborationSection";
+import PrinciplesSection from "./components/PrinciplesSection";
 import FormatsSection from "./components/FormatsSection";
 import EventsAndAchievements from "./components/EventsAndAchievements";
 import TestimonialsSection from "./components/TestimonialsSection";
@@ -39,6 +41,8 @@ const App = () => {
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
       />
+      <CollaborationSection />
+      <PrinciplesSection />
       <FormatsSection />
       <EventsAndAchievements events={events} />
       <TestimonialsSection />

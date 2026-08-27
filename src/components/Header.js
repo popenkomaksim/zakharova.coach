@@ -2,7 +2,10 @@ import styled from "styled-components";
 import { Divider } from "antd";
 
 const StyledText = styled.span`
+  display: block;
+  margin: 1.5em 0 0.5em 1em;
   font-weight: 900;
+  letter-spacing: 0.02em;
   color: #353935;
 `;
 
