@@ -1,202 +1,247 @@
+import { useState } from "react";
 import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 
-import { FaTelegram, FaHeart } from "react-icons/fa";
-import { Col, Row, Divider, Typography, Image } from "antd";
-import TransparentBoxText from "./components/TransparentBoxText";
+import { FaTelegram, FaHeart, FaCheckCircle } from "react-icons/fa";
+import {
+  GiWinterHat,
+  GiTShirt,
+  GiWinterGloves,
+  GiTrousers,
+  GiBackpack,
+  GiLipstick,
+  GiPartyPopper,
+} from "react-icons/gi";
+import { Col, Row, Divider, Typography, Card, Badge } from "antd";
 import Header from "./components/Header";
+import NavModal from "./components/NavModal";
+import FloatingActions from "./components/FloatingActions";
+import useContactRedirects from "./hooks/useContactRedirects";
+
+const CATEGORIES = [
+  {
+    title: "Голова",
+    icon: GiWinterHat,
+    color: "#3D8BFD",
+    items: [
+      "пов'язка",
+      "легка шапка",
+      "відносно тепла, але тонка шапка",
+      "баф (краще два)",
+    ],
+  },
+  {
+    title: "Верхній корпус",
+    icon: GiTShirt,
+    color: "#FA8C16",
+    items: [
+      "термо (краще меринос, що відводить вологу)",
+      "фліс",
+      "можливо тоненька жилетка",
+      "кофта-курточка на прімалофт",
+      "курточка з мембраною чи гортекс",
+    ],
+  },
+  {
+    title: "Руки",
+    icon: GiWinterGloves,
+    color: "#52C41A",
+    items: [
+      "тонкі рукавички",
+      "верхонки",
+      "теплі рукавиці",
+      "супер теплі рукави для катання вниз",
+    ],
+  },
+  {
+    title: "Ноги",
+    icon: GiTrousers,
+    color: "#B01E28",
+    items: [
+      "гарна білизна ;-)",
+      "термо (краще меринос, що відводить вологу)",
+      "штани/тайси з віндстопером",
+      "самозброси — штани від вітру, можуть бути з мембрани",
+      "два останні шари можна замінити на «тонкі» гірськолижні штани",
+      "шкарпетки — теплі гетри до коліна, 2 пари. Якщо є, можна взяти ще тонку пару гетрів",
+    ],
+  },
+  {
+    title: "Більш складні поняття",
+    icon: GiBackpack,
+    color: "#722ED1",
+    items: [
+      "шолом",
+      "окуляри",
+      "маска",
+      "палиці",
+      "рюкзак",
+      "лижі",
+      "черевики",
+      "камус",
+      "ліхтарик (запасні батарейки чи акуми; візьми з собою зарядний пристрій, яким можна зарядити ліхтар)",
+      "маленький термос (тепла вода/чай)",
+      "перекус (батончики, калорійні цукерки)",
+      "рем-набір: стяжки, маленький мультитул, армований скотч (не моток, просто пару метрів)",
+      "маленька аптечка: бинт, пластирі (силіконові — ТОП), хлоргексидин, знеболююче, регідрон, ізофолія",
+      "для бажаючих — хімічна грілка (стопи, руки)",
+      "сушка для взуття",
+      "для бажаючих — кішки (це питання потрібно обговорити додатково)",
+    ],
+  },
+  {
+    title: "Косметика",
+    icon: GiLipstick,
+    color: "#EB2F96",
+    items: ["бальзам для губ", "сонцезахисний крем"],
+  },
+];
 
 const StyledTelegram = styled(FaTelegram)`
   margin: 0 0.5em;
   top: -0.4em;
 `;
 
-const StyledP = styled.p`
-  padding-top: 2pt;
-  padding-left: 109pt;
-  text-indent: 0pt;
+const StyledHero = styled.div`
+  position: relative;
+  padding: 4.5em 1.5em;
   text-align: center;
+  color: white;
+  background: linear-gradient(
+      to bottom,
+      rgba(15, 25, 45, 0.75),
+      rgba(15, 25, 45, 0.88)
+    ),
+    url(./ski.jpg) center/cover no-repeat;
+`;
+
+const StyledIconCircle = styled.div`
+  width: 2.75em;
+  height: 2.75em;
+  min-width: 2.75em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2em;
+`;
+
+const StyledCardHeader = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+`;
+
+const StyledCategoryTitle = styled.span`
+  font-weight: 700;
+  font-size: 1.25em;
+  flex: 1;
+`;
+
+const StyledItemList = styled.ul`
+  list-style: none;
+  margin: 0.75em 0 0 0;
+  padding: 0;
+`;
+
+const StyledItem = styled.li`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  margin-bottom: 0.7em;
+  font-size: 1.02em;
+  line-height: 1.45;
+`;
+
+const StyledCheckIcon = styled(FaCheckCircle)`
+  flex-shrink: 0;
+  margin-top: 0.25em;
 `;
 
 const SkiTourList = () => {
+  const [navOpen, setNavOpen] = useState(false);
+  const { redirectToTelegram } = useContactRedirects();
+
   return (
     <>
+      <NavModal open={navOpen} onClose={() => setNavOpen(false)} />
+      <FloatingActions
+        redirectToTelegram={redirectToTelegram}
+        onMenuClick={() => setNavOpen(true)}
+      />
+
       <Header />
-      <Row justify="space-around">
-        <Col xs={24} md={8} style={{ padding: "0em 2em" }}>
-          <Divider orientation="left">Вступ:</Divider>
-          <StyledP class="s1">Які іграшки необхідно мати, щоб вижити:</StyledP>
-          <StyledP>
-            <br />
-          </StyledP>
-          <StyledP class="s1">Голова:</StyledP>
-          <StyledP>
-            <br />
-          </StyledP>
-          <ul id="l1">
-            <li data-list-text="●">
-              <StyledP>пов&#39;язка,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>легка шапка,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>відносно тепла, але тонка шапка;</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>баф (краще два);</StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-              <StyledP class="s1">Верхній корпус:</StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>термо (краще меринос, що відводить вологу),</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>фліс,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>можливо тоненька жилетка,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>кофта-курточка на прімалофт,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>курточку з мембраною чи гортекс.</StyledP>
-              <StyledP class="s1">Руки:</StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>тонкі рукавички,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>верхонки,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>теплі рукавиці,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>супер теплі рукави для катання вниз.</StyledP>
-              <StyledP class="s1">Ноги:</StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>гарна білизна ;-)</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>термо (краще меринос, що відводить вологу),</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>штани/тайси з віндстопером,</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                самозброси - штані від вітру, можуть бути з мембрани,
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                два останні шари можна замінити на “тонкі” гірськолижні штани.
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                шкарпетки - теплі гетри, але до коліна - 2 пари. Якщо є -можна
-                взяти ще тонку пару гетрів.
-              </StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-              <StyledP class="s1">Більш складні поняття:</StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>шолом</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>окуляри</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>маска</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>палиці</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>рюкзак</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>лижі</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>черевики</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>камус</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                ліхтарик (запасні батарейки чи акуми. З собою на збір взяти
-                зарядний пристрій, котрим можна зарядити ваш ліхтар)
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>маленький термос (тепла вода/чай)</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>перекус (батончики, калорійні цукерки)</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                рем-набір: стяжки, маленький мультитул, армований скотч (не
-                моток, просто пару метрів)
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                маленька аптечка: бинт, пластирі (силіконові пластирі - ТОП),
-                хлоргексидин, знеболююче, регідрон, ізофолія
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>для бажаючих - хімічна грілка (стопи, руки)</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>сушка для взуття</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>
-                для бажаючих - кішки (це питання потрібно обговорити додатково)
-              </StyledP>
-              <StyledP class="s1">Косметика:</StyledP>
-              <StyledP>
-                <br />
-              </StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>бальзам для губ</StyledP>
-            </li>
-            <li data-list-text="●">
-              <StyledP>сонцезахисний крем</StyledP>
-            </li>
-          </ul>
-        </Col>
-        <Col xs={24} md={10} style={{ padding: "0em 2em" }}>
-          <Divider orientation="left">Основна частина:</Divider>
-          <Typography.Paragraph>
-            Гарний настрій.
-          </Typography.Paragraph>
+
+      <StyledHero>
+        <Typography.Title level={1} style={{ color: "white", margin: 0 }}>
+          Чеклист лижного туру
+        </Typography.Title>
+        <Typography.Paragraph
+          style={{ color: "white", fontSize: "1.3em", margin: "0.5em 0 0 0" }}
+        >
+          Які іграшки необхідно мати, щоб вижити 🏔️
+        </Typography.Paragraph>
+      </StyledHero>
+
+      <Row gutter={[24, 24]} style={{ padding: "2.5em 2em", margin: 0 }}>
+        {CATEGORIES.map((category) => (
+          <Col xs={24} sm={12} lg={8} key={category.title}>
+            <Card
+              style={{
+                height: "100%",
+                borderTop: `4px solid ${category.color}`,
+                borderRadius: 12,
+              }}
+            >
+              <StyledCardHeader>
+                <StyledIconCircle style={{ background: category.color }}>
+                  <category.icon />
+                </StyledIconCircle>
+                <StyledCategoryTitle>{category.title}</StyledCategoryTitle>
+                <Badge
+                  count={category.items.length}
+                  style={{ backgroundColor: category.color }}
+                />
+              </StyledCardHeader>
+              <StyledItemList>
+                {category.items.map((item) => (
+                  <StyledItem key={item}>
+                    <StyledCheckIcon color={category.color} />
+                    <span>{item}</span>
+                  </StyledItem>
+                ))}
+              </StyledItemList>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      <Row justify="center" style={{ padding: "0 2em 2.5em 2em" }}>
+        <Col xs={24} md={16} lg={12}>
+          <Card
+            style={{
+              textAlign: "center",
+              background: "linear-gradient(135deg, #232526, #414345)",
+              borderRadius: 16,
+              border: "none",
+            }}
+          >
+            <GiPartyPopper size="2.5em" color="white" />
+            <Typography.Title
+              level={3}
+              style={{ color: "white", margin: "0.4em 0 0 0" }}
+            >
+              Найголовніше спорядження
+            </Typography.Title>
+            <Typography.Paragraph
+              style={{ color: "white", fontSize: "1.3em", margin: 0 }}
+            >
+              Гарний настрій.
+            </Typography.Paragraph>
+          </Card>
         </Col>
       </Row>
 
