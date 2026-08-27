@@ -5,14 +5,14 @@ import ContactIcons from "./ContactIcons";
 const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <>
     <Row justify="center" id="about" style={{ margin: "3em 0" }}>
-      <Col lg={8} xl={6}>
+      <Col lg={6} xl={6}>
         <Image
-          src="./polina.jpg"
-          style={{ borderRadius: "50%", maxWidth: "75vw" }}
+          src="./Polina_Casual.png"
+          style={{ maxWidth: "75vw" }}
           preview={false}
         />
       </Col>
-      <Col xs={24} md={12} style={{ padding: "2em" }}>
+      <Col lg={12} xs={22} md={12} style={{ padding: "0 2em 0 2em" }}>
         <Typography.Title level={2} style={{ margin: "0 0 0.5em 0" }}>
           Вітаю. Я — Поліна.
         </Typography.Title>
@@ -33,9 +33,9 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
           іншим знайти власний ритм й напрямок.
         </Typography.Paragraph>
         <Typography.Paragraph style={{ fontSize: "1.5em" }}>
-          <b>Місія:</b> Я створюю програми, що розвивають не лише витривалість,
-          а й усвідомлення себе через рух. Бути присутнім у власному тілі,
-          відчувати його силу й розум.
+          Я створюю програми, що розвивають не лише витривалість, а й
+          усвідомлення себе через рух. Бути присутнім у власному тілі, відчувати
+          його силу й розум.
         </Typography.Paragraph>
         <div id="contacts" style={{ marginTop: "1.5em" }}>
           <ContactIcons
