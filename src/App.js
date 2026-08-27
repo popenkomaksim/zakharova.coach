@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "@fontsource/montserrat";
 import "./App.css";
-import { Divider } from "antd";
 
 import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
-import TransparentBoxText from "./components/TransparentBoxText";
+import HeroBanner from "./components/HeroBanner";
 import HeroSection from "./components/HeroSection";
-import PrinciplesSection from "./components/PrinciplesSection";
+import FormatsSection from "./components/FormatsSection";
 import EventsAndAchievements from "./components/EventsAndAchievements";
-import CollaborationSection from "./components/CollaborationSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import PartnersSection from "./components/PartnersSection";
 import StatsSection from "./components/StatsSection";
 import PricingSection from "./components/PricingSection";
 import ExtraServicesSection from "./components/ExtraServicesSection";
@@ -33,18 +33,16 @@ const App = () => {
       />
 
       <Header />
-      <a href="#prices" style={{ textDecoration: "none" }}>
-        <TransparentBoxText text="Рух – це життя, а життя – це рух!" />
-      </a>
-      <Divider />
+      <HeroBanner />
 
       <HeroSection
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
       />
-      <PrinciplesSection />
+      <FormatsSection />
       <EventsAndAchievements events={events} />
-      <CollaborationSection redirectToTelegram={redirectToTelegram} />
+      <TestimonialsSection />
+      <PartnersSection />
       <StatsSection redirectToTelegram={redirectToTelegram} />
       <PricingSection
         redirectToTelegram={redirectToTelegram}
