@@ -54,6 +54,10 @@ const StyledTagBox = styled.div`
   padding: 0 0.5em 0.5em 0;
   font-size: clamp(0.85em, 1.9vw, 4em);
   line-height: 1.3;
+  @media (max-width: 768px) {
+    left: 6%;
+    width: 42%;
+  }
 `;
 
 const StyledPlanText = styled(Typography.Title)`
@@ -71,6 +75,12 @@ const StyledPlanText = styled(Typography.Title)`
     line-height: 1.15;
     text-underline-offset: 0.1em;
     font-size: clamp(1.1rem, 3vw, 5rem);
+    @media (max-width: 768px) {
+      top: 46%;
+      right: 4%;
+      width: 52%;
+      color: #1a1a1a;
+    }
   }
 `;
 
@@ -86,6 +96,9 @@ const StyledBodyText = styled(Typography.Title)`
     line-height: 2.05;
     white-space: nowrap;
     font-size: clamp(1.8rem, 3.7vw, 4.2rem);
+    @media (max-width: 768px) {
+      top: 70%;
+    }
   }
 `;
 
@@ -101,6 +114,9 @@ const StyledRulesText = styled(Typography.Title)`
     line-height: 1.05;
     white-space: nowrap;
     font-size: clamp(1.8rem, 3.7vw, 4.2rem);
+    @media (max-width: 768px) {
+      top: 84.5%;
+    }
   }
 `;
 

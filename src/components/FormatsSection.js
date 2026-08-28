@@ -14,39 +14,41 @@ const FormatsSection = () => (
     <FormatCard
       title="Індивідуальний тренінг"
       description="Ти обираєш формат і цілі — я стежу, щоб кожне тренування давало максимум ефекту."
-      photo="./viktor.jpg"
-      pagination="01/05"
+      photo="./Max_Doggy_Polya_Doggy.jpeg"
+      pagination=""
       imageSide="left"
     />
 
     <FormatCard
       title="Онлайн тренування"
+      photo="./hug.jpeg"
       description="Це простір для системної роботи без прив'язки до місця. Я створюю індивідуальні плани, що враховують ціль, рівень і контекст твого життя. Ти сам обираєш, скільки структури та взаємодії потрібно саме зараз."
+      imageSide="right"
       pagination=""
     />
 
     <FormatCard
       title="Групові тренування"
       description="Групові тренування — це час, де кожен може рухатись у своєму ритмі, але в енергії спільної мети."
-      photo="./IMG_1182.jpg"
-      pagination="01/06"
-      imageSide="right"
+      photo="./thurthday.jpeg"
+      pagination=""
+      imageSide="left"
     />
 
     <FormatCard
       title="Тренувальні збори"
       description="Бігові кемпи — це більше, ніж просто тренування. Це коли тіло і дух об'єднуються. Тут усе просто: ми тренуємось, гуляємо, відновлюємось і живемо повільніше, ніж зазвичай."
-      photo="./borzhava_2023.jpg"
-      pagination="01/05"
-      imageSide="left"
+      photo="./team6.jpeg"
+      pagination=""
+      imageSide="right"
     />
 
     <FormatCard
       title="Пропозиції для бізнесу"
       description="Це формат для компаній, які хочуть пройти шлях до спільного старту: трейлу, марафону, забігу з перешкодами чи благодійного заходу."
-      photo="./vin01.jpg"
-      pagination="01/05"
-      imageSide="right"
+      photo="./team6.jpeg"
+      pagination=""
+      imageSide="left"
     />
   </>
 );

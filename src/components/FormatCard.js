@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Image, Typography } from "antd";
-import { FaArrowRight } from "react-icons/fa";
 
 const StyledFooter = styled.div`
   display: flex;
@@ -10,15 +9,6 @@ const StyledFooter = styled.div`
   margin-top: 1em;
   color: #878787;
   font-size: 0.9em;
-`;
-
-const StyledMoreLink = styled.span`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  cursor: pointer;
-  color: #353935;
-  font-weight: 600;
 `;
 
 const FormatCard = ({
@@ -38,9 +28,6 @@ const FormatCard = ({
       </Typography.Text>
       <StyledFooter>
         <span>{pagination}</span>
-        <StyledMoreLink>
-          more <FaArrowRight />
-        </StyledMoreLink>
       </StyledFooter>
     </div>
   );
@@ -50,7 +37,7 @@ const FormatCard = ({
       <Image
         src={photo}
         preview={false}
-        style={{ filter: "grayscale(1)", width: "100%" }}
+        style={{ width: "100%", maxHeight: "69vh" }}
       />
     </Col>
   ) : null;
