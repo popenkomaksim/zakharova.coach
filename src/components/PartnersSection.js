@@ -18,7 +18,7 @@ const PartnersSection = () => (
       <Col>
         <a
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://www.x-zone.com.ua/ua/proizvoditeli/kailas.html"
         >
           <Image src="./kailas_logo.png" preview={false} width="100px" />
@@ -27,26 +27,34 @@ const PartnersSection = () => (
       <Col>
         <a
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://travel-extreme.com.ua/torq/"
         >
           <Image src="./Torq-logo-square.webp" preview={false} width="100px" />
         </a>
       </Col>
       <Col>
-        <a target="_blank" rel="noreferrer" href="https://www.x-zone.com.ua/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.x-zone.com.ua/"
+        >
           <Image src="./xzone.png" preview={false} width="100px" />
         </a>
       </Col>
       <Col>
-        <a target="_blank" rel="noreferrer" href="https://sprtlab.com.ua/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://sprtlab.com.ua/"
+        >
           <Image src="./SportLab.png" preview={false} width="100px" />
         </a>
       </Col>
       <Col>
         <a
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://travel-extreme.com.ua/"
         >
           <Image src="./travelextreme.png" preview={false} width="100px" />
