@@ -60,6 +60,15 @@ const PartnersSection = () => (
           <Image src="./travelextreme.png" preview={false} width="100px" />
         </a>
       </Col>
+      <Col>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.facebook.com/tvoiapryhoda/"
+        >
+          <Image src="./tvoya_prygoda.png" preview={false} width="100px" />
+        </a>
+      </Col>
     </Row>
   </>
 );
