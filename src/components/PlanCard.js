@@ -56,7 +56,7 @@ const PlanCard = ({
       ₴{convert(price)}
       <span style={{ color: "#878787" }}> / €{price}</span>&nbsp;на місяць
     </Typography.Text>
-    <Divider orientation="center">
+    <Divider titlePlacement="center">
       <span
         onClick={redirectToTelegram}
         onKeyDown={redirectToTelegram}

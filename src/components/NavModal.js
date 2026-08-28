@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Modal, Divider, List, Typography } from "antd";
 
 const StyledText = styled.span`
@@ -9,51 +10,72 @@ const StyledText = styled.span`
 
 const NavModal = ({ open, onClose }) => (
   <Modal open={open} onCancel={onClose} center footer={null}>
-    <Divider orientation="left">
+    <Divider titlePlacement="left">
       <StyledText>Polina Zakharova</StyledText>
     </Divider>
     <List size="small">
       <List.Item>
-        <a href="#about" onClick={onClose}>
+        <Link to="/" onClick={onClose}>
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            Головна
+          </Typography.Text>
+        </Link>
+      </List.Item>
+      <List.Item>
+        <Link to="/about" onClick={onClose}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             Про мене
           </Typography.Text>
-        </a>
+        </Link>
       </List.Item>
       <List.Item>
-        <a href="#contacts" onClick={onClose}>
+        <Link to="/contact" onClick={onClose}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             Контакти
           </Typography.Text>
-        </a>
+        </Link>
       </List.Item>
       <List.Item>
-        <a href="#desc-first" onClick={onClose}>
-          <Typography.Text style={{ fontSize: "1.75em" }}>
-            Приниципи і підходи до тренувань
-          </Typography.Text>
-        </a>
-      </List.Item>
-      <List.Item>
-        <a href="#desc-second" onClick={onClose}>
+        <a href="/#formats" onClick={onClose}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             Формати співпраці
           </Typography.Text>
         </a>
       </List.Item>
       <List.Item>
-        <a href="#prices" onClick={onClose}>
+        <a href="/#prices" onClick={onClose}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             Види планів
           </Typography.Text>
         </a>
       </List.Item>
       <List.Item>
-        <a href="#additional-services" onClick={onClose}>
+        <a href="/#additional-services" onClick={onClose}>
           <Typography.Text style={{ fontSize: "1.75em" }}>
             Додаткові послуги
           </Typography.Text>
         </a>
+      </List.Item>
+      <List.Item>
+        <Link to="/skitour-chechlist" onClick={onClose}>
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            Чеклист лижного туру
+          </Typography.Text>
+        </Link>
+      </List.Item>
+      <List.Item>
+        <Link to="/calendar" onClick={onClose}>
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            Календар подій
+          </Typography.Text>
+        </Link>
+      </List.Item>
+      <List.Item>
+        <Link to="/privacy" onClick={onClose}>
+          <Typography.Text style={{ fontSize: "1.75em" }}>
+            Конфіденційність
+          </Typography.Text>
+        </Link>
       </List.Item>
     </List>
   </Modal>

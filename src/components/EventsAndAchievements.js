@@ -4,7 +4,7 @@ import { Col, Row, Divider, List, Tag } from "antd";
 const EventsAndAchievements = ({ events }) => (
   <Row justify="center">
     <Col xs="24" s="24" lg="12" style={{ padding: "0 2em" }}>
-      <Divider orientation="left">Майбутні події:</Divider>
+      <Divider titlePlacement="left">Майбутні події:</Divider>
       <List size="small">
         {events.map((event) => (
           <List.Item key={event.name}>
@@ -17,7 +17,7 @@ const EventsAndAchievements = ({ events }) => (
     </Col>
 
     <Col xs="24" s="24" lg="12" style={{ padding: "0 2em" }}>
-      <Divider orientation="left">Спортивні досягнення:</Divider>
+      <Divider titlePlacement="left">Спортивні досягнення:</Divider>
       <List size="small">
         <List.Item>
           <Tag>Іспанія 2019</Tag>

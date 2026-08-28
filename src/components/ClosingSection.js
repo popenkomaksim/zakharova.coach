@@ -3,7 +3,7 @@ import { Col, Row, Typography, Divider } from "antd";
 import { FaHeart } from "react-icons/fa";
 import ContactIcons from "./ContactIcons";
 import LoopVideo from "./LoopVideo";
-import PolinaRun from "../polina_run.mp4";
+import PolinaRun from "../Polina_Altra.mp4";
 
 const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <>
