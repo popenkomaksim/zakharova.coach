@@ -31,7 +31,7 @@ const StyledFrame = styled.div`
 const StyledMountainPhotoWrapper = styled.div`
   position: absolute;
   top: -2%;
-  right: 5%;
+  right: 1%;
   width: 48%;
   z-index: 1;
 `;
@@ -39,7 +39,7 @@ const StyledMountainPhotoWrapper = styled.div`
 const StyledRunnerPhotoWrapper = styled.div`
   position: absolute;
   top: 30.5%;
-  left: 13%;
+  left: 17%;
   width: 43.5%;
   max-width: 39em;
   z-index: 1;
@@ -61,12 +61,13 @@ const StyledPlanText = styled(Typography.Title)`
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 55%;
-    right: clamp(3rem, 6vw, 15rem);
+    top: 65%;
+    right: clamp(3.5rem, 4.5vw, 15.5rem);
     width: 46%;
     margin: 0;
     z-index: 2;
     text-align: right;
+    color: white;
     line-height: 1.15;
     text-underline-offset: 0.1em;
     font-size: clamp(1.1rem, 3vw, 5rem);
@@ -78,7 +79,7 @@ const StyledBodyText = styled(Typography.Title)`
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 80%;
+    top: 92%;
     right: 4.5%;
     margin: 0;
     z-index: 2;
@@ -93,7 +94,7 @@ const StyledRulesText = styled(Typography.Title)`
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 95%;
+    top: 105%;
     right: 4%;
     margin: 0;
     z-index: 2;
@@ -114,7 +115,7 @@ const HeroBanner = () => {
       </StyledFrame>
       <StyledMountainPhotoWrapper>
         <Image
-          src="./design_kazbek.jpeg"
+          src="./design2_kazbek.jpeg"
           preview={false}
           style={{ display: "block", width: "100%" }}
         />

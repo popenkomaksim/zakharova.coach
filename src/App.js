@@ -43,7 +43,7 @@ const App = () => {
         redirectToWhatsup={redirectToWhatsup}
       />
       <Image
-        src="./Kazbek.png"
+        src="./design_kazbek.jpeg"
         preview={false}
         width="100%"
         style={{ margin: "3vh 0 0 0" }}

@@ -6,7 +6,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <Row justify="center" id="about" style={{ margin: "3em 0" }}>
     <Col lg={6} xl={6}>
       <Image
-        src="./Polina_Casual.png"
+        src="./Polina_Casual.jpeg"
         style={{ maxWidth: "75vw" }}
         preview={false}
       />
