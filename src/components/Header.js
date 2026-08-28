@@ -3,9 +3,9 @@ import { Divider } from "antd";
 
 const StyledText = styled.span`
   display: block;
-  margin: 1.5em 0 0.5em 1em;
+  margin: 0.6em 0 0.5em 1em;
   font-weight: 900;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: #353935;
 `;
 

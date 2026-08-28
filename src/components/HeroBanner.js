@@ -1,3 +1,4 @@
+import "@fontsource/jost/900.css";
 import styled from "styled-components";
 import { Image, Typography } from "antd";
 import frameSvg from "./frame.svg";
@@ -25,7 +26,8 @@ const StyledFrame = styled.div`
   background-size: 100% 100%;
 `;
 
-const StyledTagBox = styled.div`
+const StyledTagBox = styled.div`'
+  font-family: 'Jost', sans-serif;
   position: absolute;
   left: 9.6%;
   top: 8.9%;
@@ -33,6 +35,7 @@ const StyledTagBox = styled.div`
   z-index: 3;
   padding: 0 0.5em 0.5em 0;
   font-size: clamp(0.85em, 2.2vw, 1.05em);
+  font-weight: 900;
   line-height: 1.3;
 `;
 

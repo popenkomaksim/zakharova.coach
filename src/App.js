@@ -54,7 +54,10 @@ const App = () => {
       {/* <EventsAndAchievements events={events} /> */}
       {/* <TestimonialsSection /> */}
       {/* <StatsSection redirectToTelegram={redirectToTelegram} /> */}
-      <TransparentBoxText text="Хай та русня здохне" $padding="1em 0 1.5em 0" />
+      <TransparentBoxText
+        text="Хай та русня здохне"
+        $padding="0.1em 0 0.2em 0"
+      />
       <PricingSection
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
