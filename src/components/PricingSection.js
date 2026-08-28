@@ -20,7 +20,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
           fontSize: "3.6em",
         }}
       >
-        Умови твого тренувального плану
+        Роздягальня цін: без дрібного шрифту, але з тренером
       </Typography.Title>
     </Col>
     <Col xs={24} lg={8}>
