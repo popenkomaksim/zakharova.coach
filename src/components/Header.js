@@ -10,7 +10,7 @@ const StyledText = styled.span`
 `;
 
 const Header = () => (
-  <Divider orientation="left">
+  <Divider titlePlacement="left">
     <StyledText>Polina Zakharova</StyledText>
   </Divider>
 );

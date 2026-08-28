@@ -20,7 +20,7 @@ const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
     style={{ margin: "2em" }}
   >
     <Typography.Text>{ListOfThingth}</Typography.Text>
-    <Divider orientation="center">
+    <Divider titlePlacement="center">
       ₴{convert(price)}
       <span style={{ color: "#878787" }}> / €{price}</span>
     </Divider>

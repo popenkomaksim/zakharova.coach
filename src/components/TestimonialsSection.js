@@ -12,7 +12,7 @@ const TestimonialsSection = () => (
 
     <Row justify="center" style={{ margin: "2em 0" }}>
       <Col xs={24} md={16} lg={12}>
-        <Card style={{ overflow: "hidden" }} bodyStyle={{ padding: 0 }}>
+        <Card style={{ overflow: "hidden" }} styles={{ body: { padding: 0 } }}>
           <Image
             src="./ski2.jpg"
             preview={false}
