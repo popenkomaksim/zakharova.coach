@@ -5,7 +5,9 @@ import PlanCard from "./PlanCard";
 const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <Row
     style={{
-      background: "url(./blue_mountains.jpg) repeat",
+      backgroundImage: "url(./pencil_mountains_narrow.jpeg)",
+      backgroundRepeat: "repeat-y",
+      backgroundSize: "100% auto",
       paddingBottom: "4em",
     }}
     id="prices"
@@ -16,7 +18,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         style={{
           margin: "  ",
           textAlign: "center",
-          color: "white",
+          color: "rgb(59 59 59 / 88%)",
           fontSize: "3.6em",
         }}
       >
