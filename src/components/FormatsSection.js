@@ -46,7 +46,7 @@ const FormatsSection = () => (
     <FormatCard
       title="Пропозиції для бізнесу"
       description="Це формат для компаній, які хочуть пройти шлях до спільного старту: трейлу, марафону, забігу з перешкодами чи благодійного заходу."
-      photo="./team6.jpeg"
+      photo="./Polina_OCC.jpeg"
       pagination=""
       imageSide="left"
     />
