@@ -11,6 +11,14 @@ const StyledFooter = styled.div`
   font-size: 0.9em;
 `;
 
+const StyledRow = styled(Row)`
+  margin: 3em 0;
+
+  @media (min-width: 768px) {
+    flex-direction: ${({ $imageLeft }) => ($imageLeft ? "row-reverse" : "row")};
+  }
+`;
+
 const FormatCard = ({
   title,
   description,
@@ -18,13 +26,8 @@ const FormatCard = ({
   pagination,
   imageSide = "right",
 }) => {
-  const imageGoesFirstOnDesktop = imageSide === "left";
-
   const textBlock = (
-    <Col
-      xs={{ span: 24, order: 0 }}
-      md={{ span: photo ? 12 : 16, order: imageGoesFirstOnDesktop ? 1 : 0 }}
-    >
+    <Col xs={24} md={photo ? 12 : 16}>
       <div style={{ padding: "1em 1.5em" }}>
         <Typography.Title level={4} style={{ margin: "0 0 0.5em 0" }}>
           {title}
@@ -40,10 +43,7 @@ const FormatCard = ({
   );
 
   const imageBlock = photo ? (
-    <Col
-      xs={{ span: 24, order: 1 }}
-      md={{ span: 10, order: imageGoesFirstOnDesktop ? 0 : 1 }}
-    >
+    <Col xs={24} md={10}>
       <Image
         src={photo}
         preview={false}
@@ -53,10 +53,14 @@ const FormatCard = ({
   ) : null;
 
   return (
-    <Row justify="space-around" align="middle" style={{ margin: "3em 0" }}>
+    <StyledRow
+      justify="space-around"
+      align="middle"
+      $imageLeft={imageSide === "left"}
+    >
       {textBlock}
       {imageBlock}
-    </Row>
+    </StyledRow>
   );
 };
 
