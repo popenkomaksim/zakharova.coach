@@ -5,7 +5,6 @@
   "private": true,
   "dependencies": {
     "@ericz1803/react-google-calendar": "^4.3.2",
-    "@fontsource/jost": "^5.3.0",
     "@fontsource/montserrat": "^5.3.0",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
