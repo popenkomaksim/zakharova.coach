@@ -21,7 +21,13 @@ const StyledMoreLink = styled.span`
   font-weight: 600;
 `;
 
-const FormatCard = ({ title, description, photo, pagination, imageSide }) => {
+const FormatCard = ({
+  title,
+  description,
+  photo = null,
+  pagination,
+  imageSide = "right",
+}) => {
   const textBlock = (
     <div style={{ padding: "1em 1.5em" }}>
       <Typography.Title level={4} style={{ margin: "0 0 0.5em 0" }}>
@@ -66,11 +72,6 @@ FormatCard.propTypes = {
   photo: PropTypes.string,
   pagination: PropTypes.string.isRequired,
   imageSide: PropTypes.oneOf(["left", "right"]),
-};
-
-FormatCard.defaultProps = {
-  photo: null,
-  imageSide: "right",
 };
 
 export default FormatCard;

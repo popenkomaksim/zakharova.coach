@@ -9,7 +9,7 @@ const StyledComposition = styled.div`
   position: relative;
   width: 100%;
   padding-top: 49.5%;
-  margin: 1em 0 4em 0;
+  margin: 1em 0 clamp(4em, 16vw, 14em) 0;
   @media (max-width: 768px) {
     padding-top: 130%;
   }
@@ -26,17 +26,6 @@ const StyledFrame = styled.div`
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: 100% 100%;
-`;
-
-const StyledTagBox = styled.div`
-  position: absolute;
-  left: 9.6%;
-  top: 8.9%;
-  width: 40%;
-  z-index: 2;
-  padding: 0 0.5em 0.5em 0;
-  font-size: clamp(0.85em, 2.2vw, 4.05em);
-  line-height: 1.3;
 `;
 
 const StyledMountainPhotoWrapper = styled.div`
@@ -56,20 +45,31 @@ const StyledRunnerPhotoWrapper = styled.div`
   z-index: 1;
 `;
 
+const StyledTagBox = styled.div`
+  position: absolute;
+  left: clamp(5rem, 1vw, 9rem);
+  top: 8.9%;
+  width: 40%;
+  z-index: 2;
+  padding: 0 0.5em 0.5em 0;
+  font-size: clamp(0.85em, 1.9vw, 4em);
+  line-height: 1.3;
+`;
+
 const StyledPlanText = styled(Typography.Title)`
   &&& {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 47%;
-    right: 20%;
+    top: 55%;
+    right: clamp(3rem, 6vw, 15rem);
     width: 46%;
     margin: 0;
     z-index: 2;
     text-align: right;
     line-height: 1.15;
     text-underline-offset: 0.1em;
-    font-size: clamp(1.1em, 4vw, 5em);
+    font-size: clamp(1.1rem, 3vw, 5rem);
   }
 `;
 
@@ -78,13 +78,13 @@ const StyledBodyText = styled(Typography.Title)`
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 70%;
+    top: 80%;
     right: 4.5%;
     margin: 0;
     z-index: 2;
     line-height: 2.05;
     white-space: nowrap;
-    font-size: clamp(1.8em, 8vw, 3.4em);
+    font-size: clamp(1.8rem, 3.7vw, 4.2rem);
   }
 `;
 
@@ -93,13 +93,13 @@ const StyledRulesText = styled(Typography.Title)`
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 84.5%;
+    top: 95%;
     right: 4%;
     margin: 0;
     z-index: 2;
     line-height: 1.05;
     white-space: nowrap;
-    font-size: clamp(1.8em, 8vw, 3.4em);
+    font-size: clamp(1.8rem, 3.7vw, 4.2rem);
   }
 `;
 

@@ -14,7 +14,11 @@ const StyledWhatsapp = styled(FaWhatsapp)`
   vertical-align: middle;
 `;
 
-const ContactIcons = ({ redirectToTelegram, redirectToWhatsup, size }) => (
+const ContactIcons = ({
+  redirectToTelegram,
+  redirectToWhatsup,
+  size = "4em",
+}) => (
   <>
     <span
       onClick={redirectToTelegram}
@@ -41,10 +45,6 @@ ContactIcons.propTypes = {
   redirectToTelegram: PropTypes.func.isRequired,
   redirectToWhatsup: PropTypes.func.isRequired,
   size: PropTypes.string,
-};
-
-ContactIcons.defaultProps = {
-  size: "4em",
 };
 
 export default ContactIcons;
