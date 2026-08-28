@@ -1,18 +1,4 @@
-import styled from "styled-components";
 import { Col, Row, Image, Typography } from "antd";
-
-const StyledPlaceholderLogo = styled.div`
-  width: 100px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px dashed #c5c5c5;
-  color: #a0a0a0;
-  font-size: 0.75em;
-  text-align: center;
-  padding: 0.25em;
-`;
 
 const PartnersSection = () => (
   <>
@@ -53,10 +39,18 @@ const PartnersSection = () => (
         </a>
       </Col>
       <Col>
-        <StyledPlaceholderLogo>SPRT LAB</StyledPlaceholderLogo>
+        <a target="_blank" rel="noreferrer" href="https://sprtlab.com.ua/">
+          <Image src="./SportLab.png" preview={false} width="100px" />
+        </a>
       </Col>
       <Col>
-        <StyledPlaceholderLogo>TRAVEL EXTREME</StyledPlaceholderLogo>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://travel-extreme.com.ua/"
+        >
+          <Image src="./travelextreme.png" preview={false} width="100px" />
+        </a>
       </Col>
     </Row>
   </>
