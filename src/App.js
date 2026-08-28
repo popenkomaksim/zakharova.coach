@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Image } from "antd";
+import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
@@ -18,10 +19,20 @@ import PartnersSection from "./components/PartnersSection";
 import PricingSection from "./components/PricingSection";
 import ExtraServicesSection from "./components/ExtraServicesSection";
 import ClosingSection from "./components/ClosingSection";
-import TransparentBoxText from "./components/TransparentBoxText";
 
 import useContactRedirects from "./hooks/useContactRedirects";
 // import useUpcomingEvents from "./hooks/useUpcomingEvents";
+
+const StyledPatrioticText = styled.p`
+  margin: 0;
+  padding: 0.6em 0.4em;
+  background: transparent;
+  color: #b01e28;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 8vw, 2.75rem);
+  white-space: nowrap;
+  text-align: center;
+`;
 
 const App = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -54,10 +65,7 @@ const App = () => {
       {/* <EventsAndAchievements events={events} /> */}
       {/* <TestimonialsSection /> */}
       {/* <StatsSection redirectToTelegram={redirectToTelegram} /> */}
-      <TransparentBoxText
-        text="Хай та русня здохне"
-        $padding="0.1em 0 0.2em 0"
-      />
+      <StyledPatrioticText>Хай та русня здохне</StyledPatrioticText>
       <PricingSection
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
