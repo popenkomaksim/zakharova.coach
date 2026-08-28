@@ -18,37 +18,44 @@ const FormatCard = ({
   pagination,
   imageSide = "right",
 }) => {
+  const imageGoesFirstOnDesktop = imageSide === "left";
+
   const textBlock = (
-    <div style={{ padding: "1em 1.5em" }}>
-      <Typography.Title level={4} style={{ margin: "0 0 0.5em 0" }}>
-        {title}
-      </Typography.Title>
-      <Typography.Text style={{ fontSize: "1.1em", color: "#5a5a5a" }}>
-        {description}
-      </Typography.Text>
-      <StyledFooter>
-        <span>{pagination}</span>
-      </StyledFooter>
-    </div>
+    <Col
+      xs={{ span: 24, order: 0 }}
+      md={{ span: photo ? 12 : 16, order: imageGoesFirstOnDesktop ? 1 : 0 }}
+    >
+      <div style={{ padding: "1em 1.5em" }}>
+        <Typography.Title level={4} style={{ margin: "0 0 0.5em 0" }}>
+          {title}
+        </Typography.Title>
+        <Typography.Text style={{ fontSize: "1.1em", color: "#5a5a5a" }}>
+          {description}
+        </Typography.Text>
+        <StyledFooter>
+          <span>{pagination}</span>
+        </StyledFooter>
+      </div>
+    </Col>
   );
 
   const imageBlock = photo ? (
-    <Col xs={24} md={10}>
+    <Col
+      xs={{ span: 24, order: 1 }}
+      md={{ span: 10, order: imageGoesFirstOnDesktop ? 0 : 1 }}
+    >
       <Image
         src={photo}
         preview={false}
-        style={{ width: "100%", maxHeight: "69vh" }}
+        style={{ width: "100%", maxHeight: "76vh" }}
       />
     </Col>
   ) : null;
 
   return (
     <Row justify="space-around" align="middle" style={{ margin: "3em 0" }}>
-      {imageSide === "left" && imageBlock}
-      <Col xs={24} md={photo ? 12 : 16}>
-        {textBlock}
-      </Col>
-      {imageSide === "right" && imageBlock}
+      {textBlock}
+      {imageBlock}
     </Row>
   );
 };
