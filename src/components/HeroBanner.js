@@ -36,7 +36,7 @@ const StyledMountainPhotoWrapper = styled.div`
   z-index: 1;
   @media (max-width: 768px) {
     top: -0.5%;
-    width: 57%;
+    width: 40%;
   }
 `;
 
@@ -85,9 +85,9 @@ const StyledPlanText = styled(Typography.Title)`
     text-underline-offset: 0.1em;
     font-size: clamp(1.1rem, 3vw, 5rem);
     @media (max-width: 768px) {
-      top: 50%;
+      top: 35%;
       right: 4%;
-      width: 90%;
+      width: 100%;
       color: #1a1a1a;
       line-height: 1;
       font-size: clamp(1.8rem, 3.7vw, 4.2rem);
@@ -108,6 +108,7 @@ const StyledBodyText = styled(Typography.Title)`
     white-space: nowrap;
     font-size: clamp(1.8rem, 3.7vw, 4.2rem);
     @media (max-width: 768px) {
+      font-size: clamp(1.8rem, 8vw, 8.2rem);
       top: 70%;
     }
   }
@@ -126,7 +127,8 @@ const StyledRulesText = styled(Typography.Title)`
     white-space: nowrap;
     font-size: clamp(1.8rem, 3.7vw, 4.2rem);
     @media (max-width: 768px) {
-      top: 80%;
+      font-size: clamp(1rem, 6vw, 4rem);
+      top: 82%;
     }
   }
 `;
