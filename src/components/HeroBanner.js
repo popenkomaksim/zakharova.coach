@@ -11,7 +11,7 @@ const StyledComposition = styled.div`
   padding-top: 49.5%;
   margin: 1em 0 clamp(4em, 16vw, 14em) 0;
   @media (max-width: 768px) {
-    padding-top: 130%;
+    padding-top: 100%;
   }
 `;
 
@@ -34,6 +34,10 @@ const StyledMountainPhotoWrapper = styled.div`
   right: 1%;
   width: 48%;
   z-index: 1;
+  @media (max-width: 768px) {
+    top: -0.5%;
+    width: 57%;
+  }
 `;
 
 const StyledRunnerPhotoWrapper = styled.div`
@@ -43,6 +47,11 @@ const StyledRunnerPhotoWrapper = styled.div`
   width: 43.5%;
   max-width: 39em;
   z-index: 1;
+  @media (max-width: 768px) {
+    left: 5%;
+    top: 45%;
+    width: 49%;
+  }
 `;
 
 const StyledTagBox = styled.div`
@@ -76,10 +85,12 @@ const StyledPlanText = styled(Typography.Title)`
     text-underline-offset: 0.1em;
     font-size: clamp(1.1rem, 3vw, 5rem);
     @media (max-width: 768px) {
-      top: 46%;
+      top: 50%;
       right: 4%;
-      width: 52%;
+      width: 90%;
       color: #1a1a1a;
+      line-height: 1;
+      font-size: clamp(1.8rem, 3.7vw, 4.2rem);
     }
   }
 `;
@@ -115,7 +126,7 @@ const StyledRulesText = styled(Typography.Title)`
     white-space: nowrap;
     font-size: clamp(1.8rem, 3.7vw, 4.2rem);
     @media (max-width: 768px) {
-      top: 84.5%;
+      top: 80%;
     }
   }
 `;
