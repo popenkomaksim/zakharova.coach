@@ -9,7 +9,7 @@ const StyledText = styled.span`
 `;
 
 const NavModal = ({ open, onClose }) => (
-  <Modal open={open} onCancel={onClose} center footer={null}>
+  <Modal open={open} onCancel={onClose} centered footer={null}>
     <Divider titlePlacement="left">
       <StyledText>Polina Zakharova</StyledText>
     </Divider>
