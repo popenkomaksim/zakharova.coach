@@ -7,6 +7,8 @@ import LoopVideo from "./LoopVideo";
 import PolinaRun from "../Polina_Altra.mp4";
 
 const StyledFooterDivider = styled(Divider)`
+  margin-top: 4em;
+
   .ant-divider-inner-text {
     white-space: normal;
     text-align: center;
@@ -22,16 +24,32 @@ const StyledQuestionText = styled(Typography.Text)`
   }
 `;
 
+const StyledQuestionWrapper = styled.div`
+  margin: 0 2em;
+  text-align: center;
+`;
+
+const StyledQuestionTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+    font-size: 2.25em;
+  }
+`;
+
+const StyledHeart = styled(FaHeart)`
+  top: -0.5em;
+`;
+
 const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <>
     <LoopVideo src={PolinaRun} alt="Polina do running" />
 
     <Row justify="space-around">
       <Col xs={24} md={10}>
-        <div style={{ margin: "0 2em", textAlign: "center" }}>
-          <Typography.Title level={3} style={{ margin: 0, fontSize: "2.25em" }}>
+        <StyledQuestionWrapper>
+          <StyledQuestionTitle level={3}>
             Залишились питання?
-          </Typography.Title>
+          </StyledQuestionTitle>
           <br />
           <StyledQuestionText>
             Зв&apos;яжись зі мною в робочі години.
@@ -43,13 +61,13 @@ const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
             redirectToTelegram={redirectToTelegram}
             redirectToWhatsup={redirectToWhatsup}
           />
-        </div>
+        </StyledQuestionWrapper>
       </Col>
     </Row>
 
-    <StyledFooterDivider style={{ marginTop: "4em" }}>
-      Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
-      Ukraine © 2023 &mdash; {new Date().getFullYear()}
+    <StyledFooterDivider>
+      Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine © 2023 &mdash;{" "}
+      {new Date().getFullYear()}
     </StyledFooterDivider>
   </>
 );

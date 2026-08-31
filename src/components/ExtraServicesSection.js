@@ -1,22 +1,32 @@
+import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
 import ExtraServiceCard from "./ExtraServiceCard";
 
+const StyledTitleRow = styled(Row)`
+  margin: 2em 0;
+`;
+
+const StyledTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+    text-align: center;
+  }
+`;
+
 const ExtraServicesSection = () => (
   <>
-    <Row style={{ margin: "2em 0" }} id="additional-services">
+    <StyledTitleRow id="additional-services">
       <Col span={24}>
-        <Typography.Title level={2} style={{ margin: 0, textAlign: "center" }}>
-          Додаткові послуги
-        </Typography.Title>
+        <StyledTitle level={2}>Додаткові послуги</StyledTitle>
       </Col>
-    </Row>
+    </StyledTitleRow>
     <Row>
       <Col xs={24} md={6}>
         <ExtraServiceCard
           name="Розбір та розкладка гонки"
           price={40}
           ListOfThingth={
-            <ul style={{ listStyle: "" }}>
+            <ul>
               <li>аналіз трьох пройдешніх гонок</li>
               <li>розбір стартового треку</li>
               <li>планування пробігання гонки</li>
@@ -29,7 +39,7 @@ const ExtraServicesSection = () => (
           name="Аналіз та планування сезону"
           price={40}
           ListOfThingth={
-            <ul style={{ listStyle: "" }}>
+            <ul>
               <li>розбір цілей сезону</li>
               <li>планування</li>
             </ul>

@@ -35,6 +35,47 @@ const StyledCardWrapper = styled.div`
   padding: 2em;
 `;
 
+const StyledCard = styled(Card)`
+  &&& {
+    height: 100%;
+    ${({ $recommended }) =>
+      $recommended &&
+      `
+      border: 2px solid #b01e28;
+      box-shadow: 0 0.6em 2em rgba(176, 30, 40, 0.25);
+    `}
+  }
+`;
+
+const StyledCardTitle = styled.div`
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: rgb(59 59 59 / 88%);
+`;
+
+const StyledSectionLabel = styled(Typography.Title)`
+  &&& {
+    font-size: 1.175em;
+  }
+`;
+
+const StyledPriceRow = styled(Typography.Text)`
+  &&& {
+    justify-content: center;
+    font-size: 1.25em;
+    display: flex;
+  }
+`;
+
+const StyledEurPrice = styled.span`
+  color: #878787;
+`;
+
+const StyledIconLink = styled.span`
+  cursor: pointer;
+`;
+
 const PlanCard = ({
   name,
   price,
@@ -45,69 +86,36 @@ const PlanCard = ({
 }) => {
   const card = (
     <StyledCardWrapper>
-      <Card
-        title={
-          <div
-            style={{
-              textAlign: "center",
-              fontSize: "3em",
-              fontWeight: "bold",
-              color: "rgb(59 59 59 / 88%)",
-            }}
-          >
-            {name}
-          </div>
-        }
+      <StyledCard
+        title={<StyledCardTitle>{name}</StyledCardTitle>}
         size="small"
-        style={
-          recommended
-            ? {
-                height: "100%",
-                border: "2px solid #b01e28",
-                boxShadow: "0 0.6em 2em rgba(176, 30, 40, 0.25)",
-              }
-            : { height: "100%" }
-        }
+        $recommended={recommended}
       >
-        <Typography.Title
-          style={{
-            fontSize: "1.175em",
-          }}
-        >
-          У цьому пакеті ви отримаєте:
-        </Typography.Title>
+        <StyledSectionLabel>У цьому пакеті ви отримаєте:</StyledSectionLabel>
         <Typography.Text>{ListOfThingth}</Typography.Text>
-        <Typography.Text
-          style={{
-            justifyContent: "center",
-            fontSize: "1.25em",
-            display: "flex",
-          }}
-        >
+        <StyledPriceRow>
           ₴{convert(price)}
-          <span style={{ color: "#878787" }}> / €{price}</span>&nbsp;на місяць
-        </Typography.Text>
+          <StyledEurPrice> / €{price}</StyledEurPrice>&nbsp;на місяць
+        </StyledPriceRow>
         <Divider titlePlacement="center">
-          <span
+          <StyledIconLink
             onClick={redirectToTelegram}
             onKeyDown={redirectToTelegram}
             role="link"
             tabIndex="0"
-            style={{ cursor: "pointer" }}
           >
             <StyledTelegram size="2em" color="#229ED9" />
-          </span>
-          <span
+          </StyledIconLink>
+          <StyledIconLink
             onClick={redirectToWhatsup}
             onKeyDown={redirectToWhatsup}
             role="link"
             tabIndex="0"
-            style={{ cursor: "pointer" }}
           >
             <StyledWhatsapp size="2em" color="#25D366" />
-          </span>
+          </StyledIconLink>
         </Divider>
-      </Card>
+      </StyledCard>
     </StyledCardWrapper>
   );
 

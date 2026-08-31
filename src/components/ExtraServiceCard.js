@@ -10,29 +10,31 @@ const StyledCardWrapper = styled.div`
   padding: 2em;
 `;
 
+const StyledCard = styled(Card)`
+  &&& {
+    height: 100%;
+  }
+`;
+
+const StyledCardTitle = styled.div`
+  text-align: center;
+  font-weight: bold;
+  color: rgb(59 59 59 / 88%);
+`;
+
+const StyledEurPrice = styled.span`
+  color: #878787;
+`;
+
 const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
   <StyledCardWrapper>
-    <Card
-      title={
-        <div
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            color: "rgb(59 59 59 / 88%)",
-          }}
-        >
-          {name}
-        </div>
-      }
-      size="small"
-      style={{ height: "100%" }}
-    >
+    <StyledCard title={<StyledCardTitle>{name}</StyledCardTitle>} size="small">
       <Typography.Text>{ListOfThingth}</Typography.Text>
       <Divider titlePlacement="center">
         ₴{convert(price)}
-        <span style={{ color: "#878787" }}> / €{price}</span>
+        <StyledEurPrice> / €{price}</StyledEurPrice>
       </Divider>
-    </Card>
+    </StyledCard>
   </StyledCardWrapper>
 );
 

@@ -3,6 +3,13 @@ import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
 import PlanCard from "./PlanCard";
 
+const StyledPricingRow = styled(Row)`
+  background-image: url(./pencil_mountains_narrow.jpeg);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  padding-bottom: 4em;
+`;
+
 const StyledPricingTitleWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -26,15 +33,7 @@ const StyledPricingTitle = styled(Typography.Title)`
 `;
 
 const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
-  <Row
-    style={{
-      backgroundImage: "url(./pencil_mountains_narrow.jpeg)",
-      backgroundRepeat: "repeat-y",
-      backgroundSize: "100% auto",
-      paddingBottom: "4em",
-    }}
-    id="prices"
-  >
+  <StyledPricingRow id="prices">
     <Col span={24}>
       <StyledPricingTitleWrapper>
         <StyledPricingTitle level={2}>
@@ -49,7 +48,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         redirectToWhatsup={redirectToWhatsup}
         price={25}
         ListOfThingth={
-          <ul style={{ listStyle: "" }}>
+          <ul>
             <li>акаунт в TRAININGPEAKS</li>
             <li>персоналізований план на місяць</li>
             <li>консультація з вибором цільових стартів</li>
@@ -66,7 +65,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         redirectToWhatsup={redirectToWhatsup}
         price={40}
         ListOfThingth={
-          <ul style={{ listStyle: "" }}>
+          <ul>
             <li>акаунт в TRAININGPEAKS</li>
             <li>щотижневий персоналізований план</li>
             <li>можливість ситуативного коригування плану</li>
@@ -87,7 +86,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         redirectToWhatsup={redirectToWhatsup}
         price={60}
         ListOfThingth={
-          <ul style={{ listStyle: "" }}>
+          <ul>
             <li>pro-акаунт в TRAININGPEAKS з доступом до аналітики</li>
             <li>щотижневий персоналізований план</li>
             <li>можливість ситуативного коригування плану</li>
@@ -101,7 +100,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         }
       />
     </Col>
-  </Row>
+  </StyledPricingRow>
 );
 
 PricingSection.propTypes = {

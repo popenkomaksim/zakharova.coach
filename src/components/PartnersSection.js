@@ -6,6 +6,21 @@ const StyledPartnerLink = styled.a`
   padding: 0.75em;
 `;
 
+const StyledTitleRow = styled(Row)`
+  margin: 2em 0 1em 0;
+`;
+
+const StyledTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+    text-align: center;
+  }
+`;
+
+const StyledLogosRow = styled(Row)`
+  margin: 1em 0 3em 0;
+`;
+
 const StyledLogoTile = styled.div`
   display: flex;
   align-items: center;
@@ -60,19 +75,12 @@ const partners = [
 
 const PartnersSection = () => (
   <>
-    <Row style={{ margin: "2em 0 1em 0" }}>
+    <StyledTitleRow>
       <Col span={24}>
-        <Typography.Title level={3} style={{ margin: 0, textAlign: "center" }}>
-          Мої партнери:
-        </Typography.Title>
+        <StyledTitle level={3}>Мої партнери:</StyledTitle>
       </Col>
-    </Row>
-    <Row
-      justify="center"
-      align="middle"
-      gutter={[24, 24]}
-      style={{ margin: "1em 0 3em 0" }}
-    >
+    </StyledTitleRow>
+    <StyledLogosRow justify="center" align="middle" gutter={[24, 24]}>
       {partners.map(({ href, src, alt }) => (
         <Col key={src}>
           <StyledPartnerLink
@@ -86,7 +94,7 @@ const PartnersSection = () => (
           </StyledPartnerLink>
         </Col>
       ))}
-    </Row>
+    </StyledLogosRow>
   </>
 );
 

@@ -30,6 +30,23 @@ const StyledFormatImage = styled(Image)`
   }
 `;
 
+const StyledTextWrapper = styled.div`
+  padding: 1em 1.5em;
+`;
+
+const StyledCardTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0 0 0.5em 0;
+  }
+`;
+
+const StyledDescription = styled(Typography.Text)`
+  &&& {
+    font-size: 1.1em;
+    color: #5a5a5a;
+  }
+`;
+
 const FormatCard = ({
   title,
   description,
@@ -39,17 +56,13 @@ const FormatCard = ({
 }) => {
   const textBlock = (
     <Col xs={24} md={photo ? 12 : 16}>
-      <div style={{ padding: "1em 1.5em" }}>
-        <Typography.Title level={4} style={{ margin: "0 0 0.5em 0" }}>
-          {title}
-        </Typography.Title>
-        <Typography.Text style={{ fontSize: "1.1em", color: "#5a5a5a" }}>
-          {description}
-        </Typography.Text>
+      <StyledTextWrapper>
+        <StyledCardTitle level={4}>{title}</StyledCardTitle>
+        <StyledDescription>{description}</StyledDescription>
         <StyledFooter>
           <span>{pagination}</span>
         </StyledFooter>
-      </div>
+      </StyledTextWrapper>
     </Col>
   );
 
