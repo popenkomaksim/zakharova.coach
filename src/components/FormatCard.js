@@ -47,7 +47,7 @@ const FormatCard = ({
       <Image
         src={photo}
         preview={false}
-        style={{ width: "100%", maxHeight: "76vh" }}
+        style={{ width: "100%", maxHeight: "85vh" }}
       />
     </Col>
   ) : null;
