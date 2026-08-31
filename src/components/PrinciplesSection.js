@@ -1,20 +1,46 @@
+import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
 import TransparentBoxText from "./TransparentBoxText";
 import StyledCol from "./StyledCol";
 import LoopVideo from "./LoopVideo";
 import PolinaAltra from "../Polina_Altra.mp4";
 
+const StyledTitleRow = styled(Row)`
+  margin: 2em 0;
+`;
+
+const StyledTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+    text-align: center;
+  }
+`;
+
+const StyledPrincipleRow = styled(Row)`
+  margin: 5em 0;
+`;
+
+const StyledTextCol = styled(Col)`
+  padding: 2em;
+`;
+
+const StyledText = styled(Typography.Text)`
+  &&& {
+    font-size: 1.75em;
+  }
+`;
+
 const PrinciplesSection = () => (
   <>
-    <Row style={{ margin: "2em 0" }} justify="space-around" id="desc-first">
+    <StyledTitleRow justify="space-around" id="desc-first">
       <Col span={18}>
-        <Typography.Title level={2} style={{ margin: 0, textAlign: "center" }}>
+        <StyledTitle level={2}>
           Мій підхід до тренувального процесу базується на 3 приниципах:
-        </Typography.Title>
+        </StyledTitle>
       </Col>
-    </Row>
+    </StyledTitleRow>
 
-    <Row justify="center" align="middle" style={{ margin: "5em 0" }}>
+    <StyledPrincipleRow justify="center" align="middle">
       <Col xs={24} md={12}>
         <TransparentBoxText
           text="Баланс"
@@ -23,35 +49,22 @@ const PrinciplesSection = () => (
           $imageUrl="./ski.jpg"
         />
       </Col>
-      <Col xs={24} md={12} style={{ padding: "2em" }}>
-        <Typography.Text style={{ fontSize: "1.75em" }}>
+      <StyledTextCol xs={24} md={12}>
+        <StyledText>
           життєвий баланс &mdash; гармонійне поєднання особистого, професійного
           життя та хоббі, яке присносить задоволення та дарує покращення
           фізичного стану
-        </Typography.Text>
-      </Col>
-    </Row>
+        </StyledText>
+      </StyledTextCol>
+    </StyledPrincipleRow>
 
-    <Row
-      justify="center"
-      align="middle"
-      style={{
-        margin: "5em 0",
-        display: "flex",
-      }}
-    >
-      <StyledCol
-        xs={24}
-        md={12}
-        style={{
-          padding: "2em",
-        }}
-      >
-        <Typography.Text style={{ fontSize: "1.75em" }}>
+    <StyledPrincipleRow justify="center" align="middle">
+      <StyledCol xs={24} md={12} $padding="2em">
+        <StyledText>
           дисципліна та послідовність &mdash; дотримання плану та еволюційний
           розвиток створюють фундаментальну базу для довготривалих відносин зі
           спортом
-        </Typography.Text>
+        </StyledText>
       </StyledCol>
 
       <Col xs={24} md={12}>
@@ -62,9 +75,9 @@ const PrinciplesSection = () => (
           $imageUrl="./ski.jpg"
         />
       </Col>
-    </Row>
+    </StyledPrincipleRow>
 
-    <Row justify="center" align="middle" style={{ margin: "5em 0" }}>
+    <StyledPrincipleRow justify="center" align="middle">
       <Col xs={24} md={12}>
         <TransparentBoxText
           text="Практичність"
@@ -73,13 +86,13 @@ const PrinciplesSection = () => (
           $imageUrl="./ski.jpg"
         />
       </Col>
-      <Col xs={24} md={12} style={{ padding: "2em" }}>
-        <Typography.Text style={{ fontSize: "1.75em" }}>
+      <StyledTextCol xs={24} md={12}>
+        <StyledText>
           індивідуальність та практичність &mdash; врахування рівня фізичної
           підготовки та реальної доступності ресурсів
-        </Typography.Text>
-      </Col>
-    </Row>
+        </StyledText>
+      </StyledTextCol>
+    </StyledPrincipleRow>
 
     <LoopVideo src={PolinaAltra} alt="Polina do smile" />
   </>
