@@ -102,8 +102,8 @@ const StyledCtaIcon = styled.span`
 
 const StyledParagraph = styled(Typography.Paragraph)`
   &&& {
-    font-size: 1.8em;
-    @media (max-width: 575.98px) {
+    font-size: 1.49em;
+    @media (max-width: 991.98px) {
       font-size: 1.15em;
     }
   }
@@ -149,7 +149,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
         <StyledDesktopImageCol lg={6} xl={6}>
           <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
         </StyledDesktopImageCol>
-        <StyledTextCol lg={12} xs={22}>
+        <StyledTextCol lg={12} xs={22} md={12}>
           <StyledTextCard>
             <StyledTextCardBackground />
             <StyledSectionTitle level={2}>
