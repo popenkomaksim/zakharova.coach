@@ -3,11 +3,12 @@ import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
-import { FaHeart, FaTelegram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { Row, Col, Divider, Typography, List } from "antd";
+import { FaTelegram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { Row, Col, Typography, List } from "antd";
 import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
+import Footer from "./components/Footer";
 import useContactRedirects from "./hooks/useContactRedirects";
 
 const StyledRow = styled(Row)`
@@ -32,14 +33,6 @@ const StyledParagraph = styled(Typography.Paragraph)`
 
 const StyledIcon = styled.span`
   margin-right: 0.5em;
-`;
-
-const StyledFooterDivider = styled(Divider)`
-  margin-top: 4em;
-`;
-
-const StyledHeart = styled(FaHeart)`
-  top: -0.5em;
 `;
 
 const Contact = () => {
@@ -98,10 +91,7 @@ const Contact = () => {
         </StyledTextCol>
       </StyledRow>
 
-      <StyledFooterDivider>
-        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
-        {new Date().getFullYear()}
-      </StyledFooterDivider>
+      <Footer />
     </>
   );
 };

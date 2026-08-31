@@ -3,7 +3,7 @@ import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
 
-import { FaTelegram, FaHeart, FaCheckCircle } from "react-icons/fa";
+import { FaTelegram, FaCheckCircle } from "react-icons/fa";
 import {
   GiWinterHat,
   GiTShirt,
@@ -13,10 +13,11 @@ import {
   GiLipstick,
   GiPartyPopper,
 } from "react-icons/gi";
-import { Col, Row, Divider, Typography, Card, Badge } from "antd";
+import { Col, Row, Typography, Card, Badge } from "antd";
 import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
+import Footer from "./components/Footer";
 import useContactRedirects from "./hooks/useContactRedirects";
 
 const CATEGORIES = [
@@ -235,14 +236,6 @@ const StyledQuestionTitle = styled(Typography.Title)`
   }
 `;
 
-const StyledFooterDivider = styled(Divider)`
-  margin-top: 4em;
-`;
-
-const StyledHeart = styled(FaHeart)`
-  top: -0.5em;
-`;
-
 const SkiTourList = () => {
   const [navOpen, setNavOpen] = useState(false);
   const { redirectToTelegram } = useContactRedirects();
@@ -321,10 +314,7 @@ const SkiTourList = () => {
         </Col>
       </Row>
 
-      <StyledFooterDivider>
-        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
-        {new Date().getFullYear()}
-      </StyledFooterDivider>
+      <Footer />
     </>
   );
 };

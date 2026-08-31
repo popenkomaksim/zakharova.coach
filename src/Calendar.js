@@ -3,23 +3,15 @@ import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
-import { FaHeart } from "react-icons/fa";
 import { Divider } from "antd";
 import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
+import Footer from "./components/Footer";
 import useContactRedirects from "./hooks/useContactRedirects";
 
 const StyledIframe = styled.iframe`
   border: 0;
-`;
-
-const StyledFooterDivider = styled(Divider)`
-  margin-top: 4em;
-`;
-
-const StyledHeart = styled(FaHeart)`
-  top: -0.5em;
 `;
 
 const Project10 = () => {
@@ -43,10 +35,7 @@ const Project10 = () => {
       />
       <Divider />
 
-      <StyledFooterDivider>
-        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
-        {new Date().getFullYear()}
-      </StyledFooterDivider>
+      <Footer />
     </>
   );
 };

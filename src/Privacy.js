@@ -3,11 +3,11 @@ import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
-import { FaHeart } from "react-icons/fa";
-import { Row, Col, Divider, Typography } from "antd";
+import { Row, Col, Typography } from "antd";
 import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
+import Footer from "./components/Footer";
 import useContactRedirects from "./hooks/useContactRedirects";
 
 const StyledRow = styled(Row)`
@@ -34,14 +34,6 @@ const StyledFirstParagraph = styled(StyledParagraph)`
   &&& {
     margin-top: 1.5em;
   }
-`;
-
-const StyledFooterDivider = styled(Divider)`
-  margin-top: 4em;
-`;
-
-const StyledHeart = styled(FaHeart)`
-  top: -0.5em;
 `;
 
 const Privacy = () => {
@@ -109,10 +101,7 @@ const Privacy = () => {
         </StyledTextCol>
       </StyledRow>
 
-      <StyledFooterDivider>
-        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
-        {new Date().getFullYear()}
-      </StyledFooterDivider>
+      <Footer />
     </>
   );
 };
