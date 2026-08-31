@@ -149,7 +149,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
         <StyledDesktopImageCol lg={6} xl={6}>
           <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
         </StyledDesktopImageCol>
-        <StyledTextCol lg={12} xs={22} md={12}>
+        <StyledTextCol lg={12} xs={22} md={24}>
           <StyledTextCard>
             <StyledTextCardBackground />
             <StyledSectionTitle level={2}>

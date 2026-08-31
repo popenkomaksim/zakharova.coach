@@ -32,6 +32,14 @@ const StyledFormatImage = styled(Image)`
 
 const StyledTextWrapper = styled.div`
   padding: 1em 1.5em;
+  max-width: 30vw;
+  @media (max-width: 991.98px) {
+    max-width: 100vw;
+  }
+  font-size: 1.49em;
+  @media (max-width: 991.98px) {
+    font-size: 1.15em;
+  }
 `;
 
 const StyledCardTitle = styled(Typography.Title)`
