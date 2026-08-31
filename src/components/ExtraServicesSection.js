@@ -1,25 +1,10 @@
-import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
+import SectionTitle from "./SectionTitle";
 import ExtraServiceCard from "./ExtraServiceCard";
-
-const StyledTitleRow = styled(Row)`
-  margin: 2em 0;
-`;
-
-const StyledTitle = styled(Typography.Title)`
-  &&& {
-    margin: 0;
-    text-align: center;
-  }
-`;
 
 const ExtraServicesSection = () => (
   <>
-    <StyledTitleRow id="additional-services">
-      <Col span={24}>
-        <StyledTitle level={2}>Додаткові послуги</StyledTitle>
-      </Col>
-    </StyledTitleRow>
+    <SectionTitle id="additional-services">Додаткові послуги</SectionTitle>
     <Row>
       <Col xs={24} md={6}>
         <ExtraServiceCard

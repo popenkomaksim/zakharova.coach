@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Col, Row, Statistic, Avatar, Image } from "antd";
 import CountUp from "react-countup";
 import StyledCol from "./StyledCol";
+import ClickableIcon from "./ClickableIcon";
 
 function daysOfTraining() {
   const now = new Date();
@@ -35,10 +36,6 @@ const StyledGrayscaleImage = styled(Image)`
   }
 `;
 
-const StyledLink = styled.span`
-  cursor: pointer;
-`;
-
 const StatsSection = ({ redirectToTelegram }) => (
   <Row justify="space-around">
     <StyledStatsCol xs={24} md={12}>
@@ -55,14 +52,9 @@ const StatsSection = ({ redirectToTelegram }) => (
           <Avatar src="./zhenya.jpg" />
           <Avatar src="./tamara.jpg" />
           <Avatar src="./babii.jpg" />
-          <StyledLink
-            onClick={redirectToTelegram}
-            onKeyDown={redirectToTelegram}
-            role="link"
-            tabIndex="0"
-          >
+          <ClickableIcon onClick={redirectToTelegram}>
             <Avatar>+</Avatar>
-          </StyledLink>
+          </ClickableIcon>
         </Avatar.Group>
         <br />
         Десятки учнів займаються зараз

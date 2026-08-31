@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography, Image } from "antd";
 import StyledCol from "./StyledCol";
+import ClickableIcon from "./ClickableIcon";
 
 const StyledCenteredCol = styled(Col)`
   padding: 2em;
@@ -30,10 +31,6 @@ const StyledGrayscaleImage = styled(Image)`
   &&& {
     filter: grayscale(1);
   }
-`;
-
-const StyledLink = styled.span`
-  cursor: pointer;
 `;
 
 const CollaborationSection = ({ redirectToTelegram }) => (
@@ -70,14 +67,9 @@ const CollaborationSection = ({ redirectToTelegram }) => (
           <StyledText>
             Я щиро рада працювати з усіма, хто хоче стати кращою версією
             себе.&nbsp;
-            <StyledLink
-              onClick={redirectToTelegram}
-              onKeyDown={redirectToTelegram}
-              role="link"
-              tabIndex="0"
-            >
+            <ClickableIcon onClick={redirectToTelegram}>
               Напиши мені
-            </StyledLink>{" "}
+            </ClickableIcon>{" "}
             вже сьогодні, і, можливо, нам з тобою по дорозі.
             <br />
             Зі мною можна домовитись.

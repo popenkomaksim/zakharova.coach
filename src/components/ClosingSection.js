@@ -1,19 +1,10 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Col, Row, Typography, Divider } from "antd";
-import { FaHeart } from "react-icons/fa";
+import { Col, Row, Typography } from "antd";
 import ContactIcons from "./ContactIcons";
 import LoopVideo from "./LoopVideo";
+import Footer from "./Footer";
 import PolinaRun from "../Polina_Altra.mp4";
-
-const StyledFooterDivider = styled(Divider)`
-  margin-top: 4em;
-
-  .ant-divider-inner-text {
-    white-space: normal;
-    text-align: center;
-  }
-`;
 
 const StyledQuestionText = styled(Typography.Text)`
   &&& {
@@ -34,10 +25,6 @@ const StyledQuestionTitle = styled(Typography.Title)`
     margin: 0;
     font-size: 2.25em;
   }
-`;
-
-const StyledHeart = styled(FaHeart)`
-  top: -0.5em;
 `;
 
 const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
@@ -65,10 +52,7 @@ const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
       </Col>
     </Row>
 
-    <StyledFooterDivider>
-      Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine © 2023 &mdash;{" "}
-      {new Date().getFullYear()}
-    </StyledFooterDivider>
+    <Footer showSince2023 />
   </>
 );
 

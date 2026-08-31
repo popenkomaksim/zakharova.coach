@@ -2,13 +2,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Divider, Typography, Card } from "antd";
 
+import EqualHeightCardWrapper from "./EqualHeightCardWrapper";
 import convert from "../convert";
-
-const StyledCardWrapper = styled.div`
-  box-sizing: border-box;
-  height: 100%;
-  padding: 2em;
-`;
 
 const StyledCard = styled(Card)`
   &&& {
@@ -27,7 +22,7 @@ const StyledEurPrice = styled.span`
 `;
 
 const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
-  <StyledCardWrapper>
+  <EqualHeightCardWrapper>
     <StyledCard title={<StyledCardTitle>{name}</StyledCardTitle>} size="small">
       <Typography.Text>{ListOfThingth}</Typography.Text>
       <Divider titlePlacement="center">
@@ -35,7 +30,7 @@ const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
         <StyledEurPrice> / €{price}</StyledEurPrice>
       </Divider>
     </StyledCard>
-  </StyledCardWrapper>
+  </EqualHeightCardWrapper>
 );
 
 ExtraServiceCard.propTypes = {

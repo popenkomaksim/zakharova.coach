@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Badge, Divider, Typography, Card } from "antd";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
+import EqualHeightCardWrapper from "./EqualHeightCardWrapper";
+import ClickableIcon from "./ClickableIcon";
 import convert from "../convert";
 
 const StyledTelegram = styled(FaTelegram)`
@@ -27,12 +29,6 @@ const StyledRibbonWrapper = styled.div`
       inset-inline-end: 1em;
     }
   }
-`;
-
-const StyledCardWrapper = styled.div`
-  box-sizing: border-box;
-  height: 100%;
-  padding: 2em;
 `;
 
 const StyledCard = styled(Card)`
@@ -72,10 +68,6 @@ const StyledEurPrice = styled.span`
   color: #878787;
 `;
 
-const StyledIconLink = styled.span`
-  cursor: pointer;
-`;
-
 const PlanCard = ({
   name,
   price,
@@ -85,7 +77,7 @@ const PlanCard = ({
   recommended = false,
 }) => {
   const card = (
-    <StyledCardWrapper>
+    <EqualHeightCardWrapper>
       <StyledCard
         title={<StyledCardTitle>{name}</StyledCardTitle>}
         size="small"
@@ -98,25 +90,15 @@ const PlanCard = ({
           <StyledEurPrice> / €{price}</StyledEurPrice>&nbsp;на місяць
         </StyledPriceRow>
         <Divider titlePlacement="center">
-          <StyledIconLink
-            onClick={redirectToTelegram}
-            onKeyDown={redirectToTelegram}
-            role="link"
-            tabIndex="0"
-          >
+          <ClickableIcon onClick={redirectToTelegram}>
             <StyledTelegram size="2em" color="#229ED9" />
-          </StyledIconLink>
-          <StyledIconLink
-            onClick={redirectToWhatsup}
-            onKeyDown={redirectToWhatsup}
-            role="link"
-            tabIndex="0"
-          >
+          </ClickableIcon>
+          <ClickableIcon onClick={redirectToWhatsup}>
             <StyledWhatsapp size="2em" color="#25D366" />
-          </StyledIconLink>
+          </ClickableIcon>
         </Divider>
       </StyledCard>
-    </StyledCardWrapper>
+    </EqualHeightCardWrapper>
   );
 
   if (!recommended) return card;

@@ -1,25 +1,9 @@
-import styled from "styled-components";
-import { Col, Row, Typography } from "antd";
+import SectionTitle from "./SectionTitle";
 import FormatCard from "./FormatCard";
-
-const StyledTitleRow = styled(Row)`
-  margin: 2em 0;
-`;
-
-const StyledTitle = styled(Typography.Title)`
-  &&& {
-    margin: 0;
-    text-align: center;
-  }
-`;
 
 const FormatsSection = () => (
   <>
-    <StyledTitleRow id="formats">
-      <Col span={24}>
-        <StyledTitle level={2}>Формати співпраці</StyledTitle>
-      </Col>
-    </StyledTitleRow>
+    <SectionTitle id="formats">Формати співпраці</SectionTitle>
 
     <FormatCard
       title="Індивідуальний тренінг"

@@ -1,20 +1,10 @@
 import styled from "styled-components";
-import { Col, Row, Image, Typography } from "antd";
+import { Col, Row, Image } from "antd";
+import SectionTitle from "./SectionTitle";
 
 const StyledPartnerLink = styled.a`
   display: inline-block;
   padding: 0.75em;
-`;
-
-const StyledTitleRow = styled(Row)`
-  margin: 2em 0 1em 0;
-`;
-
-const StyledTitle = styled(Typography.Title)`
-  &&& {
-    margin: 0;
-    text-align: center;
-  }
 `;
 
 const StyledLogosRow = styled(Row)`
@@ -75,11 +65,9 @@ const partners = [
 
 const PartnersSection = () => (
   <>
-    <StyledTitleRow>
-      <Col span={24}>
-        <StyledTitle level={3}>Мої партнери:</StyledTitle>
-      </Col>
-    </StyledTitleRow>
+    <SectionTitle level={3} margin="2em 0 1em 0">
+      Мої партнери:
+    </SectionTitle>
     <StyledLogosRow justify="center" align="middle" gutter={[24, 24]}>
       {partners.map(({ href, src, alt }) => (
         <Col key={src}>

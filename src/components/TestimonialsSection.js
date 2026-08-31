@@ -1,15 +1,9 @@
 import styled from "styled-components";
 import { Col, Row, Card, Typography, Image } from "antd";
+import SectionTitle from "./SectionTitle";
 
-const StyledTitleRow = styled(Row)`
+const StyledRow = styled(Row)`
   margin: 2em 0;
-`;
-
-const StyledTitle = styled(Typography.Title)`
-  &&& {
-    margin: 0;
-    text-align: center;
-  }
 `;
 
 const StyledCard = styled(Card)`
@@ -38,13 +32,9 @@ const StyledQuote = styled(Typography.Paragraph)`
 
 const TestimonialsSection = () => (
   <>
-    <StyledTitleRow>
-      <Col span={24}>
-        <StyledTitle level={2}>Відгуки моїх студентів</StyledTitle>
-      </Col>
-    </StyledTitleRow>
+    <SectionTitle>Відгуки моїх студентів</SectionTitle>
 
-    <StyledTitleRow justify="center">
+    <StyledRow justify="center">
       <Col xs={24} md={16} lg={12}>
         <StyledCard styles={{ body: { padding: 0 } }}>
           <StyledPhoto src="./ski2.jpg" preview={false} />
@@ -58,7 +48,7 @@ const TestimonialsSection = () => (
           </StyledQuoteWrapper>
         </StyledCard>
       </Col>
-    </StyledTitleRow>
+    </StyledRow>
   </>
 );
 
