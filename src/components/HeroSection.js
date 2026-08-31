@@ -26,15 +26,60 @@ const StyledTextCardBackground = styled.div`
   z-index: -1;
 `;
 
+const StyledDesktopImageCol = styled(Col)`
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+`;
+
+const StyledMobilePhotoWrapper = styled.div`
+  display: none;
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1.5em 0;
+  }
+`;
+
+const StyledMobilePhotoFrame = styled.div`
+  position: relative;
+  width: 55vw;
+  max-width: 15em;
+  aspect-ratio: 1 / 1;
+  padding: 0.5em;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 22% 78%,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  box-shadow: -0.9em 0.9em 2.5em -0.2em rgba(0, 0, 0, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+`;
+
+const StyledMobileImage = styled(Image)`
+  && {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 50% 22%;
+    border-radius: 50%;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.25);
+  }
+`;
+
 const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <Row justify="center" id="about" style={{ margin: "3em 0" }}>
-    <Col lg={6} xl={6}>
+    <StyledDesktopImageCol lg={6} xl={6}>
       <Image
         src="./Polina_Casual.jpeg"
         style={{ maxWidth: "80vw" }}
         preview={false}
       />
-    </Col>
+    </StyledDesktopImageCol>
     <StyledTextCol lg={12} xs={22} md={12}>
       <StyledTextCard>
         <StyledTextCardBackground />
@@ -44,6 +89,15 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         >
           Вітаю. Я — Поліна.
         </Typography.Title>
+        <StyledMobilePhotoWrapper>
+          <StyledMobilePhotoFrame>
+            <StyledMobileImage
+              src="./Polina_Casual.jpeg"
+              preview={false}
+              alt="Поліна"
+            />
+          </StyledMobilePhotoFrame>
+        </StyledMobilePhotoWrapper>
         <Typography.Paragraph style={{ fontSize: "1.8em" }}>
           Мене неможливо уявити без гір, лісу й відкритого простору.
         </Typography.Paragraph>
