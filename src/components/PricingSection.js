@@ -32,7 +32,7 @@ const StyledPricingTitle = styled(Typography.Title)`
   }
 `;
 
-const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
+const PricingSection = ({ redirectToTelegram, redirectToWhatsup, rate }) => (
   <StyledPricingRow id="prices">
     <Col span={24}>
       <StyledPricingTitleWrapper>
@@ -46,6 +46,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         name="BASIC"
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
+        rate={rate}
         price={25}
         ListOfThingth={
           <ul>
@@ -63,6 +64,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         recommended
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
+        rate={rate}
         price={40}
         ListOfThingth={
           <ul>
@@ -84,6 +86,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
         name="PRO"
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
+        rate={rate}
         price={60}
         ListOfThingth={
           <ul>
@@ -106,6 +109,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
 PricingSection.propTypes = {
   redirectToTelegram: PropTypes.func.isRequired,
   redirectToWhatsup: PropTypes.func.isRequired,
+  rate: PropTypes.number,
 };
 
 export default PricingSection;

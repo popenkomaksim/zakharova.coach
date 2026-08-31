@@ -21,12 +21,12 @@ const StyledEurPrice = styled.span`
   color: #878787;
 `;
 
-const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
+const ExtraServiceCard = ({ name, price, rate, ListOfThingth }) => (
   <EqualHeightCardWrapper>
     <StyledCard title={<StyledCardTitle>{name}</StyledCardTitle>} size="small">
       <Typography.Text>{ListOfThingth}</Typography.Text>
       <Divider titlePlacement="center">
-        ₴{convert(price)}
+        ₴{convert(price, rate)}
         <StyledEurPrice> / €{price}</StyledEurPrice>
       </Divider>
     </StyledCard>
@@ -36,6 +36,7 @@ const ExtraServiceCard = ({ name, price, ListOfThingth }) => (
 ExtraServiceCard.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
+  rate: PropTypes.number,
   ListOfThingth: PropTypes.elementType,
 };
 

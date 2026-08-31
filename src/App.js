@@ -22,6 +22,7 @@ import ExtraServicesSection from "./components/ExtraServicesSection";
 import ClosingSection from "./components/ClosingSection";
 
 import useContactRedirects from "./hooks/useContactRedirects";
+import useExchangeRate from "./hooks/useExchangeRate";
 // import useUpcomingEvents from "./hooks/useUpcomingEvents";
 
 const StyledDesignImage = styled(Image)`
@@ -44,6 +45,7 @@ const StyledPatrioticText = styled.p`
 const App = () => {
   const [navOpen, setNavOpen] = useState(false);
   const { redirectToTelegram, redirectToWhatsup } = useContactRedirects();
+  const rate = useExchangeRate();
   // const events = useUpcomingEvents();
 
   return (
@@ -78,8 +80,9 @@ const App = () => {
       <PricingSection
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
+        rate={rate}
       />
-      <ExtraServicesSection />
+      <ExtraServicesSection rate={rate} />
       <PartnersSection />
       <ClosingSection
         redirectToTelegram={redirectToTelegram}

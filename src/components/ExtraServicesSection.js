@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import { Col, Row, Typography } from "antd";
 import SectionTitle from "./SectionTitle";
 import ExtraServiceCard from "./ExtraServiceCard";
 
-const ExtraServicesSection = () => (
+const ExtraServicesSection = ({ rate }) => (
   <>
     <SectionTitle id="additional-services">Додаткові послуги</SectionTitle>
     <Row>
@@ -10,6 +11,7 @@ const ExtraServicesSection = () => (
         <ExtraServiceCard
           name="Розбір та розкладка гонки"
           price={40}
+          rate={rate}
           ListOfThingth={
             <ul>
               <li>аналіз трьох пройдешніх гонок</li>
@@ -23,6 +25,7 @@ const ExtraServicesSection = () => (
         <ExtraServiceCard
           name="Аналіз та планування сезону"
           price={40}
+          rate={rate}
           ListOfThingth={
             <ul>
               <li>розбір цілей сезону</li>
@@ -35,6 +38,7 @@ const ExtraServicesSection = () => (
         <ExtraServiceCard
           name="Персональне тренування"
           price={20}
+          rate={rate}
           ListOfThingth={
             <Typography.Text>
               Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
@@ -46,6 +50,7 @@ const ExtraServicesSection = () => (
         <ExtraServiceCard
           name="Групове тренування"
           price={12}
+          rate={rate}
           ListOfThingth={
             <Typography.Text>
               Весело і корисно. Какао після не в подарунок.
@@ -56,5 +61,9 @@ const ExtraServicesSection = () => (
     </Row>
   </>
 );
+
+ExtraServicesSection.propTypes = {
+  rate: PropTypes.number,
+};
 
 export default ExtraServicesSection;

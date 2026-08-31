@@ -71,6 +71,7 @@ const StyledEurPrice = styled.span`
 const PlanCard = ({
   name,
   price,
+  rate,
   ListOfThingth,
   redirectToTelegram,
   redirectToWhatsup,
@@ -86,7 +87,7 @@ const PlanCard = ({
         <StyledSectionLabel>У цьому пакеті ви отримаєте:</StyledSectionLabel>
         <Typography.Text>{ListOfThingth}</Typography.Text>
         <StyledPriceRow>
-          ₴{convert(price)}
+          ₴{convert(price, rate)}
           <StyledEurPrice> / €{price}</StyledEurPrice>&nbsp;на місяць
         </StyledPriceRow>
         <Divider titlePlacement="center">
@@ -117,6 +118,7 @@ PlanCard.propTypes = {
   redirectToWhatsup: PropTypes.func,
   name: PropTypes.string,
   price: PropTypes.number,
+  rate: PropTypes.number,
   ListOfThingth: PropTypes.elementType,
   recommended: PropTypes.bool,
 };
