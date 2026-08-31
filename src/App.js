@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Image } from "antd";
 import styled from "styled-components";
 import "@fontsource/montserrat";
@@ -20,6 +20,7 @@ import PartnersSection from "./components/PartnersSection";
 import PricingSection from "./components/PricingSection";
 import ExtraServicesSection from "./components/ExtraServicesSection";
 import ClosingSection from "./components/ClosingSection";
+import ScrollReveal from "./components/ScrollReveal";
 
 import useContactRedirects from "./hooks/useContactRedirects";
 import useExchangeRate from "./hooks/useExchangeRate";
@@ -48,6 +49,23 @@ const App = () => {
   const rate = useExchangeRate();
   // const events = useUpcomingEvents();
 
+  useEffect(() => {
+    const { hash } = window.location;
+    if (!hash) return undefined;
+
+    const scrollToHash = () => {
+      document.getElementById(hash.slice(1))?.scrollIntoView();
+    };
+
+    if (document.readyState === "complete") {
+      scrollToHash();
+      return undefined;
+    }
+
+    window.addEventListener("load", scrollToHash);
+    return () => window.removeEventListener("load", scrollToHash);
+  }, []);
+
   return (
     <>
       <NavModal open={navOpen} onClose={() => setNavOpen(false)} />
@@ -65,29 +83,41 @@ const App = () => {
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
       />
-      <StyledDesignImage
-        src="./design_kazbek.jpeg"
-        preview={false}
-        width="100%"
-      />
+      <ScrollReveal>
+        <StyledDesignImage
+          src="./design_kazbek.jpeg"
+          preview={false}
+          width="100%"
+        />
+      </ScrollReveal>
       {/* <CollaborationSection /> */}
       {/* <PrinciplesSection /> */}
-      <FormatsSection />
+      <ScrollReveal>
+        <FormatsSection />
+      </ScrollReveal>
       {/* <EventsAndAchievements events={events} /> */}
       {/* <TestimonialsSection /> */}
       {/* <StatsSection redirectToTelegram={redirectToTelegram} /> */}
       <StyledPatrioticText>Хай та русня здохне</StyledPatrioticText>
-      <PricingSection
-        redirectToTelegram={redirectToTelegram}
-        redirectToWhatsup={redirectToWhatsup}
-        rate={rate}
-      />
-      <ExtraServicesSection rate={rate} />
-      <PartnersSection />
-      <ClosingSection
-        redirectToTelegram={redirectToTelegram}
-        redirectToWhatsup={redirectToWhatsup}
-      />
+      <ScrollReveal>
+        <PricingSection
+          redirectToTelegram={redirectToTelegram}
+          redirectToWhatsup={redirectToWhatsup}
+          rate={rate}
+        />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ExtraServicesSection rate={rate} />
+      </ScrollReveal>
+      <ScrollReveal>
+        <PartnersSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ClosingSection
+          redirectToTelegram={redirectToTelegram}
+          redirectToWhatsup={redirectToWhatsup}
+        />
+      </ScrollReveal>
     </>
   );
 };
