@@ -51,14 +51,14 @@ const StyledTextCardBackground = styled.div`
 `;
 
 const StyledDesktopImageCol = styled(Col)`
-  @media (max-width: 575.98px) {
+  @media (max-width: 991.98px) {
     display: none;
   }
 `;
 
 const StyledMobilePhotoWrapper = styled.div`
   display: none;
-  @media (max-width: 575.98px) {
+  @media (max-width: 991.98px) {
     display: flex;
     justify-content: center;
     margin: 0 0 1.5em 0;
@@ -149,7 +149,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
         <StyledDesktopImageCol lg={6} xl={6}>
           <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
         </StyledDesktopImageCol>
-        <StyledTextCol lg={12} xs={22} md={12}>
+        <StyledTextCol lg={12} xs={22}>
           <StyledTextCard>
             <StyledTextCardBackground />
             <StyledSectionTitle level={2}>
