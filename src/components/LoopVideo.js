@@ -1,5 +1,17 @@
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const StyledWrapper = styled.div`
+  width: 100%;
+  margin: 3em 0;
+`;
+
+const StyledVideo = styled.video`
+  width: 100%;
+  display: block;
+  margin: 3em 0;
+`;
 
 const LoopVideo = ({ src, alt }) => {
   const videoRef = useRef(null);
@@ -24,19 +36,11 @@ const LoopVideo = ({ src, alt }) => {
   }, []);
 
   return (
-    <div style={{ width: "100%", margin: "3em 0" }}>
-      <video
-        ref={videoRef}
-        alt={alt}
-        playsInline
-        loop
-        muted
-        preload="none"
-        style={{ width: "100%", display: "block", margin: "3em 0" }}
-      >
+    <StyledWrapper>
+      <StyledVideo ref={videoRef} alt={alt} playsInline loop muted preload="none">
         <source src={src} type="video/mp4" />
-      </video>
-    </div>
+      </StyledVideo>
+    </StyledWrapper>
   );
 };
 
