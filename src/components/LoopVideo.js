@@ -37,7 +37,14 @@ const LoopVideo = ({ src, alt }) => {
 
   return (
     <StyledWrapper>
-      <StyledVideo ref={videoRef} alt={alt} playsInline loop muted preload="none">
+      <StyledVideo
+        ref={videoRef}
+        alt={alt}
+        playsInline
+        loop
+        muted
+        preload="none"
+      >
         <source src={src} type="video/mp4" />
       </StyledVideo>
     </StyledWrapper>

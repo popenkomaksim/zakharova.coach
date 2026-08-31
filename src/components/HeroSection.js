@@ -4,6 +4,27 @@ import styled from "styled-components";
 import { Col, Row, Typography, Image, Button } from "antd";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
+const StyledAboutRow = styled(Row)`
+  margin: 3em 0;
+`;
+
+const StyledDesktopImage = styled(Image)`
+  &&& {
+    max-width: 80vw;
+  }
+`;
+
+const StyledSectionTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0 0 0.5em 0;
+    font-size: 2.25em;
+  }
+`;
+
+const StyledCtaRow = styled(Row)`
+  margin-top: 1.5em;
+`;
+
 const StyledTextCol = styled(Col)`
   padding: 0 2em;
   @media (max-width: 575.98px) {
@@ -123,23 +144,14 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
   const redirectToContact = isTelegram ? redirectToTelegram : redirectToWhatsup;
 
   return (
-    <Row justify="center" id="about" style={{ margin: "3em 0" }}>
+    <StyledAboutRow justify="center" id="about">
       <StyledDesktopImageCol lg={6} xl={6}>
-        <Image
-          src="./Polina_Casual.jpeg"
-          style={{ maxWidth: "80vw" }}
-          preview={false}
-        />
+        <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
       </StyledDesktopImageCol>
       <StyledTextCol lg={12} xs={22} md={12}>
         <StyledTextCard>
           <StyledTextCardBackground />
-          <Typography.Title
-            level={2}
-            style={{ margin: "0 0 0.5em 0", fontSize: "2.25em" }}
-          >
-            Вітаю. Я — Поліна.
-          </Typography.Title>
+          <StyledSectionTitle level={2}>Вітаю. Я — Поліна.</StyledSectionTitle>
           <StyledMobilePhotoWrapper>
             <StyledMobilePhotoFrame>
               <StyledMobileImage
@@ -171,7 +183,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
             відчувати його силу й розум.
           </StyledParagraph>
         </StyledTextCard>
-        <Row justify="center" style={{ marginTop: "1.5em" }}>
+        <StyledCtaRow justify="center">
           <StyledCtaButton onClick={redirectToContact} danger size="large">
             <StyledCtaIcon>
               {isTelegram ? (
@@ -182,9 +194,9 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
             </StyledCtaIcon>
             Почни тренуватись ефективно
           </StyledCtaButton>
-        </Row>
+        </StyledCtaRow>
       </StyledTextCol>
-    </Row>
+    </StyledAboutRow>
   );
 };
 

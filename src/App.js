@@ -63,7 +63,11 @@ const App = () => {
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
       />
-      <StyledDesignImage src="./design_kazbek.jpeg" preview={false} width="100%" />
+      <StyledDesignImage
+        src="./design_kazbek.jpeg"
+        preview={false}
+        width="100%"
+      />
       {/* <CollaborationSection /> */}
       {/* <PrinciplesSection /> */}
       <FormatsSection />
