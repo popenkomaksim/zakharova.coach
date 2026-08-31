@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Col, Row, Typography, Divider } from "antd";
 import { FaHeart } from "react-icons/fa";
 import ContactIcons from "./ContactIcons";
 import LoopVideo from "./LoopVideo";
 import PolinaRun from "../Polina_Altra.mp4";
+
+const StyledFooterDivider = styled(Divider)`
+  .ant-divider-inner-text {
+    white-space: normal;
+    text-align: center;
+  }
+`;
 
 const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <>
@@ -30,10 +38,10 @@ const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
       </Col>
     </Row>
 
-    <Divider style={{ marginTop: "4em" }}>
+    <StyledFooterDivider style={{ marginTop: "4em" }}>
       Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
       Ukraine © 2023 &mdash; {new Date().getFullYear()}
-    </Divider>
+    </StyledFooterDivider>
   </>
 );
 
