@@ -1,26 +1,43 @@
 import styled from "styled-components";
-import { Divider } from "antd";
 import { FaHeart } from "react-icons/fa";
 
-const StyledFooterDivider = styled(Divider)`
-  margin-top: 4em;
+const StyledFooterLine = styled.div`
+  margin: 4em 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.88);
 
-  .ant-divider-inner-text {
-    white-space: normal;
-    text-align: center;
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid rgba(5, 5, 5, 0.06);
+  }
+
+  &::before {
+    margin-right: 1em;
+  }
+
+  &::after {
+    margin-left: 1em;
   }
 `;
 
-const StyledHeart = styled(FaHeart)`
-  top: -0.5em;
+const StyledHeartIcon = styled(FaHeart)`
+  vertical-align: middle;
 `;
 
 const Footer = () => (
-  <StyledFooterDivider>
-    Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine © 2023
-    &mdash;&nbsp;
-    {new Date().getFullYear()}
-  </StyledFooterDivider>
+  <StyledFooterLine>
+    <span>
+      Made with&nbsp;
+      <StyledHeartIcon color="#B01E28" />
+      &nbsp;in Kyiv, Ukraine © 2023 &mdash;&nbsp;
+      {new Date().getFullYear()}
+    </span>
+  </StyledFooterLine>
 );
 
 export default Footer;
