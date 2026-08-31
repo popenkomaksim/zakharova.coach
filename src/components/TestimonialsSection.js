@@ -1,6 +1,9 @@
+import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
 import Testimonial from "./Testimonial";
+
+const AUTO_ADVANCE_MS = 7000;
 
 const StyledSection = styled.div`
   width: 100%;
@@ -14,6 +17,35 @@ const StyledTitle = styled(Typography.Title)`
   &&& {
     color: #fff;
     margin: 0 0 1.5em 0;
+  }
+`;
+
+const StyledCarousel = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1em;
+`;
+
+const StyledTestimonialWrapper = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const StyledArrowButton = styled.button`
+  flex: 0 0 auto;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #fff;
+  font-size: 1.4em;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 `;
 
@@ -36,19 +68,70 @@ const testimonials = [
     role: "СЕО продакшн студії",
     company: "Paragon Progency",
   },
+  {
+    photo: "./testimonial_maksym.jpeg",
+    quote: (
+      <>
+        Тренування з Поліною — це найкраще рішення у моєму біговому шляху!
+        Завдяки грамотному підходу та продуманій системі ми не лише покращили
+        мої фізичні показники, а й повністю змінили підхід до трейлового бігу.
+        Поліна вчить відчувати своє тіло, правильно розподіляти сили на тривалих
+        дистанціях і, головне, отримувати задоволення від кожного кілометра.
+        Щиро рекомендую всім, хто мріє про гори та нові вершини!
+      </>
+    ),
+    name: "Maksym",
+    role: "Software Architect",
+    company: "DataArt",
+  },
 ];
 
-const TestimonialsSection = () => (
-  <StyledSection>
-    <Row justify="center">
-      <Col xs={24} xl={20} xxl={16}>
-        <StyledTitle level={2}>Відгуки моїх студентів</StyledTitle>
-        {testimonials.map((testimonial) => (
-          <Testimonial key={testimonial.name} {...testimonial} />
-        ))}
-      </Col>
-    </Row>
-  </StyledSection>
-);
+const TestimonialsSection = () => {
+  const [index, setIndex] = useState(0);
+
+  const goTo = useCallback((delta) => {
+    setIndex(
+      (current) => (current + delta + testimonials.length) % testimonials.length
+    );
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((current) => (current + 1) % testimonials.length);
+    }, AUTO_ADVANCE_MS);
+    return () => clearInterval(timer);
+  }, [index]);
+
+  const testimonial = testimonials[index];
+
+  return (
+    <StyledSection>
+      <Row justify="center">
+        <Col xs={24} xl={20} xxl={16}>
+          <StyledTitle level={2}>Відгуки моїх студентів</StyledTitle>
+          <StyledCarousel>
+            <StyledArrowButton
+              type="button"
+              aria-label="Попередній відгук"
+              onClick={() => goTo(-1)}
+            >
+              ‹
+            </StyledArrowButton>
+            <StyledTestimonialWrapper>
+              <Testimonial {...testimonial} />
+            </StyledTestimonialWrapper>
+            <StyledArrowButton
+              type="button"
+              aria-label="Наступний відгук"
+              onClick={() => goTo(1)}
+            >
+              ›
+            </StyledArrowButton>
+          </StyledCarousel>
+        </Col>
+      </Row>
+    </StyledSection>
+  );
+};
 
 export default TestimonialsSection;
