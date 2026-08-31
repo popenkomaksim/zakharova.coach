@@ -1,7 +1,8 @@
+import { useRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography, Image, Button } from "antd";
-import ContactIcons from "./ContactIcons";
+import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
 const StyledTextCol = styled(Col)`
   padding: 0 2em;
@@ -71,69 +72,102 @@ const StyledMobileImage = styled(Image)`
   }
 `;
 
-const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => (
-  <Row justify="center" id="about" style={{ margin: "3em 0" }}>
-    <StyledDesktopImageCol lg={6} xl={6}>
-      <Image
-        src="./Polina_Casual.jpeg"
-        style={{ maxWidth: "80vw" }}
-        preview={false}
-      />
-    </StyledDesktopImageCol>
-    <StyledTextCol lg={12} xs={22} md={12}>
-      <StyledTextCard>
-        <StyledTextCardBackground />
-        <Typography.Title
-          level={2}
-          style={{ margin: "0 0 0.5em 0", fontSize: "2.25em" }}
-        >
-          Вітаю. Я — Поліна.
-        </Typography.Title>
-        <StyledMobilePhotoWrapper>
-          <StyledMobilePhotoFrame>
-            <StyledMobileImage
-              src="./Polina_Casual.jpeg"
-              preview={false}
-              alt="Поліна"
-            />
-          </StyledMobilePhotoFrame>
-        </StyledMobilePhotoWrapper>
-        <Typography.Paragraph style={{ fontSize: "1.8em" }}>
-          Мене неможливо уявити без гір, лісу й відкритого простору.
-        </Typography.Paragraph>
-        <Typography.Paragraph style={{ fontSize: "1.8em" }}>
-          Мій шлях у спорт почався ще у 2008 році із спортивного орієнтування та
-          рогейну — з тих пір я бачила цей світ із різних ракурсів.
-        </Typography.Paragraph>
-        <Typography.Paragraph style={{ fontSize: "1.8em" }}>
-          За 18 років я пробігла десятки тисяч кілометрів, змінила країни,
-          рельєфи й формати, але залишилась вірною головному — свободі та
-          драйву.
-        </Typography.Paragraph>
-        <Typography.Paragraph style={{ fontSize: "1.8em" }}>
-          Сьогодні я тренер, багато років займаюся скі-альпінізмом і допомагаю
-          іншим знайти власний ритм й напрямок.
-        </Typography.Paragraph>
-        <Typography.Paragraph style={{ fontSize: "1.8em" }}>
-          Я створюю програми, що розвивають не лише витривалість, а й
-          усвідомлення себе через рух. Бути присутнім у власному тілі, відчувати
-          його силу й розум.
-        </Typography.Paragraph>
-      </StyledTextCard>
-      <div id="contacts" style={{ marginTop: "1.5em" }}>
-        <ContactIcons
-          redirectToTelegram={redirectToTelegram}
-          redirectToWhatsup={redirectToWhatsup}
+const StyledCtaIcon = styled.span`
+  margin-right: 0.5em;
+  vertical-align: middle;
+`;
+
+const StyledCtaButton = styled(Button)`
+  && {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 0.75em 2em;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 3em;
+    box-shadow: 0 0.6em 1.5em rgba(255, 77, 79, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-0.1em);
+      box-shadow: 0 0.8em 1.8em rgba(255, 77, 79, 0.45);
+    }
+  }
+`;
+
+const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
+  const isTelegram = useRef(Math.random() < 0.5).current;
+  const redirectToContact = isTelegram ? redirectToTelegram : redirectToWhatsup;
+
+  return (
+    <Row justify="center" id="about" style={{ margin: "3em 0" }}>
+      <StyledDesktopImageCol lg={6} xl={6}>
+        <Image
+          src="./Polina_Casual.jpeg"
+          style={{ maxWidth: "80vw" }}
+          preview={false}
         />
-      </div>
-      <Row justify="start" style={{ marginTop: "1.5em" }}>
-        <Button onClick={redirectToTelegram} danger size="large">
-          Почати тренуватись зі мною
-        </Button>
-      </Row>
-    </StyledTextCol>
-  </Row>
-);
+      </StyledDesktopImageCol>
+      <StyledTextCol lg={12} xs={22} md={12}>
+        <StyledTextCard>
+          <StyledTextCardBackground />
+          <Typography.Title
+            level={2}
+            style={{ margin: "0 0 0.5em 0", fontSize: "2.25em" }}
+          >
+            Вітаю. Я — Поліна.
+          </Typography.Title>
+          <StyledMobilePhotoWrapper>
+            <StyledMobilePhotoFrame>
+              <StyledMobileImage
+                src="./Polina_Casual.jpeg"
+                preview={false}
+                alt="Поліна"
+              />
+            </StyledMobilePhotoFrame>
+          </StyledMobilePhotoWrapper>
+          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+            Мене неможливо уявити без гір, лісу й відкритого простору.
+          </Typography.Paragraph>
+          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+            Мій шлях у спорт почався ще у 2008 році із спортивного орієнтування
+            та рогейну — з тих пір я бачила цей світ із різних ракурсів.
+          </Typography.Paragraph>
+          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+            За 18 років я пробігла десятки тисяч кілометрів, змінила країни,
+            рельєфи й формати, але залишилась вірною головному — свободі та
+            драйву.
+          </Typography.Paragraph>
+          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+            Сьогодні я тренер, багато років займаюся скі-альпінізмом і допомагаю
+            іншим знайти власний ритм й напрямок.
+          </Typography.Paragraph>
+          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+            Я створюю програми, що розвивають не лише витривалість, а й
+            усвідомлення себе через рух. Бути присутнім у власному тілі,
+            відчувати його силу й розум.
+          </Typography.Paragraph>
+        </StyledTextCard>
+        <Row justify="center" style={{ marginTop: "1.5em" }}>
+          <StyledCtaButton onClick={redirectToContact} danger size="large">
+            <StyledCtaIcon>
+              {isTelegram ? (
+                <FaTelegram size="1.2em" />
+              ) : (
+                <FaWhatsapp size="1.2em" />
+              )}
+            </StyledCtaIcon>
+            Почни тренуватись ефективно
+          </StyledCtaButton>
+        </Row>
+      </StyledTextCol>
+    </Row>
+  );
+};
 
 HeroSection.propTypes = {
   redirectToTelegram: PropTypes.func.isRequired,
