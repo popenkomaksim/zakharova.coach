@@ -144,59 +144,64 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
   const redirectToContact = isTelegram ? redirectToTelegram : redirectToWhatsup;
 
   return (
-    <StyledAboutRow justify="center" id="about">
-      <StyledDesktopImageCol lg={6} xl={6}>
-        <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
-      </StyledDesktopImageCol>
-      <StyledTextCol lg={12} xs={22} md={12}>
-        <StyledTextCard>
-          <StyledTextCardBackground />
-          <StyledSectionTitle level={2}>Вітаю. Я — Поліна.</StyledSectionTitle>
-          <StyledMobilePhotoWrapper>
-            <StyledMobilePhotoFrame>
-              <StyledMobileImage
-                src="./Polina_Casual.jpeg"
-                preview={false}
-                alt="Поліна"
-              />
-            </StyledMobilePhotoFrame>
-          </StyledMobilePhotoWrapper>
-          <StyledParagraph>
-            Мене неможливо уявити без гір, лісу й відкритого простору.
-          </StyledParagraph>
-          <StyledParagraph>
-            Мій шлях у спорт почався ще у 2008 році із спортивного орієнтування
-            та рогейну — з тих пір я бачила цей світ із різних ракурсів.
-          </StyledParagraph>
-          <StyledParagraph>
-            За 18 років я пробігла десятки тисяч кілометрів, змінила країни,
-            рельєфи й формати, але залишилась вірною головному — свободі та
-            драйву.
-          </StyledParagraph>
-          <StyledParagraph>
-            Сьогодні я тренер, багато років займаюся скі-альпінізмом і допомагаю
-            іншим знайти власний ритм й напрямок.
-          </StyledParagraph>
-          <StyledParagraph>
-            Я створюю програми, що розвивають не лише витривалість, а й
-            усвідомлення себе через рух. Бути присутнім у власному тілі,
-            відчувати його силу й розум.
-          </StyledParagraph>
-        </StyledTextCard>
-        <StyledCtaRow justify="center">
-          <StyledCtaButton onClick={redirectToContact} danger size="large">
-            <StyledCtaIcon>
-              {isTelegram ? (
-                <FaTelegram size="1.2em" />
-              ) : (
-                <FaWhatsapp size="1.2em" />
-              )}
-            </StyledCtaIcon>
-            Почни тренуватись ефективно
-          </StyledCtaButton>
-        </StyledCtaRow>
-      </StyledTextCol>
-    </StyledAboutRow>
+    <>
+      <StyledAboutRow justify="center" id="about">
+        <StyledDesktopImageCol lg={6} xl={6}>
+          <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
+        </StyledDesktopImageCol>
+        <StyledTextCol lg={12} xs={22} md={12}>
+          <StyledTextCard>
+            <StyledTextCardBackground />
+            <StyledSectionTitle level={2}>
+              Вітаю. Я — Поліна.
+            </StyledSectionTitle>
+            <StyledMobilePhotoWrapper>
+              <StyledMobilePhotoFrame>
+                <StyledMobileImage
+                  src="./Polina_Casual.jpeg"
+                  preview={false}
+                  alt="Поліна"
+                />
+              </StyledMobilePhotoFrame>
+            </StyledMobilePhotoWrapper>
+            <StyledParagraph>
+              Мене неможливо уявити без гір, лісу й відкритого простору.
+            </StyledParagraph>
+            <StyledParagraph>
+              Мій шлях у спорт почався ще у 2008 році із спортивного
+              орієнтування та рогейну — з тих пір я бачила цей світ із різних
+              ракурсів.
+            </StyledParagraph>
+            <StyledParagraph>
+              За 18 років я пробігла десятки тисяч кілометрів, змінила країни,
+              рельєфи й формати, але залишилась вірною головному — свободі та
+              драйву.
+            </StyledParagraph>
+            <StyledParagraph>
+              Сьогодні я тренер, багато років займаюся скі-альпінізмом і
+              допомагаю іншим знайти власний ритм й напрямок.
+            </StyledParagraph>
+            <StyledParagraph>
+              Я створюю програми, що розвивають не лише витривалість, а й
+              усвідомлення себе через рух. Бути присутнім у власному тілі,
+              відчувати його силу й розум.
+            </StyledParagraph>
+          </StyledTextCard>
+        </StyledTextCol>
+      </StyledAboutRow>
+      <StyledCtaRow justify="center">
+        <StyledCtaButton onClick={redirectToContact} danger size="large">
+          <StyledCtaIcon>
+            {isTelegram ? (
+              <FaTelegram size="1.2em" />
+            ) : (
+              <FaWhatsapp size="1.2em" />
+            )}
+          </StyledCtaIcon>
+          Почни тренуватись ефективно
+        </StyledCtaButton>
+      </StyledCtaRow>
+    </>
   );
 };
 
