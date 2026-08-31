@@ -24,6 +24,10 @@ const StyledTextCol = styled(Col)`
   padding: 2em;
 `;
 
+const StyledReorderedTextCol = styled(StyledCol)`
+  padding: 2em;
+`;
+
 const StyledText = styled(Typography.Text)`
   &&& {
     font-size: 1.75em;
@@ -59,13 +63,13 @@ const PrinciplesSection = () => (
     </StyledPrincipleRow>
 
     <StyledPrincipleRow justify="center" align="middle">
-      <StyledCol xs={24} md={12} $padding="2em">
+      <StyledReorderedTextCol xs={24} md={12}>
         <StyledText>
           дисципліна та послідовність &mdash; дотримання плану та еволюційний
           розвиток створюють фундаментальну базу для довготривалих відносин зі
           спортом
         </StyledText>
-      </StyledCol>
+      </StyledReorderedTextCol>
 
       <Col xs={24} md={12}>
         <TransparentBoxText
