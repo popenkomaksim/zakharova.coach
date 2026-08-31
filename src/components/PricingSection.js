@@ -44,6 +44,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
     <Col xs={24} lg={8}>
       <PlanCard
         name="EXPERIENCED"
+        recommended
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
         price={40}
