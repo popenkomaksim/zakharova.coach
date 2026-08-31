@@ -1,37 +1,64 @@
+import styled from "styled-components";
 import { Col, Row, Card, Typography, Image } from "antd";
+
+const StyledTitleRow = styled(Row)`
+  margin: 2em 0;
+`;
+
+const StyledTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+    text-align: center;
+  }
+`;
+
+const StyledCard = styled(Card)`
+  &&& {
+    overflow: hidden;
+  }
+`;
+
+const StyledPhoto = styled(Image)`
+  &&& {
+    width: 100%;
+    display: block;
+  }
+`;
+
+const StyledQuoteWrapper = styled.div`
+  padding: 1.5em;
+`;
+
+const StyledQuote = styled(Typography.Paragraph)`
+  &&& {
+    font-size: 1.2em;
+    color: #5a5a5a;
+  }
+`;
 
 const TestimonialsSection = () => (
   <>
-    <Row style={{ margin: "2em 0" }}>
+    <StyledTitleRow>
       <Col span={24}>
-        <Typography.Title level={2} style={{ margin: 0, textAlign: "center" }}>
-          Відгуки моїх студентів
-        </Typography.Title>
+        <StyledTitle level={2}>Відгуки моїх студентів</StyledTitle>
       </Col>
-    </Row>
+    </StyledTitleRow>
 
-    <Row justify="center" style={{ margin: "2em 0" }}>
+    <StyledTitleRow justify="center">
       <Col xs={24} md={16} lg={12}>
-        <Card style={{ overflow: "hidden" }} styles={{ body: { padding: 0 } }}>
-          <Image
-            src="./ski2.jpg"
-            preview={false}
-            style={{ width: "100%", display: "block" }}
-          />
-          <div style={{ padding: "1.5em" }}>
-            <Typography.Paragraph
-              italic
-              style={{ fontSize: "1.2em", color: "#5a5a5a" }}
-            >
+        <StyledCard styles={{ body: { padding: 0 } }}>
+          <StyledPhoto src="./ski2.jpg" preview={false} />
+          <StyledQuoteWrapper>
+            <StyledQuote italic>
               [Текст відгуку — уточнити оригінальну цитату]
-            </Typography.Paragraph>
+            </StyledQuote>
             <Typography.Text strong>
               [Ім&apos;я, посада — уточнити]
             </Typography.Text>
-          </div>
-        </Card>
+          </StyledQuoteWrapper>
+        </StyledCard>
       </Col>
-    </Row>
+    </StyledTitleRow>
   </>
 );
 

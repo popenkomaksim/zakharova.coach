@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Col, Row, Divider, List, Tag } from "antd";
+
+const StyledCol = styled(Col)`
+  padding: 0 2em;
+`;
 
 const EventsAndAchievements = ({ events }) => (
   <Row justify="center">
-    <Col xs="24" s="24" lg="12" style={{ padding: "0 2em" }}>
+    <StyledCol xs="24" s="24" lg="12">
       <Divider titlePlacement="left">Майбутні події:</Divider>
       <List size="small">
         {events.map((event) => (
@@ -14,9 +19,9 @@ const EventsAndAchievements = ({ events }) => (
         ))}
       </List>
       <Divider />
-    </Col>
+    </StyledCol>
 
-    <Col xs="24" s="24" lg="12" style={{ padding: "0 2em" }}>
+    <StyledCol xs="24" s="24" lg="12">
       <Divider titlePlacement="left">Спортивні досягнення:</Divider>
       <List size="small">
         <List.Item>
@@ -45,7 +50,7 @@ const EventsAndAchievements = ({ events }) => (
         <List.Item>майстер спорту міжнародного класу з орієнтування</List.Item>
         <List.Item>майстер спорту України з легкої атлетики</List.Item>
       </List>
-    </Col>
+    </StyledCol>
   </Row>
 );
 

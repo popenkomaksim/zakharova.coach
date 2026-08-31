@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
@@ -8,6 +9,41 @@ import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
 import useContactRedirects from "./hooks/useContactRedirects";
+
+const StyledRow = styled(Row)`
+  margin: 3em 0;
+`;
+
+const StyledPhoto = styled(Image)`
+  &&& {
+    border-radius: 50%;
+    max-width: 75vw;
+  }
+`;
+
+const StyledTextCol = styled(Col)`
+  padding: 2em;
+`;
+
+const StyledTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0 0 0.5em 0;
+  }
+`;
+
+const StyledParagraph = styled(Typography.Paragraph)`
+  &&& {
+    font-size: 1.25em;
+  }
+`;
+
+const StyledFooterDivider = styled(Divider)`
+  margin-top: 4em;
+`;
+
+const StyledHeart = styled(FaHeart)`
+  top: -0.5em;
+`;
 
 const About = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -22,55 +58,49 @@ const About = () => {
       />
 
       <Header />
-      <Row justify="center" style={{ margin: "3em 0" }}>
+      <StyledRow justify="center">
         <Col lg={8} xl={6}>
-          <Image
-            src="./polina.jpg"
-            style={{ borderRadius: "50%", maxWidth: "75vw" }}
-            preview={false}
-          />
+          <StyledPhoto src="./polina.jpg" preview={false} />
         </Col>
-        <Col xs={24} md={12} style={{ padding: "2em" }}>
-          <Typography.Title level={2} style={{ margin: "0 0 0.5em 0" }}>
-            Про Поліну Захарову
-          </Typography.Title>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+        <StyledTextCol xs={24} md={12}>
+          <StyledTitle level={2}>Про Поліну Захарову</StyledTitle>
+          <StyledParagraph>
             Мене звати Поліна Захарова, я тренер з трейлраннінгу та
             скі-альпінізму, базуюсь у Києві, Україна.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Мій шлях у спорт почався ще у 2008 році зі спортивного орієнтування
             та рогейну — з тих пір я бачила цей світ із різних ракурсів. За 18
             років я пробігла десятки тисяч кілометрів, змінила країни, рельєфи й
             формати, але залишилась вірною головному — свободі та драйву.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Останні роки я багато займаюся скі-альпінізмом і допомагаю іншим
             спортсменам-аматорам знайти власний ритм і напрямок через
             персоналізовані тренувальні плани, побудовані навколо TrainingPeaks.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             <b>Досягнення:</b> переможниця Chornohora Sky Marathon (Україна,
             2018, 2019, 2020); переможниця в абсолюті «Bojko Trail» 46 км
             (Україна, 2018).
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             <b>Місія:</b> я створюю програми, що розвивають не лише
             витривалість, а й усвідомлення себе через рух — бути присутнім у
             власному тілі, відчувати його силу й розум.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Я працюю дистанційно з клієнтами через TrainingPeaks, тож географія
             співпраці не обмежена — головне спільна мова спілкування та
             готовність тренуватись.
-          </Typography.Paragraph>
-        </Col>
-      </Row>
+          </StyledParagraph>
+        </StyledTextCol>
+      </StyledRow>
 
-      <Divider style={{ marginTop: "4em" }}>
-        Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
-        Ukraine © {new Date().getFullYear()}
-      </Divider>
+      <StyledFooterDivider>
+        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
+        {new Date().getFullYear()}
+      </StyledFooterDivider>
     </>
   );
 };

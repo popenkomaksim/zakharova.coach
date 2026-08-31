@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
@@ -8,6 +9,38 @@ import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
 import useContactRedirects from "./hooks/useContactRedirects";
+
+const StyledRow = styled(Row)`
+  margin: 3em 0;
+`;
+
+const StyledTextCol = styled(Col)`
+  padding: 2em;
+`;
+
+const StyledTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0 0 0.5em 0;
+  }
+`;
+
+const StyledParagraph = styled(Typography.Paragraph)`
+  &&& {
+    font-size: 1.25em;
+  }
+`;
+
+const StyledIcon = styled.span`
+  margin-right: 0.5em;
+`;
+
+const StyledFooterDivider = styled(Divider)`
+  margin-top: 4em;
+`;
+
+const StyledHeart = styled(FaHeart)`
+  top: -0.5em;
+`;
 
 const Contact = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -22,63 +55,53 @@ const Contact = () => {
       />
 
       <Header />
-      <Row justify="center" style={{ margin: "3em 0" }}>
-        <Col xs={24} md={14} style={{ padding: "2em" }}>
-          <Typography.Title level={2} style={{ margin: "0 0 0.5em 0" }}>
-            Контакти
-          </Typography.Title>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+      <StyledRow justify="center">
+        <StyledTextCol xs={24} md={14}>
+          <StyledTitle level={2}>Контакти</StyledTitle>
+          <StyledParagraph>
             Найшвидший спосіб зв&apos;язатися зі мною — написати в Telegram або
             WhatsApp. Я особисто відповідаю на повідомлення в робочі дні.
-          </Typography.Paragraph>
+          </StyledParagraph>
           <List size="large">
             <List.Item>
-              <FaTelegram
-                size="1.5em"
-                color="#229ED9"
-                style={{ marginRight: "0.5em" }}
-              />
+              <StyledIcon as={FaTelegram} size="1.5em" color="#229ED9" />
               <a href="https://telegram.me/ZakharovaPolina">
                 Telegram: @ZakharovaPolina
               </a>
             </List.Item>
             <List.Item>
-              <FaWhatsapp
-                size="1.5em"
-                color="#25D366"
-                style={{ marginRight: "0.5em" }}
-              />
+              <StyledIcon as={FaWhatsapp} size="1.5em" color="#25D366" />
               <a href="https://wa.me/380633862021">
                 WhatsApp: +380 63 386 20 21
               </a>
             </List.Item>
             <List.Item>
-              <FaEnvelope size="1.5em" style={{ marginRight: "0.5em" }} />
+              <StyledIcon as={FaEnvelope} size="1.5em" />
               <a href="mailto:polina.zakharova94@gmail.com">
                 Email: polina.zakharova94@gmail.com
               </a>
             </List.Item>
           </List>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          <StyledParagraph>
             Я базуюсь у Києві, Україна, але працюю з клієнтами дистанційно через
             TrainingPeaks, тож можу тренувати спортсменів незалежно від їхнього
             місця проживання.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             <b>Як почати:</b> напиши мені кілька слів про свій досвід і цілі — я
             запропоную формат співпраці (BASIC, EXPERIENCED або PRO) і за
             потреби призначу відеодзвінок для знайомства.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.25em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Час відповіді: зазвичай впродовж одного робочого дня.
-          </Typography.Paragraph>
-        </Col>
-      </Row>
+          </StyledParagraph>
+        </StyledTextCol>
+      </StyledRow>
 
-      <Divider style={{ marginTop: "4em" }}>
-        Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
-        Ukraine © {new Date().getFullYear()}
-      </Divider>
+      <StyledFooterDivider>
+        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
+        {new Date().getFullYear()}
+      </StyledFooterDivider>
     </>
   );
 };

@@ -116,6 +116,34 @@ const StyledHero = styled.div`
     url(./ski.jpg) center/cover no-repeat;
 `;
 
+const StyledHeroTitle = styled(Typography.Title)`
+  &&& {
+    color: white;
+    margin: 0;
+  }
+`;
+
+const StyledHeroSubtitle = styled(Typography.Paragraph)`
+  &&& {
+    color: white;
+    font-size: 1.3em;
+    margin: 0.5em 0 0 0;
+  }
+`;
+
+const StyledCategoriesRow = styled(Row)`
+  padding: 2.5em 2em;
+  margin: 0;
+`;
+
+const StyledCategoryCard = styled(Card)`
+  &&& {
+    height: 100%;
+    border-top: 4px solid ${({ $color }) => $color};
+    border-radius: 12px;
+  }
+`;
+
 const StyledIconCircle = styled.div`
   width: 2.75em;
   height: 2.75em;
@@ -126,6 +154,7 @@ const StyledIconCircle = styled.div`
   justify-content: center;
   color: white;
   font-size: 1.2em;
+  background: ${({ $color }) => $color};
 `;
 
 const StyledCardHeader = styled.div`
@@ -139,6 +168,12 @@ const StyledCategoryTitle = styled.span`
   font-weight: 700;
   font-size: 1.25em;
   flex: 1;
+`;
+
+const StyledBadge = styled(Badge)`
+  &&& .ant-badge-count {
+    background-color: ${({ $color }) => $color};
+  }
 `;
 
 const StyledItemList = styled.ul`
@@ -161,6 +196,53 @@ const StyledCheckIcon = styled(FaCheckCircle)`
   margin-top: 0.25em;
 `;
 
+const StyledCtaRow = styled(Row)`
+  padding: 0 2em 2.5em 2em;
+`;
+
+const StyledCtaCard = styled(Card)`
+  &&& {
+    text-align: center;
+    background: linear-gradient(135deg, #232526, #414345);
+    border-radius: 16px;
+    border: none;
+  }
+`;
+
+const StyledCtaTitle = styled(Typography.Title)`
+  &&& {
+    color: white;
+    margin: 0.4em 0 0 0;
+  }
+`;
+
+const StyledCtaText = styled(Typography.Paragraph)`
+  &&& {
+    color: white;
+    font-size: 1.3em;
+    margin: 0;
+  }
+`;
+
+const StyledQuestionWrapper = styled.div`
+  margin: 3em 2em 0 2em;
+  text-align: center;
+`;
+
+const StyledQuestionTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+  }
+`;
+
+const StyledFooterDivider = styled(Divider)`
+  margin-top: 4em;
+`;
+
+const StyledHeart = styled(FaHeart)`
+  top: -0.5em;
+`;
+
 const SkiTourList = () => {
   const [navOpen, setNavOpen] = useState(false);
   const { redirectToTelegram } = useContactRedirects();
@@ -176,34 +258,24 @@ const SkiTourList = () => {
       <Header />
 
       <StyledHero>
-        <Typography.Title level={1} style={{ color: "white", margin: 0 }}>
-          Чеклист лижного туру
-        </Typography.Title>
-        <Typography.Paragraph
-          style={{ color: "white", fontSize: "1.3em", margin: "0.5em 0 0 0" }}
-        >
+        <StyledHeroTitle level={1}>Чеклист лижного туру</StyledHeroTitle>
+        <StyledHeroSubtitle>
           Які іграшки необхідно мати, щоб вижити 🏔️
-        </Typography.Paragraph>
+        </StyledHeroSubtitle>
       </StyledHero>
 
-      <Row gutter={[24, 24]} style={{ padding: "2.5em 2em", margin: 0 }}>
+      <StyledCategoriesRow gutter={[24, 24]}>
         {CATEGORIES.map((category) => (
           <Col xs={24} sm={12} lg={8} key={category.title}>
-            <Card
-              style={{
-                height: "100%",
-                borderTop: `4px solid ${category.color}`,
-                borderRadius: 12,
-              }}
-            >
+            <StyledCategoryCard $color={category.color}>
               <StyledCardHeader>
-                <StyledIconCircle style={{ background: category.color }}>
+                <StyledIconCircle $color={category.color}>
                   <category.icon />
                 </StyledIconCircle>
                 <StyledCategoryTitle>{category.title}</StyledCategoryTitle>
-                <Badge
+                <StyledBadge
                   count={category.items.length}
-                  style={{ backgroundColor: category.color }}
+                  $color={category.color}
                 />
               </StyledCardHeader>
               <StyledItemList>
@@ -214,43 +286,27 @@ const SkiTourList = () => {
                   </StyledItem>
                 ))}
               </StyledItemList>
-            </Card>
+            </StyledCategoryCard>
           </Col>
         ))}
-      </Row>
+      </StyledCategoriesRow>
 
-      <Row justify="center" style={{ padding: "0 2em 2.5em 2em" }}>
+      <StyledCtaRow justify="center">
         <Col xs={24} md={16} lg={12}>
-          <Card
-            style={{
-              textAlign: "center",
-              background: "linear-gradient(135deg, #232526, #414345)",
-              borderRadius: 16,
-              border: "none",
-            }}
-          >
+          <StyledCtaCard>
             <GiPartyPopper size="2.5em" color="white" />
-            <Typography.Title
-              level={3}
-              style={{ color: "white", margin: "0.4em 0 0 0" }}
-            >
-              Найголовніше спорядження
-            </Typography.Title>
-            <Typography.Paragraph
-              style={{ color: "white", fontSize: "1.3em", margin: 0 }}
-            >
-              Гарний настрій.
-            </Typography.Paragraph>
-          </Card>
+            <StyledCtaTitle level={3}>Найголовніше спорядження</StyledCtaTitle>
+            <StyledCtaText>Гарний настрій.</StyledCtaText>
+          </StyledCtaCard>
         </Col>
-      </Row>
+      </StyledCtaRow>
 
       <Row justify="space-around">
         <Col xs={24} md={10}>
-          <div style={{ margin: "3em 2em 0 2em", textAlign: "center" }}>
-            <Typography.Title level={3} style={{ margin: 0 }}>
+          <StyledQuestionWrapper>
+            <StyledQuestionTitle level={3}>
               Залишились питання?
-            </Typography.Title>
+            </StyledQuestionTitle>
             <br />
             <Typography.Text>
               Зв&apos;яжись зі мною в робочі години.
@@ -261,14 +317,14 @@ const SkiTourList = () => {
             <a href="https://telegram.me/ZakharovaPolina">
               <StyledTelegram size="4em" color="#229ED9" />
             </a>
-          </div>
+          </StyledQuestionWrapper>
         </Col>
       </Row>
 
-      <Divider style={{ marginTop: "4em" }}>
-        Made with <FaHeart style={{ top: "-0.5em" }} color="#B01E28" /> in Kyiv,
-        Ukraine © {new Date().getFullYear()}
-      </Divider>
+      <StyledFooterDivider>
+        Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
+        {new Date().getFullYear()}
+      </StyledFooterDivider>
     </>
   );
 };
