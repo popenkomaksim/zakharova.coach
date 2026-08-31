@@ -14,7 +14,7 @@ import HeroSection from "./components/HeroSection";
 // import PrinciplesSection from "./components/PrinciplesSection";
 import FormatsSection from "./components/FormatsSection";
 // import EventsAndAchievements from "./components/EventsAndAchievements";
-// import TestimonialsSection from "./components/TestimonialsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 import PartnersSection from "./components/PartnersSection";
 // import StatsSection from "./components/StatsSection";
 import PricingSection from "./components/PricingSection";
@@ -96,7 +96,6 @@ const App = () => {
         <FormatsSection />
       </ScrollReveal>
       {/* <EventsAndAchievements events={events} /> */}
-      {/* <TestimonialsSection /> */}
       {/* <StatsSection redirectToTelegram={redirectToTelegram} /> */}
       <StyledPatrioticText>Хай та русня здохне</StyledPatrioticText>
       <ScrollReveal>
@@ -108,6 +107,9 @@ const App = () => {
       </ScrollReveal>
       <ScrollReveal>
         <ExtraServicesSection rate={rate} />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TestimonialsSection />
       </ScrollReveal>
       <ScrollReveal>
         <PartnersSection />
