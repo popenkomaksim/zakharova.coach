@@ -19,6 +19,17 @@ const StyledRow = styled(Row)`
   }
 `;
 
+const StyledFormatImage = styled(Image)`
+  &&& {
+    width: 100%;
+    max-height: 85vh;
+    @media (min-width: 768px) {
+      max-height: 26em;
+      object-fit: cover;
+    }
+  }
+`;
+
 const FormatCard = ({
   title,
   description,
@@ -44,12 +55,7 @@ const FormatCard = ({
 
   const imageBlock = photo ? (
     <Col xs={24} md={10}>
-      <Image
-        src={photo}
-        preview={false}
-        loading="lazy"
-        style={{ width: "100%", maxHeight: "85vh" }}
-      />
+      <StyledFormatImage src={photo} preview={false} loading="lazy" />
     </Col>
   ) : null;
 

@@ -14,6 +14,8 @@ const StyledTextCol = styled(Col)`
 const StyledTextCard = styled.div`
   position: relative;
   overflow: hidden;
+  max-width: 42em;
+  margin: 0 auto;
   border-radius: 1.5em;
   box-shadow: 0 0.5em 6em rgba(0, 0, 0, 0.12);
   padding: 1.5em;
