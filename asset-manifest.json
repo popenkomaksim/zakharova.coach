@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.01221644.css",
-    "main.js": "/static/js/main.9d6302d2.js",
+    "main.css": "/static/css/main.67035805.css",
+    "main.js": "/static/js/main.61ea467b.js",
     "static/js/488.ad75ecc0.chunk.js": "/static/js/488.ad75ecc0.chunk.js",
     "static/media/Polina_Altra.mp4": "/static/media/Polina_Altra.fb9614cc68fb9d593644.mp4",
     "static/media/donetsk.svg": "/static/media/donetsk.afc5ff64bc9aa83d26e7.svg",
@@ -27,12 +27,12 @@
     "static/media/montserrat-vietnamese-900-normal.woff": "/static/media/montserrat-vietnamese-900-normal.755285a3ea14f973af6f.woff",
     "index.html": "/index.html",
     "static/media/frame.svg": "/static/media/frame.2fbf0bde090fde543e1f8ba2dafbc219.svg",
-    "main.01221644.css.map": "/static/css/main.01221644.css.map",
-    "main.9d6302d2.js.map": "/static/js/main.9d6302d2.js.map",
+    "main.67035805.css.map": "/static/css/main.67035805.css.map",
+    "main.61ea467b.js.map": "/static/js/main.61ea467b.js.map",
     "488.ad75ecc0.chunk.js.map": "/static/js/488.ad75ecc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01221644.css",
-    "static/js/main.9d6302d2.js"
+    "static/css/main.67035805.css",
+    "static/js/main.61ea467b.js"
   ]
 }
