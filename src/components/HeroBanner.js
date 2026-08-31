@@ -87,10 +87,10 @@ const StyledPlanText = styled(Typography.Title)`
     @media (max-width: 768px) {
       top: 35%;
       right: 4%;
-      width: 100%;
+      width: 96%;
       color: #1a1a1a;
       line-height: 1;
-      font-size: clamp(1.8rem, 3.7vw, 4.2rem);
+      font-size: clamp(1.7rem, 3.7vw, 4.2rem);
     }
   }
 `;
