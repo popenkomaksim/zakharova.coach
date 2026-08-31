@@ -16,7 +16,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
       <Typography.Title
         level={2}
         style={{
-          margin: "  ",
+          margin: "0 0.2rem",
           textAlign: "center",
           color: "rgb(59 59 59 / 88%)",
           fontSize: "3.6em",
