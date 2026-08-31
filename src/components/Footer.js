@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Divider } from "antd";
 import { FaHeart } from "react-icons/fa";
@@ -16,16 +15,12 @@ const StyledHeart = styled(FaHeart)`
   top: -0.5em;
 `;
 
-const Footer = ({ showSince2023 = false }) => (
+const Footer = () => (
   <StyledFooterDivider>
-    Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine ©{" "}
-    {showSince2023 && <>2023 &mdash; </>}
+    Made with <StyledHeart color="#B01E28" /> in Kyiv, Ukraine © 2023
+    &mdash;&nbsp;
     {new Date().getFullYear()}
   </StyledFooterDivider>
 );
-
-Footer.propTypes = {
-  showSince2023: PropTypes.bool,
-};
 
 export default Footer;

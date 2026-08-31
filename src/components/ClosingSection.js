@@ -52,7 +52,7 @@ const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
       </Col>
     </Row>
 
-    <Footer showSince2023 />
+    <Footer />
   </>
 );
 
