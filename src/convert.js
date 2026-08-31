@@ -1,4 +1,4 @@
-const rateEURtoUAH = 47.52;
+const rateEURtoUAH = 52.1;
 
 const convert = (eur) => parseInt(eur * rateEURtoUAH, 10);
 
