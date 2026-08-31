@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
 import HeroBanner from "./components/HeroBanner";
+import MobileCtaButton from "./components/MobileCtaButton";
 import HeroSection from "./components/HeroSection";
 // import CollaborationSection from "./components/CollaborationSection";
 // import PrinciplesSection from "./components/PrinciplesSection";
@@ -49,6 +50,9 @@ const App = () => {
 
       <Header />
       <HeroBanner />
+
+      <MobileCtaButton redirectToTelegram={redirectToTelegram} />
+
       <HeroSection
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
