@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Col, Row, Statistic, Avatar, Image } from "antd";
 import CountUp from "react-countup";
 import StyledCol from "./StyledCol";
@@ -17,22 +18,30 @@ function getKmAmount() {
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
+const StyledStatsCol = styled(Col)`
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-auto-rows: 1fr;
+`;
+
+const StyledGrayscaleImage = styled(Image)`
+  &&& {
+    filter: grayscale(1);
+  }
+`;
+
+const StyledLink = styled.span`
+  cursor: pointer;
+`;
+
 const StatsSection = ({ redirectToTelegram }) => (
   <Row justify="space-around">
-    <Col
-      xs={24}
-      md={12}
-      style={{
-        padding: "2em",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "10px",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        gridAutoRows: "1fr",
-      }}
-    >
+    <StyledStatsCol xs={24} md={12}>
       <Statistic
         title="Кілометрів подолали мої учні"
         value={getKmAmount()}
@@ -46,26 +55,21 @@ const StatsSection = ({ redirectToTelegram }) => (
           <Avatar src="./zhenya.jpg" />
           <Avatar src="./tamara.jpg" />
           <Avatar src="./babii.jpg" />
-          <span
+          <StyledLink
             onClick={redirectToTelegram}
             onKeyDown={redirectToTelegram}
             role="link"
             tabIndex="0"
-            style={{ cursor: "pointer" }}
           >
             <Avatar>+</Avatar>
-          </span>
+          </StyledLink>
         </Avatar.Group>
         <br />
         Десятки учнів займаються зараз
       </div>
-    </Col>
+    </StyledStatsCol>
     <StyledCol xs={24} md={12}>
-      <Image
-        src="./kazbek.jpg"
-        preview={false}
-        style={{ filter: "grayscale(1)" }}
-      />
+      <StyledGrayscaleImage src="./kazbek.jpg" preview={false} />
     </StyledCol>
   </Row>
 );
