@@ -12,10 +12,15 @@ const StyledMenuIcon = styled(IoMenuOutline)`
   font-size: 1em;
 `;
 
+const StyledTelegramFloatButton = styled(FloatButton)`
+  &&& {
+    right: 94px;
+  }
+`;
+
 const FloatingActions = ({ redirectToTelegram, onMenuClick }) => (
   <>
-    <FloatButton
-      style={{ right: 94 }}
+    <StyledTelegramFloatButton
       onClick={redirectToTelegram}
       badge={{ count: 1 }}
       icon={<StyledTooltipTelegram />}

@@ -133,6 +133,13 @@ const StyledRulesText = styled(Typography.Title)`
   }
 `;
 
+const StyledPhoto = styled(Image)`
+  &&& {
+    display: block;
+    width: 100%;
+  }
+`;
+
 const HeroBanner = () => {
   return (
     <StyledComposition>
@@ -143,18 +150,10 @@ const HeroBanner = () => {
         <StyledRulesText level={1}>Мої правила</StyledRulesText>
       </StyledFrame>
       <StyledMountainPhotoWrapper>
-        <Image
-          src="./design2_kazbek.jpeg"
-          preview={false}
-          style={{ display: "block", width: "100%" }}
-        />
+        <StyledPhoto src="./design2_kazbek.jpeg" preview={false} />
       </StyledMountainPhotoWrapper>
       <StyledRunnerPhotoWrapper>
-        <Image
-          src="./PolinaJump.jpeg"
-          preview={false}
-          style={{ display: "block", width: "100%" }}
-        />
+        <StyledPhoto src="./PolinaJump.jpeg" preview={false} />
       </StyledRunnerPhotoWrapper>
     </StyledComposition>
   );

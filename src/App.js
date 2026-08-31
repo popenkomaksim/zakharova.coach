@@ -24,6 +24,12 @@ import ClosingSection from "./components/ClosingSection";
 import useContactRedirects from "./hooks/useContactRedirects";
 // import useUpcomingEvents from "./hooks/useUpcomingEvents";
 
+const StyledDesignImage = styled(Image)`
+  &&& {
+    margin: 3vh 0 0 0;
+  }
+`;
+
 const StyledPatrioticText = styled.p`
   margin: 2em 0;
   padding: 0.6em 0.4em;
@@ -57,12 +63,7 @@ const App = () => {
         redirectToTelegram={redirectToTelegram}
         redirectToWhatsup={redirectToWhatsup}
       />
-      <Image
-        src="./design_kazbek.jpeg"
-        preview={false}
-        width="100%"
-        style={{ margin: "3vh 0 0 0" }}
-      />
+      <StyledDesignImage src="./design_kazbek.jpeg" preview={false} width="100%" />
       {/* <CollaborationSection /> */}
       {/* <PrinciplesSection /> */}
       <FormatsSection />

@@ -14,30 +14,32 @@ const StyledWhatsapp = styled(FaWhatsapp)`
   vertical-align: middle;
 `;
 
+const StyledIconLink = styled.span`
+  cursor: pointer;
+`;
+
 const ContactIcons = ({
   redirectToTelegram,
   redirectToWhatsup,
   size = "4em",
 }) => (
   <>
-    <span
+    <StyledIconLink
       onClick={redirectToTelegram}
       onKeyDown={redirectToTelegram}
       role="link"
       tabIndex="0"
-      style={{ cursor: "pointer" }}
     >
       <StyledTelegram size={size} color="#229ED9" />
-    </span>
-    <span
+    </StyledIconLink>
+    <StyledIconLink
       onClick={redirectToWhatsup}
       onKeyDown={redirectToWhatsup}
       role="link"
       tabIndex="0"
-      style={{ cursor: "pointer" }}
     >
       <StyledWhatsapp size={size} color="#25D366" />
-    </span>
+    </StyledIconLink>
   </>
 );
 
