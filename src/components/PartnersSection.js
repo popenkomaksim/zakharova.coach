@@ -1,4 +1,10 @@
+import styled from "styled-components";
 import { Col, Row, Image, Typography } from "antd";
+
+const StyledPartnerLink = styled.a`
+  display: inline-block;
+  padding: 0.75em;
+`;
 
 const PartnersSection = () => (
   <>
@@ -16,58 +22,88 @@ const PartnersSection = () => (
       style={{ margin: "1em 0 3em 0" }}
     >
       <Col>
-        <a
+        <StyledPartnerLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.x-zone.com.ua/ua/proizvoditeli/kailas.html"
         >
-          <Image src="./kailas_logo.png" preview={false} width="100px" />
-        </a>
+          <Image
+            src="./kailas_logo.png"
+            preview={false}
+            loading="lazy"
+            width="100px"
+          />
+        </StyledPartnerLink>
       </Col>
       <Col>
-        <a
+        <StyledPartnerLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://travel-extreme.com.ua/torq/"
         >
-          <Image src="./Torq-logo-square.webp" preview={false} width="100px" />
-        </a>
+          <Image
+            src="./Torq-logo-square.webp"
+            preview={false}
+            loading="lazy"
+            width="100px"
+          />
+        </StyledPartnerLink>
       </Col>
       <Col>
-        <a
+        <StyledPartnerLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.x-zone.com.ua/"
         >
-          <Image src="./xzone.png" preview={false} width="100px" />
-        </a>
+          <Image
+            src="./xzone.png"
+            preview={false}
+            loading="lazy"
+            width="100px"
+          />
+        </StyledPartnerLink>
       </Col>
       <Col>
-        <a
+        <StyledPartnerLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://sprtlab.com.ua/"
         >
-          <Image src="./SportLab.png" preview={false} width="100px" />
-        </a>
+          <Image
+            src="./SportLab.png"
+            preview={false}
+            loading="lazy"
+            width="100px"
+          />
+        </StyledPartnerLink>
       </Col>
       <Col>
-        <a
+        <StyledPartnerLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://travel-extreme.com.ua/"
         >
-          <Image src="./travelextreme.png" preview={false} width="100px" />
-        </a>
+          <Image
+            src="./travelextreme.png"
+            preview={false}
+            loading="lazy"
+            width="100px"
+          />
+        </StyledPartnerLink>
       </Col>
       <Col>
-        <a
+        <StyledPartnerLink
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.facebook.com/tvoiapryhoda/"
         >
-          <Image src="./tvoya_prygoda.png" preview={false} width="100px" />
-        </a>
+          <Image
+            src="./tvoya_prygoda.png"
+            preview={false}
+            loading="lazy"
+            width="100px"
+          />
+        </StyledPartnerLink>
       </Col>
     </Row>
   </>

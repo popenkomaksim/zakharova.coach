@@ -1,21 +1,12 @@
 import PropTypes from "prop-types";
 import { Button, Row } from "antd";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const StyledMobileCtaRow = styled(Row)`
   display: none;
   @media (max-width: 991.98px) {
     display: flex;
     margin: 1.5em 0;
-  }
-`;
-
-const pulseGlow = keyframes`
-  0%, 100% {
-    box-shadow: 0 0.4em 1.2em rgba(176, 30, 40, 0.35);
-  }
-  50% {
-    box-shadow: 0 0.4em 1.8em rgba(176, 30, 40, 0.6);
   }
 `;
 
@@ -32,7 +23,7 @@ const StyledCtaButton = styled(Button)`
     letter-spacing: 0.01em;
     text-transform: uppercase;
     text-shadow: 0 0.05em 0.15em rgba(0, 0, 0, 0.35);
-    animation: ${pulseGlow} 2.4s ease-in-out infinite;
+    box-shadow: 0 0.4em 1.2em rgba(176, 30, 40, 0.35);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover,

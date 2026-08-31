@@ -1,6 +1,29 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
 import PlanCard from "./PlanCard";
+
+const StyledPricingTitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 1.5em 1em;
+`;
+
+const StyledPricingTitle = styled(Typography.Title)`
+  &&& {
+    margin: 0;
+    max-width: 40em;
+    padding: 0.4em 0.8em;
+    border-radius: 0.5em;
+    background: rgba(255, 255, 255, 0.82);
+    text-align: center;
+    color: #2b2b2b;
+    font-size: 3.6em;
+    @media (max-width: 575.98px) {
+      font-size: 1.8em;
+    }
+  }
+`;
 
 const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <Row
@@ -13,17 +36,11 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
     id="prices"
   >
     <Col span={24}>
-      <Typography.Title
-        level={2}
-        style={{
-          margin: "0 0.2rem",
-          textAlign: "center",
-          color: "rgb(59 59 59 / 88%)",
-          fontSize: "3.6em",
-        }}
-      >
-        Роздягальня цін: без дрібного шрифту, але з тренером
-      </Typography.Title>
+      <StyledPricingTitleWrapper>
+        <StyledPricingTitle level={2}>
+          Роздягальня цін: без дрібного шрифту, але з тренером
+        </StyledPricingTitle>
+      </StyledPricingTitleWrapper>
     </Col>
     <Col xs={24} lg={8}>
       <PlanCard

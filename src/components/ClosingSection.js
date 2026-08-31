@@ -13,6 +13,15 @@ const StyledFooterDivider = styled(Divider)`
   }
 `;
 
+const StyledQuestionText = styled(Typography.Text)`
+  &&& {
+    font-size: 1.75em;
+    @media (max-width: 575.98px) {
+      font-size: 1.15em;
+    }
+  }
+`;
+
 const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
   <>
     <LoopVideo src={PolinaRun} alt="Polina do running" />
@@ -24,9 +33,9 @@ const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
             Залишились питання?
           </Typography.Title>
           <br />
-          <Typography.Text style={{ fontSize: "1.75em" }}>
+          <StyledQuestionText>
             Зв&apos;яжись зі мною в робочі години.
-          </Typography.Text>
+          </StyledQuestionText>
           <br />
           <br />
           <br />

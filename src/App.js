@@ -25,7 +25,7 @@ import useContactRedirects from "./hooks/useContactRedirects";
 // import useUpcomingEvents from "./hooks/useUpcomingEvents";
 
 const StyledPatrioticText = styled.p`
-  margin: 0;
+  margin: 2em 0;
   padding: 0.6em 0.4em;
   background: transparent;
   color: #b01e28;

@@ -77,6 +77,15 @@ const StyledCtaIcon = styled.span`
   vertical-align: middle;
 `;
 
+const StyledParagraph = styled(Typography.Paragraph)`
+  &&& {
+    font-size: 1.8em;
+    @media (max-width: 575.98px) {
+      font-size: 1.15em;
+    }
+  }
+`;
+
 const StyledCtaButton = styled(Button)`
   && {
     display: inline-flex;
@@ -138,27 +147,27 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
               />
             </StyledMobilePhotoFrame>
           </StyledMobilePhotoWrapper>
-          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+          <StyledParagraph>
             Мене неможливо уявити без гір, лісу й відкритого простору.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Мій шлях у спорт почався ще у 2008 році із спортивного орієнтування
             та рогейну — з тих пір я бачила цей світ із різних ракурсів.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             За 18 років я пробігла десятки тисяч кілометрів, змінила країни,
             рельєфи й формати, але залишилась вірною головному — свободі та
             драйву.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Сьогодні я тренер, багато років займаюся скі-альпінізмом і допомагаю
             іншим знайти власний ритм й напрямок.
-          </Typography.Paragraph>
-          <Typography.Paragraph style={{ fontSize: "1.8em" }}>
+          </StyledParagraph>
+          <StyledParagraph>
             Я створюю програми, що розвивають не лише витривалість, а й
             усвідомлення себе через рух. Бути присутнім у власному тілі,
             відчувати його силу й розум.
-          </Typography.Paragraph>
+          </StyledParagraph>
         </StyledTextCard>
         <Row justify="center" style={{ marginTop: "1.5em" }}>
           <StyledCtaButton onClick={redirectToContact} danger size="large">
