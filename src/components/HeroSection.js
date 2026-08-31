@@ -90,11 +90,19 @@ const StyledCtaButton = styled(Button)`
     border-radius: 3em;
     box-shadow: 0 0.6em 1.5em rgba(255, 77, 79, 0.35);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: normal;
 
     &:hover,
     &:focus {
       transform: translateY(-0.1em);
       box-shadow: 0 0.8em 1.8em rgba(255, 77, 79, 0.45);
+    }
+
+    @media (max-width: 575.98px) {
+      max-width: 90vw;
+      padding: 0.7em 1.2em;
+      font-size: 1em;
+      text-align: center;
     }
   }
 `;
