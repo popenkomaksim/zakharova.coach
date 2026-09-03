@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledHeaderBar = styled.div`
   display: flex;
@@ -43,9 +44,9 @@ const Header = () => (
   <StyledHeaderBar>
     <StyledLogo>Polina Zakharova</StyledLogo>
     <StyledNav>
-      <a href="/#formats">Формати співпраці</a>
-      <a href="/#prices">Види планів</a>
-      <a href="/#additional-services">Додаткові послуги</a>
+      <Link to="/formats">Формати співпраці</Link>
+      <Link to="/prices">Види планів</Link>
+      <Link to="/additional-services">Додаткові послуги</Link>
     </StyledNav>
   </StyledHeaderBar>
 );

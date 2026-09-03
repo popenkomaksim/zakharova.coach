@@ -21,6 +21,18 @@ const router = createBrowserRouter(
       element: <App />,
     },
     {
+      path: "formats",
+      element: <App />,
+    },
+    {
+      path: "prices",
+      element: <App />,
+    },
+    {
+      path: "additional-services",
+      element: <App />,
+    },
+    {
       path: "skitour-chechlist",
       element: <SkiTourList />,
     },

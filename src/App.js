@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Image } from "antd";
 import styled from "styled-components";
 import "@fontsource/montserrat";
@@ -47,24 +48,25 @@ const App = () => {
   const [navOpen, setNavOpen] = useState(false);
   const { redirectToTelegram, redirectToWhatsup } = useContactRedirects();
   const rate = useExchangeRate();
+  const { pathname } = useLocation();
   // const events = useUpcomingEvents();
 
   useEffect(() => {
-    const { hash } = window.location;
-    if (!hash) return undefined;
+    const sectionId = pathname.replace(/^\//, "");
+    if (!sectionId) return undefined;
 
-    const scrollToHash = () => {
-      document.getElementById(hash.slice(1))?.scrollIntoView();
+    const scrollToSection = () => {
+      document.getElementById(sectionId)?.scrollIntoView();
     };
 
     if (document.readyState === "complete") {
-      scrollToHash();
+      scrollToSection();
       return undefined;
     }
 
-    window.addEventListener("load", scrollToHash);
-    return () => window.removeEventListener("load", scrollToHash);
-  }, []);
+    window.addEventListener("load", scrollToSection);
+    return () => window.removeEventListener("load", scrollToSection);
+  }, [pathname]);
 
   return (
     <>

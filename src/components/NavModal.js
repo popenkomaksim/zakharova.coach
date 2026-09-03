@@ -61,19 +61,19 @@ const NavModal = ({ open, onClose }) => (
           </Link>
         </List.Item>
         <List.Item>
-          <a href="/#formats" onClick={onClose}>
+          <Link to="/formats" onClick={onClose}>
             <StyledNavText>Формати співпраці</StyledNavText>
-          </a>
+          </Link>
         </List.Item>
         <List.Item>
-          <a href="/#prices" onClick={onClose}>
+          <Link to="/prices" onClick={onClose}>
             <StyledNavText>Види планів</StyledNavText>
-          </a>
+          </Link>
         </List.Item>
         <List.Item>
-          <a href="/#additional-services" onClick={onClose}>
+          <Link to="/additional-services" onClick={onClose}>
             <StyledNavText>Додаткові послуги</StyledNavText>
-          </a>
+          </Link>
         </List.Item>
         <List.Item>
           <Link to="/skitour-chechlist" onClick={onClose}>
