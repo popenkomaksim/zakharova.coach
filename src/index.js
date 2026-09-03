@@ -7,6 +7,7 @@ import App from "./App";
 import SkiTourList from "./SkiTourList";
 import Calendar from "./Calendar";
 import About from "./About";
+import Achievements from "./Achievements";
 import Contact from "./Contact";
 import Privacy from "./Privacy";
 import reportWebVitals from "./reportWebVitals";
@@ -30,6 +31,10 @@ const router = createBrowserRouter(
     {
       path: "about",
       element: <About />,
+    },
+    {
+      path: "achievements",
+      element: <Achievements onBack={() => window.location.assign("/")} />,
     },
     {
       path: "contact",

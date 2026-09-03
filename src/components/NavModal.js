@@ -51,6 +51,11 @@ const NavModal = ({ open, onClose }) => (
           </Link>
         </List.Item>
         <List.Item>
+          <Link to="/achievements" onClick={onClose}>
+            <StyledNavText>Спортивні досягнення</StyledNavText>
+          </Link>
+        </List.Item>
+        <List.Item>
           <Link to="/contact" onClick={onClose}>
             <StyledNavText>Контакти</StyledNavText>
           </Link>
