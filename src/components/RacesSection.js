@@ -12,21 +12,29 @@ const StyledRacesRow = styled(Row)`
 `;
 
 const StyledRaceTile = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 8em;
   height: 8em;
   padding: 1em;
-  border-radius: 0.75em;
-  background: #fff;
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+  }
+`;
+
+const StyledRaceBadge = styled(Image)`
+  &&& {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5em;
+    height: auto;
   }
 `;
 
@@ -50,6 +58,8 @@ const races = [
     href: "https://montblanc.utmb.world/races/OCC",
     src: "./race_occ.png",
     alt: "OCC (UTMB Mont-Blanc)",
+    badge: "./race_occ_badge.png",
+    badgeAlt: "50K",
   },
   {
     href: "https://transgrancanaria.net/",
@@ -84,11 +94,19 @@ const RacesSection = () => (
       Старти, на яких фінішували мої учні
     </SectionTitle>
     <StyledRacesRow justify="center" align="middle" gutter={[24, 24]}>
-      {races.map(({ href, src, alt }) => (
+      {races.map(({ href, src, alt, badge, badgeAlt }) => (
         <Col key={src}>
           <StyledRaceLink target="_blank" rel="noopener noreferrer" href={href}>
             <StyledRaceTile>
               <Image src={src} alt={alt} preview={false} loading="lazy" />
+              {badge && (
+                <StyledRaceBadge
+                  src={badge}
+                  alt={badgeAlt}
+                  preview={false}
+                  loading="lazy"
+                />
+              )}
             </StyledRaceTile>
           </StyledRaceLink>
         </Col>
