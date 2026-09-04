@@ -11,6 +11,7 @@ import FloatingActions from "./components/FloatingActions";
 import HeroBanner from "./components/HeroBanner";
 import MobileCtaButton from "./components/MobileCtaButton";
 import HeroSection from "./components/HeroSection";
+import RacesSection from "./components/RacesSection";
 // import CollaborationSection from "./components/CollaborationSection";
 // import PrinciplesSection from "./components/PrinciplesSection";
 import FormatsSection from "./components/FormatsSection";
@@ -94,6 +95,9 @@ const App = () => {
       </ScrollReveal>
       {/* <CollaborationSection /> */}
       {/* <PrinciplesSection /> */}
+      <ScrollReveal>
+        <RacesSection />
+      </ScrollReveal>
       <ScrollReveal>
         <FormatsSection />
       </ScrollReveal>
