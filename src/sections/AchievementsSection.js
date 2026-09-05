@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "@fontsource/montserrat";
 import "../App.css";
 
-import { Typography, Button } from "antd";
+import { Typography, Button, Image } from "antd";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const StyledWrapper = styled.div`
@@ -91,22 +91,56 @@ const StyledTextColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+
+  @media (max-width: 900px) {
+    order: 2;
+  }
 `;
 
 const StyledPhotoColumn = styled.div`
   align-self: start;
-`;
-
-const StyledPhoto = styled.img`
-  width: 90%;
-  display: block;
-  object-fit: cover;
 
   @media (max-width: 900px) {
-    width: auto;
-    max-width: 75vw;
-    margin: 0 auto;
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+const StyledPhotoFrame = styled.div`
+  @media (max-width: 900px) {
+    position: relative;
+    width: 55vw;
+    max-width: 15em;
+    aspect-ratio: 1 / 1;
+    padding: 0.5em;
     border-radius: 50%;
+    background: radial-gradient(
+      circle at 22% 78%,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.35) 45%,
+      rgba(255, 255, 255, 0) 72%
+    );
+    box-shadow: -0.9em 0.9em 2.5em -0.2em rgba(0, 0, 0, 0.16),
+      0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+  }
+`;
+
+const StyledPhoto = styled(Image)`
+  &&& {
+    width: 90%;
+    display: block;
+    object-fit: cover;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: 50% 22%;
+      border-radius: 50%;
+      box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.25);
+    }
   }
 `;
 
@@ -183,10 +217,13 @@ const AchievementsSection = ({ onBack }) => {
         </StyledTextColumn>
 
         <StyledPhotoColumn>
-          <StyledPhoto
-            src="./Polina_OCC.jpeg"
-            alt="Поліна Захарова на фініші"
-          />
+          <StyledPhotoFrame>
+            <StyledPhoto
+              src="./Polina_OCC.jpeg"
+              preview={false}
+              alt="Поліна Захарова на фініші"
+            />
+          </StyledPhotoFrame>
         </StyledPhotoColumn>
       </StyledComposition>
     </StyledWrapper>
