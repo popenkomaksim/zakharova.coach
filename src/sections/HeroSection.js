@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import AboutSection from "./AboutSection";
-import Achievements from "../Achievements";
+import Achievements from "./HeroSection.Achievements";
 
 const StyledHeroSwap = styled.div`
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};

@@ -4,11 +4,11 @@ import "@fontsource/montserrat";
 import "./App.css";
 
 import { Row, Col, Typography, Image } from "antd";
-import Header from "./components/Header";
-import NavModal from "./components/NavModal";
-import FloatingActions from "./components/FloatingActions";
-import Footer from "./components/Footer";
-import useContactRedirects from "./hooks/useContactRedirects";
+import Header from "../components/Header";
+import NavModal from "../components/NavModal";
+import FloatingActions from "../components/FloatingActions";
+import Footer from "../components/Footer";
+import useContactRedirects from "../hooks/useContactRedirects";
 
 const StyledRow = styled(Row)`
   margin: 3em 0;
