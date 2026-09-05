@@ -103,6 +103,31 @@ const races = [
     src: "./race_nice.png",
     alt: "Nice Côte d'Azur by UTMB",
   },
+  {
+    href: "https://grandraidduguillestrois-queyras.com",
+    src: "./race_grgq.png",
+    alt: "Grand Raid du Guillestrois – Queyras",
+  },
+  {
+    href: "https://kullamannen.utmb.world/",
+    src: "./race_kullamannen.png",
+    alt: "Kullamannen by UTMB",
+  },
+  {
+    href: "https://www.madrisatrail.ch",
+    src: "./race_madrisa.png",
+    alt: "Madrisa Trail Klosters",
+  },
+  {
+    href: "https://www.humanitrail.com/rhino-26k.html",
+    src: "./race_rhino.png",
+    alt: "Rhino TRAIL 26 km / 1'600m D+ — THE Ormonts ridges",
+  },
+  {
+    href: "https://www.legendstrail.be/",
+    src: "./race_legends_trail.png",
+    alt: "Legends Trail",
+  },
 ];
 
 const RacesSection = () => (
