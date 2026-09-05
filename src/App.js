@@ -15,6 +15,7 @@ import HeroBanner from "./sections/HeroBanner";
 import HeroSection from "./sections/HeroSection";
 import RacesSection from "./sections/RacesSection";
 import FormatsSection from "./sections/FormatsSection";
+import PatrioticBanner from "./sections/PatrioticBanner";
 import TestimonialsSection from "./sections/TestimonialsSection";
 import PartnersSection from "./sections/PartnersSection";
 import PricingSection from "./sections/PricingSection";
@@ -28,17 +29,6 @@ const StyledDesignImage = styled(Image)`
   &&& {
     margin: 3vh 0 0 0;
   }
-`;
-
-const StyledPatrioticText = styled.p`
-  margin: 2em 0;
-  padding: 0.6em 0.4em;
-  background: transparent;
-  color: #b01e28;
-  font-weight: 900;
-  font-size: clamp(1.1rem, 8vw, 2.75rem);
-  white-space: nowrap;
-  text-align: center;
 `;
 
 const App = () => {
@@ -94,7 +84,7 @@ const App = () => {
       <ScrollReveal>
         <FormatsSection />
       </ScrollReveal>
-      <StyledPatrioticText>Хай та русня здохне</StyledPatrioticText>
+      <PatrioticBanner />
       <ScrollReveal>
         <PricingSection
           redirectToTelegram={redirectToTelegram}

@@ -3,36 +3,14 @@ import styled from "styled-components";
 import "@fontsource/montserrat";
 import "../App.css";
 
-import { Typography, Button, Image } from "antd";
+import { Typography, Image } from "antd";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import StyledBackButton from "../components/OutlineButton";
 
 const StyledWrapper = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   padding: 2em 1.5em 1em;
-`;
-
-const StyledBackButton = styled(Button)`
-  && {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    width: fit-content;
-    height: auto;
-    margin: 1em auto 0 auto;
-    padding: 0.6em 1.4em;
-    font-weight: 600;
-    color: #353935;
-    border: 1px solid #353935;
-    border-radius: 2em;
-
-    &:hover,
-    &:focus {
-      color: #b01e28;
-      border-color: #b01e28;
-    }
-  }
 `;
 
 const StyledTitle = styled(Typography.Title)`

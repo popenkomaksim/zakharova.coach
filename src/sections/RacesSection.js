@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Col, Row, Image, Grid, Button } from "antd";
+import { Col, Row, Image, Grid } from "antd";
 import SectionTitle from "../components/SectionTitle";
+import BaseOutlineButton from "../components/OutlineButton";
 
 const { useBreakpoint } = Grid;
 
@@ -49,25 +50,10 @@ const StyledRaceBadge = styled.img`
   height: auto;
 `;
 
-const StyledShowMoreButton = styled(Button)`
+const StyledShowMoreButton = styled(BaseOutlineButton)`
   && {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: auto;
+    gap: 0;
     margin: 0 auto 1em auto;
-    padding: 0.6em 1.4em;
-    font-weight: 600;
-    color: #353935;
-    border: 1px solid #353935;
-    border-radius: 2em;
-
-    &:hover,
-    &:focus {
-      color: #b01e28;
-      border-color: #b01e28;
-    }
   }
 `;
 

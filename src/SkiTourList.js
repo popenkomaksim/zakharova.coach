@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "@fontsource/montserrat";
 import "./App.css";
 import styled from "styled-components";
@@ -14,11 +13,7 @@ import {
   GiPartyPopper,
 } from "react-icons/gi";
 import { Col, Row, Typography, Card, Badge } from "antd";
-import Header from "./components/Header";
-import NavModal from "./components/NavModal";
-import FloatingActions from "./components/FloatingActions";
-import Footer from "./components/Footer";
-import useContactRedirects from "./hooks/useContactRedirects";
+import PageShell from "./components/PageShell";
 
 const CATEGORIES = [
   {
@@ -236,87 +231,72 @@ const StyledQuestionTitle = styled(Typography.Title)`
   }
 `;
 
-const SkiTourList = () => {
-  const [navOpen, setNavOpen] = useState(false);
-  const { redirectToTelegram } = useContactRedirects();
+const SkiTourList = () => (
+  <PageShell>
+    <StyledHero>
+      <StyledHeroTitle level={1}>Чеклист лижного туру</StyledHeroTitle>
+      <StyledHeroSubtitle>
+        Які іграшки необхідно мати, щоб вижити 🏔️
+      </StyledHeroSubtitle>
+    </StyledHero>
 
-  return (
-    <>
-      <NavModal open={navOpen} onClose={() => setNavOpen(false)} />
-      <FloatingActions
-        redirectToTelegram={redirectToTelegram}
-        onMenuClick={() => setNavOpen(true)}
-      />
-
-      <Header />
-
-      <StyledHero>
-        <StyledHeroTitle level={1}>Чеклист лижного туру</StyledHeroTitle>
-        <StyledHeroSubtitle>
-          Які іграшки необхідно мати, щоб вижити 🏔️
-        </StyledHeroSubtitle>
-      </StyledHero>
-
-      <StyledCategoriesRow gutter={[24, 24]}>
-        {CATEGORIES.map((category) => (
-          <Col xs={24} sm={12} lg={8} key={category.title}>
-            <StyledCategoryCard $color={category.color}>
-              <StyledCardHeader>
-                <StyledIconCircle $color={category.color}>
-                  <category.icon />
-                </StyledIconCircle>
-                <StyledCategoryTitle>{category.title}</StyledCategoryTitle>
-                <StyledBadge
-                  count={category.items.length}
-                  $color={category.color}
-                />
-              </StyledCardHeader>
-              <StyledItemList>
-                {category.items.map((item) => (
-                  <StyledItem key={item}>
-                    <StyledCheckIcon color={category.color} />
-                    <span>{item}</span>
-                  </StyledItem>
-                ))}
-              </StyledItemList>
-            </StyledCategoryCard>
-          </Col>
-        ))}
-      </StyledCategoriesRow>
-
-      <StyledCtaRow justify="center">
-        <Col xs={24} md={16} lg={12}>
-          <StyledCtaCard>
-            <GiPartyPopper size="2.5em" color="white" />
-            <StyledCtaTitle level={3}>Найголовніше спорядження</StyledCtaTitle>
-            <StyledCtaText>Гарний настрій.</StyledCtaText>
-          </StyledCtaCard>
+    <StyledCategoriesRow gutter={[24, 24]}>
+      {CATEGORIES.map((category) => (
+        <Col xs={24} sm={12} lg={8} key={category.title}>
+          <StyledCategoryCard $color={category.color}>
+            <StyledCardHeader>
+              <StyledIconCircle $color={category.color}>
+                <category.icon />
+              </StyledIconCircle>
+              <StyledCategoryTitle>{category.title}</StyledCategoryTitle>
+              <StyledBadge
+                count={category.items.length}
+                $color={category.color}
+              />
+            </StyledCardHeader>
+            <StyledItemList>
+              {category.items.map((item) => (
+                <StyledItem key={item}>
+                  <StyledCheckIcon color={category.color} />
+                  <span>{item}</span>
+                </StyledItem>
+              ))}
+            </StyledItemList>
+          </StyledCategoryCard>
         </Col>
-      </StyledCtaRow>
+      ))}
+    </StyledCategoriesRow>
 
-      <Row justify="space-around">
-        <Col xs={24} md={10}>
-          <StyledQuestionWrapper>
-            <StyledQuestionTitle level={3}>
-              Залишились питання?
-            </StyledQuestionTitle>
-            <br />
-            <Typography.Text>
-              Зв&apos;яжись зі мною в робочі години.
-            </Typography.Text>
-            <br />
-            <br />
-            <br />
-            <a href="https://telegram.me/ZakharovaPolina">
-              <StyledTelegram size="4em" color="#229ED9" />
-            </a>
-          </StyledQuestionWrapper>
-        </Col>
-      </Row>
+    <StyledCtaRow justify="center">
+      <Col xs={24} md={16} lg={12}>
+        <StyledCtaCard>
+          <GiPartyPopper size="2.5em" color="white" />
+          <StyledCtaTitle level={3}>Найголовніше спорядження</StyledCtaTitle>
+          <StyledCtaText>Гарний настрій.</StyledCtaText>
+        </StyledCtaCard>
+      </Col>
+    </StyledCtaRow>
 
-      <Footer />
-    </>
-  );
-};
+    <Row justify="space-around">
+      <Col xs={24} md={10}>
+        <StyledQuestionWrapper>
+          <StyledQuestionTitle level={3}>
+            Залишились питання?
+          </StyledQuestionTitle>
+          <br />
+          <Typography.Text>
+            Зв&apos;яжись зі мною в робочі години.
+          </Typography.Text>
+          <br />
+          <br />
+          <br />
+          <a href="https://telegram.me/ZakharovaPolina">
+            <StyledTelegram size="4em" color="#229ED9" />
+          </a>
+        </StyledQuestionWrapper>
+      </Col>
+    </Row>
+  </PageShell>
+);
 
 export default SkiTourList;

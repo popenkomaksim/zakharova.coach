@@ -100,7 +100,7 @@ const TestimonialsSection = () => {
       setIndex((current) => (current + 1) % testimonials.length);
     }, AUTO_ADVANCE_MS);
     return () => clearInterval(timer);
-  }, [index]);
+  }, []);
 
   const testimonial = testimonials[index];
 

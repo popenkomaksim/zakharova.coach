@@ -14,28 +14,11 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const APP_PATHS = ["/", "formats", "races", "prices", "additional-services"];
+
 const router = createBrowserRouter(
   [
-    {
-      path: "/",
-      element: <App />,
-    },
-    {
-      path: "formats",
-      element: <App />,
-    },
-    {
-      path: "races",
-      element: <App />,
-    },
-    {
-      path: "prices",
-      element: <App />,
-    },
-    {
-      path: "additional-services",
-      element: <App />,
-    },
+    ...APP_PATHS.map((path) => ({ path, element: <App /> })),
     {
       path: "skitour-chechlist",
       element: <SkiTourList />,

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
-import TransparentBoxText from "../../components/TransparentBoxText";
+import TransparentBoxText from "../../components/archived/TransparentBoxText";
 import StyledCol from "../../components/StyledCol";
 import LoopVideo from "../../components/LoopVideo";
 import PolinaAltra from "../../Polina_Altra.mp4";

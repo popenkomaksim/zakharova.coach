@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Col, Row, Typography, Image, Button } from "antd";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import StyledMoreButton from "../components/OutlineButton";
 
 const StyledAboutRow = styled(Row)`
   margin: 3em 0;
@@ -24,29 +25,6 @@ const StyledSectionTitle = styled(Typography.Title)`
 
 const StyledCtaRow = styled(Row)`
   margin-top: 1.5em;
-`;
-
-const StyledMoreButton = styled(Button)`
-  && {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    width: fit-content;
-    height: auto;
-    margin: 1em auto 0 auto;
-    padding: 0.6em 1.4em;
-    font-weight: 600;
-    color: #353935;
-    border: 1px solid #353935;
-    border-radius: 2em;
-
-    &:hover,
-    &:focus {
-      color: #b01e28;
-      border-color: #b01e28;
-    }
-  }
 `;
 
 const StyledTextCol = styled(Col)`
