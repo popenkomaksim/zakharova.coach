@@ -60,7 +60,7 @@ const CollaborationSection = ({ redirectToTelegram }) => (
 
     <Row justify="space-around">
       <StyledCol xs={24} md={12}>
-        <StyledGrayscaleImage src="./IMG_1182.jpg" preview={false} />
+        <StyledGrayscaleImage src="./img_1182.jpg" preview={false} />
       </StyledCol>
       <StyledCenteredCol xs={24} md={12}>
         <StyledTextWrapper>

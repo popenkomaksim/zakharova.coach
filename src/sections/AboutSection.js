@@ -153,7 +153,7 @@ const AboutSection = ({
     <>
       <StyledAboutRow justify="center" id="about">
         <StyledDesktopImageCol lg={6} xl={6}>
-          <StyledDesktopImage src="./Polina_Casual.jpeg" preview={false} />
+          <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
         </StyledDesktopImageCol>
         <StyledTextCol lg={12} xs={22} md={24}>
           <StyledTextCard>
@@ -164,7 +164,7 @@ const AboutSection = ({
             <StyledMobilePhotoWrapper>
               <StyledMobilePhotoFrame>
                 <StyledMobileImage
-                  src="./Polina_Casual.jpeg"
+                  src="./polina_casual.jpeg"
                   preview={false}
                   alt="Поліна"
                 />

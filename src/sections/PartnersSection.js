@@ -38,7 +38,7 @@ const partners = [
   },
   {
     href: "https://travel-extreme.com.ua/torq/",
-    src: "./Torq-logo-square.webp",
+    src: "./torq_logo_square.webp",
     alt: "Torq",
   },
   {
@@ -48,7 +48,7 @@ const partners = [
   },
   {
     href: "https://sprtlab.com.ua/",
-    src: "./SportLab.png",
+    src: "./sportlab.png",
     alt: "SportLab",
   },
   {

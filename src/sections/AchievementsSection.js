@@ -197,7 +197,7 @@ const AchievementsSection = ({ onBack }) => {
         <StyledPhotoColumn>
           <StyledPhotoFrame>
             <StyledPhoto
-              src="./Polina_OCC.jpeg"
+              src="./polina_occ.jpeg"
               preview={false}
               alt="Поліна Захарова на фініші"
             />

@@ -153,7 +153,7 @@ const HeroBanner = () => {
         <StyledPhoto src="./design2_kazbek.jpeg" preview={false} />
       </StyledMountainPhotoWrapper>
       <StyledRunnerPhotoWrapper>
-        <StyledPhoto src="./PolinaJump.jpeg" preview={false} />
+        <StyledPhoto src="./polina_jump.jpeg" preview={false} />
       </StyledRunnerPhotoWrapper>
     </StyledComposition>
   );

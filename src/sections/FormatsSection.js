@@ -10,7 +10,7 @@ const FormatsSection = () => (
       <FormatCard
         title="Індивідуальний тренінг"
         description="Ти обираєш формат і цілі — я стежу, щоб кожне тренування давало максимум ефекту."
-        photo="./Max_Doggy_Polya_Doggy.jpeg"
+        photo="./max_doggy_polya_doggy.jpeg"
         pagination=""
         imageSide="left"
       />
@@ -42,7 +42,7 @@ const FormatsSection = () => (
       <FormatCard
         title="Пропозиції для бізнесу"
         description="Це формат для компаній, які хочуть пройти шлях до спільного старту: трейлу, марафону, забігу з перешкодами чи благодійного заходу."
-        photo="./Polina_OCC.jpeg"
+        photo="./polina_occ.jpeg"
         pagination=""
         imageSide="left"
       />
