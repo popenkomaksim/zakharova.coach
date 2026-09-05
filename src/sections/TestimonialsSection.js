@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
-import Testimonial from "./Testimonial";
+import Testimonial from "../components/Testimonial";
 
 const AUTO_ADVANCE_MS = 7000;
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
-import TransparentBoxText from "../TransparentBoxText";
-import StyledCol from "../StyledCol";
-import LoopVideo from "../LoopVideo";
+import TransparentBoxText from "../../components/TransparentBoxText";
+import StyledCol from "../../components/StyledCol";
+import LoopVideo from "../../components/LoopVideo";
 import PolinaAltra from "../../Polina_Altra.mp4";
 
 const StyledTitleRow = styled(Row)`

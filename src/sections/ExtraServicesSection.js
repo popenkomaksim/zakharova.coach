@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Col, Row, Typography } from "antd";
-import SectionTitle from "./SectionTitle";
-import ExtraServiceCard from "./ExtraServiceCard";
+import SectionTitle from "../components/SectionTitle";
+import ExtraServiceCard from "../components/ExtraServiceCard";
 
 const ExtraServicesSection = ({ rate }) => (
   <>

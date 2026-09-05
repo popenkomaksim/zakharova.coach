@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Col, Row, Image, Grid, Button } from "antd";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 const { useBreakpoint } = Grid;
 

@@ -8,17 +8,18 @@ import "./App.css";
 import Header from "./components/Header";
 import NavModal from "./components/NavModal";
 import FloatingActions from "./components/FloatingActions";
-import HeroBanner from "./components/HeroBanner";
 import MobileCtaButton from "./components/MobileCtaButton";
-import HeroSection from "./components/HeroSection";
-import RacesSection from "./components/RacesSection";
-import FormatsSection from "./components/FormatsSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import PartnersSection from "./components/PartnersSection";
-import PricingSection from "./components/PricingSection";
-import ExtraServicesSection from "./components/ExtraServicesSection";
-import ClosingSection from "./components/ClosingSection";
 import ScrollReveal from "./components/ScrollReveal";
+
+import HeroBanner from "./sections/HeroBanner";
+import HeroSection from "./sections/HeroSection";
+import RacesSection from "./sections/RacesSection";
+import FormatsSection from "./sections/FormatsSection";
+import TestimonialsSection from "./sections/TestimonialsSection";
+import PartnersSection from "./sections/PartnersSection";
+import PricingSection from "./sections/PricingSection";
+import ExtraServicesSection from "./sections/ExtraServicesSection";
+import ClosingSection from "./sections/ClosingSection";
 
 import useContactRedirects from "./hooks/useContactRedirects";
 import useExchangeRate from "./hooks/useExchangeRate";

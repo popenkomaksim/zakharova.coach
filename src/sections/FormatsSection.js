@@ -1,6 +1,6 @@
 import { Row } from "antd";
-import SectionTitle from "./SectionTitle";
-import FormatCard from "./FormatCard";
+import SectionTitle from "../components/SectionTitle";
+import FormatCard from "../components/FormatCard";
 
 const FormatsSection = () => (
   <>

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography, Image } from "antd";
-import StyledCol from "../StyledCol";
-import ClickableIcon from "../ClickableIcon";
+import StyledCol from "../../components/StyledCol";
+import ClickableIcon from "../../components/ClickableIcon";
 
 const StyledCenteredCol = styled(Col)`
   padding: 2em;

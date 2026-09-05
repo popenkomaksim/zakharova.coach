@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
-import ContactIcons from "./ContactIcons";
-import LoopVideo from "./LoopVideo";
-import Footer from "./Footer";
+import ContactIcons from "../components/ContactIcons";
+import LoopVideo from "../components/LoopVideo";
+import Footer from "../components/Footer";
 import PolinaRun from "../Polina_Altra.mp4";
 
 const StyledQuestionText = styled(Typography.Text)`

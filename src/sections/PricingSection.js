@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
-import PlanCard from "./PlanCard";
+import PlanCard from "../components/PlanCard";
 
 const StyledPricingRow = styled(Row)`
   background-image: url(./pencil_mountains_narrow.jpeg);
