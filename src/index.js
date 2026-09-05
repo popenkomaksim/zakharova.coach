@@ -7,7 +7,7 @@ import App from "./App";
 import SkiTourList from "./SkiTourList";
 import Calendar from "./Calendar";
 import About from "./About";
-import AchievementsSection from "./AchievementsSection";
+import AchievementsSection from "./sections/AchievementsSection";
 import Contact from "./Contact";
 import Privacy from "./Privacy";
 import reportWebVitals from "./reportWebVitals";
@@ -63,13 +63,13 @@ const router = createBrowserRouter(
       element: <Privacy />,
     },
   ],
-  { basename: "/" },
+  { basename: "/" }
 );
 
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
