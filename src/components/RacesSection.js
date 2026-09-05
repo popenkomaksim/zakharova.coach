@@ -1,6 +1,11 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { Col, Row, Image } from "antd";
+import { Col, Row, Image, Grid, Button } from "antd";
 import SectionTitle from "./SectionTitle";
+
+const { useBreakpoint } = Grid;
+
+const MOBILE_VISIBLE_COUNT = 9;
 
 const StyledRaceLink = styled.a`
   display: inline-block;
@@ -38,6 +43,28 @@ const StyledRaceBadge = styled.img`
   right: -0.5em;
   width: 2em;
   height: auto;
+`;
+
+const StyledShowMoreButton = styled(Button)`
+  && {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: auto;
+    margin: 0 auto 1em auto;
+    padding: 0.6em 1.4em;
+    font-weight: 600;
+    color: #353935;
+    border: 1px solid #353935;
+    border-radius: 2em;
+
+    &:hover,
+    &:focus {
+      color: #b01e28;
+      border-color: #b01e28;
+    }
+  }
 `;
 
 const races = [
@@ -200,28 +227,51 @@ const races = [
   },
 ];
 
-const RacesSection = () => (
-  <>
-    <SectionTitle id="races" level={3} margin="2em 0 1em 0">
-      Старти, на яких фінішували мої учні
-    </SectionTitle>
-    <StyledRacesRow justify="center" align="middle" gutter={[24, 24]}>
-      {races.map(({ href, src, alt, badge, badgeAlt }) => (
-        <Col key={src}>
-          <StyledRaceLink target="_blank" rel="noopener noreferrer" href={href}>
-            <StyledRaceTile>
-              <StyledImageWrap>
-                <Image src={src} alt={alt} preview={false} loading="lazy" />
-                {badge && (
-                  <StyledRaceBadge src={badge} alt={badgeAlt} loading="lazy" />
-                )}
-              </StyledImageWrap>
-            </StyledRaceTile>
-          </StyledRaceLink>
-        </Col>
-      ))}
-    </StyledRacesRow>
-  </>
-);
+const RacesSection = () => {
+  const [expanded, setExpanded] = useState(false);
+  const screens = useBreakpoint();
+  const isMobile = !screens.sm;
+  const visibleRaces =
+    isMobile && !expanded ? races.slice(0, MOBILE_VISIBLE_COUNT) : races;
+
+  return (
+    <>
+      <SectionTitle id="races" level={3} margin="2em 0 1em 0">
+        Старти, на яких фінішували мої учні
+      </SectionTitle>
+      <StyledRacesRow justify="center" align="middle" gutter={[24, 24]}>
+        {visibleRaces.map(({ href, src, alt, badge, badgeAlt }) => (
+          <Col key={src}>
+            <StyledRaceLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href={href}
+            >
+              <StyledRaceTile>
+                <StyledImageWrap>
+                  <Image src={src} alt={alt} preview={false} loading="lazy" />
+                  {badge && (
+                    <StyledRaceBadge
+                      src={badge}
+                      alt={badgeAlt}
+                      loading="lazy"
+                    />
+                  )}
+                </StyledImageWrap>
+              </StyledRaceTile>
+            </StyledRaceLink>
+          </Col>
+        ))}
+      </StyledRacesRow>
+      {isMobile && !expanded && (
+        <Row justify="center">
+          <StyledShowMoreButton onClick={() => setExpanded(true)}>
+            Показати більше
+          </StyledShowMoreButton>
+        </Row>
+      )}
+    </>
+  );
+};
 
 export default RacesSection;
