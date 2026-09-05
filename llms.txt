@@ -29,9 +29,15 @@ There is no API. To act on a match:
 - EXPERIENCED (€40/mo): weekly-adjusted personalized plan, target-race consultation and analysis, race nutrition guidance, monthly video call.
 - PRO (€60/mo): PRO TrainingPeaks account with analytics, weekly-adjusted plan, analysis/planning for up to 3 races per season, race nutrition guidance, weekly video call.
 
+One-off/add-on services (homepage #additional-services): race analysis & pacing plan (€40), season analysis & planning (€40), single personal training session (€20), group training session (€12).
+
 ## Docs
 
-- [Homepage](https://zakharova.coach/): bio, pricing, testimonials, partners
+- [Homepage](https://zakharova.coach/): bio, cooperation formats (#formats), student race results (#races), pricing (#prices), additional services (#additional-services), testimonials, partners
+- [Coach's achievements](https://zakharova.coach/achievements): Polina's own sporting results/résumé
+- [About](https://zakharova.coach/about): coach bio in full
+- [Contact](https://zakharova.coach/contact): Telegram/WhatsApp/email contact options
 - [Ski tour checklist](https://zakharova.coach/skitour-chechlist): gear checklist for ski-mountaineering trips
 - [Events calendar](https://zakharova.coach/calendar): upcoming trail-running / ski-mountaineering events (live data)
+- [Privacy policy](https://zakharova.coach/privacy)
 - [Sitemap](https://zakharova.coach/sitemap.xml)
