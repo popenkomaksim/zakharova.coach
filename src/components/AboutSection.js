@@ -215,7 +215,7 @@ const AboutSection = ({
               відчувати його силу й розум.
             </StyledParagraph>
             <StyledMoreButton onClick={onShowAchievements}>
-              Трішки більше про мої спортивні досягнення
+              Мої спортивні досягнення
               <FaArrowRightLong />
             </StyledMoreButton>
           </StyledTextCard>

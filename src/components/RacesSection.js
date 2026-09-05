@@ -30,6 +30,10 @@ const StyledRaceTile = styled.div`
     max-height: 100%;
     object-fit: contain;
   }
+
+  @media (max-width: 575.98px) {
+    padding: 0;
+  }
 `;
 
 const StyledImageWrap = styled.div`
@@ -106,15 +110,14 @@ const races = [
     alt: "Transgrancanaria",
   },
   {
-    href: "https://miutmadeira.com/",
-    src: "./race_miut.png",
-    alt: "Madeira Island Ultra Trail",
-  },
-
-  {
     href: "https://lavaredo.utmb.world/",
     src: "./race_lavaredo.png",
     alt: "Lavaredo Ultra Trail",
+  },
+  {
+    href: "https://miutmadeira.com/",
+    src: "./race_miut.png",
+    alt: "Madeira Island Ultra Trail",
   },
   {
     href: "https://www.ultratraillo.com/",
