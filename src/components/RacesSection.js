@@ -138,6 +138,16 @@ const races = [
     src: "./race_deka_strong.png",
     alt: "DEKA Strong (Spartan)",
   },
+  {
+    href: "https://www.ultratourmonterosa.com/",
+    src: "./race_utmr.png",
+    alt: "Ultra Tour Monte Rosa",
+  },
+  {
+    href: "https://graubuenda.run/",
+    src: "./race_graubuenda.png",
+    alt: "Trailrun Graubünda",
+  },
 ];
 
 const RacesSection = () => (
