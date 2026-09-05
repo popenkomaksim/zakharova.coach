@@ -12,13 +12,9 @@ import HeroBanner from "./components/HeroBanner";
 import MobileCtaButton from "./components/MobileCtaButton";
 import HeroSection from "./components/HeroSection";
 import RacesSection from "./components/RacesSection";
-// import CollaborationSection from "./components/CollaborationSection";
-// import PrinciplesSection from "./components/PrinciplesSection";
 import FormatsSection from "./components/FormatsSection";
-// import EventsAndAchievements from "./components/EventsAndAchievements";
 import TestimonialsSection from "./components/TestimonialsSection";
 import PartnersSection from "./components/PartnersSection";
-// import StatsSection from "./components/StatsSection";
 import PricingSection from "./components/PricingSection";
 import ExtraServicesSection from "./components/ExtraServicesSection";
 import ClosingSection from "./components/ClosingSection";
@@ -26,7 +22,6 @@ import ScrollReveal from "./components/ScrollReveal";
 
 import useContactRedirects from "./hooks/useContactRedirects";
 import useExchangeRate from "./hooks/useExchangeRate";
-// import useUpcomingEvents from "./hooks/useUpcomingEvents";
 
 const StyledDesignImage = styled(Image)`
   &&& {
@@ -50,7 +45,6 @@ const App = () => {
   const { redirectToTelegram, redirectToWhatsup } = useContactRedirects();
   const rate = useExchangeRate();
   const { pathname } = useLocation();
-  // const events = useUpcomingEvents();
 
   useEffect(() => {
     const sectionId = pathname.replace(/^\//, "");
@@ -93,16 +87,12 @@ const App = () => {
           width="100%"
         />
       </ScrollReveal>
-      {/* <CollaborationSection /> */}
-      {/* <PrinciplesSection /> */}
       <ScrollReveal>
         <RacesSection />
       </ScrollReveal>
       <ScrollReveal>
         <FormatsSection />
       </ScrollReveal>
-      {/* <EventsAndAchievements events={events} /> */}
-      {/* <StatsSection redirectToTelegram={redirectToTelegram} /> */}
       <StyledPatrioticText>Хай та русня здохне</StyledPatrioticText>
       <ScrollReveal>
         <PricingSection
