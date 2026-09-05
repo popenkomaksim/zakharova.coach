@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import AboutSection from "./AboutSection";
-import Achievements from "./HeroSection.Achievements";
+import AchievementsSection from "./AchievementsSection";
 
 const StyledHeroSwap = styled.div`
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};
@@ -47,7 +47,7 @@ const HeroSection = ({ redirectToTelegram, redirectToWhatsup }) => {
           onShowAchievements={() => switchMode("achievements")}
         />
       ) : (
-        <Achievements onBack={() => switchMode("about")} />
+        <AchievementsSection onBack={() => switchMode("about")} />
       )}
     </StyledHeroSwap>
   );

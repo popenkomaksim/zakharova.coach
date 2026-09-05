@@ -21,3 +21,14 @@ window.matchMedia =
     removeEventListener: () => {},
     dispatchEvent: () => false,
   }));
+
+// JSDOM doesn't implement IntersectionObserver; ScrollReveal needs it.
+global.IntersectionObserver =
+  global.IntersectionObserver ||
+  class IntersectionObserver {
+    observe() {}
+
+    unobserve() {}
+
+    disconnect() {}
+  };

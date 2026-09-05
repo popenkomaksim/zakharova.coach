@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import "@fontsource/montserrat";
-import "./App.css";
+import "../App.css";
 
 import { Typography, Button } from "antd";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -101,6 +101,13 @@ const StyledPhoto = styled.img`
   width: 90%;
   display: block;
   object-fit: cover;
+
+  @media (max-width: 900px) {
+    width: auto;
+    max-width: 75vw;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
 `;
 
 const StyledBox = styled.div`
@@ -123,7 +130,7 @@ const StyledIndentBox = styled(StyledBox)`
   }
 `;
 
-const Achievements = ({ onBack }) => {
+const AchievementsSection = ({ onBack }) => {
   return (
     <StyledWrapper>
       <StyledTitle level={2}>Мої спортивні досягнення:</StyledTitle>
@@ -186,8 +193,8 @@ const Achievements = ({ onBack }) => {
   );
 };
 
-Achievements.propTypes = {
+AchievementsSection.propTypes = {
   onBack: PropTypes.func.isRequired,
 };
 
-export default Achievements;
+export default AchievementsSection;
