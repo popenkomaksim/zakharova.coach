@@ -12,7 +12,6 @@ const StyledRacesRow = styled(Row)`
 `;
 
 const StyledRaceTile = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,14 +27,17 @@ const StyledRaceTile = styled.div`
   }
 `;
 
-const StyledRaceBadge = styled(Image)`
-  &&& {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2.5em;
-    height: auto;
-  }
+const StyledImageWrap = styled.div`
+  position: relative;
+  display: inline-flex;
+`;
+
+const StyledRaceBadge = styled.img`
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  width: 2em;
+  height: auto;
 `;
 
 const races = [
@@ -60,6 +62,11 @@ const races = [
     alt: "OCC (UTMB Mont-Blanc)",
     badge: "./race_occ_badge.png",
     badgeAlt: "50K",
+  },
+  {
+    href: "https://www.facebook.com/tvoiapryhoda/",
+    src: "./tvoya_prygoda.png",
+    alt: "Твоя Пригода",
   },
   {
     href: "https://transgrancanaria.net/",
@@ -98,15 +105,12 @@ const RacesSection = () => (
         <Col key={src}>
           <StyledRaceLink target="_blank" rel="noopener noreferrer" href={href}>
             <StyledRaceTile>
-              <Image src={src} alt={alt} preview={false} loading="lazy" />
-              {badge && (
-                <StyledRaceBadge
-                  src={badge}
-                  alt={badgeAlt}
-                  preview={false}
-                  loading="lazy"
-                />
-              )}
+              <StyledImageWrap>
+                <Image src={src} alt={alt} preview={false} loading="lazy" />
+                {badge && (
+                  <StyledRaceBadge src={badge} alt={badgeAlt} loading="lazy" />
+                )}
+              </StyledImageWrap>
             </StyledRaceTile>
           </StyledRaceLink>
         </Col>
