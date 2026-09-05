@@ -148,6 +148,36 @@ const races = [
     src: "./race_graubuenda.png",
     alt: "Trailrun Graubünda",
   },
+  {
+    href: "https://hyrox.com/",
+    src: "./race_hyrox.png",
+    alt: "HYROX",
+  },
+  {
+    href: "https://www.adamelloskiraid.com/",
+    src: "./race_adamello.svg",
+    alt: "Adamello Ski Raid",
+  },
+  {
+    href: "https://cn.spartan.com/zh/race/championships/ultra",
+    src: "./race_uwc.png",
+    alt: "Spartan Ultra World Championship",
+  },
+  {
+    href: "https://www.skyrunning.com/2025-skyrunning-european-championships/",
+    src: "./race_skyrunning_euro.png",
+    alt: "European Skyrunning Championships 2025",
+  },
+  {
+    href: "https://www.skymarathon.it/gare/",
+    src: "./race_skymarathon.png",
+    alt: "SkyMarathon Sentiero 4 Luglio",
+  },
+  {
+    href: "https://canfrancpirineos2025wmtrc.com/",
+    src: "./race_canfranc.png",
+    alt: "Canfranc Pirineos 2025 – World Mountain and Trail Running Championships",
+  },
 ];
 
 const RacesSection = () => (
