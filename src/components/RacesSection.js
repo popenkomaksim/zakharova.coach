@@ -193,6 +193,11 @@ const races = [
     src: "./race_wrc2019.png",
     alt: "16th World Rogaining Championship 2019 – La Molina, Catalunya",
   },
+  {
+    href: "https://wrc2025.org/",
+    src: "./race_wrc2025.png",
+    alt: "World Rogaining Championship 2025",
+  },
 ];
 
 const RacesSection = () => (
