@@ -115,7 +115,7 @@ const races = [
   },
   {
     href: "https://www.madrisatrail.ch",
-    src: "./race_madrisa.png",
+    src: "./race_madrisa.svg",
     alt: "Madrisa Trail Klosters",
   },
   {
