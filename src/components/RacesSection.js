@@ -128,6 +128,16 @@ const races = [
     src: "./race_legends_trail.png",
     alt: "Legends Trail",
   },
+  {
+    href: "https://ua.spartan.com/uk",
+    src: "./race_spartan.svg",
+    alt: "Spartan Race Ukraine",
+  },
+  {
+    href: "https://www.spartan.com/en/deka/strong",
+    src: "./race_deka_strong.png",
+    alt: "DEKA Strong (Spartan)",
+  },
 ];
 
 const RacesSection = () => (
