@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Image, Typography } from "antd";
+import RatingBadge from "./RatingBadge";
 
 const StyledRow = styled(Row)`
   margin: 0 0 2em 0;
@@ -46,6 +47,7 @@ const Testimonial = ({ photo, quote, name, role = "", company = "" }) => (
       </StyledPhotoWrapper>
     </Col>
     <Col xs={24} sm={16} md={18}>
+      <RatingBadge rating={5} />
       <StyledQuote>{quote}</StyledQuote>
       <StyledName>
         {name}

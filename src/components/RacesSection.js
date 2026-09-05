@@ -93,6 +93,16 @@ const races = [
     src: "./race_utlo.png",
     alt: "Ultra-Trail del Lago d'Orta",
   },
+  {
+    href: "https://mozart.utmb.world/",
+    src: "./race_mozart.png",
+    alt: "Mozart 100 by UTMB",
+  },
+  {
+    href: "https://nice.utmb.world/",
+    src: "./race_nice.png",
+    alt: "Nice Côte d'Azur by UTMB",
+  },
 ];
 
 const RacesSection = () => (

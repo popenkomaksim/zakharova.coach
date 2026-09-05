@@ -14,18 +14,23 @@ const StyledWrapper = styled.div`
 
 const StyledBackButton = styled(Button)`
   && {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5em;
+    width: fit-content;
     height: auto;
-    padding: 0;
-    margin-bottom: 0.5em;
+    margin: 1em auto 0 auto;
+    padding: 0.6em 1.4em;
     font-weight: 600;
     color: #353935;
+    border: 1px solid #353935;
+    border-radius: 2em;
 
     &:hover,
     &:focus {
       color: #b01e28;
+      border-color: #b01e28;
     }
   }
 `;
@@ -93,7 +98,7 @@ const StyledPhotoColumn = styled.div`
 `;
 
 const StyledPhoto = styled.img`
-  width: 100%;
+  width: 90%;
   display: block;
   object-fit: cover;
 `;
@@ -121,10 +126,6 @@ const StyledIndentBox = styled(StyledBox)`
 const Achievements = ({ onBack }) => {
   return (
     <StyledWrapper>
-      <StyledBackButton type="link" onClick={onBack}>
-        <FaArrowLeftLong />
-        Назад
-      </StyledBackButton>
       <StyledTitle level={2}>Мої спортивні досягнення:</StyledTitle>
       <StyledComposition>
         <StyledTopBracket />
@@ -167,6 +168,11 @@ const Achievements = ({ onBack }) => {
             2020, Чемпіонка України з трейлу 40 км – 2021),{" "}
             <b>Карпатія 70 км</b> (третя в абсолюті) – 2025)
           </StyledBox>
+
+          <StyledBackButton onClick={onBack}>
+            <FaArrowLeftLong />
+            Назад
+          </StyledBackButton>
         </StyledTextColumn>
 
         <StyledPhotoColumn>
