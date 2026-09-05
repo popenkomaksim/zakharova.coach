@@ -69,6 +69,21 @@ const StyledShowMoreButton = styled(Button)`
 
 const races = [
   {
+    href: "https://montblanc.utmb.world/races/UTMB",
+    src: "./race_utmb.png",
+    alt: "UTMB Mont-Blanc",
+  },
+  {
+    href: "https://www.adamelloskiraid.com/",
+    src: "./race_adamello.svg",
+    alt: "Adamello Ski Raid",
+  },
+  {
+    href: "https://ua.spartan.com/uk",
+    src: "./race_spartan.svg",
+    alt: "Spartan Race Ukraine",
+  },
+  {
     href: "https://swisspeaks.ch/",
     src: "./race_swisspeaks.svg",
     alt: "Swiss Peaks Trail Ultra Race",
@@ -78,23 +93,13 @@ const races = [
     src: "./race_tordesgeants.png",
     alt: "Tor des Géants",
   },
+
   {
-    href: "https://montblanc.utmb.world/races/UTMB",
-    src: "./race_utmb.png",
-    alt: "UTMB Mont-Blanc",
+    href: "https://www.cal-o-fest.com/",
+    src: "./race_cal_o_fest.svg",
+    alt: "Cal-O-Fest",
   },
-  {
-    href: "https://montblanc.utmb.world/races/OCC",
-    src: "./race_occ.png",
-    alt: "OCC (UTMB Mont-Blanc)",
-    badge: "./race_occ_badge.png",
-    badgeAlt: "50K",
-  },
-  {
-    href: "https://www.facebook.com/tvoiapryhoda/",
-    src: "./tvoya_prygoda.png",
-    alt: "Твоя Пригода",
-  },
+
   {
     href: "https://transgrancanaria.net/",
     src: "./race_transgrancanaria.png",
@@ -105,11 +110,7 @@ const races = [
     src: "./race_miut.png",
     alt: "Madeira Island Ultra Trail",
   },
-  {
-    href: "https://www.transylvania100k.com/",
-    src: "./race_transylvania.png",
-    alt: "Transylvania 100",
-  },
+
   {
     href: "https://lavaredo.utmb.world/",
     src: "./race_lavaredo.png",
@@ -156,9 +157,9 @@ const races = [
     alt: "Legends Trail",
   },
   {
-    href: "https://ua.spartan.com/uk",
-    src: "./race_spartan.svg",
-    alt: "Spartan Race Ukraine",
+    href: "https://www.facebook.com/tvoiapryhoda/",
+    src: "./tvoya_prygoda.png",
+    alt: "Твоя Пригода",
   },
   {
     href: "https://www.spartan.com/en/deka/strong",
@@ -181,9 +182,9 @@ const races = [
     alt: "HYROX",
   },
   {
-    href: "https://www.adamelloskiraid.com/",
-    src: "./race_adamello.svg",
-    alt: "Adamello Ski Raid",
+    href: "https://www.transylvania100k.com/",
+    src: "./race_transylvania.png",
+    alt: "Transylvania 100",
   },
   {
     href: "https://cn.spartan.com/zh/race/championships/ultra",
@@ -206,9 +207,11 @@ const races = [
     alt: "Canfranc Pirineos 2025 – World Mountain and Trail Running Championships",
   },
   {
-    href: "https://www.cal-o-fest.com/",
-    src: "./race_cal_o_fest.svg",
-    alt: "Cal-O-Fest",
+    href: "https://montblanc.utmb.world/races/OCC",
+    src: "./race_occ.png",
+    alt: "OCC (UTMB Mont-Blanc)",
+    badge: "./race_occ_badge.png",
+    badgeAlt: "50K",
   },
   {
     href: "https://erc2024.rogain.ee/",
@@ -224,6 +227,11 @@ const races = [
     href: "https://wrc2025.org/",
     src: "./race_wrc2025.png",
     alt: "World Rogaining Championship 2025",
+  },
+  {
+    href: "https://www.o-adventure.cz/stranka.php?co=2026erc",
+    src: "./race_erc2026.png",
+    alt: "European Rogaining Championship 2026 – Orlické Záhoří, Czech Republic",
   },
 ];
 
