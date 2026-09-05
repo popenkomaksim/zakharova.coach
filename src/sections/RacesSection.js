@@ -5,7 +5,7 @@ import SectionTitle from "../components/SectionTitle";
 
 const { useBreakpoint } = Grid;
 
-const MOBILE_VISIBLE_COUNT = 9;
+const MOBILE_VISIBLE_COUNT = 8;
 
 const StyledRaceLink = styled.a`
   display: inline-block;
