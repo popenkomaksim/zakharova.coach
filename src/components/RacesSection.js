@@ -150,7 +150,7 @@ const races = [
   },
   {
     href: "https://hyrox.com/",
-    src: "./race_hyrox.png",
+    src: "./race_hyrox.svg",
     alt: "HYROX",
   },
   {
