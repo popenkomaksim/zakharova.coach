@@ -25,6 +25,10 @@ const router = createBrowserRouter(
       element: <App />,
     },
     {
+      path: "races",
+      element: <App />,
+    },
+    {
       path: "prices",
       element: <App />,
     },

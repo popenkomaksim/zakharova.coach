@@ -178,11 +178,26 @@ const races = [
     src: "./race_canfranc.png",
     alt: "Canfranc Pirineos 2025 – World Mountain and Trail Running Championships",
   },
+  {
+    href: "https://www.cal-o-fest.com/",
+    src: "./race_cal_o_fest.svg",
+    alt: "Cal-O-Fest",
+  },
+  {
+    href: "https://erc2024.rogain.ee/",
+    src: "./race_erc.png",
+    alt: "European Rogaining Championships Estonia 2024",
+  },
+  {
+    href: "https://tracktherace.com/sports-events/orienteering/world-rogaining-championship-2019",
+    src: "./race_wrc2019.png",
+    alt: "16th World Rogaining Championship 2019 – La Molina, Catalunya",
+  },
 ];
 
 const RacesSection = () => (
   <>
-    <SectionTitle level={3} margin="2em 0 1em 0">
+    <SectionTitle id="races" level={3} margin="2em 0 1em 0">
       Старти, на яких фінішували мої учні
     </SectionTitle>
     <StyledRacesRow justify="center" align="middle" gutter={[24, 24]}>
