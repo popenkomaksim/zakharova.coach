@@ -222,6 +222,31 @@ const races = [
     src: "./race_erc2026.png",
     alt: "European Rogaining Championship 2026 – Orlické Záhoří, Czech Republic",
   },
+  {
+    href: "https://tourism.saintgervais.com/i-want-to/an-event-or-animation/la-montagnhard/",
+    src: "./race_montagnhard.png",
+    alt: "La Montagn'Hard – Saint-Gervais Mont-Blanc",
+  },
+  {
+    href: "https://wildstrubel.utmb.world/races/wild-70",
+    src: "./race_wildstrubel.png",
+    alt: "Wildstrubel by UTMB – Crans-Montana",
+  },
+  {
+    href: "https://alanyaultratrail.com/",
+    src: "./race_alanya.png",
+    alt: "Alanya Ultra Trail",
+  },
+  {
+    href: "https://puglia.utmb.world/",
+    src: "./race_puglia.png",
+    alt: "Puglia Terra delle Gravine by UTMB",
+  },
+  {
+    href: "https://cappadociaultratrail.com/",
+    src: "./race_cappadocia.png",
+    alt: "Cappadocia Ultra Trail",
+  },
 ];
 
 const RacesSection = () => {
