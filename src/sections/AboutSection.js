@@ -70,6 +70,8 @@ const StyledSectionTitle = styled(Typography.Title)`
 `;
 
 const StyledTextCol = styled(Col)`
+  display: flex;
+  align-items: center;
   padding: 0 2em;
   @media (max-width: 575.98px) {
     padding: 0;

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Image } from "antd";
-import styled from "styled-components";
 import "@fontsource/montserrat";
 import "./App.css";
 
@@ -13,6 +11,7 @@ import ScrollReveal from "./components/ScrollReveal";
 
 import HeroBanner from "./sections/HeroBanner";
 import HeroSection from "./sections/HeroSection";
+import DesignImageSection from "./sections/DesignImageSection";
 import RacesSection from "./sections/RacesSection";
 import FormatsSection from "./sections/FormatsSection";
 import PatrioticBanner from "./sections/PatrioticBanner";
@@ -24,12 +23,6 @@ import ClosingSection from "./sections/ClosingSection";
 
 import useContactRedirects from "./hooks/useContactRedirects";
 import useExchangeRate from "./hooks/useExchangeRate";
-
-const StyledDesignImage = styled(Image)`
-  &&& {
-    margin: 3vh 0 0 0;
-  }
-`;
 
 const App = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -64,15 +57,11 @@ const App = () => {
 
       <MobileCtaButton redirectToTelegram={redirectToTelegram} />
 
-      <HeroSection
-        redirectToTelegram={redirectToTelegram}
-        redirectToWhatsup={redirectToWhatsup}
-      />
+      <HeroSection />
       <ScrollReveal>
-        <StyledDesignImage
-          src="./design_kazbek.jpeg"
-          preview={false}
-          width="100%"
+        <DesignImageSection
+          redirectToTelegram={redirectToTelegram}
+          redirectToWhatsup={redirectToWhatsup}
         />
       </ScrollReveal>
       <ScrollReveal>

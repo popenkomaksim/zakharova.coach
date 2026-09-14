@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, useRef } from "react";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
 import { Trans, useTranslation } from "react-i18next";
 import Testimonial from "../components/Testimonial";
 
-const AUTO_ADVANCE_MS = 7000;
+const AUTO_ADVANCE_MS = 13069;
 const SWIPE_THRESHOLD_PX = 50;
 
 const shuffle = (array) => {
@@ -40,16 +40,24 @@ const StyledCarousel = styled.div`
 const StyledTestimonialWrapper = styled.div`
   flex: 1;
   min-width: 0;
-  min-height: ${({ $minHeight }) => ($minHeight ? `${$minHeight}px` : "auto")};
-  transition: min-height 0.3s ease-out;
+  display: grid;
   touch-action: pan-y;
 `;
 
-const StyledTestimonialFade = styled.div`
-  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
-  transform: translateX(${({ $offset }) => $offset}px);
-  transition: ${({ $animate }) =>
-    $animate ? "opacity 0.25s ease-out, transform 0.25s ease-out" : "none"};
+/*
+ * All testimonials are stacked in the same grid cell at all times (rather
+ * than swapped in/out of the DOM), so the grid track sizes to the tallest
+ * one and the section never jumps when the active slide changes - it's a
+ * pure CSS crossfade, not a height that has to be measured/predicted in JS.
+ */
+const StyledTestimonialSlide = styled.div`
+  grid-area: 1 / 1;
+  opacity: ${({ $active }) => ($active ? 1 : 0)};
+  transform: translateX(
+    ${({ $active, $direction }) => ($active ? 0 : $direction * 24)}px
+  );
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  pointer-events: ${({ $active }) => ($active ? "auto" : "none")};
 `;
 
 const StyledArrowButton = styled.button`
@@ -91,16 +99,6 @@ const StyledDot = styled.button`
   background: ${({ $active }) =>
     $active ? "#fff" : "rgba(255, 255, 255, 0.35)"};
   transition: background 0.2s ease-out;
-`;
-
-const StyledMeasureLayer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: -1;
 `;
 
 const TestimonialsSection = () => {
@@ -148,49 +146,22 @@ const TestimonialsSection = () => {
   );
 
   const [displayIndex, setDisplayIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-  const [offset, setOffset] = useState(0);
-  const pendingIndexRef = useRef(null);
-  const measureRefs = useRef([]);
-  const [minHeight, setMinHeight] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   const goTo = useCallback(
     (delta) => {
-      setVisible(false);
-      setOffset(delta > 0 ? -24 : 24);
-      pendingIndexRef.current =
-        (displayIndex + delta + testimonialsCount) % testimonialsCount;
+      setDirection(delta > 0 ? 1 : -1);
+      setDisplayIndex(
+        (current) => (current + delta + testimonialsCount) % testimonialsCount
+      );
     },
-    [displayIndex, testimonialsCount]
+    [testimonialsCount]
   );
-
-  useEffect(() => {
-    if (visible || pendingIndexRef.current === null) return undefined;
-    const timeout = setTimeout(() => {
-      setDisplayIndex(pendingIndexRef.current);
-      pendingIndexRef.current = null;
-      setOffset(0);
-      setVisible(true);
-    }, 200);
-    return () => clearTimeout(timeout);
-  }, [visible]);
 
   useEffect(() => {
     const timer = setInterval(() => goTo(1), AUTO_ADVANCE_MS);
     return () => clearInterval(timer);
   }, [goTo]);
-
-  useEffect(() => {
-    const recomputeHeight = () => {
-      const heights = measureRefs.current.map(
-        (node) => node?.getBoundingClientRect().height || 0
-      );
-      setMinHeight(Math.max(...heights, 0));
-    };
-    recomputeHeight();
-    window.addEventListener("resize", recomputeHeight);
-    return () => window.removeEventListener("resize", recomputeHeight);
-  }, [orderedTestimonials]);
 
   const touchStartXRef = useRef(null);
 
@@ -206,8 +177,6 @@ const TestimonialsSection = () => {
     goTo(deltaX < 0 ? 1 : -1);
   };
 
-  const testimonial = orderedTestimonials[displayIndex];
-
   return (
     <StyledSection>
       <Row justify="center">
@@ -222,30 +191,19 @@ const TestimonialsSection = () => {
               ‹
             </StyledArrowButton>
             <StyledTestimonialWrapper
-              $minHeight={minHeight}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
-              style={{ position: "relative" }}
             >
-              <StyledMeasureLayer>
-                {orderedTestimonials.map((item, i) => (
-                  <div
-                    key={item.name}
-                    ref={(node) => {
-                      measureRefs.current[i] = node;
-                    }}
-                  >
-                    <Testimonial {...item} />
-                  </div>
-                ))}
-              </StyledMeasureLayer>
-              <StyledTestimonialFade
-                $visible={visible}
-                $offset={offset}
-                $animate
-              >
-                <Testimonial {...testimonial} />
-              </StyledTestimonialFade>
+              {orderedTestimonials.map((item, i) => (
+                <StyledTestimonialSlide
+                  key={item.name}
+                  $active={i === displayIndex}
+                  $direction={direction}
+                  aria-hidden={i !== displayIndex}
+                >
+                  <Testimonial {...item} />
+                </StyledTestimonialSlide>
+              ))}
             </StyledTestimonialWrapper>
             <StyledArrowButton
               type="button"
