@@ -220,7 +220,7 @@ PlanCard.propTypes = {
   subtitle: PropTypes.string,
   price: PropTypes.number,
   rate: PropTypes.number,
-  ListOfThingth: PropTypes.elementType,
+  ListOfThingth: PropTypes.element,
   recommended: PropTypes.bool,
 };
 

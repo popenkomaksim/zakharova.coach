@@ -37,7 +37,7 @@ ExtraServiceCard.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   rate: PropTypes.number,
-  ListOfThingth: PropTypes.elementType,
+  ListOfThingth: PropTypes.element,
 };
 
 export default ExtraServiceCard;
