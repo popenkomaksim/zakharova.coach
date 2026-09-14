@@ -45,7 +45,7 @@
     "block1": "-mistrzyni Mistrzostw Świata w rogainingu (<b>Finlandia</b> 2015, <b>Hiszpania</b> 2019, <b>USA</b> 2023)<br/>-mistrzyni Mistrzostw Europy w rogainingu (<b>Hiszpania</b> 2017)<br/>-uczestniczka Mistrzostw Świata w skialpinizmie (<b>Włochy</b> 2023)<br/>-uczestniczka Mistrzostw Świata w biegach górskich (<b>Hiszpania</b> 2025)",
     "block2": "-<b>mistrzyni sportu klasy międzynarodowej</b> w biegach na orientację<br/>-mistrzyni sportu Ukrainy <b>w lekkoatletyce</b>",
     "block3": "-medalistka Mountains Hard Ultra Trail 35 km (<b>Francja</b> 2022), MIUT 85 km (<b>Portugalia</b> 2019), MIUT 42 km (<b>Portugalia</b> 2024)<br/>-uczestniczka topowego biegu UTMB, dystans OCC (<b>Francja</b> 2022)",
-    "block4": "-zwyciężczyni kultowych ukraińskich startów: (<b>zwyciężczyni open</b>: Bojko Trail 46 km 2018 i Burning Heads Trail 2019, zwyciężczyni w kategorii kobiet: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Mistrzyni Ukrainy w biegach górskich 40 km – 2021), <b>Karpatia 70 km</b> (3. miejsce open) – 2025)",
+    "block4": "-zwyciężczyni kultowych ukraińskich startów: (<b>zwyciężczyni open</b>: Bojko Trail 46 km 2018 i Burning Heads Trail 2019, zwyciężczyni w kategorii kobiet: Chornohora Sky Marathon 60km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, Fun Karpaty– 2021, Karpatia 42 km – 2020, Mistrzyni Ukrainy w biegach górskich 40 km – 2021), <b>Karpatia 70 km</b> (3. miejsce open) – 2025)",
     "back": "← O mnie"
   },
   "races": {
@@ -89,6 +89,7 @@
     "title": "Opinie moich podopiecznych",
     "prevAria": "Poprzednia opinia",
     "nextAria": "Następna opinia",
+    "dotAria": "Przejdź do opinii {{index}}",
     "kyrylo": {
       "quote": "Polina to trenerka, która naprawdę pomaga osiągać cele, które wydawały się nierealne. W tym roku dzięki jej przygotowaniu wziąłem udział w moim pierwszym górskim biegu <strong>Bukotrail</strong>, na który długo się nie odważałem. Poza tym mój udział w biegach z przeszkodami <strong>Spartan Race</strong> minął nie na wyczerpaniu, a z przyjemnością. Polina potrafi tak zorganizować treningi, że dają realne rezultaty i przy tym nie są uciążliwe. Polecam ją każdemu, kto chce biegać efektywnie i z przyjemnością.",
       "name": "Kyrylo Psasichniuk",

@@ -45,7 +45,7 @@
     "block1": "-World Rogaining Championships winner (<b>Finland</b> 2015, <b>Spain</b> 2019, <b>USA</b> 2023)<br/>-European Rogaining Championship winner (<b>Spain</b> 2017)<br/>-competitor at the World Ski Mountaineering Championships (<b>Italy</b> 2023)<br/>-competitor at the World Trail Running Championships (<b>Spain</b> 2025)",
     "block2": "-<b>International Class Master of Sport</b> in orienteering<br/>-Master of Sport of Ukraine <b>in athletics</b>",
     "block3": "-podium finisher at Mountains Hard Ultra Trail 35 km (<b>France</b> 2022), MIUT 85 km (<b>Portugal</b> 2019), MIUT 42 km (<b>Portugal</b> 2024)<br/>-competitor at the top trail race UTMB, OCC distance (<b>France</b> 2022)",
-    "block4": "-winner of iconic Ukrainian races: (<b>overall winner</b>: Bojko Trail 46 km 2018 and Burning Heads Trail 2019, women's category winner: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Ukrainian Trail Running Champion 40 km – 2021), <b>Karpatia 70 km</b> (3rd overall) – 2025)",
+    "block4": "-winner of iconic Ukrainian races: (<b>overall winner</b>: Bojko Trail 46 km 2018 and Burning Heads Trail 2019, women's category winner: Chornohora Sky Marathon 60 km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, Fun Karpaty– 2021, Karpatia 42 km – 2020, Ukrainian Trail Running Champion 40 km – 2021), <b>Karpatia 70 km</b> (3rd overall) – 2025)",
     "back": "← About me"
   },
   "races": {
@@ -89,6 +89,7 @@
     "title": "My students' reviews",
     "prevAria": "Previous review",
     "nextAria": "Next review",
+    "dotAria": "Go to review {{index}}",
     "kyrylo": {
       "quote": "Polina is a coach who really helps you achieve goals that seemed unreal. This year, thanks to her preparation, I took part in my first mountain trail race, <strong>Bukotrail</strong>, which I had long hesitated to sign up for. My participation in the <strong>Spartan Race</strong> obstacle course races also went by more as fun than exhaustion. Polina knows how to organize training so it delivers real results without being a grind. I recommend her to anyone who wants to run effectively and with enjoyment.",
       "name": "Kyrylo Psasichniuk",

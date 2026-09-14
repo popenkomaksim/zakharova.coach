@@ -45,7 +45,7 @@
     "block1": "-vincitrice dei Campionati del Mondo di rogaining (<b>Finlandia</b> 2015, <b>Spagna</b> 2019, <b>USA</b> 2023)<br/>-vincitrice del Campionato Europeo di rogaining (<b>Spagna</b> 2017)<br/>-partecipante ai Campionati del Mondo di scialpinismo (<b>Italia</b> 2023)<br/>-partecipante ai Campionati del Mondo di trail running (<b>Spagna</b> 2025)",
     "block2": "-<b>maestro dello sport di classe internazionale</b> nell'orientamento<br/>-maestro dello sport dell'Ucraina <b>nell'atletica leggera</b>",
     "block3": "-podio alla Mountains Hard Ultra Trail 35 km (<b>Francia</b> 2022), MIUT 85 km (<b>Portogallo</b> 2019), MIUT 42 km (<b>Portogallo</b> 2024)<br/>-partecipante alla gara trail più prestigiosa, UTMB, distanza OCC (<b>Francia</b> 2022)",
-    "block4": "-vincitrice di gare ucraine iconiche: (<b>vincitrice assoluta</b>: Bojko Trail 46 km 2018 e Burning Heads Trail 2019, vincitrice categoria femminile: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Campionessa ucraina di trail running 40 km – 2021), <b>Karpatia 70 km</b> (3ª assoluta) – 2025)",
+    "block4": "-vincitrice di gare ucraine iconiche: (<b>vincitrice assoluta</b>: Bojko Trail 46 km 2018 e Burning Heads Trail 2019, vincitrice categoria femminile: Chornohora Sky Marathon 60km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, Fun Karpaty– 2021, Karpatia 42 km – 2020, Campionessa ucraina di trail running 40 km – 2021), <b>Karpatia 70 km</b> (3ª assoluta) – 2025)",
     "back": "← Chi sono"
   },
   "races": {
@@ -89,6 +89,7 @@
     "title": "Le recensioni dei miei allievi",
     "prevAria": "Recensione precedente",
     "nextAria": "Recensione successiva",
+    "dotAria": "Vai alla recensione {{index}}",
     "kyrylo": {
       "quote": "Polina è una coach che aiuta davvero a raggiungere obiettivi che sembravano irrealistici. Quest'anno, grazie alla sua preparazione, ho partecipato alla mia prima trail di montagna, la <strong>Bukotrail</strong>, a cui per molto tempo non avevo osato iscrivermi. Inoltre, la mia partecipazione alle gare a ostacoli <strong>Spartan Race</strong> è stata più all'insegna del divertimento che della fatica. Polina sa organizzare gli allenamenti in modo che diano risultati reali senza essere pesanti. La consiglio a chiunque voglia correre in modo efficace e con piacere.",
       "name": "Kyrylo Psasičnjuk",
