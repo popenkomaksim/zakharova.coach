@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -18,6 +18,16 @@ const StyledLogo = styled.span`
   letter-spacing: 0.01em;
   color: #353935;
   white-space: nowrap;
+`;
+
+const StyledLogoLink = styled(Link)`
+  &&& {
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    color: #353935;
+    white-space: nowrap;
+    text-decoration: none;
+  }
 `;
 
 const StyledNav = styled.nav`
@@ -50,10 +60,16 @@ const StyledRightGroup = styled.div`
 
 const Header = () => {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   return (
     <StyledHeaderBar>
-      <StyledLogo>Polina Zakharova</StyledLogo>
+      {isHome ? (
+        <StyledLogo>Polina Zakharova</StyledLogo>
+      ) : (
+        <StyledLogoLink to="/">Polina Zakharova</StyledLogoLink>
+      )}
       <StyledRightGroup>
         <StyledNav>
           <Link to="/formats">{t("nav.formats")}</Link>
