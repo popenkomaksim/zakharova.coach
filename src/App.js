@@ -55,6 +55,10 @@ const App = () => {
       <Header />
       <HeroBanner />
 
+      <ScrollReveal>
+        <RacesSection />
+      </ScrollReveal>
+
       <MobileCtaButton redirectToTelegram={redirectToTelegram} />
 
       <HeroSection />
@@ -63,9 +67,6 @@ const App = () => {
           redirectToTelegram={redirectToTelegram}
           redirectToWhatsup={redirectToWhatsup}
         />
-      </ScrollReveal>
-      <ScrollReveal>
-        <RacesSection />
       </ScrollReveal>
       <ScrollReveal>
         <FormatsSection />
