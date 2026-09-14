@@ -54,25 +54,32 @@
   },
   "formatsSection": {
     "title": "Cooperation formats",
+    "readMore": "Read more",
+    "readLess": "Show less",
     "individual": {
       "title": "Individual coaching",
-      "description": "You choose the format and the goals — I make sure every session delivers maximum effect."
+      "description": "You choose the format and the goals — I make sure every session delivers maximum effect.",
+      "expanded": "We work one-on-one, online or offline: I correct your technique, guide you on how to move properly, and help you feel your body in a new way. We can choose the focus together: running — speed, endurance, understanding your own rhythm; strength — functional and strength endurance; technique and coordination — springiness, flexibility, mobility; movement analysis — finding weak points and working on them. Here, movement becomes your strength, and training becomes a drive that builds confidence and the desire to set new goals."
     },
     "online": {
       "title": "Online training",
-      "description": "A space for systematic work with no ties to location. I build individual plans that take into account your goal, level, and life context. You decide how much structure and interaction you need right now."
+      "description": "A space for systematic work with no ties to location. I build individual plans that take into account your goal, level, and life context. You decide how much structure and interaction you need right now.",
+      "expanded": "I create individual plans that take into account your goals, fitness level, and life context. The plan adapts to your schedule, workload, and progress, and all workouts are available in the app. You choose how much structure and interaction you need right now — from a ready-made plan to ongoing coaching support (BASIC / EXPERIENCED / PRO)."
     },
     "group": {
       "title": "Group training",
-      "description": "Group training is time where everyone can move at their own pace, but with the energy of a shared goal."
+      "description": "Group training is time where everyone can move at their own pace, but with the energy of a shared goal.",
+      "expanded": "Formats vary: functional, technical (tailored to the specifics of trail running), strength, and speed sessions. Session length is 75–90 minutes. Training takes place on schedule or on request starting from three participants. Locations — Kyiv: stadiums, Trukhaniv Island, Holosiivskyi Forest. Join us — there'll be pace, support, and the same thrill that makes us love running!"
     },
     "camps": {
       "title": "Training camps",
-      "description": "Running camps are more than just training. It's when body and spirit come together. Here everything is simple: we train, walk, recover, and live slower than usual."
+      "description": "Running camps are more than just training. It's when body and spirit come together. Here everything is simple: we train, walk, recover, and live slower than usual.",
+      "expanded": "It's when you escape to the mountains, where there's space to be strong and finally breathe. It's a chance to break away from routine. Everything here is simple: we train, talk, stay silent, recover, and live a little slower than usual. Each camp has its own story and format: One-day — an escape. We break away from the noise, breathe, train, talk, and catch both silence and drive at once. It's like a reset button, only better! Short, three-day — a balance between training, work, and life; moments woven together with trail sessions and views that inspire you to keep moving. Weekly or working camp — we go for 7–10 days to places where mountains sit next to a laptop, and online meetings naturally flow into trail training among mountains and forests. Corporate camp — team building that actually works. No boring presentations — just movement, fresh air, and team climbs where everyone supports each other. We come back not just as colleagues, but as a team that truly knows what \"together\" means."
     },
     "business": {
       "title": "Business offers",
-      "description": "This format is for companies who want to walk the road together toward a shared start line: a trail run, a marathon, an obstacle race, or a charity event."
+      "description": "This format is for companies who want to walk the road together toward a shared start line: a trail run, a marathon, an obstacle race, or a charity event.",
+      "expanded": "The goal isn't just to finish, but to go through the preparation journey together: from the first training session to the finish arch. How it works: choosing the goal — we define the target race or event that will become a shared challenge for the team; assessing fitness level — we test participants to understand everyone's physical condition; planning — I build a training plan that accounts for each person's level while keeping the team dynamic; the training process — offline: joint sessions, work on technique, strength, and endurance; online: guidance, consultations, feedback, and motivational support. The result: less chaos, more structure; less \"someday,\" more \"now\"; and most importantly — a shared victory that will be remembered for a long time."
     }
   },
   "patrioticBanner": {

@@ -1,6 +1,9 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import { Col, Row, Image, Typography } from "antd";
+import TypewriterText from "./TypewriterText";
 
 const StyledFooter = styled.div`
   display: flex;
@@ -55,18 +58,59 @@ const StyledDescription = styled(Typography.Text)`
   }
 `;
 
+const StyledExpandedText = styled(Typography.Text)`
+  &&& {
+    display: block;
+    margin-top: 0.75em;
+    font-size: 1.1em;
+    color: #5a5a5a;
+  }
+`;
+
+const StyledToggleButton = styled.button`
+  &&& {
+    margin-top: 0.75em;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #1a1a1a;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
+
 const FormatCard = ({
   title,
   description,
+  expandedDescription = null,
   photo = null,
   pagination,
   imageSide = "right",
 }) => {
+  const { t } = useTranslation();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpanded = () => setIsExpanded((current) => !current);
+
   const textBlock = (
     <Col xs={24} md={photo ? 12 : 16}>
       <StyledTextWrapper>
         <StyledCardTitle level={4}>{title}</StyledCardTitle>
         <StyledDescription>{description}</StyledDescription>
+        {isExpanded && expandedDescription && (
+          <StyledExpandedText>
+            <TypewriterText text={expandedDescription} />
+          </StyledExpandedText>
+        )}
+        {expandedDescription && (
+          <StyledToggleButton type="button" onClick={toggleExpanded}>
+            {isExpanded
+              ? t("formatsSection.readLess")
+              : t("formatsSection.readMore")}
+          </StyledToggleButton>
+        )}
         <StyledFooter>
           <span>{pagination}</span>
         </StyledFooter>
@@ -95,6 +139,7 @@ const FormatCard = ({
 FormatCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  expandedDescription: PropTypes.string,
   photo: PropTypes.string,
   pagination: PropTypes.string.isRequired,
   imageSide: PropTypes.oneOf(["left", "right"]),

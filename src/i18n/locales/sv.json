@@ -54,25 +54,32 @@
   },
   "formatsSection": {
     "title": "Samarbetsformer",
+    "readMore": "Läs mer",
+    "readLess": "Visa mindre",
     "individual": {
       "title": "Individuell coaching",
-      "description": "Du väljer format och mål — jag ser till att varje pass ger maximal effekt."
+      "description": "Du väljer format och mål — jag ser till att varje pass ger maximal effekt.",
+      "expanded": "Vi jobbar en mot en, online eller offline: jag rättar tekniken, visar hur du rör dig rätt och hjälper dig att känna din kropp på ett nytt sätt. Vi kan välja fokus tillsammans: löpning — hastighet, uthållighet, förståelse för din egen rytm; styrka — funktionell och muskulär uthållighet; teknik och koordination — spänst, rörlighet, flexibilitet; rörelseanalys — att hitta svaga punkter och arbeta med dem. Här blir rörelsen din styrka, och träningen blir en drivkraft som ger självförtroende och lust att sätta nya mål."
     },
     "online": {
       "title": "Onlineträning",
-      "description": "Ett utrymme för systematiskt arbete utan bindning till plats. Jag skapar individuella planer som tar hänsyn till mål, nivå och sammanhanget i ditt liv. Du väljer själv hur mycket struktur och interaktion du behöver just nu."
+      "description": "Ett utrymme för systematiskt arbete utan bindning till plats. Jag skapar individuella planer som tar hänsyn till mål, nivå och sammanhanget i ditt liv. Du väljer själv hur mycket struktur och interaktion du behöver just nu.",
+      "expanded": "Jag skapar individuella program som tar hänsyn till dina mål, din träningsnivå och din livssituation. Programmet anpassas efter ditt schema, din belastning och dina framsteg, och alla pass finns tillgängliga i appen. Du väljer själv hur mycket struktur och kontakt du behöver just nu — från ett färdigt program till kontinuerligt coachstöd (BASIC / EXPERIENCED / PRO)."
     },
     "group": {
       "title": "Gruppträning",
-      "description": "Gruppträning är en tid då var och en kan röra sig i sitt eget tempo, men med energin från ett gemensamt mål."
+      "description": "Gruppträning är en tid då var och en kan röra sig i sitt eget tempo, men med energin från ett gemensamt mål.",
+      "expanded": "Formaten varierar: funktionella, tekniska (anpassade efter terränglöpningens särdrag), styrke- och snabbhetspass. Passen varar 75–90 minuter. Träningarna sker enligt schema eller på förfrågan från tre deltagare och uppåt. Platser — Kiev: stadion, ön Truchaniv, Holosijiv-skogen. Häng med — det blir tempo, stöd och samma kick som gör att vi älskar löpning!"
     },
     "camps": {
       "title": "Träningsläger",
-      "description": "Löparläger är mer än bara träning. Det är när kropp och själ förenas. Här är allt enkelt: vi tränar, promenerar, återhämtar oss och lever långsammare än vanligt."
+      "description": "Löparläger är mer än bara träning. Det är när kropp och själ förenas. Här är allt enkelt: vi tränar, promenerar, återhämtar oss och lever långsammare än vanligt.",
+      "expanded": "Det är när du flyr till bergen, där det finns utrymme för styrka och du äntligen kan andas. Det är en chans att bryta dig loss från vardagen. Allt är enkelt här: vi tränar, pratar, är tysta, återhämtar oss och lever lite långsammare än vanligt. Varje läger har sin egen historia och sitt eget format: Endagsläger — en flykt. Vi bryter oss loss från bruset, andas, tränar, pratar och fångar både tystnad och energi samtidigt. Det är som en omstartsknapp, fast bättre! Kort, tredagarsläger — en balans mellan träning, arbete och liv; ögonblick sammanflätade med terränglöpning och utsikter som inspirerar dig att fortsätta röra dig framåt. Vecko- eller arbetsläger — vi åker i 7–10 dagar till platser där bergen ligger nära din laptop, och online-möten naturligt övergår i terrängträning bland berg och skog. Företagsläger — teambuilding som faktiskt fungerar. Inga tråkiga presentationer — bara rörelse, frisk luft och gemensamma bestigningar där alla stöttar varandra. Vi kommer tillbaka inte bara som kollegor, utan som ett team som verkligen vet vad \"tillsammans\" betyder."
     },
     "business": {
       "title": "Erbjudanden för företag",
-      "description": "Det här formatet är för företag som vill gå vägen tillsammans mot en gemensam start: ett trail-lopp, ett maraton, ett hinderlopp eller ett välgörenhetsevenemang."
+      "description": "Det här formatet är för företag som vill gå vägen tillsammans mot en gemensam start: ett trail-lopp, ett maraton, ett hinderlopp eller ett välgörenhetsevenemang.",
+      "expanded": "Målet är inte bara att gå i mål, utan att gå igenom förberedelseresan tillsammans: från första passet till mållinjen. Så här går det till: val av mål — vi definierar loppet eller evenemanget som blir teamets gemensamma utmaning; analys av träningsnivå — vi testar deltagarna för att förstå allas fysiska status; planering — jag bygger ett träningsprogram som tar hänsyn till varje persons nivå och samtidigt bevarar teamdynamiken; träningsprocessen — offline: gemensamma pass, arbete med teknik, styrka och uthållighet; online: stöd, konsultationer, feedback och motivation. Resultatet: mindre kaos, mer struktur; mindre \"någon gång\", mer \"nu\"; och viktigast av allt — en gemensam seger som man minns länge."
     }
   },
   "patrioticBanner": {

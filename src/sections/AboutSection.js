@@ -1,8 +1,6 @@
-import { useRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Col, Row, Typography, Image, Button } from "antd";
-import { FaTelegram, FaWhatsapp } from "react-icons/fa";
+import { Col, Row, Typography, Image } from "antd";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import StyledMoreButton from "../components/OutlineButton";
@@ -22,10 +20,6 @@ const StyledSectionTitle = styled(Typography.Title)`
     margin: 0 0 0.5em 0;
     font-size: 2.25em;
   }
-`;
-
-const StyledCtaRow = styled(Row)`
-  margin-top: 1.5em;
 `;
 
 const StyledTextCol = styled(Col)`
@@ -98,11 +92,6 @@ const StyledMobileImage = styled(Image)`
   }
 `;
 
-const StyledCtaIcon = styled.span`
-  margin-right: 0.5em;
-  vertical-align: middle;
-`;
-
 const StyledParagraph = styled(Typography.Paragraph)`
   &&& {
     font-size: 1.49em;
@@ -112,97 +101,45 @@ const StyledParagraph = styled(Typography.Paragraph)`
   }
 `;
 
-const StyledCtaButton = styled(Button)`
-  && {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 0.75em 2em;
-    font-size: 1.25em;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    border-radius: 3em;
-    box-shadow: 0 0.6em 1.5em rgba(255, 77, 79, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    white-space: normal;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-0.1em);
-      box-shadow: 0 0.8em 1.8em rgba(255, 77, 79, 0.45);
-    }
-
-    @media (max-width: 575.98px) {
-      max-width: 90vw;
-      padding: 0.7em 1.2em;
-      font-size: 1em;
-      text-align: center;
-    }
-  }
-`;
-
-const AboutSection = ({
-  redirectToTelegram,
-  redirectToWhatsup,
-  onShowAchievements,
-}) => {
-  const isTelegram = useRef(Math.random() < 0.5).current;
-  const redirectToContact = isTelegram ? redirectToTelegram : redirectToWhatsup;
+const AboutSection = ({ onShowAchievements }) => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <StyledAboutRow justify="center" id="about">
-        <StyledDesktopImageCol lg={6} xl={6}>
-          <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
-        </StyledDesktopImageCol>
-        <StyledTextCol lg={12} xs={22} md={24}>
-          <StyledTextCard>
-            <StyledTextCardBackground />
-            <StyledSectionTitle level={2}>
-              {t("aboutSection.title")}
-            </StyledSectionTitle>
-            <StyledMobilePhotoWrapper>
-              <StyledMobilePhotoFrame>
-                <StyledMobileImage
-                  src="./polina_casual.jpeg"
-                  preview={false}
-                  alt={t("aboutSection.photoAlt")}
-                />
-              </StyledMobilePhotoFrame>
-            </StyledMobilePhotoWrapper>
-            <StyledParagraph>{t("aboutSection.p1")}</StyledParagraph>
-            <StyledParagraph>{t("aboutSection.p2")}</StyledParagraph>
-            <StyledParagraph>{t("aboutSection.p3")}</StyledParagraph>
-            <StyledParagraph>{t("aboutSection.p4")}</StyledParagraph>
-            <StyledParagraph>{t("aboutSection.p5")}</StyledParagraph>
-            <StyledMoreButton onClick={onShowAchievements}>
-              {t("aboutSection.moreButton")}
-              <FaArrowRightLong />
-            </StyledMoreButton>
-          </StyledTextCard>
-        </StyledTextCol>
-      </StyledAboutRow>
-      <StyledCtaRow justify="center">
-        <StyledCtaButton onClick={redirectToContact} danger size="large">
-          <StyledCtaIcon>
-            {isTelegram ? (
-              <FaTelegram size="1.2em" />
-            ) : (
-              <FaWhatsapp size="1.2em" />
-            )}
-          </StyledCtaIcon>
-          {t("aboutSection.ctaButton")}
-        </StyledCtaButton>
-      </StyledCtaRow>
-    </>
+    <StyledAboutRow justify="center" id="about">
+      <StyledDesktopImageCol lg={6} xl={6}>
+        <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
+      </StyledDesktopImageCol>
+      <StyledTextCol lg={12} xs={22} md={24}>
+        <StyledTextCard>
+          <StyledTextCardBackground />
+          <StyledSectionTitle level={2}>
+            {t("aboutSection.title")}
+          </StyledSectionTitle>
+          <StyledMobilePhotoWrapper>
+            <StyledMobilePhotoFrame>
+              <StyledMobileImage
+                src="./polina_casual.jpeg"
+                preview={false}
+                alt={t("aboutSection.photoAlt")}
+              />
+            </StyledMobilePhotoFrame>
+          </StyledMobilePhotoWrapper>
+          <StyledParagraph>{t("aboutSection.p1")}</StyledParagraph>
+          <StyledParagraph>{t("aboutSection.p2")}</StyledParagraph>
+          <StyledParagraph>{t("aboutSection.p3")}</StyledParagraph>
+          <StyledParagraph>{t("aboutSection.p4")}</StyledParagraph>
+          <StyledParagraph>{t("aboutSection.p5")}</StyledParagraph>
+          <StyledMoreButton onClick={onShowAchievements}>
+            {t("aboutSection.moreButton")}
+            <FaArrowRightLong />
+          </StyledMoreButton>
+        </StyledTextCard>
+      </StyledTextCol>
+    </StyledAboutRow>
   );
 };
 
 AboutSection.propTypes = {
-  redirectToTelegram: PropTypes.func.isRequired,
-  redirectToWhatsup: PropTypes.func.isRequired,
   onShowAchievements: PropTypes.func.isRequired,
 };
 

@@ -14,6 +14,7 @@ const FormatsSection = () => {
         <FormatCard
           title={t("formatsSection.individual.title")}
           description={t("formatsSection.individual.description")}
+          expandedDescription={t("formatsSection.individual.expanded")}
           photo="./max_doggy_polya_doggy.jpeg"
           pagination=""
           imageSide="left"
@@ -23,6 +24,7 @@ const FormatsSection = () => {
           title={t("formatsSection.online.title")}
           photo="./hug.jpeg"
           description={t("formatsSection.online.description")}
+          expandedDescription={t("formatsSection.online.expanded")}
           imageSide="right"
           pagination=""
         />
@@ -30,6 +32,7 @@ const FormatsSection = () => {
         <FormatCard
           title={t("formatsSection.group.title")}
           description={t("formatsSection.group.description")}
+          expandedDescription={t("formatsSection.group.expanded")}
           photo="./thurthday.jpeg"
           pagination=""
           imageSide="left"
@@ -38,6 +41,7 @@ const FormatsSection = () => {
         <FormatCard
           title={t("formatsSection.camps.title")}
           description={t("formatsSection.camps.description")}
+          expandedDescription={t("formatsSection.camps.expanded")}
           photo="./team6.jpeg"
           pagination=""
           imageSide="right"
@@ -46,6 +50,7 @@ const FormatsSection = () => {
         <FormatCard
           title={t("formatsSection.business.title")}
           description={t("formatsSection.business.description")}
+          expandedDescription={t("formatsSection.business.expanded")}
           photo="./polina_occ.jpeg"
           pagination=""
           imageSide="left"

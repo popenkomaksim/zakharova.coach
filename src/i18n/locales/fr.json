@@ -54,25 +54,32 @@
   },
   "formatsSection": {
     "title": "Formats de collaboration",
+    "readMore": "Lire la suite",
+    "readLess": "Réduire",
     "individual": {
       "title": "Coaching individuel",
-      "description": "Tu choisis le format et les objectifs — je veille à ce que chaque séance ait un effet maximal."
+      "description": "Tu choisis le format et les objectifs — je veille à ce que chaque séance ait un effet maximal.",
+      "expanded": "Nous travaillons en tête-à-tête, en ligne ou en présentiel : je corrige la technique, je te guide pour bouger correctement et je t'aide à ressentir ton corps d'une nouvelle façon. Nous pouvons choisir l'axe de travail ensemble : la course — vitesse, endurance, compréhension de ton propre rythme ; la force — endurance fonctionnelle et musculaire ; la technique et la coordination — souplesse, mobilité, agilité ; l'analyse du mouvement — repérer les points faibles et travailler dessus. Ici, le mouvement devient ta force, et l'entraînement un moteur qui apporte confiance en soi et l'envie de se fixer de nouveaux objectifs."
     },
     "online": {
       "title": "Entraînement en ligne",
-      "description": "Un espace de travail systématique sans contrainte de lieu. Je crée des plans individuels qui tiennent compte de ton objectif, de ton niveau et du contexte de ta vie. Tu décides toi-même de la quantité de structure et d'interaction dont tu as besoin en ce moment."
+      "description": "Un espace de travail systématique sans contrainte de lieu. Je crée des plans individuels qui tiennent compte de ton objectif, de ton niveau et du contexte de ta vie. Tu décides toi-même de la quantité de structure et d'interaction dont tu as besoin en ce moment.",
+      "expanded": "Je crée des plans individuels qui prennent en compte tes objectifs, ton niveau de préparation et le contexte de ta vie. Le plan s'adapte à ton emploi du temps, ta charge d'entraînement et tes progrès, et toutes les séances sont disponibles dans l'application. Tu choisis toi-même le niveau de structure et d'échange dont tu as besoin en ce moment — d'un plan tout fait à un accompagnement continu (BASIC / EXPERIENCED / PRO)."
     },
     "group": {
       "title": "Entraînements en groupe",
-      "description": "Les entraînements en groupe sont un moment où chacun peut avancer à son propre rythme, tout en profitant de l'énergie d'un objectif commun."
+      "description": "Les entraînements en groupe sont un moment où chacun peut avancer à son propre rythme, tout en profitant de l'énergie d'un objectif commun.",
+      "expanded": "Les formats varient : fonctionnel, technique (adapté aux spécificités du trail), renforcement et vitesse. La séance dure 75 à 90 minutes. Les entraînements ont lieu selon un planning ou sur demande à partir de trois participants. Lieux — Kyiv : stades, île de Trukhaniv, forêt de Holosiivskyi. Rejoins-nous — il y aura du rythme, du soutien et le même plaisir qui nous fait aimer la course !"
     },
     "camps": {
       "title": "Stages d'entraînement",
-      "description": "Les stages de course sont bien plus qu'un simple entraînement. C'est le moment où le corps et l'esprit se rejoignent. Ici tout est simple : on s'entraîne, on marche, on récupère et on vit plus lentement que d'habitude."
+      "description": "Les stages de course sont bien plus qu'un simple entraînement. C'est le moment où le corps et l'esprit se rejoignent. Ici tout est simple : on s'entraîne, on marche, on récupère et on vit plus lentement que d'habitude.",
+      "expanded": "C'est le moment où tu t'échappes en montagne, où il y a de la place pour la force et où tu peux enfin respirer. C'est une occasion de sortir de la routine. Ici tout est simple : on s'entraîne, on parle, on se tait, on récupère et on vit un peu plus lentement que d'habitude. Chaque camp a sa propre histoire et son propre format : Camp d'une journée — une échappée. On s'éloigne du bruit, on respire, on s'entraîne, on discute, on capte à la fois le silence et l'énergie. C'est comme un bouton de réinitialisation, en mieux ! Camp court, de trois jours — un équilibre entre entraînement, travail et vie ; des moments entrelacés d'entraînements en montagne et de paysages qui donnent envie d'avancer. Camp d'une semaine ou camp de travail — on part 7 à 10 jours dans des endroits où les montagnes côtoient l'ordinateur portable, et les réunions en ligne se fondent naturellement dans les entraînements en montagne et en forêt. Camp d'entreprise — un team building qui fonctionne vraiment. Pas de présentations ennuyeuses — juste du mouvement, de l'air frais et des ascensions collectives où chacun soutient l'autre. On revient non pas simplement collègues, mais une équipe qui sait vraiment ce que signifie « ensemble »."
     },
     "business": {
       "title": "Offres pour les entreprises",
-      "description": "Ce format s'adresse aux entreprises qui souhaitent parcourir ensemble le chemin vers un départ commun : un trail, un marathon, une course à obstacles ou un événement caritatif."
+      "description": "Ce format s'adresse aux entreprises qui souhaitent parcourir ensemble le chemin vers un départ commun : un trail, un marathon, une course à obstacles ou un événement caritatif.",
+      "expanded": "L'objectif n'est pas seulement de finir, mais de parcourir ensemble le chemin de la préparation : du premier entraînement jusqu'à l'arche d'arrivée. Comment ça se passe : choix de l'objectif — on définit la course ou l'événement cible qui deviendra un défi commun pour l'équipe ; analyse du niveau de préparation — on teste les participants pour comprendre l'état physique de chacun ; planification — je construis un plan d'entraînement qui tient compte du niveau de chacun tout en préservant la dynamique d'équipe ; processus d'entraînement — hors ligne : entraînements communs, travail sur la technique, la force et l'endurance ; en ligne : accompagnement, consultations, retours et soutien motivationnel. Résultat : moins de chaos, plus de méthode ; moins de « un jour », plus de « maintenant » ; et surtout — une victoire commune dont on se souvient longtemps."
     }
   },
   "patrioticBanner": {

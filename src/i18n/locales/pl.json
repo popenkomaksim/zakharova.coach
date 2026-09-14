@@ -54,25 +54,32 @@
   },
   "formatsSection": {
     "title": "Formaty współpracy",
+    "readMore": "Czytaj więcej",
+    "readLess": "Zwiń",
     "individual": {
       "title": "Trening indywidualny",
-      "description": "Ty wybierasz format i cele — ja dbam, żeby każdy trening dawał maksymalny efekt."
+      "description": "Ty wybierasz format i cele — ja dbam, żeby każdy trening dawał maksymalny efekt.",
+      "expanded": "Pracujemy jeden na jeden, online lub offline: koryguję technikę, podpowiadam, jak poruszać się prawidłowo, i pomagam poczuć swoje ciało na nowo. Fokus możemy wybrać razem: bieganie — szybkość, wytrzymałość, zrozumienie własnego rytmu; siła — wytrzymałość funkcjonalna i siłowa; technika i koordynacja — sprężystość, elastyczność, mobilność; analiza ruchu — szukanie słabych punktów i praca nad nimi. Tutaj ruch staje się twoją siłą, a trening — napędem, który daje pewność siebie i chęć wyznaczania nowych celów."
     },
     "online": {
       "title": "Trening online",
-      "description": "To przestrzeń do systematycznej pracy bez związku z miejscem. Tworzę indywidualne plany uwzględniające cel, poziom i kontekst twojego życia. Sam decydujesz, ile struktury i interakcji potrzebujesz właśnie teraz."
+      "description": "To przestrzeń do systematycznej pracy bez związku z miejscem. Tworzę indywidualne plany uwzględniające cel, poziom i kontekst twojego życia. Sam decydujesz, ile struktury i interakcji potrzebujesz właśnie teraz.",
+      "expanded": "Tworzę indywidualne plany, uwzględniające cele, poziom przygotowania i kontekst twojego życia. Plan dostosowuje się do twojego grafiku, obciążenia i postępów, a wszystkie treningi są dostępne w aplikacji. Sam wybierasz, ile struktury i kontaktu potrzebujesz właśnie teraz — od gotowego planu po stałe wsparcie trenerskie (BASIC / EXPERIENCED / PRO)."
     },
     "group": {
       "title": "Treningi grupowe",
-      "description": "Treningi grupowe to czas, w którym każdy może poruszać się we własnym tempie, ale w energii wspólnego celu."
+      "description": "Treningi grupowe to czas, w którym każdy może poruszać się we własnym tempie, ale w energii wspólnego celu.",
+      "expanded": "Formaty są różne: funkcjonalne, techniczne (z uwzględnieniem specyfiki biegania górskiego), siłowe i szybkościowe. Czas trwania zajęć — 75–90 minut. Treningi odbywają się według grafiku lub na życzenie, od trzech uczestników. Miejsca — Kijów: stadiony, wyspa Truchaniv, las Hołosijiwski. Dołącz — będzie tempo, wsparcie i ten sam kajf, za który kochamy bieganie!"
     },
     "camps": {
       "title": "Obozy treningowe",
-      "description": "Obozy biegowe to coś więcej niż trening. To moment, gdy ciało i duch się jednoczą. Tu wszystko jest proste: trenujemy, spacerujemy, regenerujemy się i żyjemy wolniej niż zwykle."
+      "description": "Obozy biegowe to coś więcej niż trening. To moment, gdy ciało i duch się jednoczą. Tu wszystko jest proste: trenujemy, spacerujemy, regenerujemy się i żyjemy wolniej niż zwykle.",
+      "expanded": "To wtedy, gdy uciekasz w góry, gdzie jest przestrzeń na siłę i wreszcie można odetchnąć. To szansa, by wyrwać się z codzienności. Wszystko jest tu proste: trenujemy, rozmawiamy, milczymy, regenerujemy się i żyjemy trochę wolniej niż zwykle. Każdy obóz ma swoją historię i format: Jednodniowy — to ucieczka. Wyrywamy się z hałasu, oddychamy, trenujemy, rozmawiamy, łapiemy ciszę i energię jednocześnie. To jak przycisk \"reset\", tylko lepszy! Krótki, trzydniowy — balans między treningiem, pracą i życiem; chwile przeplatane treningami górskimi i widokami, które inspirują do dalszego ruchu. Tygodniowy lub roboczy obóz — jedziemy na 7–10 dni w miejsca, gdzie góry sąsiadują z laptopem, a spotkania online naturalnie przechodzą w treningi górskie wśród gór i lasów. Obóz firmowy — team building, który naprawdę działa. Bez nudnych prezentacji — tylko ruch, świeże powietrze i wspólne podejścia, gdzie każdy wspiera innego. Wracamy nie tylko jako koledzy, ale jako zespół, który naprawdę wie, co znaczy \"razem\"."
     },
     "business": {
       "title": "Oferty dla firm",
-      "description": "To format dla firm, które chcą przejść wspólną drogę do startu: biegu górskiego, maratonu, biegu z przeszkodami czy wydarzenia charytatywnego."
+      "description": "To format dla firm, które chcą przejść wspólną drogę do startu: biegu górskiego, maratonu, biegu z przeszkodami czy wydarzenia charytatywnego.",
+      "expanded": "Celem nie jest samo ukończenie, ale wspólne przejście drogi przygotowań: od pierwszego treningu po bramę mety. Jak to wygląda: wybór celu — określamy docelowy start lub wydarzenie, które stanie się wspólnym wyzwaniem dla zespołu; analiza poziomu przygotowania — testujemy uczestników, aby zrozumieć stan fizyczny każdego; planowanie — buduję plan treningowy, który uwzględnia poziom każdej osoby, zachowując przy tym dynamikę zespołu; proces treningowy — offline: wspólne treningi, praca nad techniką, siłą i wytrzymałością; online: wsparcie, konsultacje, feedback i motywacja. Efekt: mniej chaosu, więcej systematyczności; mniej \"kiedyś\", więcej \"teraz\"; a co najważniejsze — wspólne zwycięstwo, które zapada w pamięć na długo."
     }
   },
   "patrioticBanner": {

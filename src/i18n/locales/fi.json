@@ -54,25 +54,32 @@
   },
   "formatsSection": {
     "title": "Yhteistyömuodot",
+    "readMore": "Lue lisää",
+    "readLess": "Näytä vähemmän",
     "individual": {
       "title": "Yksilövalmennus",
-      "description": "Sinä valitset formaatin ja tavoitteet — minä huolehdin, että jokainen harjoitus tuottaa maksimaalisen tuloksen."
+      "description": "Sinä valitset formaatin ja tavoitteet — minä huolehdin, että jokainen harjoitus tuottaa maksimaalisen tuloksen.",
+      "expanded": "Työskentelemme kahdestaan, verkossa tai kasvokkain: korjaan tekniikkaa, neuvon oikeaa liikkumista ja autan sinua tuntemaan kehosi uudella tavalla. Voimme valita painopisteen yhdessä: juoksu — nopeus, kestävyys, oman rytmin ymmärtäminen; voima — toiminnallinen ja lihaskestävyys; tekniikka ja koordinaatio — notkeus, liikkuvuus, ketteryys; liikeanalyysi — heikkojen kohtien löytäminen ja niiden parantaminen. Täällä liikkeestä tulee voimasi, ja treenistä into, joka tuo itseluottamusta ja halua asettaa uusia tavoitteita."
     },
     "online": {
       "title": "Verkkovalmennus",
-      "description": "Tila järjestelmälliselle työlle ilman paikkasidonnaisuutta. Rakennan yksilölliset suunnitelmat, jotka ottavat huomioon tavoitteesi, tasosi ja elämäsi kontekstin. Päätät itse, kuinka paljon rakennetta ja vuorovaikutusta tarvitset juuri nyt."
+      "description": "Tila järjestelmälliselle työlle ilman paikkasidonnaisuutta. Rakennan yksilölliset suunnitelmat, jotka ottavat huomioon tavoitteesi, tasosi ja elämäsi kontekstin. Päätät itse, kuinka paljon rakennetta ja vuorovaikutusta tarvitset juuri nyt.",
+      "expanded": "Luon yksilölliset ohjelmat, jotka huomioivat tavoitteesi, kuntotasosi ja elämäntilanteesi. Ohjelma mukautuu aikatauluusi, kuormitukseesi ja edistymiseesi, ja kaikki treenit löytyvät sovelluksesta. Voit itse valita, kuinka paljon rakennetta ja vuorovaikutusta tarvitset juuri nyt — valmiista ohjelmasta jatkuvaan valmennustukeen (BASIC / EXPERIENCED / PRO)."
     },
     "group": {
       "title": "Ryhmävalmennus",
-      "description": "Ryhmäharjoittelu on aikaa, jolloin jokainen voi edetä omaan tahtiinsa, mutta yhteisen tavoitteen energialla."
+      "description": "Ryhmäharjoittelu on aikaa, jolloin jokainen voi edetä omaan tahtiinsa, mutta yhteisen tavoitteen energialla.",
+      "expanded": "Muotoja on erilaisia: toiminnalliset, tekniset (polkujuoksun erityispiirteet huomioiden), voima- ja nopeusharjoitukset. Harjoitus kestää 75–90 minuuttia. Treenit järjestetään aikataulun mukaan tai pyynnöstä, kun osallistujia on vähintään kolme. Paikat — Kiova: stadionit, Truhaniv-saari, Holosijivin metsä. Liity mukaan — luvassa on vauhtia, tukea ja sama fiilis, jonka takia rakastamme juoksua!"
     },
     "camps": {
       "title": "Harjoitusleirit",
-      "description": "Juoksuleirit ovat enemmän kuin pelkkää harjoittelua. Silloin keho ja mieli yhdistyvät. Kaikki on yksinkertaista: harjoittelemme, kävelemme, palaudumme ja elämme tavallista hitaammin."
+      "description": "Juoksuleirit ovat enemmän kuin pelkkää harjoittelua. Silloin keho ja mieli yhdistyvät. Kaikki on yksinkertaista: harjoittelemme, kävelemme, palaudumme ja elämme tavallista hitaammin.",
+      "expanded": "Se on hetki, jolloin pakenet vuorille, missä on tilaa voimalle ja voit vihdoin hengittää. Se on mahdollisuus irtautua arjesta. Kaikki on täällä yksinkertaista: treenaamme, puhumme, olemme hiljaa, palaudumme ja elämme hieman hitaammin kuin tavallisesti. Jokaisella leirillä on oma tarinansa ja muotonsa: Yhden päivän leiri — pakomatka. Irtaudumme melusta, hengitämme, treenaamme, keskustelemme ja tavoitamme sekä hiljaisuuden että intoa yhtä aikaa. Se on kuin resetointinappi, mutta parempi! Lyhyt, kolmen päivän leiri — tasapaino treenin, työn ja elämän välillä; hetkiä, jotka kietoutuvat polkujuoksuun ja maisemiin, jotka innostavat jatkamaan eteenpäin. Viikon tai työleiri — matkustamme 7–10 päiväksi paikkoihin, joissa vuoret ovat kannettavan tietokoneen vieressä, ja verkkotapaamiset sulautuvat luontevasti polkujuoksuharjoituksiin vuorten ja metsien keskellä. Yritysleiri — tiimirakennusta, joka todella toimii. Ei tylsiä esityksiä — vain liikettä, raikasta ilmaa ja yhteisiä nousuja, joissa jokainen tukee toista. Palaamme takaisin emme vain kollegoina, vaan tiiminä, joka todella tietää, mitä \"yhdessä\" tarkoittaa."
     },
     "business": {
       "title": "Tarjoukset yrityksille",
-      "description": "Tämä formaatti on yrityksille, jotka haluavat kulkea yhdessä kohti yhteistä lähtöviivaa: polkujuoksua, maratonia, esteratajuoksua tai hyväntekeväisyystapahtumaa."
+      "description": "Tämä formaatti on yrityksille, jotka haluavat kulkea yhdessä kohti yhteistä lähtöviivaa: polkujuoksua, maratonia, esteratajuoksua tai hyväntekeväisyystapahtumaa.",
+      "expanded": "Tavoitteena ei ole vain maaliin pääseminen, vaan valmistautumismatkan kulkeminen yhdessä: ensimmäisestä treenistä maaliporttiin asti. Näin se etenee: tavoitteen valinta — määritämme kohdekisan tai tapahtuman, josta tulee tiimin yhteinen haaste; kuntotason analyysi — testaamme osallistujat ymmärtääksemme jokaisen fyysisen tilan; suunnittelu — rakennan treeniohjelman, joka huomioi jokaisen tason säilyttäen samalla tiimin dynamiikan; treeniprosessi — kasvokkain: yhteiset treenit, työtä tekniikan, voiman ja kestävyyden parissa; verkossa: tuki, konsultaatiot, palaute ja motivointi. Tulos: vähemmän kaaosta, enemmän järjestelmällisyyttä; vähemmän \"joskus\", enemmän \"nyt\"; ja mikä tärkeintä — yhteinen voitto, joka muistetaan pitkään."
     }
   },
   "patrioticBanner": {
