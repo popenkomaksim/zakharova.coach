@@ -6,7 +6,52 @@ import { useTranslation } from "react-i18next";
 import StyledMoreButton from "../components/OutlineButton";
 
 const StyledAboutRow = styled(Row)`
-  margin: 3em 0;
+  position: relative;
+  max-width: 1400px;
+  margin: 3em auto;
+`;
+
+const StyledFlipTriggerRow = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledTopFlipTriggerRow = styled(StyledFlipTriggerRow)`
+  margin-bottom: 2em;
+`;
+
+const StyledBottomFlipTriggerRow = styled(StyledFlipTriggerRow)`
+  margin-top: 2em;
+`;
+
+const StyledTopBracket = styled.div`
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  right: -1.5em;
+  height: 52%;
+  border-top: 1px solid #1a1a1a;
+  border-right: 1px solid #1a1a1a;
+  pointer-events: none;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const StyledBottomBracket = styled.div`
+  position: absolute;
+  bottom: -1.5em;
+  left: -1.5em;
+  right: 32%;
+  height: 42%;
+  border-bottom: 1px solid #1a1a1a;
+  border-left: 1px solid #1a1a1a;
+  pointer-events: none;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const StyledDesktopImage = styled(Image)`
@@ -105,37 +150,51 @@ const AboutSection = ({ onShowAchievements }) => {
   const { t } = useTranslation();
 
   return (
-    <StyledAboutRow justify="center" id="about">
-      <StyledDesktopImageCol lg={6} xl={6}>
-        <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
-      </StyledDesktopImageCol>
-      <StyledTextCol lg={12} xs={22} md={24}>
-        <StyledTextCard>
-          <StyledTextCardBackground />
-          <StyledSectionTitle level={2}>
-            {t("aboutSection.title")}
-          </StyledSectionTitle>
-          <StyledMobilePhotoWrapper>
-            <StyledMobilePhotoFrame>
-              <StyledMobileImage
-                src="./polina_casual.jpeg"
-                preview={false}
-                alt={t("aboutSection.photoAlt")}
-              />
-            </StyledMobilePhotoFrame>
-          </StyledMobilePhotoWrapper>
-          <StyledParagraph>{t("aboutSection.p1")}</StyledParagraph>
-          <StyledParagraph>{t("aboutSection.p2")}</StyledParagraph>
-          <StyledParagraph>{t("aboutSection.p3")}</StyledParagraph>
-          <StyledParagraph>{t("aboutSection.p4")}</StyledParagraph>
-          <StyledParagraph>{t("aboutSection.p5")}</StyledParagraph>
-          <StyledMoreButton onClick={onShowAchievements}>
-            {t("aboutSection.moreButton")}
-            <FaArrowRightLong />
-          </StyledMoreButton>
-        </StyledTextCard>
-      </StyledTextCol>
-    </StyledAboutRow>
+    <>
+      <StyledTopFlipTriggerRow>
+        <StyledMoreButton onClick={onShowAchievements}>
+          {t("aboutSection.moreButton")}
+          <FaArrowRightLong />
+        </StyledMoreButton>
+      </StyledTopFlipTriggerRow>
+
+      <StyledAboutRow justify="center" id="about">
+        <StyledTopBracket />
+        <StyledBottomBracket />
+        <StyledDesktopImageCol lg={6} xl={6}>
+          <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
+        </StyledDesktopImageCol>
+        <StyledTextCol lg={12} xs={22} md={24}>
+          <StyledTextCard>
+            <StyledTextCardBackground />
+            <StyledSectionTitle level={2}>
+              {t("aboutSection.title")}
+            </StyledSectionTitle>
+            <StyledMobilePhotoWrapper>
+              <StyledMobilePhotoFrame>
+                <StyledMobileImage
+                  src="./polina_casual.jpeg"
+                  preview={false}
+                  alt={t("aboutSection.photoAlt")}
+                />
+              </StyledMobilePhotoFrame>
+            </StyledMobilePhotoWrapper>
+            <StyledParagraph>{t("aboutSection.p1")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p2")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p3")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p4")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p5")}</StyledParagraph>
+          </StyledTextCard>
+        </StyledTextCol>
+      </StyledAboutRow>
+
+      <StyledBottomFlipTriggerRow>
+        <StyledMoreButton onClick={onShowAchievements}>
+          {t("aboutSection.moreButton")}
+          <FaArrowRightLong />
+        </StyledMoreButton>
+      </StyledBottomFlipTriggerRow>
+    </>
   );
 };
 

@@ -3,8 +3,7 @@ import styled from "styled-components";
 import "@fontsource/montserrat";
 import "../App.css";
 
-import { Typography, Image } from "antd";
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { Image } from "antd";
 import { Trans, useTranslation } from "react-i18next";
 import StyledBackButton from "../components/OutlineButton";
 
@@ -14,12 +13,17 @@ const StyledWrapper = styled.div`
   padding: 2em 1.5em 1em;
 `;
 
-const StyledTitle = styled(Typography.Title)`
-  &&& {
-    font-weight: 800;
-    margin: 0.2em 0 2.5em 0;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-  }
+const StyledFlipTriggerRow = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledTopFlipTriggerRow = styled(StyledFlipTriggerRow)`
+  margin-bottom: 2em;
+`;
+
+const StyledBottomFlipTriggerRow = styled(StyledFlipTriggerRow)`
+  margin-top: 2em;
 `;
 
 const StyledComposition = styled.div`
@@ -148,7 +152,12 @@ const AchievementsSection = ({ onBack }) => {
 
   return (
     <StyledWrapper>
-      <StyledTitle level={2}>{t("achievementsSection.title")}</StyledTitle>
+      <StyledTopFlipTriggerRow>
+        <StyledBackButton onClick={onBack}>
+          {t("achievementsSection.back")}
+        </StyledBackButton>
+      </StyledTopFlipTriggerRow>
+
       <StyledComposition>
         <StyledTopBracket />
         <StyledBottomBracket />
@@ -181,11 +190,6 @@ const AchievementsSection = ({ onBack }) => {
               components={{ b: <b />, br: <br /> }}
             />
           </StyledBox>
-
-          <StyledBackButton onClick={onBack}>
-            <FaArrowLeftLong />
-            {t("achievementsSection.back")}
-          </StyledBackButton>
         </StyledTextColumn>
 
         <StyledPhotoColumn>
@@ -198,6 +202,12 @@ const AchievementsSection = ({ onBack }) => {
           </StyledPhotoFrame>
         </StyledPhotoColumn>
       </StyledComposition>
+
+      <StyledBottomFlipTriggerRow>
+        <StyledBackButton onClick={onBack}>
+          {t("achievementsSection.back")}
+        </StyledBackButton>
+      </StyledBottomFlipTriggerRow>
     </StyledWrapper>
   );
 };
