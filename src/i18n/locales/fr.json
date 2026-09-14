@@ -109,33 +109,28 @@
         "un plan mensuel personnalisé",
         "une consultation pour le choix des courses objectifs",
         "un retour via TRAININGPEAKS"
-      ]
+      ],
+      "subtitle": "Autonomie + structure"
     },
     "experienced": {
       "items": [
-        "un compte TRAININGPEAKS",
+        "tout ce qui est inclus dans BASIC, plus :",
         "un plan hebdomadaire personnalisé",
         "la possibilité d'ajuster le plan selon la situation",
-        "une consultation pour le choix des courses objectifs",
-        "l'analyse d'une course à venir",
         "l'analyse et la planification d'une course par saison",
         "des recommandations nutritionnelles pour les courses",
-        "un retour via l'application TRAININGPEAKS",
-        "un appel vidéo avec la coach une fois par mois"
-      ]
+        "un appel vidéo une fois par mois"
+      ],
+      "subtitle": "Plus de contrôle + adaptation"
     },
     "pro": {
       "items": [
-        "un compte pro TRAININGPEAKS avec accès aux analyses",
-        "un plan hebdomadaire personnalisé",
-        "la possibilité d'ajuster le plan selon la situation",
-        "une consultation pour le choix des courses objectifs",
-        "l'analyse de 3 courses à venir",
+        "tout ce qui est inclus dans EXPERIENCED, plus :",
         "l'analyse et la planification de 3 courses par saison",
-        "des recommandations nutritionnelles pour les courses",
-        "un retour via l'application TRAININGPEAKS",
+        "des ajustements ponctuels du plan",
         "un appel vidéo une fois par semaine"
-      ]
+      ],
+      "subtitle": "Accompagnement continu + adaptation maximale"
     }
   },
   "extraServicesSection": {

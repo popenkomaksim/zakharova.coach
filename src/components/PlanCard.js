@@ -24,12 +24,21 @@ const StyledRibbonWrapper = styled.div`
 const StyledCard = styled(Card)`
   &&& {
     height: 100%;
+    display: flex;
+    flex-direction: column;
     ${({ $recommended }) =>
       $recommended &&
       `
       border: 2px solid #b01e28;
       box-shadow: 0 0.6em 2em rgba(176, 30, 40, 0.25);
     `}
+
+    .ant-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
   }
 `;
 
@@ -38,6 +47,13 @@ const StyledCardTitle = styled.div`
   font-size: 3em;
   font-weight: bold;
   color: rgb(59 59 59 / 88%);
+`;
+
+const StyledCardSubtitle = styled.div`
+  text-align: center;
+  font-size: 0.35em;
+  font-weight: normal;
+  color: rgb(59 59 59 / 70%);
 `;
 
 const StyledSectionLabel = styled(Typography.Title)`
@@ -49,7 +65,8 @@ const StyledSectionLabel = styled(Typography.Title)`
 const StyledPriceRow = styled(Typography.Text)`
   &&& {
     justify-content: center;
-    font-size: 1.25em;
+    font-size: 2em;
+    font-weight: bold;
     display: flex;
   }
 `;
@@ -58,8 +75,19 @@ const StyledEurPrice = styled.span`
   color: #878787;
 `;
 
+const StyledPlanDetails = styled.div`
+  text-align: center;
+`;
+
+const StyledDivider = styled(Divider)`
+  &&& {
+    margin-top: auto;
+  }
+`;
+
 const PlanCard = ({
   name,
+  subtitle,
   price,
   rate,
   ListOfThingth,
@@ -71,26 +99,33 @@ const PlanCard = ({
   const card = (
     <EqualHeightCardWrapper>
       <StyledCard
-        title={<StyledCardTitle>{name}</StyledCardTitle>}
+        title={
+          <StyledCardTitle>
+            {name}
+            {subtitle && <StyledCardSubtitle>{subtitle}</StyledCardSubtitle>}
+          </StyledCardTitle>
+        }
         size="small"
         $recommended={recommended}
       >
-        <StyledSectionLabel>
-          {t("pricingSection.youWillGet")}
-        </StyledSectionLabel>
-        <Typography.Text>{ListOfThingth}</Typography.Text>
         <StyledPriceRow>
           ₴{convert(price, rate)}
           <StyledEurPrice> / €{price}</StyledEurPrice>&nbsp;
           {t("pricingSection.perMonth")}
         </StyledPriceRow>
-        <Divider titlePlacement="center">
+        <StyledPlanDetails>
+          <StyledSectionLabel>
+            {t("pricingSection.youWillGet")}
+          </StyledSectionLabel>
+          <Typography.Text>{ListOfThingth}</Typography.Text>
+        </StyledPlanDetails>
+        <StyledDivider titlePlacement="center">
           <ContactIcons
             redirectToTelegram={redirectToTelegram}
             redirectToWhatsup={redirectToWhatsup}
             size="2em"
           />
-        </Divider>
+        </StyledDivider>
       </StyledCard>
     </EqualHeightCardWrapper>
   );
@@ -110,6 +145,7 @@ PlanCard.propTypes = {
   redirectToTelegram: PropTypes.func,
   redirectToWhatsup: PropTypes.func,
   name: PropTypes.string,
+  subtitle: PropTypes.string,
   price: PropTypes.number,
   rate: PropTypes.number,
   ListOfThingth: PropTypes.elementType,

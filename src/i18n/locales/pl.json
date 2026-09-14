@@ -109,33 +109,28 @@
         "spersonalizowany plan na miesiąc",
         "konsultację przy wyborze startów docelowych",
         "informację zwrotną przez TRAININGPEAKS"
-      ]
+      ],
+      "subtitle": "Samodzielność + struktura"
     },
     "experienced": {
       "items": [
-        "konto w TRAININGPEAKS",
+        "wszystko, co zawiera BASIC, plus:",
         "cotygodniowy spersonalizowany plan",
         "możliwość doraźnej korekty planu",
-        "konsultację przy wyborze startów docelowych",
-        "analizę 1 nadchodzącego startu",
         "analizę i planowanie 1 startu w sezonie",
         "rekomendacje żywieniowe na zawody",
-        "informację zwrotną przez aplikację TRAININGPEAKS",
-        "rozmowę wideo z trenerką raz w miesiącu"
-      ]
+        "rozmowę wideo raz w miesiącu"
+      ],
+      "subtitle": "Więcej kontroli + adaptacja"
     },
     "pro": {
       "items": [
-        "konto pro w TRAININGPEAKS z dostępem do analityki",
-        "cotygodniowy spersonalizowany plan",
-        "możliwość doraźnej korekty planu",
-        "konsultację przy wyborze startów docelowych",
-        "analizę 3 nadchodzących startów",
+        "wszystko, co zawiera EXPERIENCED, plus:",
         "analizę i planowanie 3 startów w sezonie",
-        "rekomendacje żywieniowe na zawody",
-        "informację zwrotną przez aplikację TRAININGPEAKS",
+        "doraźną korektę planu",
         "rozmowę wideo raz w tygodniu"
-      ]
+      ],
+      "subtitle": "Stałe wsparcie + maksymalna adaptacja"
     }
   },
   "extraServicesSection": {

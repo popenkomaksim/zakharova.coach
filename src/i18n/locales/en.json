@@ -109,33 +109,28 @@
         "a personalized monthly plan",
         "consultation on choosing target races",
         "feedback via TRAININGPEAKS"
-      ]
+      ],
+      "subtitle": "Independence + structure"
     },
     "experienced": {
       "items": [
-        "a TRAININGPEAKS account",
+        "everything in BASIC, plus:",
         "a weekly personalized plan",
         "the ability to adjust the plan on the fly",
-        "consultation on choosing target races",
-        "analysis of 1 upcoming race",
         "analysis and planning for 1 race per season",
         "race nutrition recommendations",
-        "feedback via the TRAININGPEAKS app",
-        "a video call with the coach once a month"
-      ]
+        "a video call once a month"
+      ],
+      "subtitle": "More control + adaptation"
     },
     "pro": {
       "items": [
-        "a pro TRAININGPEAKS account with analytics access",
-        "a weekly personalized plan",
-        "the ability to adjust the plan on the fly",
-        "consultation on choosing target races",
-        "analysis of 3 upcoming races",
+        "everything in EXPERIENCED, plus:",
         "analysis and planning for 3 races per season",
-        "race nutrition recommendations",
-        "feedback via the TRAININGPEAKS app",
+        "situational plan adjustments",
         "a video call once a week"
-      ]
+      ],
+      "subtitle": "Continuous support + maximum adaptation"
     }
   },
   "extraServicesSection": {

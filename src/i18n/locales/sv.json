@@ -109,33 +109,28 @@
         "en personlig plan för en månad",
         "konsultation om val av tävlingar",
         "återkoppling via TRAININGPEAKS"
-      ]
+      ],
+      "subtitle": "Självständighet + struktur"
     },
     "experienced": {
       "items": [
-        "ett TRAININGPEAKS-konto",
+        "allt som ingår i BASIC, plus:",
         "en veckovis personlig plan",
         "möjlighet att justera planen löpande",
-        "konsultation om val av tävlingar",
-        "analys av 1 kommande tävling",
         "analys och planering av 1 tävling per säsong",
         "kostrekommendationer för tävlingar",
-        "återkoppling via TRAININGPEAKS-appen",
-        "ett videosamtal med coachen en gång i månaden"
-      ]
+        "ett videosamtal en gång i månaden"
+      ],
+      "subtitle": "Mer kontroll + anpassning"
     },
     "pro": {
       "items": [
-        "ett pro-konto i TRAININGPEAKS med tillgång till analyser",
-        "en veckovis personlig plan",
-        "möjlighet att justera planen löpande",
-        "konsultation om val av tävlingar",
-        "analys av 3 kommande tävlingar",
+        "allt som ingår i EXPERIENCED, plus:",
         "analys och planering av 3 tävlingar per säsong",
-        "kostrekommendationer för tävlingar",
-        "återkoppling via TRAININGPEAKS-appen",
+        "situationsanpassade justeringar av planen",
         "ett videosamtal en gång i veckan"
-      ]
+      ],
+      "subtitle": "Kontinuerligt stöd + maximal anpassning"
     }
   },
   "extraServicesSection": {

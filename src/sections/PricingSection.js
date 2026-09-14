@@ -48,6 +48,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup, rate }) => {
       <Col xs={24} lg={8}>
         <PlanCard
           name="BASIC"
+          subtitle={t("pricingSection.basic.subtitle")}
           redirectToTelegram={redirectToTelegram}
           redirectToWhatsup={redirectToWhatsup}
           rate={rate}
@@ -66,6 +67,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup, rate }) => {
       <Col xs={24} lg={8}>
         <PlanCard
           name="EXPERIENCED"
+          subtitle={t("pricingSection.experienced.subtitle")}
           recommended
           redirectToTelegram={redirectToTelegram}
           redirectToWhatsup={redirectToWhatsup}
@@ -85,6 +87,7 @@ const PricingSection = ({ redirectToTelegram, redirectToWhatsup, rate }) => {
       <Col xs={24} lg={8}>
         <PlanCard
           name="PRO"
+          subtitle={t("pricingSection.pro.subtitle")}
           redirectToTelegram={redirectToTelegram}
           redirectToWhatsup={redirectToWhatsup}
           rate={rate}

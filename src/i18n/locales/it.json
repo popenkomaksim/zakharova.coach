@@ -109,33 +109,28 @@
         "un piano mensile personalizzato",
         "una consulenza per la scelta delle gare obiettivo",
         "feedback tramite TRAININGPEAKS"
-      ]
+      ],
+      "subtitle": "Autonomia + struttura"
     },
     "experienced": {
       "items": [
-        "un account TRAININGPEAKS",
+        "tutto ciò che include BASIC, più:",
         "un piano settimanale personalizzato",
         "la possibilità di adeguare il piano in base alla situazione",
-        "una consulenza per la scelta delle gare obiettivo",
-        "l'analisi di 1 gara imminente",
         "l'analisi e la pianificazione di 1 gara a stagione",
         "consigli nutrizionali per le gare",
-        "feedback tramite l'app TRAININGPEAKS",
-        "una videochiamata con la coach una volta al mese"
-      ]
+        "una videochiamata una volta al mese"
+      ],
+      "subtitle": "Più controllo + adattamento"
     },
     "pro": {
       "items": [
-        "un account pro TRAININGPEAKS con accesso all'analisi dati",
-        "un piano settimanale personalizzato",
-        "la possibilità di adeguare il piano in base alla situazione",
-        "una consulenza per la scelta delle gare obiettivo",
-        "l'analisi di 3 gare imminenti",
+        "tutto ciò che include EXPERIENCED, più:",
         "l'analisi e la pianificazione di 3 gare a stagione",
-        "consigli nutrizionali per le gare",
-        "feedback tramite l'app TRAININGPEAKS",
+        "adeguamenti del piano in base alla situazione",
         "una videochiamata una volta a settimana"
-      ]
+      ],
+      "subtitle": "Supporto continuo + massimo adattamento"
     }
   },
   "extraServicesSection": {

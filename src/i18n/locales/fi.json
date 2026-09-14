@@ -109,33 +109,28 @@
         "henkilökohtaisen kuukausisuunnitelman",
         "konsultaation tavoitekilpailujen valinnassa",
         "palautetta TRAININGPEAKSin kautta"
-      ]
+      ],
+      "subtitle": "Itsenäisyyttä + rakennetta"
     },
     "experienced": {
       "items": [
-        "TRAININGPEAKS-tilin",
+        "kaiken, mitä BASIC sisältää, plus:",
         "viikoittaisen henkilökohtaisen suunnitelman",
         "mahdollisuuden säätää suunnitelmaa tilanteen mukaan",
-        "konsultaation tavoitekilpailujen valinnassa",
-        "1 tulevan kilpailun analyysin",
         "1 kilpailun analysoinnin ja suunnittelun kaudessa",
         "kilpailuravitsemussuositukset",
-        "palautetta TRAININGPEAKS-sovelluksen kautta",
-        "videopuhelun valmentajan kanssa kerran kuukaudessa"
-      ]
+        "videopuhelun kerran kuukaudessa"
+      ],
+      "subtitle": "Enemmän hallintaa + mukautuvuutta"
     },
     "pro": {
       "items": [
-        "pro-tilin TRAININGPEAKSissa analytiikkapääsyllä",
-        "viikoittaisen henkilökohtaisen suunnitelman",
-        "mahdollisuuden säätää suunnitelmaa tilanteen mukaan",
-        "konsultaation tavoitekilpailujen valinnassa",
-        "3 tulevan kilpailun analyysin",
+        "kaiken, mitä EXPERIENCED sisältää, plus:",
         "3 kilpailun analysoinnin ja suunnittelun kaudessa",
-        "kilpailuravitsemussuositukset",
-        "palautetta TRAININGPEAKS-sovelluksen kautta",
+        "tilannekohtaiset suunnitelman säädöt",
         "videopuhelun kerran viikossa"
-      ]
+      ],
+      "subtitle": "Jatkuvaa tukea + maksimaalista mukautuvuutta"
     }
   },
   "extraServicesSection": {
