@@ -48,7 +48,7 @@ const ExtraServicesSection = ({ rate }) => {
         <Col xs={24} md={6}>
           <ExtraServiceCard
             name={t("extraServicesSection.personalTraining.name")}
-            price={20}
+            price={25}
             rate={rate}
             recommended
             ListOfThingth={
