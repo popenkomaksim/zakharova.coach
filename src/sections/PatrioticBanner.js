@@ -7,9 +7,14 @@ const StyledPatrioticText = styled.p`
   background: transparent;
   color: #b01e28;
   font-weight: 900;
-  font-size: clamp(1.1rem, 8vw, 2.75rem);
-  white-space: nowrap;
+  font-size: clamp(1.1rem, 6vw, 2.75rem);
+  white-space: normal;
+  overflow-wrap: break-word;
   text-align: center;
+
+  @media (max-width: 575.98px) {
+    font-size: clamp(1.1rem, 8vw, 1.8rem);
+  }
 `;
 
 const PatrioticBanner = () => {

@@ -11,7 +11,6 @@ const StyledFlipScene = styled.div`
 
 const StyledFlipCard = styled.div`
   position: relative;
-  display: grid;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transition: transform 0.9s cubic-bezier(0.45, 0.05, 0.15, 1);
@@ -24,7 +23,6 @@ const StyledFlipCard = styled.div`
 `;
 
 const StyledFlipFace = styled.div`
-  grid-area: 1 / 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   /* isolate + own compositing layer so filtered/blurred descendants (see
@@ -35,6 +33,22 @@ const StyledFlipFace = styled.div`
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   pointer-events: ${({ $active }) => ($active ? "auto" : "none")};
+
+  /* Only the active face sits in normal flow so the card's height tracks
+     it; the inactive face is overlaid absolutely so its (often taller or
+     shorter) content doesn't stretch the container and leave a gap below
+     the visible face. */
+  ${({ $active }) =>
+    $active
+      ? `
+        position: relative;
+      `
+      : `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      `}
 
   ${({ $back }) =>
     $back &&

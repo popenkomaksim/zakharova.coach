@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState, useRef } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Col, Row, Typography } from "antd";
 import { Trans, useTranslation } from "react-i18next";
 import Testimonial from "../components/Testimonial";
@@ -59,7 +59,11 @@ const StyledTestimonialWrapper = styled.div`
   touch-action: pan-y;
 
   @media (max-width: 575.98px) {
-    animation: ${swipeHint} 1.2s ease-in-out 0.8s 1;
+    ${({ $showHint }) =>
+      $showHint &&
+      css`
+        animation: ${swipeHint} 1.2s ease-in-out 1;
+      `}
   }
 `;
 
@@ -182,6 +186,25 @@ const TestimonialsSection = () => {
     return () => clearInterval(timer);
   }, [goTo]);
 
+  const [showSwipeHint, setShowSwipeHint] = useState(false);
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowSwipeHint(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const touchStartXRef = useRef(null);
 
   const handleTouchStart = (event) => {
@@ -210,6 +233,8 @@ const TestimonialsSection = () => {
               ‹
             </StyledArrowButton>
             <StyledTestimonialWrapper
+              ref={wrapperRef}
+              $showHint={showSwipeHint}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >

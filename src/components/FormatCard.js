@@ -69,6 +69,7 @@ const StyledExpandedText = styled(Typography.Text)`
 
 const StyledToggleButton = styled.button`
   &&& {
+    display: block;
     margin-top: 0.75em;
     padding: 0;
     border: none;
@@ -76,7 +77,9 @@ const StyledToggleButton = styled.button`
     color: #1a1a1a;
     font-size: 1em;
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #b3b3b3;
     cursor: pointer;
   }
 `;

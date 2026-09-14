@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useMemo } from "react";
 import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
 
@@ -6,45 +6,42 @@ const prefersReducedMotion = () =>
   typeof window !== "undefined" &&
   window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-const fadeIn = keyframes`
+const letterIn = keyframes`
   from {
     opacity: 0;
+    transform: translateY(0.4em);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 `;
 
-const StyledChar = styled.span`
+const StyledWord = styled.span`
   display: inline-block;
-  white-space: pre;
-  animation: ${fadeIn} 0.25s ease-out;
+  white-space: nowrap;
 `;
 
-const TypewriterText = ({ text, speed = 18, as: Component = "span" }) => {
-  const initialVisibleChars = prefersReducedMotion() ? text.length : 0;
-  const [visibleChars, setVisibleChars] = useState(initialVisibleChars);
-  const intervalRef = useRef(null);
+const StyledLetter = styled.span`
+  display: inline-block;
+  animation: ${letterIn} 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: ${({ $delay }) => $delay}s;
+`;
 
-  useEffect(() => {
-    if (prefersReducedMotion()) {
-      setVisibleChars(text.length);
-      return undefined;
-    }
-
-    setVisibleChars(0);
-    intervalRef.current = setInterval(() => {
-      setVisibleChars((current) => {
-        if (current >= text.length) {
-          clearInterval(intervalRef.current);
-          return current;
-        }
-        return current + 1;
-      });
-    }, speed);
-
-    return () => clearInterval(intervalRef.current);
-  }, [text, speed]);
+const TypewriterText = ({
+  text,
+  startDelay = 0,
+  step = 0.035 / 3,
+  as: Component = "span",
+}) => {
+  const words = useMemo(() => {
+    let letterIndex = 0;
+    return text.split(" ").map((word) => {
+      const wordStart = letterIndex;
+      letterIndex += word.length;
+      return { word, wordStart };
+    });
+  }, [text]);
 
   if (prefersReducedMotion()) {
     return <Component>{text}</Component>;
@@ -52,20 +49,31 @@ const TypewriterText = ({ text, speed = 18, as: Component = "span" }) => {
 
   return (
     <Component>
-      {text
-        .slice(0, visibleChars)
-        .split("")
-        .map((char, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <StyledChar key={index}>{char}</StyledChar>
-        ))}
+      {words.map(({ word, wordStart }, wordIndex) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Fragment key={wordIndex}>
+          {wordIndex > 0 && " "}
+          <StyledWord>
+            {word.split("").map((char, charIndex) => (
+              <StyledLetter
+                // eslint-disable-next-line react/no-array-index-key
+                key={charIndex}
+                $delay={startDelay + (wordStart + charIndex) * step}
+              >
+                {char}
+              </StyledLetter>
+            ))}
+          </StyledWord>
+        </Fragment>
+      ))}
     </Component>
   );
 };
 
 TypewriterText.propTypes = {
   text: PropTypes.string.isRequired,
-  speed: PropTypes.number,
+  startDelay: PropTypes.number,
+  step: PropTypes.number,
   as: PropTypes.elementType,
 };
 
