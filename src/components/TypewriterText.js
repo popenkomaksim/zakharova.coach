@@ -27,10 +27,39 @@ const TOTAL_ANIMATION_BUDGET = 1.2;
 
 const StyledLetter = styled.span`
   display: inline-block;
+  font-weight: ${({ $bold }) => ($bold ? 700 : "inherit")};
+  font-style: ${({ $italic }) => ($italic ? "italic" : "inherit")};
   animation: ${letterIn} ${LETTER_ANIMATION_DURATION}s
     cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: ${({ $delay }) => $delay}s;
 `;
+
+// Parses **bold** and *italic* markup out of `raw`, returning the plain
+// text plus the [start, end) character ranges (positions within the plain
+// text) that should render bold/italic.
+const parseInlineMarkup = (raw) => {
+  const markupPattern = /\*\*(.+?)\*\*|\*(.+?)\*/g;
+  let clean = "";
+  let lastIndex = 0;
+  const boldRanges = [];
+  const italicRanges = [];
+  let match = markupPattern.exec(raw);
+  while (match !== null) {
+    clean += raw.slice(lastIndex, match.index);
+    const isBold = match[1] !== undefined;
+    const content = isBold ? match[1] : match[2];
+    const start = clean.length;
+    clean += content;
+    (isBold ? boldRanges : italicRanges).push([start, clean.length]);
+    ({ lastIndex } = markupPattern);
+    match = markupPattern.exec(raw);
+  }
+  clean += raw.slice(lastIndex);
+  return { clean, boldRanges, italicRanges };
+};
+
+const isWithinRanges = (index, ranges) =>
+  ranges.some(([start, end]) => index >= start && index < end);
 
 const TypewriterText = ({
   text,
@@ -38,16 +67,22 @@ const TypewriterText = ({
   step = 0.035 / 3,
   as: Component = "span",
 }) => {
+  const { clean, boldRanges, italicRanges } = useMemo(
+    () => parseInlineMarkup(text),
+    [text]
+  );
+
   const words = useMemo(() => {
     let letterIndex = 0;
-    return text.split(" ").map((word) => {
+    return clean.split(" ").map((word, wordIndex) => {
       const wordStart = letterIndex;
+      const absoluteStart = wordStart + wordIndex;
       letterIndex += word.length;
-      return { word, wordStart };
+      return { word, wordStart, absoluteStart };
     });
-  }, [text]);
+  }, [clean]);
 
-  const totalLetters = useMemo(() => text.replace(/ /g, "").length, [text]);
+  const totalLetters = useMemo(() => clean.replace(/ /g, "").length, [clean]);
 
   // Cap the last letter's delay so the whole animation always finishes
   // within TOTAL_ANIMATION_BUDGET, regardless of text length.
@@ -60,25 +95,58 @@ const TypewriterText = ({
   }, [step, totalLetters, startDelay]);
 
   if (prefersReducedMotion()) {
-    return <Component>{text}</Component>;
+    return (
+      <Component>
+        {words.map(({ word, absoluteStart }, wordIndex) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <Fragment key={wordIndex}>
+            {wordIndex > 0 && " "}
+            {word.split("").map((char, charIndex) => {
+              const absoluteIndex = absoluteStart + charIndex;
+              const bold = isWithinRanges(absoluteIndex, boldRanges);
+              const italic = isWithinRanges(absoluteIndex, italicRanges);
+              if (!bold && !italic) return char;
+              const emphasisStyle = {
+                fontWeight: bold ? 700 : "inherit",
+                fontStyle: italic ? "italic" : "inherit",
+              };
+              return (
+                <span
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={charIndex}
+                  style={emphasisStyle}
+                >
+                  {char}
+                </span>
+              );
+            })}
+          </Fragment>
+        ))}
+      </Component>
+    );
   }
 
   return (
     <Component>
-      {words.map(({ word, wordStart }, wordIndex) => (
+      {words.map(({ word, wordStart, absoluteStart }, wordIndex) => (
         // eslint-disable-next-line react/no-array-index-key
         <Fragment key={wordIndex}>
           {wordIndex > 0 && " "}
           <StyledWord>
-            {word.split("").map((char, charIndex) => (
-              <StyledLetter
-                // eslint-disable-next-line react/no-array-index-key
-                key={charIndex}
-                $delay={startDelay + (wordStart + charIndex) * effectiveStep}
-              >
-                {char}
-              </StyledLetter>
-            ))}
+            {word.split("").map((char, charIndex) => {
+              const absoluteIndex = absoluteStart + charIndex;
+              return (
+                <StyledLetter
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={charIndex}
+                  $delay={startDelay + (wordStart + charIndex) * effectiveStep}
+                  $bold={isWithinRanges(absoluteIndex, boldRanges)}
+                  $italic={isWithinRanges(absoluteIndex, italicRanges)}
+                >
+                  {char}
+                </StyledLetter>
+              );
+            })}
           </StyledWord>
         </Fragment>
       ))}

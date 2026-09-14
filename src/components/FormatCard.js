@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Col, Row, Image, Typography } from "antd";
-import TypewriterText from "./TypewriterText";
+import ExpandedText from "./ExpandedText";
 
 const StyledRow = styled(Row)`
   margin: 3em 0;
@@ -53,7 +53,7 @@ const StyledDescription = styled(Typography.Text)`
   }
 `;
 
-const StyledExpandedText = styled(Typography.Text)`
+const StyledExpandedText = styled.div`
   &&& {
     display: block;
     margin-top: 0.75em;
@@ -98,7 +98,7 @@ const FormatCard = ({
         <StyledDescription>{description}</StyledDescription>
         {isExpanded && expandedDescription && (
           <StyledExpandedText>
-            <TypewriterText text={expandedDescription} />
+            <ExpandedText text={expandedDescription} />
           </StyledExpandedText>
         )}
         {expandedDescription && (
