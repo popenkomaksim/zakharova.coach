@@ -27,7 +27,7 @@ const writeCachedRate = (rate) => {
   try {
     localStorage.setItem(
       STORAGE_KEY,
-      JSON.stringify({ date: getTodayKey(), rate }),
+      JSON.stringify({ date: getTodayKey(), rate })
     );
   } catch {
     // ignore
@@ -62,7 +62,6 @@ const useExchangeRate = () => {
   const [rate, setRate] = useState(
     () => readCachedRate() ?? FALLBACK_RATE_EUR_TO_UAH
   );
-
 
   useEffect(() => {
     if (readCachedRate() !== null) return undefined;
