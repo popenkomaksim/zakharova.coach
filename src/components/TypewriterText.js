@@ -22,9 +22,13 @@ const StyledWord = styled.span`
   white-space: nowrap;
 `;
 
+const LETTER_ANIMATION_DURATION = 0.55;
+const TOTAL_ANIMATION_BUDGET = 1.2;
+
 const StyledLetter = styled.span`
   display: inline-block;
-  animation: ${letterIn} 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: ${letterIn} ${LETTER_ANIMATION_DURATION}s cubic-bezier(0.16, 1, 0.3, 1)
+    both;
   animation-delay: ${({ $delay }) => $delay}s;
 `;
 
@@ -43,6 +47,21 @@ const TypewriterText = ({
     });
   }, [text]);
 
+  const totalLetters = useMemo(
+    () => text.replace(/ /g, "").length,
+    [text]
+  );
+
+  // Cap the last letter's delay so the whole animation always finishes
+  // within TOTAL_ANIMATION_BUDGET, regardless of text length.
+  const effectiveStep = useMemo(() => {
+    if (totalLetters <= 1) return step;
+    const budget =
+      TOTAL_ANIMATION_BUDGET - startDelay - LETTER_ANIMATION_DURATION;
+    if (budget <= 0) return 0;
+    return Math.min(step, budget / (totalLetters - 1));
+  }, [step, totalLetters, startDelay]);
+
   if (prefersReducedMotion()) {
     return <Component>{text}</Component>;
   }
@@ -58,7 +77,7 @@ const TypewriterText = ({
               <StyledLetter
                 // eslint-disable-next-line react/no-array-index-key
                 key={charIndex}
-                $delay={startDelay + (wordStart + charIndex) * step}
+                $delay={startDelay + (wordStart + charIndex) * effectiveStep}
               >
                 {char}
               </StyledLetter>

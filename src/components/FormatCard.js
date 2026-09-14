@@ -15,11 +15,13 @@ const StyledRow = styled(Row)`
 
 const StyledFormatImage = styled(Image)`
   &&& {
+    display: block;
+    margin: 0 auto;
     width: 100%;
-    max-width: 80vw;
     max-height: ${({ $isExpanded }) => ($isExpanded ? "80vh" : "85vh")};
     transition: max-height 0.4s ease, max-width 0.4s ease;
     @media (min-width: 768px) {
+      max-width: 80vw;
       max-height: ${({ $isExpanded }) => ($isExpanded ? "80vh" : "26em")};
       object-fit: cover;
     }
@@ -111,7 +113,7 @@ const FormatCard = ({
   );
 
   const imageBlock = photo ? (
-    <Col xs={24} md={10}>
+    <Col xs={24} md={10} style={{ textAlign: "center" }}>
       <StyledFormatImage
         src={photo}
         preview={false}
