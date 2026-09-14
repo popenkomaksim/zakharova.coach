@@ -60,8 +60,9 @@ export const resetExchangeRateCache = () => {
 
 const useExchangeRate = () => {
   const [rate, setRate] = useState(
-    () => readCachedRate() ?? FALLBACK_RATE_EUR_TO_UAH,
+    () => readCachedRate() ?? FALLBACK_RATE_EUR_TO_UAH
   );
+
 
   useEffect(() => {
     if (readCachedRate() !== null) return undefined;
