@@ -85,6 +85,9 @@ const StyledPlanText = styled(Typography.Title)`
     line-height: 1.15;
     text-underline-offset: 0.1em;
     font-size: clamp(1.1rem, 3vw, 5rem);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
     @media (max-width: 768px) {
       top: 35%;
       right: 4%;
