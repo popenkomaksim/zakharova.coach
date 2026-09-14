@@ -153,6 +153,7 @@
   },
   "extraServicesSection": {
     "title": "Services supplémentaires",
+    "mostWanted": "Le plus demandé",
     "raceAnalysis": {
       "name": "Analyse et plan d'allure de course",
       "items": [

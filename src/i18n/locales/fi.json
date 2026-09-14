@@ -153,6 +153,7 @@
   },
   "extraServicesSection": {
     "title": "Lisäpalvelut",
+    "mostWanted": "Suosituin",
     "raceAnalysis": {
       "name": "Kilpailuanalyysi ja tahtisuunnitelma",
       "items": [

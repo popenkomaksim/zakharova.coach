@@ -50,6 +50,7 @@ const ExtraServicesSection = ({ rate }) => {
             name={t("extraServicesSection.personalTraining.name")}
             price={20}
             rate={rate}
+            recommended
             ListOfThingth={
               <Typography.Text>
                 {t("extraServicesSection.personalTraining.text")}

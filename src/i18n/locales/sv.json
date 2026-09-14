@@ -153,6 +153,7 @@
   },
   "extraServicesSection": {
     "title": "Extra tjänster",
+    "mostWanted": "Mest populär",
     "raceAnalysis": {
       "name": "Tävlingsanalys och tempoplan",
       "items": [
