@@ -13,85 +13,16 @@ import {
   GiPartyPopper,
 } from "react-icons/gi";
 import { Col, Row, Typography, Card, Badge } from "antd";
+import { useTranslation } from "react-i18next";
 import PageShell from "./components/PageShell";
 
-const CATEGORIES = [
-  {
-    title: "Голова",
-    icon: GiWinterHat,
-    color: "#3D8BFD",
-    items: [
-      "пов'язка",
-      "легка шапка",
-      "відносно тепла, але тонка шапка",
-      "баф (краще два)",
-    ],
-  },
-  {
-    title: "Верхній корпус",
-    icon: GiTShirt,
-    color: "#FA8C16",
-    items: [
-      "термо (краще меринос, що відводить вологу)",
-      "фліс",
-      "можливо тоненька жилетка",
-      "кофта-курточка на прімалофт",
-      "курточка з мембраною чи гортекс",
-    ],
-  },
-  {
-    title: "Руки",
-    icon: GiWinterGloves,
-    color: "#52C41A",
-    items: [
-      "тонкі рукавички",
-      "верхонки",
-      "теплі рукавиці",
-      "супер теплі рукави для катання вниз",
-    ],
-  },
-  {
-    title: "Ноги",
-    icon: GiTrousers,
-    color: "#B01E28",
-    items: [
-      "гарна білизна ;-)",
-      "термо (краще меринос, що відводить вологу)",
-      "штани/тайси з віндстопером",
-      "самозброси — штани від вітру, можуть бути з мембрани",
-      "два останні шари можна замінити на «тонкі» гірськолижні штани",
-      "шкарпетки — теплі гетри до коліна, 2 пари. Якщо є, можна взяти ще тонку пару гетрів",
-    ],
-  },
-  {
-    title: "Більш складні поняття",
-    icon: GiBackpack,
-    color: "#722ED1",
-    items: [
-      "шолом",
-      "окуляри",
-      "маска",
-      "палиці",
-      "рюкзак",
-      "лижі",
-      "черевики",
-      "камус",
-      "ліхтарик (запасні батарейки чи акуми; візьми з собою зарядний пристрій, яким можна зарядити ліхтар)",
-      "маленький термос (тепла вода/чай)",
-      "перекус (батончики, калорійні цукерки)",
-      "рем-набір: стяжки, маленький мультитул, армований скотч (не моток, просто пару метрів)",
-      "маленька аптечка: бинт, пластирі (силіконові — ТОП), хлоргексидин, знеболююче, регідрон, ізофолія",
-      "для бажаючих — хімічна грілка (стопи, руки)",
-      "сушка для взуття",
-      "для бажаючих — кішки (це питання потрібно обговорити додатково)",
-    ],
-  },
-  {
-    title: "Косметика",
-    icon: GiLipstick,
-    color: "#EB2F96",
-    items: ["бальзам для губ", "сонцезахисний крем"],
-  },
+const CATEGORY_META = [
+  { key: "head", icon: GiWinterHat, color: "#3D8BFD" },
+  { key: "torso", icon: GiTShirt, color: "#FA8C16" },
+  { key: "hands", icon: GiWinterGloves, color: "#52C41A" },
+  { key: "legs", icon: GiTrousers, color: "#B01E28" },
+  { key: "advanced", icon: GiBackpack, color: "#722ED1" },
+  { key: "cosmetics", icon: GiLipstick, color: "#EB2F96" },
 ];
 
 const StyledTelegram = styled(FaTelegram)`
@@ -231,72 +162,83 @@ const StyledQuestionTitle = styled(Typography.Title)`
   }
 `;
 
-const SkiTourList = () => (
-  <PageShell>
-    <StyledHero>
-      <StyledHeroTitle level={1}>Чеклист лижного туру</StyledHeroTitle>
-      <StyledHeroSubtitle>
-        Які іграшки необхідно мати, щоб вижити 🏔️
-      </StyledHeroSubtitle>
-    </StyledHero>
+const SkiTourList = () => {
+  const { t } = useTranslation();
+  const categories = CATEGORY_META.map(({ key, icon, color }) => ({
+    key,
+    icon,
+    color,
+    title: t(`skiTourList.categories.${key}.title`),
+    items: t(`skiTourList.categories.${key}.items`, { returnObjects: true }),
+  }));
 
-    <StyledCategoriesRow gutter={[24, 24]}>
-      {CATEGORIES.map((category) => (
-        <Col xs={24} sm={12} lg={8} key={category.title}>
-          <StyledCategoryCard $color={category.color}>
-            <StyledCardHeader>
-              <StyledIconCircle $color={category.color}>
-                <category.icon />
-              </StyledIconCircle>
-              <StyledCategoryTitle>{category.title}</StyledCategoryTitle>
-              <StyledBadge
-                count={category.items.length}
-                $color={category.color}
-              />
-            </StyledCardHeader>
-            <StyledItemList>
-              {category.items.map((item) => (
-                <StyledItem key={item}>
-                  <StyledCheckIcon color={category.color} />
-                  <span>{item}</span>
-                </StyledItem>
-              ))}
-            </StyledItemList>
-          </StyledCategoryCard>
+  return (
+    <PageShell>
+      <StyledHero>
+        <StyledHeroTitle level={1}>
+          {t("skiTourList.heroTitle")}
+        </StyledHeroTitle>
+        <StyledHeroSubtitle>{t("skiTourList.heroSubtitle")}</StyledHeroSubtitle>
+      </StyledHero>
+
+      <StyledCategoriesRow gutter={[24, 24]}>
+        {categories.map((category) => (
+          <Col xs={24} sm={12} lg={8} key={category.key}>
+            <StyledCategoryCard $color={category.color}>
+              <StyledCardHeader>
+                <StyledIconCircle $color={category.color}>
+                  <category.icon />
+                </StyledIconCircle>
+                <StyledCategoryTitle>{category.title}</StyledCategoryTitle>
+                <StyledBadge
+                  count={category.items.length}
+                  $color={category.color}
+                />
+              </StyledCardHeader>
+              <StyledItemList>
+                {category.items.map((item) => (
+                  <StyledItem key={item}>
+                    <StyledCheckIcon color={category.color} />
+                    <span>{item}</span>
+                  </StyledItem>
+                ))}
+              </StyledItemList>
+            </StyledCategoryCard>
+          </Col>
+        ))}
+      </StyledCategoriesRow>
+
+      <StyledCtaRow justify="center">
+        <Col xs={24} md={16} lg={12}>
+          <StyledCtaCard>
+            <GiPartyPopper size="2.5em" color="white" />
+            <StyledCtaTitle level={3}>
+              {t("skiTourList.ctaTitle")}
+            </StyledCtaTitle>
+            <StyledCtaText>{t("skiTourList.ctaText")}</StyledCtaText>
+          </StyledCtaCard>
         </Col>
-      ))}
-    </StyledCategoriesRow>
+      </StyledCtaRow>
 
-    <StyledCtaRow justify="center">
-      <Col xs={24} md={16} lg={12}>
-        <StyledCtaCard>
-          <GiPartyPopper size="2.5em" color="white" />
-          <StyledCtaTitle level={3}>Найголовніше спорядження</StyledCtaTitle>
-          <StyledCtaText>Гарний настрій.</StyledCtaText>
-        </StyledCtaCard>
-      </Col>
-    </StyledCtaRow>
-
-    <Row justify="space-around">
-      <Col xs={24} md={10}>
-        <StyledQuestionWrapper>
-          <StyledQuestionTitle level={3}>
-            Залишились питання?
-          </StyledQuestionTitle>
-          <br />
-          <Typography.Text>
-            Зв&apos;яжись зі мною в робочі години.
-          </Typography.Text>
-          <br />
-          <br />
-          <br />
-          <a href="https://telegram.me/ZakharovaPolina">
-            <StyledTelegram size="4em" color="#229ED9" />
-          </a>
-        </StyledQuestionWrapper>
-      </Col>
-    </Row>
-  </PageShell>
-);
+      <Row justify="space-around">
+        <Col xs={24} md={10}>
+          <StyledQuestionWrapper>
+            <StyledQuestionTitle level={3}>
+              {t("skiTourList.question")}
+            </StyledQuestionTitle>
+            <br />
+            <Typography.Text>{t("skiTourList.answer")}</Typography.Text>
+            <br />
+            <br />
+            <br />
+            <a href="https://telegram.me/ZakharovaPolina">
+              <StyledTelegram size="4em" color="#229ED9" />
+            </a>
+          </StyledQuestionWrapper>
+        </Col>
+      </Row>
+    </PageShell>
+  );
+};
 
 export default SkiTourList;

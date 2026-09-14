@@ -1,6 +1,7 @@
 import "@fontsource/montserrat/900.css";
 import styled from "styled-components";
 import { Image, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 import frameSvg from "./frame.svg";
 
 const StyledComposition = styled.div`
@@ -141,13 +142,15 @@ const StyledPhoto = styled(Image)`
 `;
 
 const HeroBanner = () => {
+  const { t } = useTranslation();
+
   return (
     <StyledComposition>
       <StyledFrame>
-        <StyledTagBox>Українська ідентичність через спорт</StyledTagBox>
-        <StyledPlanText level={2}>Наш тренувальний план</StyledPlanText>
-        <StyledBodyText level={1}>Твоє тіло</StyledBodyText>
-        <StyledRulesText level={1}>Мої правила</StyledRulesText>
+        <StyledTagBox>{t("heroBanner.tag")}</StyledTagBox>
+        <StyledPlanText level={2}>{t("heroBanner.plan")}</StyledPlanText>
+        <StyledBodyText level={1}>{t("heroBanner.body")}</StyledBodyText>
+        <StyledRulesText level={1}>{t("heroBanner.rules")}</StyledRulesText>
       </StyledFrame>
       <StyledMountainPhotoWrapper>
         <StyledPhoto src="./design2_kazbek.jpeg" preview={false} />

@@ -1,66 +1,78 @@
 import PropTypes from "prop-types";
 import { Col, Row, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 import SectionTitle from "../components/SectionTitle";
 import ExtraServiceCard from "../components/ExtraServiceCard";
 
-const ExtraServicesSection = ({ rate }) => (
-  <>
-    <SectionTitle id="additional-services">Додаткові послуги</SectionTitle>
-    <Row>
-      <Col xs={24} md={6}>
-        <ExtraServiceCard
-          name="Розбір та розкладка гонки"
-          price={40}
-          rate={rate}
-          ListOfThingth={
-            <ul>
-              <li>аналіз трьох пройдешніх гонок</li>
-              <li>розбір стартового треку</li>
-              <li>планування пробігання гонки</li>
-            </ul>
-          }
-        />
-      </Col>
-      <Col xs={24} md={6}>
-        <ExtraServiceCard
-          name="Аналіз та планування сезону"
-          price={40}
-          rate={rate}
-          ListOfThingth={
-            <ul>
-              <li>розбір цілей сезону</li>
-              <li>планування</li>
-            </ul>
-          }
-        />
-      </Col>
-      <Col xs={24} md={6}>
-        <ExtraServiceCard
-          name="Персональне тренування"
-          price={20}
-          rate={rate}
-          ListOfThingth={
-            <Typography.Text>
-              Біг, вело, роллери, лижі, лиже-роллери, орієнтуванна, рогейн.
-            </Typography.Text>
-          }
-        />
-      </Col>
-      <Col xs={24} md={6}>
-        <ExtraServiceCard
-          name="Групове тренування"
-          price={12}
-          rate={rate}
-          ListOfThingth={
-            <Typography.Text>
-              Весело і корисно. Какао після не в подарунок.
-            </Typography.Text>
-          }
-        />
-      </Col>
-    </Row>
-  </>
-);
+const ExtraServicesSection = ({ rate }) => {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <SectionTitle id="additional-services">
+        {t("extraServicesSection.title")}
+      </SectionTitle>
+      <Row>
+        <Col xs={24} md={6}>
+          <ExtraServiceCard
+            name={t("extraServicesSection.raceAnalysis.name")}
+            price={40}
+            rate={rate}
+            ListOfThingth={
+              <ul>
+                {t("extraServicesSection.raceAnalysis.items", {
+                  returnObjects: true,
+                }).map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            }
+          />
+        </Col>
+        <Col xs={24} md={6}>
+          <ExtraServiceCard
+            name={t("extraServicesSection.seasonPlanning.name")}
+            price={40}
+            rate={rate}
+            ListOfThingth={
+              <ul>
+                {t("extraServicesSection.seasonPlanning.items", {
+                  returnObjects: true,
+                }).map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            }
+          />
+        </Col>
+        <Col xs={24} md={6}>
+          <ExtraServiceCard
+            name={t("extraServicesSection.personalTraining.name")}
+            price={20}
+            rate={rate}
+            ListOfThingth={
+              <Typography.Text>
+                {t("extraServicesSection.personalTraining.text")}
+              </Typography.Text>
+            }
+          />
+        </Col>
+        <Col xs={24} md={6}>
+          <ExtraServiceCard
+            name={t("extraServicesSection.groupTraining.name")}
+            price={12}
+            rate={rate}
+            ListOfThingth={
+              <Typography.Text>
+                {t("extraServicesSection.groupTraining.text")}
+              </Typography.Text>
+            }
+          />
+        </Col>
+      </Row>
+    </>
+  );
+};
 
 ExtraServicesSection.propTypes = {
   rate: PropTypes.number,

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Col, Row, Typography, Image, Button } from "antd";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 import StyledMoreButton from "../components/OutlineButton";
 
 const StyledAboutRow = styled(Row)`
@@ -148,6 +149,7 @@ const AboutSection = ({
 }) => {
   const isTelegram = useRef(Math.random() < 0.5).current;
   const redirectToContact = isTelegram ? redirectToTelegram : redirectToWhatsup;
+  const { t } = useTranslation();
 
   return (
     <>
@@ -159,41 +161,24 @@ const AboutSection = ({
           <StyledTextCard>
             <StyledTextCardBackground />
             <StyledSectionTitle level={2}>
-              Вітаю. Я — Поліна.
+              {t("aboutSection.title")}
             </StyledSectionTitle>
             <StyledMobilePhotoWrapper>
               <StyledMobilePhotoFrame>
                 <StyledMobileImage
                   src="./polina_casual.jpeg"
                   preview={false}
-                  alt="Поліна"
+                  alt={t("aboutSection.photoAlt")}
                 />
               </StyledMobilePhotoFrame>
             </StyledMobilePhotoWrapper>
-            <StyledParagraph>
-              Мене неможливо уявити без гір, лісу й відкритого простору.
-            </StyledParagraph>
-            <StyledParagraph>
-              Мій шлях у спорт почався ще у 2008 році із спортивного
-              орієнтування та рогейну — з тих пір я бачила цей світ із різних
-              ракурсів.
-            </StyledParagraph>
-            <StyledParagraph>
-              За 18 років я пробігла десятки тисяч кілометрів, змінила країни,
-              рельєфи й формати, але залишилась вірною головному — свободі та
-              драйву.
-            </StyledParagraph>
-            <StyledParagraph>
-              Сьогодні я тренер, багато років займаюся скі-альпінізмом і
-              допомагаю іншим знайти власний ритм й напрямок.
-            </StyledParagraph>
-            <StyledParagraph>
-              Я створюю програми, що розвивають не лише витривалість, а й
-              усвідомлення себе через рух. Бути присутнім у власному тілі,
-              відчувати його силу й розум.
-            </StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p1")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p2")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p3")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p4")}</StyledParagraph>
+            <StyledParagraph>{t("aboutSection.p5")}</StyledParagraph>
             <StyledMoreButton onClick={onShowAchievements}>
-              Мої спортивні досягнення
+              {t("aboutSection.moreButton")}
               <FaArrowRightLong />
             </StyledMoreButton>
           </StyledTextCard>
@@ -208,7 +193,7 @@ const AboutSection = ({
               <FaWhatsapp size="1.2em" />
             )}
           </StyledCtaIcon>
-          Почни тренуватись ефективно
+          {t("aboutSection.ctaButton")}
         </StyledCtaButton>
       </StyledCtaRow>
     </>

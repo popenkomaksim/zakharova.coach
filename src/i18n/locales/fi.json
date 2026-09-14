@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Polina Zakharova. Valmentaja",
+    "description": "Tee itsestäsi vahvempi joka päivä. Valmentaja auttaa sinua saavuttamaan tavoitteesi ilman loukkaantumisia."
+  },
+  "nav": {
+    "home": "Etusivu",
+    "about": "Minusta",
+    "achievements": "Urheilusaavutukset",
+    "contact": "Yhteystiedot",
+    "races": "Oppilaiden kilpailut",
+    "formats": "Yhteistyömuodot",
+    "prices": "Suunnitelmatyypit",
+    "services": "Lisäpalvelut",
+    "skitour": "Hiihtoretken tarkistuslista",
+    "calendar": "Tapahtumakalenteri",
+    "privacy": "Tietosuoja"
+  },
+  "languagePicker": {
+    "label": "Kieli"
+  },
+  "heroBanner": {
+    "tag": "Ukrainalaista identiteettiä urheilun kautta",
+    "plan": "Harjoitussuunnitelmamme",
+    "body": "Kehosi",
+    "rules": "Säännöt"
+  },
+  "mobileCta": {
+    "button": "Varaa konsultaatio"
+  },
+  "aboutSection": {
+    "title": "Hei. Olen Polina.",
+    "photoAlt": "Polina",
+    "p1": "En voi kuvitella elämääni ilman vuoria, metsää ja avoimia tiloja.",
+    "p2": "Matkani urheilussa alkoi jo vuonna 2008 suunnistuksesta ja rogainingista — siitä lähtien olen nähnyt tämän maailman monista eri kulmista.",
+    "p3": "18 vuoden aikana olen juossut kymmeniä tuhansia kilometrejä, vaihtanut maita, maastoja ja formaatteja, mutta pysynyt uskollisena tärkeimmälle — vapaudelle ja intohimolle.",
+    "p4": "Nykyään olen valmentaja, olen harrastanut vuoristohiihtoa vuosia ja autan muita löytämään oman rytminsä ja suuntansa.",
+    "p5": "Luon ohjelmia, jotka kehittävät paitsi kestävyyttä myös itsetuntemusta liikkeen kautta — läsnäoloa omassa kehossa, sen voiman ja mielen tuntemista.",
+    "moreButton": "Urheilusaavutukseni",
+    "ctaButton": "Aloita tehokas harjoittelu"
+  },
+  "achievementsSection": {
+    "title": "Urheilusaavutukseni:",
+    "photoAlt": "Polina Zakharova maalissa",
+    "block1": "-rogaining-MM-kisojen voittaja (<b>Suomi</b> 2015, <b>Espanja</b> 2019, <b>USA</b> 2023)<br/>-rogaining-EM-kisojen voittaja (<b>Espanja</b> 2017)<br/>-osallistuja vuoristohiihdon MM-kisoissa (<b>Italia</b> 2023)<br/>-osallistuja polkujuoksun MM-kisoissa (<b>Espanja</b> 2025)",
+    "block2": "-<b>kansainvälisen luokan urheilumestari</b> suunnistuksessa<br/>-Ukrainan urheilumestari <b>yleisurheilussa</b>",
+    "block3": "-palkintosijan saavuttaja Mountains Hard Ultra Trail 35 km (<b>Ranska</b> 2022), MIUT 85 km (<b>Portugali</b> 2019), MIUT 42 km (<b>Portugali</b> 2024)<br/>-osallistuja huippukilpailussa UTMB, OCC-matka (<b>Ranska</b> 2022)",
+    "block4": "-kulttimaisten ukrainalaisten kilpailujen voittaja: (<b>kokonaiskilpailun voittaja</b>: Bojko Trail 46 km 2018 ja Burning Heads Trail 2019, naisten sarjan voittaja: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Ukrainan polkujuoksun mestari 40 km – 2021), <b>Karpatia 70 km</b> (3. sija kokonaiskilpailussa) – 2025)",
+    "back": "Takaisin"
+  },
+  "races": {
+    "title": "Kilpailut, joissa oppilaani ovat maalissa",
+    "showMore": "Näytä lisää"
+  },
+  "formatsSection": {
+    "title": "Yhteistyömuodot",
+    "individual": {
+      "title": "Yksilövalmennus",
+      "description": "Sinä valitset formaatin ja tavoitteet — minä huolehdin, että jokainen harjoitus tuottaa maksimaalisen tuloksen."
+    },
+    "online": {
+      "title": "Verkkovalmennus",
+      "description": "Tila järjestelmälliselle työlle ilman paikkasidonnaisuutta. Rakennan yksilölliset suunnitelmat, jotka ottavat huomioon tavoitteesi, tasosi ja elämäsi kontekstin. Päätät itse, kuinka paljon rakennetta ja vuorovaikutusta tarvitset juuri nyt."
+    },
+    "group": {
+      "title": "Ryhmävalmennus",
+      "description": "Ryhmäharjoittelu on aikaa, jolloin jokainen voi edetä omaan tahtiinsa, mutta yhteisen tavoitteen energialla."
+    },
+    "camps": {
+      "title": "Harjoitusleirit",
+      "description": "Juoksuleirit ovat enemmän kuin pelkkää harjoittelua. Silloin keho ja mieli yhdistyvät. Kaikki on yksinkertaista: harjoittelemme, kävelemme, palaudumme ja elämme tavallista hitaammin."
+    },
+    "business": {
+      "title": "Tarjoukset yrityksille",
+      "description": "Tämä formaatti on yrityksille, jotka haluavat kulkea yhdessä kohti yhteistä lähtöviivaa: polkujuoksua, maratonia, esteratajuoksua tai hyväntekeväisyystapahtumaa."
+    }
+  },
+  "patrioticBanner": {
+    "text": "Kuolkoon se venäläinen roskaväki"
+  },
+  "testimonialsSection": {
+    "title": "Oppilaideni palautteet",
+    "prevAria": "Edellinen palaute",
+    "nextAria": "Seuraava palaute",
+    "kyrylo": {
+      "quote": "Polina on valmentaja, joka todella auttaa saavuttamaan tavoitteita, jotka tuntuivat epärealistisilta. Tänä vuonna hänen valmennuksensa ansiosta osallistuin ensimmäiseen vuoristopolkujuoksuuni, <strong>Bukotrailiin</strong>, johon en pitkään uskaltanut ilmoittautua. Lisäksi osallistumiseni esteratajuoksuihin <strong>Spartan Race</strong> sujui enemmän hauskanpidon kuin uupumuksen merkeissä. Polina osaa järjestää harjoittelun niin, että se tuottaa oikeita tuloksia ilman, että siitä tulee raskasta. Suosittelen häntä kaikille, jotka haluavat juosta tehokkaasti ja nauttien.",
+      "name": "Kyrylo Psasitšnjuk",
+      "role": "Tuotantostudion toimitusjohtaja",
+      "company": "Paragon Progency"
+    },
+    "maksym": {
+      "quote": "Valmennus Polinan kanssa on paras päätös juoksu-urallani! Harkitun lähestymistavan ja hyvin suunnitellun järjestelmän ansiosta emme ainoastaan parantaneet fyysistä suorituskykyäni, vaan muutimme kokonaan lähestymistapaani polkujuoksuun. Polina opettaa tuntemaan oman kehon, jakamaan voimat viisaasti pitkillä matkoilla ja, mikä tärkeintä, nauttimaan jokaisesta kilometristä. Suosittelen häntä lämpimästi kaikille, jotka haaveilevat vuorista ja uusista huipuista!",
+      "name": "Maksym",
+      "role": "Ohjelmistoarkkitehti",
+      "company": "DataArt"
+    }
+  },
+  "partnersSection": {
+    "title": "Yhteistyökumppanini:"
+  },
+  "pricingSection": {
+    "title": "Hinnat purettuna: ei pikkupränttiä, vain valmentaja",
+    "perMonth": "kuukaudessa",
+    "recommended": "Suositeltu",
+    "youWillGet": "Tässä paketissa saat:",
+    "basic": {
+      "items": [
+        "TRAININGPEAKS-tilin",
+        "henkilökohtaisen kuukausisuunnitelman",
+        "konsultaation tavoitekilpailujen valinnassa",
+        "palautetta TRAININGPEAKSin kautta"
+      ]
+    },
+    "experienced": {
+      "items": [
+        "TRAININGPEAKS-tilin",
+        "viikoittaisen henkilökohtaisen suunnitelman",
+        "mahdollisuuden säätää suunnitelmaa tilanteen mukaan",
+        "konsultaation tavoitekilpailujen valinnassa",
+        "1 tulevan kilpailun analyysin",
+        "1 kilpailun analysoinnin ja suunnittelun kaudessa",
+        "kilpailuravitsemussuositukset",
+        "palautetta TRAININGPEAKS-sovelluksen kautta",
+        "videopuhelun valmentajan kanssa kerran kuukaudessa"
+      ]
+    },
+    "pro": {
+      "items": [
+        "pro-tilin TRAININGPEAKSissa analytiikkapääsyllä",
+        "viikoittaisen henkilökohtaisen suunnitelman",
+        "mahdollisuuden säätää suunnitelmaa tilanteen mukaan",
+        "konsultaation tavoitekilpailujen valinnassa",
+        "3 tulevan kilpailun analyysin",
+        "3 kilpailun analysoinnin ja suunnittelun kaudessa",
+        "kilpailuravitsemussuositukset",
+        "palautetta TRAININGPEAKS-sovelluksen kautta",
+        "videopuhelun kerran viikossa"
+      ]
+    }
+  },
+  "extraServicesSection": {
+    "title": "Lisäpalvelut",
+    "raceAnalysis": {
+      "name": "Kilpailuanalyysi ja tahtisuunnitelma",
+      "items": [
+        "kolmen aiemman kilpailun analyysi",
+        "lähtöreitin läpikäynti",
+        "kilpailun etenemisen suunnittelu"
+      ]
+    },
+    "seasonPlanning": {
+      "name": "Kauden analyysi ja suunnittelu",
+      "items": [
+        "kauden tavoitteiden läpikäynti",
+        "suunnittelu"
+      ]
+    },
+    "personalTraining": {
+      "name": "Henkilökohtainen harjoitus",
+      "text": "Juoksu, pyöräily, rullasuksihiihto, hiihto, suunnistus, rogaining."
+    },
+    "groupTraining": {
+      "name": "Ryhmäharjoitus",
+      "text": "Hauskaa ja hyödyllistä. Kaakao jälkeenpäin ei sisälly."
+    }
+  },
+  "closingSection": {
+    "videoAlt": "Polina juoksee",
+    "question": "Onko sinulla vielä kysyttävää?",
+    "answer": "Ota yhteyttä työaikana."
+  },
+  "footer": {
+    "text": "Made with in Kyiv, Ukraine © 2023 —"
+  },
+  "about": {
+    "title": "Tietoa Polina Zakharovasta",
+    "p1": "Nimeni on Polina Zakharova, olen polkujuoksun ja vuoristohiihdon valmentaja, asun Kiovassa, Ukrainassa.",
+    "p2": "Matkani urheilussa alkoi jo vuonna 2008 suunnistuksesta ja rogainingista — siitä lähtien olen nähnyt tämän maailman monista eri kulmista. 18 vuoden aikana olen juossut kymmeniä tuhansia kilometrejä, vaihtanut maita, maastoja ja formaatteja, mutta pysynyt uskollisena tärkeimmälle — vapaudelle ja intohimolle.",
+    "p3": "Viime vuosina olen keskittynyt paljon vuoristohiihtoon ja autan muita amatööriurheilijoita löytämään oman rytminsä ja suuntansa TrainingPeaksiin rakennettujen henkilökohtaisten harjoitussuunnitelmien avulla.",
+    "achievements": "<b>Saavutukset:</b> Chornohora Sky Marathonin voittaja (Ukraina, 2018, 2019, 2020); «Bojko Trail» 46 km:n kokonaiskilpailun voittaja (Ukraina, 2018).",
+    "mission": "<b>Missio:</b> luon ohjelmia, jotka kehittävät paitsi kestävyyttä myös itsetuntemusta liikkeen kautta — läsnäoloa omassa kehossa, sen voiman ja mielen tuntemista.",
+    "p4": "Työskentelen etänä asiakkaiden kanssa TrainingPeaksin kautta, joten yhteistyön maantiede on rajaton — tärkeintä on yhteinen kieli ja valmius harjoitella."
+  },
+  "contact": {
+    "title": "Yhteystiedot",
+    "intro": "Nopein tapa tavoittaa minut on kirjoittaa Telegramissa tai WhatsAppissa. Vastaan viesteihin henkilökohtaisesti arkipäivinä.",
+    "telegram": "Telegram: @ZakharovaPolina",
+    "whatsapp": "WhatsApp: +380 63 386 20 21",
+    "email": "Sähköposti: polina.zakharova94@gmail.com",
+    "location": "Asun Kiovassa, Ukrainassa, mutta työskentelen asiakkaiden kanssa etänä TrainingPeaksin kautta, joten voin valmentaa urheilijoita heidän asuinpaikastaan riippumatta.",
+    "howToStart": "<b>Näin pääset alkuun:</b> kirjoita minulle muutama sana kokemuksestasi ja tavoitteistasi — ehdotan yhteistyömuotoa (BASIC, EXPERIENCED tai PRO) ja tarvittaessa sovin tutustumisvideopuhelun.",
+    "responseTime": "Vastausaika: yleensä yhden arkipäivän kuluessa."
+  },
+  "privacy": {
+    "title": "Tietosuojakäytäntö",
+    "lastUpdated": "Viimeksi päivitetty: 27. elokuuta 2026",
+    "intro": "Tämä sivusto (zakharova.coach) kuuluu Polina Zakharoville ja sitä käytetään esittelemään polkujuoksun ja vuoristohiihdon valmennuspalveluja. Sivustolla ei ole rekisteröitymis- tai tilauslomakkeita, joten emme kerää henkilötietoja suoraan sivuston kautta.",
+    "analytics": "<b>Analytiikka ja mainonta.</b> Sivusto käyttää Google Analyticsia ja Google Adsia (gtag.js) liikenteen ja mainonnan tehokkuuden analysointiin. Nämä palvelut voivat asettaa evästeitä ja käsitellä anonymisoitua teknistä dataa (IP-osoite, laitetyyppi, sivun käyttö) Googlen oman tietosuojakäytännön mukaisesti.",
+    "communication": "<b>Yhteydenpito.</b> Jos otat yhteyttä Telegramin, WhatsAppin tai sähköpostin kautta, viestejä käsitellään näiden palveluiden omien tietosuojakäytäntöjen mukaisesti (Telegram, WhatsApp/Meta, sähköpostipalveluntarjoaja), eikä niitä tallenneta tälle sivustolle.",
+    "trainingData": "<b>Harjoitustiedot.</b> Jos sinusta tulee asiakkaani, harjoitus-, terveys- ja tavoitekilpailutiedot pidetään TrainingPeaksissa — erillisessä palvelussa, jolla on oma tietosuojakäytäntönsä. Tällä sivustolla ei ole pääsyä näihin tietoihin, eikä se tallenna niitä.",
+    "calendar": "<b>Tapahtumakalenteri.</b> Sivu /calendar näyttää julkisen Google-kalenterin eikä kerää vierailijoista tietoja.",
+    "rights": "<b>Oikeutesi.</b> Voit milloin tahansa pyytää minulle henkilökohtaisesti lähetettyjen viestien tai tietojen poistamista kirjoittamalla osoitteeseen <email>polina.zakharova94@gmail.com</email>.",
+    "changes": "<b>Käytännön muutokset.</b> Tätä sivua voidaan päivittää ajan myötä; viimeisin päivityspäivä näkyy yläreunassa."
+  },
+  "skiTourList": {
+    "heroTitle": "Hiihtoretken tarkistuslista",
+    "heroSubtitle": "Millaista varustusta tarvitset selviytyäksesi 🏔️",
+    "ctaTitle": "Tärkein varuste",
+    "ctaText": "Hyvä mieli.",
+    "question": "Onko sinulla vielä kysyttävää?",
+    "answer": "Ota yhteyttä työaikana.",
+    "categories": {
+      "head": {
+        "title": "Pää",
+        "items": [
+          "otsapanta",
+          "kevyt pipo",
+          "suhteellisen lämmin mutta ohut pipo",
+          "buffi (mieluummin kaksi)"
+        ]
+      },
+      "torso": {
+        "title": "Yläkroppa",
+        "items": [
+          "aluskerrasto (mieluiten kosteutta siirtävä merinovilla)",
+          "fleece",
+          "mahdollisesti ohut liivi",
+          "primaloft-takki",
+          "kalvo- tai gore-tex-takki"
+        ]
+      },
+      "hands": {
+        "title": "Kädet",
+        "items": [
+          "ohuet käsineet",
+          "ylikäsineet",
+          "lämpimät lapaset",
+          "erittäin lämpimät lapaset laskua varten"
+        ]
+      },
+      "legs": {
+        "title": "Jalat",
+        "items": [
+          "hyvät alusvaatteet ;-)",
+          "aluskerrasto (mieluiten kosteutta siirtävä merinovilla)",
+          "windstopper-housut/trikoot",
+          "tuulihousut — voivat olla kalvomateriaalia",
+          "kaksi viimeistä kerrosta voi korvata \"ohuilla\" laskettelu­housuilla",
+          "sukat — lämpimät polveen ulottuvat sääryhdet, 2 paria. Jos on, ota mukaan myös ohut pari sääryhdet"
+        ]
+      },
+      "advanced": {
+        "title": "Vaativampi varustus",
+        "items": [
+          "kypärä",
+          "silmälasit",
+          "maski",
+          "sauvat",
+          "reppu",
+          "sukset",
+          "kengät",
+          "nousukarvat",
+          "otsalamppu (varaparistot tai powerbank; ota mukaan laturi, jolla voit ladata lampun)",
+          "pieni termospullo (lämmintä vettä/teetä)",
+          "välipala (patukat, kaloripitoiset makeiset)",
+          "korjaussarja: nippusiteet, pieni monitoimityökalu, vahvistettu teippi (ei kokonaista rullaa, vain pari metriä)",
+          "pieni ensiapupakkaus: side, laastarit (silikonilaastarit ovat parhaita), klooriheksidiini, kipulääke, elektrolyyttijauhe, isofolia",
+          "halukkaille — kemialliset lämmittimet (jalat, kädet)",
+          "kenkien kuivain",
+          "halukkaille — jääraudat (tästä pitää keskustella erikseen)"
+        ]
+      },
+      "cosmetics": {
+        "title": "Kosmetiikka",
+        "items": [
+          "huulirasva",
+          "aurinkovoide"
+        ]
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const StyledHeaderBar = styled.div`
   display: flex;
@@ -40,15 +42,28 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Header = () => (
-  <StyledHeaderBar>
-    <StyledLogo>Polina Zakharova</StyledLogo>
-    <StyledNav>
-      <Link to="/formats">Формати співпраці</Link>
-      <Link to="/prices">Види планів</Link>
-      <Link to="/additional-services">Додаткові послуги</Link>
-    </StyledNav>
-  </StyledHeaderBar>
-);
+const StyledRightGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.75em;
+`;
+
+const Header = () => {
+  const { t } = useTranslation();
+
+  return (
+    <StyledHeaderBar>
+      <StyledLogo>Polina Zakharova</StyledLogo>
+      <StyledRightGroup>
+        <StyledNav>
+          <Link to="/formats">{t("nav.formats")}</Link>
+          <Link to="/prices">{t("nav.prices")}</Link>
+          <Link to="/additional-services">{t("nav.services")}</Link>
+        </StyledNav>
+        <LanguageSwitcher />
+      </StyledRightGroup>
+    </StyledHeaderBar>
+  );
+};
 
 export default Header;

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Modal, Divider, List, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 
 const StyledText = styled.span`
   font-weight: 900;
@@ -33,72 +34,76 @@ const StyledNavText = styled(Typography.Text)`
   }
 `;
 
-const NavModal = ({ open, onClose }) => (
-  <Modal open={open} onCancel={onClose} centered footer={null}>
-    <Divider titlePlacement="left">
-      <StyledText>Polina Zakharova</StyledText>
-    </Divider>
-    <StyledScrollArea>
-      <List size="small">
-        <List.Item>
-          <Link to="/" onClick={onClose}>
-            <StyledNavText>Головна</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/about" onClick={onClose}>
-            <StyledNavText>Про мене</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/achievements" onClick={onClose}>
-            <StyledNavText>Спортивні досягнення</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/contact" onClick={onClose}>
-            <StyledNavText>Контакти</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/races" onClick={onClose}>
-            <StyledNavText>Старти учнів</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/formats" onClick={onClose}>
-            <StyledNavText>Формати співпраці</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/prices" onClick={onClose}>
-            <StyledNavText>Види планів</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/additional-services" onClick={onClose}>
-            <StyledNavText>Додаткові послуги</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/skitour-chechlist" onClick={onClose}>
-            <StyledNavText>Чеклист лижного туру</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/calendar" onClick={onClose}>
-            <StyledNavText>Календар подій</StyledNavText>
-          </Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/privacy" onClick={onClose}>
-            <StyledNavText>Конфіденційність</StyledNavText>
-          </Link>
-        </List.Item>
-      </List>
-    </StyledScrollArea>
-  </Modal>
-);
+const NavModal = ({ open, onClose }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Modal open={open} onCancel={onClose} centered footer={null}>
+      <Divider titlePlacement="left">
+        <StyledText>Polina Zakharova</StyledText>
+      </Divider>
+      <StyledScrollArea>
+        <List size="small">
+          <List.Item>
+            <Link to="/" onClick={onClose}>
+              <StyledNavText>{t("nav.home")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/about" onClick={onClose}>
+              <StyledNavText>{t("nav.about")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/achievements" onClick={onClose}>
+              <StyledNavText>{t("nav.achievements")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/contact" onClick={onClose}>
+              <StyledNavText>{t("nav.contact")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/races" onClick={onClose}>
+              <StyledNavText>{t("nav.races")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/formats" onClick={onClose}>
+              <StyledNavText>{t("nav.formats")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/prices" onClick={onClose}>
+              <StyledNavText>{t("nav.prices")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/additional-services" onClick={onClose}>
+              <StyledNavText>{t("nav.services")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/skitour-chechlist" onClick={onClose}>
+              <StyledNavText>{t("nav.skitour")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/calendar" onClick={onClose}>
+              <StyledNavText>{t("nav.calendar")}</StyledNavText>
+            </Link>
+          </List.Item>
+          <List.Item>
+            <Link to="/privacy" onClick={onClose}>
+              <StyledNavText>{t("nav.privacy")}</StyledNavText>
+            </Link>
+          </List.Item>
+        </List>
+      </StyledScrollArea>
+    </Modal>
+  );
+};
 
 NavModal.propTypes = {
   open: PropTypes.bool.isRequired,

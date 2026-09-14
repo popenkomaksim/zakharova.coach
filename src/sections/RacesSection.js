@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Col, Row, Image, Grid } from "antd";
+import { useTranslation } from "react-i18next";
 import SectionTitle from "../components/SectionTitle";
 import BaseOutlineButton from "../components/OutlineButton";
 
@@ -255,11 +256,12 @@ const RacesSection = () => {
   const isMobile = !screens.sm;
   const visibleRaces =
     isMobile && !expanded ? races.slice(0, MOBILE_VISIBLE_COUNT) : races;
+  const { t } = useTranslation();
 
   return (
     <>
       <SectionTitle id="races" level={3} margin="2em 0 1em 0">
-        Старти, на яких фінішували мої учні
+        {t("races.title")}
       </SectionTitle>
       <StyledRacesRow justify="center" align="middle" gutter={[24, 24]}>
         {visibleRaces.map(({ href, src, alt, badge, badgeAlt }) => (
@@ -288,7 +290,7 @@ const RacesSection = () => {
       {isMobile && !expanded && (
         <Row justify="center">
           <StyledShowMoreButton onClick={() => setExpanded(true)}>
-            Показати більше
+            {t("races.showMore")}
           </StyledShowMoreButton>
         </Row>
       )}

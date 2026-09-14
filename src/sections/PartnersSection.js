@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Col, Row, Image } from "antd";
+import { useTranslation } from "react-i18next";
 import SectionTitle from "../components/SectionTitle";
 
 const StyledPartnerLink = styled.a`
@@ -63,27 +64,31 @@ const partners = [
   },
 ];
 
-const PartnersSection = () => (
-  <>
-    <SectionTitle level={3} margin="2em 0 1em 0">
-      Мої партнери:
-    </SectionTitle>
-    <StyledLogosRow justify="center" align="middle" gutter={[24, 24]}>
-      {partners.map(({ href, src, alt }) => (
-        <Col key={src}>
-          <StyledPartnerLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href={href}
-          >
-            <StyledLogoTile>
-              <Image src={src} alt={alt} preview={false} loading="lazy" />
-            </StyledLogoTile>
-          </StyledPartnerLink>
-        </Col>
-      ))}
-    </StyledLogosRow>
-  </>
-);
+const PartnersSection = () => {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <SectionTitle level={3} margin="2em 0 1em 0">
+        {t("partnersSection.title")}
+      </SectionTitle>
+      <StyledLogosRow justify="center" align="middle" gutter={[24, 24]}>
+        {partners.map(({ href, src, alt }) => (
+          <Col key={src}>
+            <StyledPartnerLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href={href}
+            >
+              <StyledLogoTile>
+                <Image src={src} alt={alt} preview={false} loading="lazy" />
+              </StyledLogoTile>
+            </StyledPartnerLink>
+          </Col>
+        ))}
+      </StyledLogosRow>
+    </>
+  );
+};
 
 export default PartnersSection;

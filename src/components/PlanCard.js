@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Badge, Divider, Typography, Card } from "antd";
+import { useTranslation } from "react-i18next";
 
 import EqualHeightCardWrapper from "./EqualHeightCardWrapper";
 import ContactIcons from "./ContactIcons";
@@ -66,6 +67,7 @@ const PlanCard = ({
   redirectToWhatsup,
   recommended = false,
 }) => {
+  const { t } = useTranslation();
   const card = (
     <EqualHeightCardWrapper>
       <StyledCard
@@ -73,11 +75,14 @@ const PlanCard = ({
         size="small"
         $recommended={recommended}
       >
-        <StyledSectionLabel>У цьому пакеті ви отримаєте:</StyledSectionLabel>
+        <StyledSectionLabel>
+          {t("pricingSection.youWillGet")}
+        </StyledSectionLabel>
         <Typography.Text>{ListOfThingth}</Typography.Text>
         <StyledPriceRow>
           ₴{convert(price, rate)}
-          <StyledEurPrice> / €{price}</StyledEurPrice>&nbsp;на місяць
+          <StyledEurPrice> / €{price}</StyledEurPrice>&nbsp;
+          {t("pricingSection.perMonth")}
         </StyledPriceRow>
         <Divider titlePlacement="center">
           <ContactIcons
@@ -94,7 +99,7 @@ const PlanCard = ({
 
   return (
     <StyledRibbonWrapper>
-      <Badge.Ribbon text="Рекомендую" color="#b01e28">
+      <Badge.Ribbon text={t("pricingSection.recommended")} color="#b01e28">
         {card}
       </Badge.Ribbon>
     </StyledRibbonWrapper>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const StyledPatrioticText = styled.p`
   margin: 2em 0;
@@ -11,8 +12,10 @@ const StyledPatrioticText = styled.p`
   text-align: center;
 `;
 
-const PatrioticBanner = () => (
-  <StyledPatrioticText>Хай та русня здохне</StyledPatrioticText>
-);
+const PatrioticBanner = () => {
+  const { t } = useTranslation();
+
+  return <StyledPatrioticText>{t("patrioticBanner.text")}</StyledPatrioticText>;
+};
 
 export default PatrioticBanner;

@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Polina Zakharova. Coach",
+    "description": "Make yourself stronger every day. A coach will help you achieve your goals without injuries."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "achievements": "Sporting achievements",
+    "contact": "Contact",
+    "races": "Students' races",
+    "formats": "Cooperation formats",
+    "prices": "Plan types",
+    "services": "Extra services",
+    "skitour": "Ski tour checklist",
+    "calendar": "Events calendar",
+    "privacy": "Privacy"
+  },
+  "languagePicker": {
+    "label": "Language"
+  },
+  "heroBanner": {
+    "tag": "Ukrainian identity through sport",
+    "plan": "Our training plan",
+    "body": "Your body",
+    "rules": "My rules"
+  },
+  "mobileCta": {
+    "button": "Book a consultation"
+  },
+  "aboutSection": {
+    "title": "Hi. I'm Polina.",
+    "photoAlt": "Polina",
+    "p1": "I can't imagine my life without mountains, forests, and open spaces.",
+    "p2": "My journey in sport began back in 2008 with orienteering and rogaining — since then I've seen this world from many different angles.",
+    "p3": "Over 18 years I've run tens of thousands of kilometers, changed countries, terrains and formats, but stayed true to what matters most — freedom and drive.",
+    "p4": "Today I'm a coach, I've been doing ski mountaineering for many years, and I help others find their own rhythm and direction.",
+    "p5": "I build programs that develop not only endurance but self-awareness through movement — being present in your own body, feeling its strength and mind.",
+    "moreButton": "My sporting achievements",
+    "ctaButton": "Start training effectively"
+  },
+  "achievementsSection": {
+    "title": "My sporting achievements:",
+    "photoAlt": "Polina Zakharova at the finish line",
+    "block1": "-World Rogaining Championships winner (<b>Finland</b> 2015, <b>Spain</b> 2019, <b>USA</b> 2023)<br/>-European Rogaining Championship winner (<b>Spain</b> 2017)<br/>-competitor at the World Ski Mountaineering Championships (<b>Italy</b> 2023)<br/>-competitor at the World Trail Running Championships (<b>Spain</b> 2025)",
+    "block2": "-<b>International Class Master of Sport</b> in orienteering<br/>-Master of Sport of Ukraine <b>in athletics</b>",
+    "block3": "-podium finisher at Mountains Hard Ultra Trail 35 km (<b>France</b> 2022), MIUT 85 km (<b>Portugal</b> 2019), MIUT 42 km (<b>Portugal</b> 2024)<br/>-competitor at the top trail race UTMB, OCC distance (<b>France</b> 2022)",
+    "block4": "-winner of iconic Ukrainian races: (<b>overall winner</b>: Bojko Trail 46 km 2018 and Burning Heads Trail 2019, women's category winner: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Ukrainian Trail Running Champion 40 km – 2021), <b>Karpatia 70 km</b> (3rd overall) – 2025)",
+    "back": "Back"
+  },
+  "races": {
+    "title": "Races where my students have finished",
+    "showMore": "Show more"
+  },
+  "formatsSection": {
+    "title": "Cooperation formats",
+    "individual": {
+      "title": "Individual coaching",
+      "description": "You choose the format and the goals — I make sure every session delivers maximum effect."
+    },
+    "online": {
+      "title": "Online training",
+      "description": "A space for systematic work with no ties to location. I build individual plans that take into account your goal, level, and life context. You decide how much structure and interaction you need right now."
+    },
+    "group": {
+      "title": "Group training",
+      "description": "Group training is time where everyone can move at their own pace, but with the energy of a shared goal."
+    },
+    "camps": {
+      "title": "Training camps",
+      "description": "Running camps are more than just training. It's when body and spirit come together. Here everything is simple: we train, walk, recover, and live slower than usual."
+    },
+    "business": {
+      "title": "Business offers",
+      "description": "This format is for companies who want to walk the road together toward a shared start line: a trail run, a marathon, an obstacle race, or a charity event."
+    }
+  },
+  "patrioticBanner": {
+    "text": "Death to the russian scum"
+  },
+  "testimonialsSection": {
+    "title": "My students' reviews",
+    "prevAria": "Previous review",
+    "nextAria": "Next review",
+    "kyrylo": {
+      "quote": "Polina is a coach who really helps you achieve goals that seemed unreal. This year, thanks to her preparation, I took part in my first mountain trail race, <strong>Bukotrail</strong>, which I had long hesitated to sign up for. My participation in the <strong>Spartan Race</strong> obstacle course races also went by more as fun than exhaustion. Polina knows how to organize training so it delivers real results without being a grind. I recommend her to anyone who wants to run effectively and with enjoyment.",
+      "name": "Kyrylo Psasichniuk",
+      "role": "CEO of a production studio",
+      "company": "Paragon Progency"
+    },
+    "maksym": {
+      "quote": "Training with Polina is the best decision on my running journey! Thanks to her thoughtful approach and well-designed system, we not only improved my physical performance but completely changed my approach to trail running. Polina teaches you to feel your body, distribute your effort wisely over long distances, and, most importantly, enjoy every kilometer. I sincerely recommend her to anyone who dreams of mountains and new summits!",
+      "name": "Maksym",
+      "role": "Software Architect",
+      "company": "DataArt"
+    }
+  },
+  "partnersSection": {
+    "title": "My partners:"
+  },
+  "pricingSection": {
+    "title": "The price breakdown: no fine print, just a coach",
+    "perMonth": "per month",
+    "recommended": "Recommended",
+    "youWillGet": "In this package you get:",
+    "basic": {
+      "items": [
+        "a TRAININGPEAKS account",
+        "a personalized monthly plan",
+        "consultation on choosing target races",
+        "feedback via TRAININGPEAKS"
+      ]
+    },
+    "experienced": {
+      "items": [
+        "a TRAININGPEAKS account",
+        "a weekly personalized plan",
+        "the ability to adjust the plan on the fly",
+        "consultation on choosing target races",
+        "analysis of 1 upcoming race",
+        "analysis and planning for 1 race per season",
+        "race nutrition recommendations",
+        "feedback via the TRAININGPEAKS app",
+        "a video call with the coach once a month"
+      ]
+    },
+    "pro": {
+      "items": [
+        "a pro TRAININGPEAKS account with analytics access",
+        "a weekly personalized plan",
+        "the ability to adjust the plan on the fly",
+        "consultation on choosing target races",
+        "analysis of 3 upcoming races",
+        "analysis and planning for 3 races per season",
+        "race nutrition recommendations",
+        "feedback via the TRAININGPEAKS app",
+        "a video call once a week"
+      ]
+    }
+  },
+  "extraServicesSection": {
+    "title": "Extra services",
+    "raceAnalysis": {
+      "name": "Race breakdown and pacing plan",
+      "items": [
+        "analysis of three past races",
+        "start track breakdown",
+        "race pacing plan"
+      ]
+    },
+    "seasonPlanning": {
+      "name": "Season analysis and planning",
+      "items": [
+        "breakdown of season goals",
+        "planning"
+      ]
+    },
+    "personalTraining": {
+      "name": "Personal training session",
+      "text": "Running, cycling, roller skiing, skiing, orienteering, rogaining."
+    },
+    "groupTraining": {
+      "name": "Group training session",
+      "text": "Fun and useful. Cocoa afterward not included."
+    }
+  },
+  "closingSection": {
+    "videoAlt": "Polina running",
+    "question": "Still have questions?",
+    "answer": "Reach out to me during business hours."
+  },
+  "footer": {
+    "text": "Made with in Kyiv, Ukraine © 2023 —"
+  },
+  "about": {
+    "title": "About Polina Zakharova",
+    "p1": "My name is Polina Zakharova, I'm a trail running and ski mountaineering coach based in Kyiv, Ukraine.",
+    "p2": "My journey in sport began back in 2008 with orienteering and rogaining — since then I've seen this world from many different angles. Over 18 years I've run tens of thousands of kilometers, changed countries, terrains, and formats, but stayed true to what matters most — freedom and drive.",
+    "p3": "In recent years I've focused a lot on ski mountaineering and help other amateur athletes find their own rhythm and direction through personalized training plans built around TrainingPeaks.",
+    "achievements": "<b>Achievements:</b> winner of the Chornohora Sky Marathon (Ukraine, 2018, 2019, 2020); overall winner of the \"Bojko Trail\" 46 km (Ukraine, 2018).",
+    "mission": "<b>Mission:</b> I create programs that develop not only endurance but also self-awareness through movement — being present in your own body, feeling its strength and mind.",
+    "p4": "I work remotely with clients through TrainingPeaks, so the geography of cooperation is unlimited — what matters is a shared language and readiness to train."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "The fastest way to reach me is to message me on Telegram or WhatsApp. I personally reply to messages on business days.",
+    "telegram": "Telegram: @ZakharovaPolina",
+    "whatsapp": "WhatsApp: +380 63 386 20 21",
+    "email": "Email: polina.zakharova94@gmail.com",
+    "location": "I'm based in Kyiv, Ukraine, but I work with clients remotely through TrainingPeaks, so I can coach athletes regardless of where they live.",
+    "howToStart": "<b>How to get started:</b> write me a few words about your experience and goals — I'll suggest a cooperation format (BASIC, EXPERIENCED, or PRO) and, if needed, schedule an introductory video call.",
+    "responseTime": "Response time: usually within one business day."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: August 27, 2026",
+    "intro": "This website (zakharova.coach) belongs to Polina Zakharova and is used to present trail running and ski mountaineering coaching services. There are no sign-up or checkout forms on the site, so we don't collect personal data directly through it.",
+    "analytics": "<b>Analytics and advertising.</b> The site uses Google Analytics and Google Ads (gtag.js) to analyze traffic and ad performance. These services may set cookies and process anonymized technical data (IP address, device type, page interaction) according to Google's own privacy policy.",
+    "communication": "<b>Communication.</b> If you reach out via Telegram, WhatsApp, or email, messages are handled according to those services' own privacy policies (Telegram, WhatsApp/Meta, your email provider) and are not stored on this site.",
+    "trainingData": "<b>Training data.</b> If you become my client, your training, health, and target race data are kept in TrainingPeaks — a separate service with its own privacy policy. This site has no access to that data and does not store it.",
+    "calendar": "<b>Events calendar.</b> The /calendar page displays a public Google Calendar and does not collect any visitor data.",
+    "rights": "<b>Your rights.</b> You can request the deletion of messages or data sent to me personally at any time by writing to <email>polina.zakharova94@gmail.com</email>.",
+    "changes": "<b>Policy changes.</b> This page may be updated over time; the last update date is shown at the top."
+  },
+  "skiTourList": {
+    "heroTitle": "Ski tour checklist",
+    "heroSubtitle": "What gear you need to survive 🏔️",
+    "ctaTitle": "The most important gear",
+    "ctaText": "A good mood.",
+    "question": "Still have questions?",
+    "answer": "Reach out to me during business hours.",
+    "categories": {
+      "head": {
+        "title": "Head",
+        "items": [
+          "headband",
+          "light hat",
+          "relatively warm but thin hat",
+          "buff (better two)"
+        ]
+      },
+      "torso": {
+        "title": "Upper body",
+        "items": [
+          "base layer (merino wool that wicks moisture is best)",
+          "fleece",
+          "maybe a thin vest",
+          "primaloft jacket",
+          "membrane or gore-tex jacket"
+        ]
+      },
+      "hands": {
+        "title": "Hands",
+        "items": [
+          "thin gloves",
+          "overmitts",
+          "warm mittens",
+          "super warm mittens for the descent"
+        ]
+      },
+      "legs": {
+        "title": "Legs",
+        "items": [
+          "nice underwear ;-)",
+          "base layer (merino wool that wicks moisture is best)",
+          "windstopper pants/tights",
+          "wind pants — can be membrane",
+          "the last two layers can be replaced with \"thin\" ski pants",
+          "socks — warm knee-high gaiters, 2 pairs. If you have them, bring a thin pair of gaiters too"
+        ]
+      },
+      "advanced": {
+        "title": "More advanced gear",
+        "items": [
+          "helmet",
+          "glasses",
+          "goggles",
+          "poles",
+          "backpack",
+          "skis",
+          "boots",
+          "skins",
+          "headlamp (spare batteries or power banks; bring a charger you can use to charge the headlamp)",
+          "small thermos (warm water/tea)",
+          "snacks (bars, high-calorie candy)",
+          "repair kit: zip ties, a small multitool, reinforced tape (not a full roll, just a couple of meters)",
+          "small first aid kit: bandage, plasters (silicone ones are the best), chlorhexidine, painkillers, rehydration salts, isofolia",
+          "for those who want it — chemical hand/foot warmers",
+          "boot dryer",
+          "for those who want it — crampons (this needs a separate discussion)"
+        ]
+      },
+      "cosmetics": {
+        "title": "Cosmetics",
+        "items": [
+          "lip balm",
+          "sunscreen"
+        ]
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import i18n from "../i18n";
 import Header from "./Header";
 
 describe("Header", () => {
+  beforeAll(() => i18n.changeLanguage("uk"));
+
   test("renders the coach name as the logo", () => {
     render(<Header />, { wrapper: MemoryRouter });
 

@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Polina Zakharova. Trenerka",
+    "description": "Bądź silniejszy każdego dnia. Trenerka pomoże ci osiągnąć cel bez kontuzji."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "achievements": "Osiągnięcia sportowe",
+    "contact": "Kontakt",
+    "races": "Starty uczniów",
+    "formats": "Formaty współpracy",
+    "prices": "Rodzaje planów",
+    "services": "Usługi dodatkowe",
+    "skitour": "Lista skitourowa",
+    "calendar": "Kalendarz wydarzeń",
+    "privacy": "Prywatność"
+  },
+  "languagePicker": {
+    "label": "Język"
+  },
+  "heroBanner": {
+    "tag": "Ukraińska tożsamość przez sport",
+    "plan": "Nasz plan treningowy",
+    "body": "Twoje ciało",
+    "rules": "Moje zasady"
+  },
+  "mobileCta": {
+    "button": "Umów się na konsultację"
+  },
+  "aboutSection": {
+    "title": "Witaj. Jestem Polina.",
+    "photoAlt": "Polina",
+    "p1": "Nie wyobrażam sobie życia bez gór, lasu i otwartej przestrzeni.",
+    "p2": "Moja droga w sporcie zaczęła się w 2008 roku od biegów na orientację i rogainingu — od tamtej pory patrzę na ten świat z wielu różnych perspektyw.",
+    "p3": "Przez 18 lat przebiegłam dziesiątki tysięcy kilometrów, zmieniałam kraje, tereny i formaty, ale pozostałam wierna temu, co najważniejsze — wolności i pasji.",
+    "p4": "Dziś jestem trenerką, od wielu lat zajmuję się skialpinizmem i pomagam innym znaleźć własny rytm i kierunek.",
+    "p5": "Tworzę programy, które rozwijają nie tylko wytrzymałość, ale i świadomość siebie poprzez ruch — bycie obecnym we własnym ciele, odczuwanie jego siły i umysłu.",
+    "moreButton": "Moje osiągnięcia sportowe",
+    "ctaButton": "Zacznij trenować efektywnie"
+  },
+  "achievementsSection": {
+    "title": "Moje osiągnięcia sportowe:",
+    "photoAlt": "Polina Zakharova na mecie",
+    "block1": "-mistrzyni Mistrzostw Świata w rogainingu (<b>Finlandia</b> 2015, <b>Hiszpania</b> 2019, <b>USA</b> 2023)<br/>-mistrzyni Mistrzostw Europy w rogainingu (<b>Hiszpania</b> 2017)<br/>-uczestniczka Mistrzostw Świata w skialpinizmie (<b>Włochy</b> 2023)<br/>-uczestniczka Mistrzostw Świata w biegach górskich (<b>Hiszpania</b> 2025)",
+    "block2": "-<b>mistrzyni sportu klasy międzynarodowej</b> w biegach na orientację<br/>-mistrzyni sportu Ukrainy <b>w lekkoatletyce</b>",
+    "block3": "-medalistka Mountains Hard Ultra Trail 35 km (<b>Francja</b> 2022), MIUT 85 km (<b>Portugalia</b> 2019), MIUT 42 km (<b>Portugalia</b> 2024)<br/>-uczestniczka topowego biegu UTMB, dystans OCC (<b>Francja</b> 2022)",
+    "block4": "-zwyciężczyni kultowych ukraińskich startów: (<b>zwyciężczyni open</b>: Bojko Trail 46 km 2018 i Burning Heads Trail 2019, zwyciężczyni w kategorii kobiet: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Mistrzyni Ukrainy w biegach górskich 40 km – 2021), <b>Karpatia 70 km</b> (3. miejsce open) – 2025)",
+    "back": "Wstecz"
+  },
+  "races": {
+    "title": "Starty, na których finiszowali moi uczniowie",
+    "showMore": "Pokaż więcej"
+  },
+  "formatsSection": {
+    "title": "Formaty współpracy",
+    "individual": {
+      "title": "Trening indywidualny",
+      "description": "Ty wybierasz format i cele — ja dbam, żeby każdy trening dawał maksymalny efekt."
+    },
+    "online": {
+      "title": "Trening online",
+      "description": "To przestrzeń do systematycznej pracy bez związku z miejscem. Tworzę indywidualne plany uwzględniające cel, poziom i kontekst twojego życia. Sam decydujesz, ile struktury i interakcji potrzebujesz właśnie teraz."
+    },
+    "group": {
+      "title": "Treningi grupowe",
+      "description": "Treningi grupowe to czas, w którym każdy może poruszać się we własnym tempie, ale w energii wspólnego celu."
+    },
+    "camps": {
+      "title": "Obozy treningowe",
+      "description": "Obozy biegowe to coś więcej niż trening. To moment, gdy ciało i duch się jednoczą. Tu wszystko jest proste: trenujemy, spacerujemy, regenerujemy się i żyjemy wolniej niż zwykle."
+    },
+    "business": {
+      "title": "Oferty dla firm",
+      "description": "To format dla firm, które chcą przejść wspólną drogę do startu: biegu górskiego, maratonu, biegu z przeszkodami czy wydarzenia charytatywnego."
+    }
+  },
+  "patrioticBanner": {
+    "text": "Niech ten ruski motłoch zdechnie"
+  },
+  "testimonialsSection": {
+    "title": "Opinie moich podopiecznych",
+    "prevAria": "Poprzednia opinia",
+    "nextAria": "Następna opinia",
+    "kyrylo": {
+      "quote": "Polina to trenerka, która naprawdę pomaga osiągać cele, które wydawały się nierealne. W tym roku dzięki jej przygotowaniu wziąłem udział w moim pierwszym górskim biegu <strong>Bukotrail</strong>, na który długo się nie odważałem. Poza tym mój udział w biegach z przeszkodami <strong>Spartan Race</strong> minął nie na wyczerpaniu, a z przyjemnością. Polina potrafi tak zorganizować treningi, że dają realne rezultaty i przy tym nie są uciążliwe. Polecam ją każdemu, kto chce biegać efektywnie i z przyjemnością.",
+      "name": "Kyrylo Psasichniuk",
+      "role": "CEO studia produkcyjnego",
+      "company": "Paragon Progency"
+    },
+    "maksym": {
+      "quote": "Trening z Poliną to najlepsza decyzja na mojej biegowej drodze! Dzięki przemyślanemu podejściu i dobrze zaplanowanemu systemowi nie tylko poprawiliśmy moje wyniki fizyczne, ale całkowicie zmieniliśmy podejście do biegania górskiego. Polina uczy odczuwania własnego ciała, mądrego rozkładania sił na długich dystansach i, co najważniejsze, czerpania radości z każdego kilometra. Szczerze polecam każdemu, kto marzy o górach i nowych szczytach!",
+      "name": "Maksym",
+      "role": "Architekt oprogramowania",
+      "company": "DataArt"
+    }
+  },
+  "partnersSection": {
+    "title": "Moi partnerzy:"
+  },
+  "pricingSection": {
+    "title": "Rozbiórka cen: bez drobnego druku, za to z trenerką",
+    "perMonth": "miesięcznie",
+    "recommended": "Polecane",
+    "youWillGet": "W tym pakiecie otrzymasz:",
+    "basic": {
+      "items": [
+        "konto w TRAININGPEAKS",
+        "spersonalizowany plan na miesiąc",
+        "konsultację przy wyborze startów docelowych",
+        "informację zwrotną przez TRAININGPEAKS"
+      ]
+    },
+    "experienced": {
+      "items": [
+        "konto w TRAININGPEAKS",
+        "cotygodniowy spersonalizowany plan",
+        "możliwość doraźnej korekty planu",
+        "konsultację przy wyborze startów docelowych",
+        "analizę 1 nadchodzącego startu",
+        "analizę i planowanie 1 startu w sezonie",
+        "rekomendacje żywieniowe na zawody",
+        "informację zwrotną przez aplikację TRAININGPEAKS",
+        "rozmowę wideo z trenerką raz w miesiącu"
+      ]
+    },
+    "pro": {
+      "items": [
+        "konto pro w TRAININGPEAKS z dostępem do analityki",
+        "cotygodniowy spersonalizowany plan",
+        "możliwość doraźnej korekty planu",
+        "konsultację przy wyborze startów docelowych",
+        "analizę 3 nadchodzących startów",
+        "analizę i planowanie 3 startów w sezonie",
+        "rekomendacje żywieniowe na zawody",
+        "informację zwrotną przez aplikację TRAININGPEAKS",
+        "rozmowę wideo raz w tygodniu"
+      ]
+    }
+  },
+  "extraServicesSection": {
+    "title": "Usługi dodatkowe",
+    "raceAnalysis": {
+      "name": "Analiza i rozkład zawodów",
+      "items": [
+        "analiza trzech przebytych zawodów",
+        "analiza trasy startowej",
+        "planowanie przebiegu zawodów"
+      ]
+    },
+    "seasonPlanning": {
+      "name": "Analiza i planowanie sezonu",
+      "items": [
+        "analiza celów sezonu",
+        "planowanie"
+      ]
+    },
+    "personalTraining": {
+      "name": "Trening personalny",
+      "text": "Bieganie, kolarstwo, narciarstwo na rolkach, narciarstwo, biegi na orientację, rogaining."
+    },
+    "groupTraining": {
+      "name": "Trening grupowy",
+      "text": "Wesoło i pożytecznie. Kakao po treningu nie gwarantowane."
+    }
+  },
+  "closingSection": {
+    "videoAlt": "Polina biegnie",
+    "question": "Masz jeszcze pytania?",
+    "answer": "Napisz do mnie w godzinach pracy."
+  },
+  "footer": {
+    "text": "Made with in Kyiv, Ukraine © 2023 —"
+  },
+  "about": {
+    "title": "O Polinie Zakharovej",
+    "p1": "Nazywam się Polina Zakharova, jestem trenerką biegów górskich i skialpinizmu z Kijowa, Ukraina.",
+    "p2": "Moja droga w sporcie zaczęła się w 2008 roku od biegów na orientację i rogainingu — od tamtej pory patrzę na ten świat z wielu różnych perspektyw. Przez 18 lat przebiegłam dziesiątki tysięcy kilometrów, zmieniałam kraje, tereny i formaty, ale pozostałam wierna temu, co najważniejsze — wolności i pasji.",
+    "p3": "W ostatnich latach dużo zajmuję się skialpinizmem i pomagam innym amatorskim sportowcom znaleźć własny rytm i kierunek dzięki spersonalizowanym planom treningowym opartym na TrainingPeaks.",
+    "achievements": "<b>Osiągnięcia:</b> zwyciężczyni Chornohora Sky Marathon (Ukraina, 2018, 2019, 2020); zwyciężczyni open «Bojko Trail» 46 km (Ukraina, 2018).",
+    "mission": "<b>Misja:</b> tworzę programy, które rozwijają nie tylko wytrzymałość, ale i świadomość siebie poprzez ruch — bycie obecnym we własnym ciele, odczuwanie jego siły i umysłu.",
+    "p4": "Pracuję zdalnie z klientami przez TrainingPeaks, więc geografia współpracy jest nieograniczona — najważniejszy jest wspólny język i gotowość do treningu."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Najszybszy sposób, aby się ze mną skontaktować, to napisać na Telegramie lub WhatsAppie. Osobiście odpowiadam na wiadomości w dni robocze.",
+    "telegram": "Telegram: @ZakharovaPolina",
+    "whatsapp": "WhatsApp: +380 63 386 20 21",
+    "email": "Email: polina.zakharova94@gmail.com",
+    "location": "Mieszkam w Kijowie, na Ukrainie, ale pracuję z klientami zdalnie przez TrainingPeaks, więc mogę trenować sportowców niezależnie od miejsca ich zamieszkania.",
+    "howToStart": "<b>Jak zacząć:</b> napisz do mnie kilka słów o swoim doświadczeniu i celach — zaproponuję format współpracy (BASIC, EXPERIENCED lub PRO) i w razie potrzeby umówię rozmowę wideo na zapoznanie.",
+    "responseTime": "Czas odpowiedzi: zwykle w ciągu jednego dnia roboczego."
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "lastUpdated": "Ostatnia aktualizacja: 27 sierpnia 2026 r.",
+    "intro": "Ta strona (zakharova.coach) należy do Poliny Zakharovej i służy do prezentacji usług trenerskich w biegach górskich i skialpinizmie. Na stronie nie ma formularzy rejestracji ani zamówień, więc nie zbieramy danych osobowych bezpośrednio przez stronę.",
+    "analytics": "<b>Analityka i reklama.</b> Strona korzysta z Google Analytics i Google Ads (gtag.js) do analizy ruchu i skuteczności reklam. Usługi te mogą ustawiać pliki cookie i przetwarzać zanonimizowane dane techniczne (adres IP, typ urządzenia, interakcja ze stroną) zgodnie z własną polityką prywatności Google.",
+    "communication": "<b>Komunikacja.</b> Jeśli piszesz do mnie przez Telegram, WhatsApp lub e-mail, wiadomości są przetwarzane zgodnie z politykami prywatności tych usług (Telegram, WhatsApp/Meta, dostawca poczty), a nie przechowywane na tej stronie.",
+    "trainingData": "<b>Dane treningowe.</b> Jeśli zostaniesz moim klientem, dane o treningach, zdrowiu i startach docelowych są prowadzone w TrainingPeaks — osobnym serwisie z własną polityką prywatności. Ta strona nie ma dostępu do tych danych i ich nie przechowuje.",
+    "calendar": "<b>Kalendarz wydarzeń.</b> Strona /calendar wyświetla publiczny kalendarz Google i nie zbiera żadnych danych odwiedzających.",
+    "rights": "<b>Twoje prawa.</b> W każdej chwili możesz poprosić o usunięcie wiadomości lub danych przesłanych mi osobiście, pisząc na <email>polina.zakharova94@gmail.com</email>.",
+    "changes": "<b>Zmiany polityki.</b> Ta strona może być z czasem aktualizowana; data ostatniej aktualizacji jest podana na górze."
+  },
+  "skiTourList": {
+    "heroTitle": "Lista skitourowa",
+    "heroSubtitle": "Jaki sprzęt trzeba mieć, by przeżyć 🏔️",
+    "ctaTitle": "Najważniejszy sprzęt",
+    "ctaText": "Dobry humor.",
+    "question": "Masz jeszcze pytania?",
+    "answer": "Napisz do mnie w godzinach pracy.",
+    "categories": {
+      "head": {
+        "title": "Głowa",
+        "items": [
+          "opaska",
+          "lekka czapka",
+          "względnie ciepła, ale cienka czapka",
+          "buff (lepiej dwa)"
+        ]
+      },
+      "torso": {
+        "title": "Górna część ciała",
+        "items": [
+          "termoaktywna bielizna (najlepiej merynos odprowadzający wilgoć)",
+          "polar",
+          "ewentualnie cienka kamizelka",
+          "kurtka z primaloftem",
+          "kurtka z membraną lub gore-tex"
+        ]
+      },
+      "hands": {
+        "title": "Ręce",
+        "items": [
+          "cienkie rękawiczki",
+          "wierzchnie rękawice",
+          "ciepłe rękawice",
+          "super ciepłe rękawice na zjazd"
+        ]
+      },
+      "legs": {
+        "title": "Nogi",
+        "items": [
+          "dobra bielizna ;-)",
+          "termoaktywna bielizna (najlepiej merynos odprowadzający wilgoć)",
+          "spodnie/getry z windstopperem",
+          "spodnie przeciwwiatrowe — mogą być z membraną",
+          "ostatnie dwie warstwy można zastąpić \"cienkimi\" spodniami narciarskimi",
+          "skarpety — ciepłe getry do kolan, 2 pary. Jeśli masz, weź też cienką parę getrów"
+        ]
+      },
+      "advanced": {
+        "title": "Bardziej zaawansowany sprzęt",
+        "items": [
+          "kask",
+          "okulary",
+          "gogle",
+          "kijki",
+          "plecak",
+          "narty",
+          "buty",
+          "foki",
+          "czołówka (zapasowe baterie lub powerbank; zabierz ładowarkę, którą naładujesz czołówkę)",
+          "mały termos (ciepła woda/herbata)",
+          "przekąska (batony, wysokokaloryczne cukierki)",
+          "zestaw naprawczy: opaski zaciskowe, mały multitool, taśma wzmocniona (nie cała rolka, tylko parę metrów)",
+          "mała apteczka: bandaż, plastry (silikonowe — TOP), chlorheksydyna, środek przeciwbólowy, elektrolity, izofolia",
+          "dla chętnych — chemiczne ogrzewacze (stopy, dłonie)",
+          "suszarka do butów",
+          "dla chętnych — raki (to trzeba omówić osobno)"
+        ]
+      },
+      "cosmetics": {
+        "title": "Kosmetyki",
+        "items": [
+          "balsam do ust",
+          "krem z filtrem"
+        ]
+      }
+    }
+  }
+}

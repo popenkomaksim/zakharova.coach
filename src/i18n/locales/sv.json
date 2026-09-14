@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Polina Zakharova. Coach",
+    "description": "Gör dig starkare varje dag. En coach hjälper dig nå dina mål utan skador."
+  },
+  "nav": {
+    "home": "Hem",
+    "about": "Om mig",
+    "achievements": "Idrottsprestationer",
+    "contact": "Kontakt",
+    "races": "Elevernas tävlingar",
+    "formats": "Samarbetsformer",
+    "prices": "Planer",
+    "services": "Extra tjänster",
+    "skitour": "Checklista för skidtur",
+    "calendar": "Evenemangskalender",
+    "privacy": "Integritet"
+  },
+  "languagePicker": {
+    "label": "Språk"
+  },
+  "heroBanner": {
+    "tag": "Ukrainsk identitet genom idrott",
+    "plan": "Vår träningsplan",
+    "body": "Din kropp",
+    "rules": "Mina regler"
+  },
+  "mobileCta": {
+    "button": "Boka en konsultation"
+  },
+  "aboutSection": {
+    "title": "Hej. Jag är Polina.",
+    "photoAlt": "Polina",
+    "p1": "Jag kan inte tänka mig ett liv utan berg, skog och öppna ytor.",
+    "p2": "Min resa inom idrott började redan 2008 med orientering och rogaining — sedan dess har jag sett världen ur många olika perspektiv.",
+    "p3": "Under 18 år har jag sprungit tiotusentals kilometer, bytt länder, terränger och format, men förblivit trogen det viktigaste — friheten och drivkraften.",
+    "p4": "Idag är jag coach, jag har ägnat mig åt skidalpinism i många år och hjälper andra att hitta sin egen rytm och riktning.",
+    "p5": "Jag skapar program som utvecklar inte bara uthållighet utan även självmedvetenhet genom rörelse — att vara närvarande i sin egen kropp, känna dess styrka och sinne.",
+    "moreButton": "Mina idrottsprestationer",
+    "ctaButton": "Börja träna effektivt"
+  },
+  "achievementsSection": {
+    "title": "Mina idrottsprestationer:",
+    "photoAlt": "Polina Zakharova i mål",
+    "block1": "-vinnare av VM i rogaining (<b>Finland</b> 2015, <b>Spanien</b> 2019, <b>USA</b> 2023)<br/>-vinnare av EM i rogaining (<b>Spanien</b> 2017)<br/>-deltagare i VM i skidalpinism (<b>Italien</b> 2023)<br/>-deltagare i VM i trail running (<b>Spanien</b> 2025)",
+    "block2": "-<b>mästare i sport, internationell klass,</b> i orientering<br/>-mästare i sport i Ukraina <b>i friidrott</b>",
+    "block3": "-prispallsplacering i Mountains Hard Ultra Trail 35 km (<b>Frankrike</b> 2022), MIUT 85 km (<b>Portugal</b> 2019), MIUT 42 km (<b>Portugal</b> 2024)<br/>-deltagare i topploppet UTMB, distansen OCC (<b>Frankrike</b> 2022)",
+    "block4": "-vinnare av ikoniska ukrainska lopp: (<b>totalsegrare</b>: Bojko Trail 46 km 2018 och Burning Heads Trail 2019, segrare i damklassen: <b>Chornohora Sky Marathon 60</b> km – 2018, 2019, 2020, Wet Hills – 2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Karpatia 42 km – 2020, Ukrainas mästare i trail running 40 km – 2021), <b>Karpatia 70 km</b> (3:a totalt) – 2025)",
+    "back": "Tillbaka"
+  },
+  "races": {
+    "title": "Tävlingar där mina elever gått i mål",
+    "showMore": "Visa fler"
+  },
+  "formatsSection": {
+    "title": "Samarbetsformer",
+    "individual": {
+      "title": "Individuell coaching",
+      "description": "Du väljer format och mål — jag ser till att varje pass ger maximal effekt."
+    },
+    "online": {
+      "title": "Onlineträning",
+      "description": "Ett utrymme för systematiskt arbete utan bindning till plats. Jag skapar individuella planer som tar hänsyn till mål, nivå och sammanhanget i ditt liv. Du väljer själv hur mycket struktur och interaktion du behöver just nu."
+    },
+    "group": {
+      "title": "Gruppträning",
+      "description": "Gruppträning är en tid då var och en kan röra sig i sitt eget tempo, men med energin från ett gemensamt mål."
+    },
+    "camps": {
+      "title": "Träningsläger",
+      "description": "Löparläger är mer än bara träning. Det är när kropp och själ förenas. Här är allt enkelt: vi tränar, promenerar, återhämtar oss och lever långsammare än vanligt."
+    },
+    "business": {
+      "title": "Erbjudanden för företag",
+      "description": "Det här formatet är för företag som vill gå vägen tillsammans mot en gemensam start: ett trail-lopp, ett maraton, ett hinderlopp eller ett välgörenhetsevenemang."
+    }
+  },
+  "patrioticBanner": {
+    "text": "Må den där ryska avskummet dö"
+  },
+  "testimonialsSection": {
+    "title": "Mina elevers omdömen",
+    "prevAria": "Föregående omdöme",
+    "nextAria": "Nästa omdöme",
+    "kyrylo": {
+      "quote": "Polina är en coach som verkligen hjälper dig nå mål som verkade orealistiska. I år, tack vare hennes förberedelse, deltog jag i mitt första bergstrail-lopp, <strong>Bukotrail</strong>, som jag länge inte vågat anmäla mig till. Dessutom gick mitt deltagande i hinderloppen <strong>Spartan Race</strong> mer i tecknet av glädje än utmattning. Polina vet hur man lägger upp träningen så att den ger verkliga resultat utan att kännas tung. Jag rekommenderar henne till alla som vill springa effektivt och med glädje.",
+      "name": "Kyrylo Psasitjnjuk",
+      "role": "VD för en produktionsstudio",
+      "company": "Paragon Progency"
+    },
+    "maksym": {
+      "quote": "Träning med Polina är det bästa beslutet i min löparresa! Tack vare ett genomtänkt tillvägagångssätt och ett väl utformat system har vi inte bara förbättrat mina fysiska resultat, utan helt förändrat mitt förhållningssätt till trail running. Polina lär dig att känna din kropp, fördela krafterna klokt på långa distanser och, viktigast av allt, njuta av varje kilometer. Jag rekommenderar henne varmt till alla som drömmer om berg och nya toppar!",
+      "name": "Maksym",
+      "role": "Mjukvaruarkitekt",
+      "company": "DataArt"
+    }
+  },
+  "partnersSection": {
+    "title": "Mina partners:"
+  },
+  "pricingSection": {
+    "title": "Priserna uppradade: ingen finstil, bara en coach",
+    "perMonth": "per månad",
+    "recommended": "Rekommenderas",
+    "youWillGet": "I det här paketet får du:",
+    "basic": {
+      "items": [
+        "ett TRAININGPEAKS-konto",
+        "en personlig plan för en månad",
+        "konsultation om val av tävlingar",
+        "återkoppling via TRAININGPEAKS"
+      ]
+    },
+    "experienced": {
+      "items": [
+        "ett TRAININGPEAKS-konto",
+        "en veckovis personlig plan",
+        "möjlighet att justera planen löpande",
+        "konsultation om val av tävlingar",
+        "analys av 1 kommande tävling",
+        "analys och planering av 1 tävling per säsong",
+        "kostrekommendationer för tävlingar",
+        "återkoppling via TRAININGPEAKS-appen",
+        "ett videosamtal med coachen en gång i månaden"
+      ]
+    },
+    "pro": {
+      "items": [
+        "ett pro-konto i TRAININGPEAKS med tillgång till analyser",
+        "en veckovis personlig plan",
+        "möjlighet att justera planen löpande",
+        "konsultation om val av tävlingar",
+        "analys av 3 kommande tävlingar",
+        "analys och planering av 3 tävlingar per säsong",
+        "kostrekommendationer för tävlingar",
+        "återkoppling via TRAININGPEAKS-appen",
+        "ett videosamtal en gång i veckan"
+      ]
+    }
+  },
+  "extraServicesSection": {
+    "title": "Extra tjänster",
+    "raceAnalysis": {
+      "name": "Tävlingsanalys och tempoplan",
+      "items": [
+        "analys av tre tidigare tävlingar",
+        "genomgång av tävlingsbanan",
+        "planering av tävlingsloppet"
+      ]
+    },
+    "seasonPlanning": {
+      "name": "Säsonganalys och planering",
+      "items": [
+        "genomgång av säsongens mål",
+        "planering"
+      ]
+    },
+    "personalTraining": {
+      "name": "Personlig träning",
+      "text": "Löpning, cykling, rullskidor, skidor, orientering, rogaining."
+    },
+    "groupTraining": {
+      "name": "Grupptriäning",
+      "text": "Roligt och nyttigt. Kakao efteråt ingår inte."
+    }
+  },
+  "closingSection": {
+    "videoAlt": "Polina springer",
+    "question": "Har du fler frågor?",
+    "answer": "Hör av dig till mig under arbetstid."
+  },
+  "footer": {
+    "text": "Made with in Kyiv, Ukraine © 2023 —"
+  },
+  "about": {
+    "title": "Om Polina Zakharova",
+    "p1": "Jag heter Polina Zakharova, jag är coach inom trail running och skidalpinism baserad i Kiev, Ukraina.",
+    "p2": "Min resa inom idrott började redan 2008 med orientering och rogaining — sedan dess har jag sett världen ur många olika perspektiv. Under 18 år har jag sprungit tiotusentals kilometer, bytt länder, terränger och format, men förblivit trogen det viktigaste — friheten och drivkraften.",
+    "p3": "De senaste åren har jag ägnat mig mycket åt skidalpinism och hjälper andra amatöridrottare att hitta sin egen rytm och riktning genom personliga träningsplaner byggda kring TrainingPeaks.",
+    "achievements": "<b>Prestationer:</b> vinnare av Chornohora Sky Marathon (Ukraina, 2018, 2019, 2020); totalsegrare i «Bojko Trail» 46 km (Ukraina, 2018).",
+    "mission": "<b>Uppdrag:</b> jag skapar program som utvecklar inte bara uthållighet utan även självmedvetenhet genom rörelse — att vara närvarande i sin egen kropp, känna dess styrka och sinne.",
+    "p4": "Jag arbetar på distans med klienter via TrainingPeaks, så samarbetets geografi är obegränsad — det viktiga är ett gemensamt språk och vilja att träna."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Det snabbaste sättet att nå mig är att skriva på Telegram eller WhatsApp. Jag svarar personligen på meddelanden på vardagar.",
+    "telegram": "Telegram: @ZakharovaPolina",
+    "whatsapp": "WhatsApp: +380 63 386 20 21",
+    "email": "E-post: polina.zakharova94@gmail.com",
+    "location": "Jag är baserad i Kiev, Ukraina, men arbetar med klienter på distans via TrainingPeaks, så jag kan coacha idrottare oavsett var de bor.",
+    "howToStart": "<b>Så här kommer du igång:</b> skriv några ord om din erfarenhet och dina mål — jag föreslår en samarbetsform (BASIC, EXPERIENCED eller PRO) och bokar vid behov ett videosamtal för att lära känna varandra.",
+    "responseTime": "Svarstid: vanligtvis inom en arbetsdag."
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: 27 augusti 2026",
+    "intro": "Den här webbplatsen (zakharova.coach) tillhör Polina Zakharova och används för att presentera coachningstjänster inom trail running och skidalpinism. Webbplatsen har inga registrerings- eller beställningsformulär, så vi samlar inte in personuppgifter direkt via den.",
+    "analytics": "<b>Analys och annonsering.</b> Webbplatsen använder Google Analytics och Google Ads (gtag.js) för att analysera trafik och annonseffektivitet. Dessa tjänster kan sätta cookies och behandla anonymiserad teknisk data (IP-adress, enhetstyp, sidinteraktion) enligt Googles egen integritetspolicy.",
+    "communication": "<b>Kommunikation.</b> Om du kontaktar mig via Telegram, WhatsApp eller e-post hanteras meddelandena enligt dessa tjänsters egna integritetspolicyer (Telegram, WhatsApp/Meta, din e-postleverantör) och lagras inte på den här webbplatsen.",
+    "trainingData": "<b>Träningsdata.</b> Om du blir min klient förs data om träning, hälsa och måltävlingar i TrainingPeaks — en separat tjänst med egen integritetspolicy. Den här webbplatsen har ingen tillgång till dessa data och lagrar dem inte.",
+    "calendar": "<b>Evenemangskalender.</b> Sidan /calendar visar en offentlig Google-kalender och samlar inte in några besökardata.",
+    "rights": "<b>Dina rättigheter.</b> Du kan när som helst begära att meddelanden eller data som skickats till mig personligen raderas genom att skriva till <email>polina.zakharova94@gmail.com</email>.",
+    "changes": "<b>Ändringar av policyn.</b> Den här sidan kan uppdateras över tid; datumet för senaste uppdatering visas högst upp."
+  },
+  "skiTourList": {
+    "heroTitle": "Checklista för skidtur",
+    "heroSubtitle": "Vilken utrustning du behöver för att överleva 🏔️",
+    "ctaTitle": "Den viktigaste utrustningen",
+    "ctaText": "Ett gott humör.",
+    "question": "Har du fler frågor?",
+    "answer": "Hör av dig till mig under arbetstid.",
+    "categories": {
+      "head": {
+        "title": "Huvud",
+        "items": [
+          "pannband",
+          "lätt mössa",
+          "relativt varm men tunn mössa",
+          "buff (helst två)"
+        ]
+      },
+      "torso": {
+        "title": "Överkropp",
+        "items": [
+          "underställ (helst merinoull som transporterar bort fukt)",
+          "fleece",
+          "eventuellt en tunn väst",
+          "primaloft-jacka",
+          "jacka med membran eller gore-tex"
+        ]
+      },
+      "hands": {
+        "title": "Händer",
+        "items": [
+          "tunna handskar",
+          "överhandskar",
+          "varma vantar",
+          "extra varma vantar för nedfarten"
+        ]
+      },
+      "legs": {
+        "title": "Ben",
+        "items": [
+          "bra underkläder ;-)",
+          "underställ (helst merinoull som transporterar bort fukt)",
+          "byxor/tights med windstopper",
+          "vindbyxor — kan vara med membran",
+          "de två sista lagren kan bytas mot \"tunna\" skidbyxor",
+          "strumpor — varma knähöga damasker, 2 par. Om du har, ta med ett tunt par damasker också"
+        ]
+      },
+      "advanced": {
+        "title": "Mer avancerad utrustning",
+        "items": [
+          "hjälm",
+          "glasögon",
+          "goggles",
+          "stavar",
+          "ryggsäck",
+          "skidor",
+          "pjäxor",
+          "fällskinn",
+          "pannlampa (extra batterier eller powerbank; ta med en laddare du kan ladda pannlampan med)",
+          "liten termos (varmt vatten/te)",
+          "mellanmål (energibars, kaloririka godisar)",
+          "reparationssats: buntband, ett litet multiverktyg, förstärkt tejp (inte en hel rulle, bara några meter)",
+          "liten första hjälpen-kit: bandage, plåster (silikonplåster är bäst), klorhexidin, smärtstillande, vätskeersättning, isofolia",
+          "för den som vill — kemiska värmedynor (fötter, händer)",
+          "skotork",
+          "för den som vill — broddar (det här behöver diskuteras separat)"
+        ]
+      },
+      "cosmetics": {
+        "title": "Kosmetika",
+        "items": [
+          "läppbalsam",
+          "solkräm"
+        ]
+      }
+    }
+  }
+}

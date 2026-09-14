@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
+import { Trans, useTranslation } from "react-i18next";
 import Testimonial from "../components/Testimonial";
 
 const AUTO_ADVANCE_MS = 7000;
@@ -49,55 +50,48 @@ const StyledArrowButton = styled.button`
   }
 `;
 
-const testimonials = [
-  {
-    photo: "./testimonial_kyrylo.jpeg",
-    quote: (
-      <>
-        Поліна — це тренер, яка реально допомагає досягати цілей, що здавалися
-        нереальними. Цього року, завдяки її підготовці взяв участь у своєму
-        першому гірському трейлі <strong>Bukotrail</strong>, на який довго не
-        наважувався. Крім того, моя участь у забігах з перешкодами{" "}
-        <strong>Spartan Race</strong> пройшов не на виснаження, а у по фану.
-        Поліна вміє так організувати тренування так, що вони дають реальні
-        результати і при цьому не в напряг. Раджу її всім, хто хоче бігати
-        ефективно та у задоволення.
-      </>
-    ),
-    name: "Кирило Псасічнюк",
-    role: "СЕО продакшн студії",
-    company: "Paragon Progency",
-  },
-  {
-    photo: "./testimonial_maksym.jpeg",
-    quote: (
-      <>
-        Тренування з Поліною — це найкраще рішення у моєму біговому шляху!
-        Завдяки грамотному підходу та продуманій системі ми не лише покращили
-        мої фізичні показники, а й повністю змінили підхід до трейлового бігу.
-        Поліна вчить відчувати своє тіло, правильно розподіляти сили на тривалих
-        дистанціях і, головне, отримувати задоволення від кожного кілометра.
-        Щиро рекомендую всім, хто мріє про гори та нові вершини!
-      </>
-    ),
-    name: "Maksym",
-    role: "Software Architect",
-    company: "DataArt",
-  },
-];
+const TESTIMONIALS_COUNT = 2;
 
 const TestimonialsSection = () => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
+
+  const testimonials = [
+    {
+      photo: "./testimonial_kyrylo.jpeg",
+      quote: (
+        <Trans
+          i18nKey="testimonialsSection.kyrylo.quote"
+          components={{ strong: <strong /> }}
+        />
+      ),
+      name: t("testimonialsSection.kyrylo.name"),
+      role: t("testimonialsSection.kyrylo.role"),
+      company: t("testimonialsSection.kyrylo.company"),
+    },
+    {
+      photo: "./testimonial_maksym.jpeg",
+      quote: (
+        <Trans
+          i18nKey="testimonialsSection.maksym.quote"
+          components={{ strong: <strong /> }}
+        />
+      ),
+      name: t("testimonialsSection.maksym.name"),
+      role: t("testimonialsSection.maksym.role"),
+      company: t("testimonialsSection.maksym.company"),
+    },
+  ];
 
   const goTo = useCallback((delta) => {
     setIndex(
-      (current) => (current + delta + testimonials.length) % testimonials.length
+      (current) => (current + delta + TESTIMONIALS_COUNT) % TESTIMONIALS_COUNT
     );
   }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((current) => (current + 1) % testimonials.length);
+      setIndex((current) => (current + 1) % TESTIMONIALS_COUNT);
     }, AUTO_ADVANCE_MS);
     return () => clearInterval(timer);
   }, []);
@@ -108,11 +102,11 @@ const TestimonialsSection = () => {
     <StyledSection>
       <Row justify="center">
         <Col xs={24} xl={20} xxl={16}>
-          <StyledTitle level={2}>Відгуки моїх студентів</StyledTitle>
+          <StyledTitle level={2}>{t("testimonialsSection.title")}</StyledTitle>
           <StyledCarousel>
             <StyledArrowButton
               type="button"
-              aria-label="Попередній відгук"
+              aria-label={t("testimonialsSection.prevAria")}
               onClick={() => goTo(-1)}
             >
               ‹
@@ -122,7 +116,7 @@ const TestimonialsSection = () => {
             </StyledTestimonialWrapper>
             <StyledArrowButton
               type="button"
-              aria-label="Наступний відгук"
+              aria-label={t("testimonialsSection.nextAria")}
               onClick={() => goTo(1)}
             >
               ›

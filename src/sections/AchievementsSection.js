@@ -5,6 +5,7 @@ import "../App.css";
 
 import { Typography, Image } from "antd";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { Trans, useTranslation } from "react-i18next";
 import StyledBackButton from "../components/OutlineButton";
 
 const StyledWrapper = styled.div`
@@ -143,54 +144,47 @@ const StyledIndentBox = styled(StyledBox)`
 `;
 
 const AchievementsSection = ({ onBack }) => {
+  const { t } = useTranslation();
+
   return (
     <StyledWrapper>
-      <StyledTitle level={2}>Мої спортивні досягнення:</StyledTitle>
+      <StyledTitle level={2}>{t("achievementsSection.title")}</StyledTitle>
       <StyledComposition>
         <StyledTopBracket />
         <StyledBottomBracket />
 
         <StyledTextColumn>
           <StyledBox>
-            -чемпіонка Чемпіонатів Світу з рогейну (<b>Фінляндія</b> 2015,{" "}
-            <b>Іспанія</b> 2019, <b>США</b> 2023)
-            <br />
-            -чемпіонка Чемпіонату Європи з рогейну (<b>Іспанія</b> 2017)
-            <br />
-            -учасниця чемпіонату Світу зі скі-альпінізму (<b>Італія</b> 2023)
-            <br />
-            -учасниця чемпіонату Світу з трейлового бігу (<b>Іспанія</b> 2025)
+            <Trans
+              i18nKey="achievementsSection.block1"
+              components={{ b: <b />, br: <br /> }}
+            />
           </StyledBox>
 
           <StyledIndentBox>
-            -<b>майстер спорту міжнародного класу</b> зі спортивного
-            орієнтування
-            <br />
-            -майстер спорту України <b>з легкої атлетики</b>
+            <Trans
+              i18nKey="achievementsSection.block2"
+              components={{ b: <b />, br: <br /> }}
+            />
           </StyledIndentBox>
 
           <StyledBox>
-            -призерка Mountains Hard Ultra Trail 35 км (<b>Франція</b> 2022)
-            MIUT 85 км (<b>Португалія</b> 2019), MIUT 42 км (<b>Португалія</b>{" "}
-            2024)
-            <br />
-            -учасниця топового трейлового старту UTMB, на дистанції OCC (
-            <b>Франція</b> 2022)
+            <Trans
+              i18nKey="achievementsSection.block3"
+              components={{ b: <b />, br: <br /> }}
+            />
           </StyledBox>
 
           <StyledBox>
-            -переможниця культових українських стартів: (
-            <b>переможниця в абсолюті</b>: Bojko Trail 46 км 2018 та Burning
-            Heads Trail 2019, переможниця в жіночу класі:{" "}
-            <b>Chornohora Sky Marathon 60</b> км – 2018, 2019, 2020, Wet Hills –
-            2019, Ice Trail – 2019, <b>Fun Karpaty</b> – 2021, Карпатія 42 км –
-            2020, Чемпіонка України з трейлу 40 км – 2021),{" "}
-            <b>Карпатія 70 км</b> (третя в абсолюті) – 2025)
+            <Trans
+              i18nKey="achievementsSection.block4"
+              components={{ b: <b />, br: <br /> }}
+            />
           </StyledBox>
 
           <StyledBackButton onClick={onBack}>
             <FaArrowLeftLong />
-            Назад
+            {t("achievementsSection.back")}
           </StyledBackButton>
         </StyledTextColumn>
 
@@ -199,7 +193,7 @@ const AchievementsSection = ({ onBack }) => {
             <StyledPhoto
               src="./polina_occ.jpeg"
               preview={false}
-              alt="Поліна Захарова на фініші"
+              alt={t("achievementsSection.photoAlt")}
             />
           </StyledPhotoFrame>
         </StyledPhotoColumn>

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Button, Row } from "antd";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const StyledMobileCtaRow = styled(Row)`
   display: none;
@@ -38,13 +39,17 @@ const StyledCtaButton = styled(Button)`
   }
 `;
 
-const MobileCtaButton = ({ redirectToTelegram }) => (
-  <StyledMobileCtaRow justify="center">
-    <StyledCtaButton onClick={redirectToTelegram} danger size="large">
-      Запишись на консультацію
-    </StyledCtaButton>
-  </StyledMobileCtaRow>
-);
+const MobileCtaButton = ({ redirectToTelegram }) => {
+  const { t } = useTranslation();
+
+  return (
+    <StyledMobileCtaRow justify="center">
+      <StyledCtaButton onClick={redirectToTelegram} danger size="large">
+        {t("mobileCta.button")}
+      </StyledCtaButton>
+    </StyledMobileCtaRow>
+  );
+};
 
 MobileCtaButton.propTypes = {
   redirectToTelegram: PropTypes.func.isRequired,

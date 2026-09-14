@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 import ContactIcons from "../components/ContactIcons";
 import LoopVideo from "../components/LoopVideo";
 import Footer from "../components/Footer";
@@ -27,34 +28,38 @@ const StyledQuestionTitle = styled(Typography.Title)`
   }
 `;
 
-const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => (
-  <>
-    <LoopVideo src={PolinaRun} alt="Polina do running" />
+const ClosingSection = ({ redirectToTelegram, redirectToWhatsup }) => {
+  const { t } = useTranslation();
 
-    <Row justify="space-around">
-      <Col xs={24} md={10}>
-        <StyledQuestionWrapper>
-          <StyledQuestionTitle level={3}>
-            Залишились питання?
-          </StyledQuestionTitle>
-          <br />
-          <StyledQuestionText>
-            Зв&apos;яжись зі мною в робочі години.
-          </StyledQuestionText>
-          <br />
-          <br />
-          <br />
-          <ContactIcons
-            redirectToTelegram={redirectToTelegram}
-            redirectToWhatsup={redirectToWhatsup}
-          />
-        </StyledQuestionWrapper>
-      </Col>
-    </Row>
+  return (
+    <>
+      <LoopVideo src={PolinaRun} alt={t("closingSection.videoAlt")} />
 
-    <Footer />
-  </>
-);
+      <Row justify="space-around">
+        <Col xs={24} md={10}>
+          <StyledQuestionWrapper>
+            <StyledQuestionTitle level={3}>
+              {t("closingSection.question")}
+            </StyledQuestionTitle>
+            <br />
+            <StyledQuestionText>
+              {t("closingSection.answer")}
+            </StyledQuestionText>
+            <br />
+            <br />
+            <br />
+            <ContactIcons
+              redirectToTelegram={redirectToTelegram}
+              redirectToWhatsup={redirectToWhatsup}
+            />
+          </StyledQuestionWrapper>
+        </Col>
+      </Row>
+
+      <Footer />
+    </>
+  );
+};
 
 ClosingSection.propTypes = {
   redirectToTelegram: PropTypes.func.isRequired,
