@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import AboutSection from "./AboutSection";
@@ -59,8 +60,15 @@ const StyledFlipFace = styled.div`
 `;
 
 const HeroSection = () => {
-  const [mode, setMode] = useState("about");
+  const { pathname } = useLocation();
+  const [mode, setMode] = useState(() =>
+    pathname === "/achievements" ? "achievements" : "about"
+  );
   const swapRef = useRef(null);
+
+  useEffect(() => {
+    setMode(pathname === "/achievements" ? "achievements" : "about");
+  }, [pathname]);
 
   const switchMode = (nextMode) => {
     setMode(nextMode);
@@ -75,7 +83,7 @@ const HeroSection = () => {
   const flipped = mode === "achievements";
 
   return (
-    <StyledFlipScene ref={swapRef}>
+    <StyledFlipScene id="achievements" ref={swapRef}>
       <StyledFlipCard $flipped={flipped}>
         <StyledFlipFace $active={!flipped} aria-hidden={flipped}>
           <AboutSection onShowAchievements={() => switchMode("achievements")} />

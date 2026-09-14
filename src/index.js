@@ -8,14 +8,20 @@ import App from "./App";
 import SkiTourList from "./SkiTourList";
 import Calendar from "./Calendar";
 import About from "./About";
-import AchievementsSection from "./sections/AchievementsSection";
 import Contact from "./Contact";
 import Privacy from "./Privacy";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const APP_PATHS = ["/", "formats", "races", "prices", "additional-services"];
+const APP_PATHS = [
+  "/",
+  "formats",
+  "races",
+  "prices",
+  "additional-services",
+  "achievements",
+];
 
 const router = createBrowserRouter(
   [
@@ -31,12 +37,6 @@ const router = createBrowserRouter(
     {
       path: "about",
       element: <About />,
-    },
-    {
-      path: "achievements",
-      element: (
-        <AchievementsSection onBack={() => window.location.assign("/")} />
-      ),
     },
     {
       path: "contact",
