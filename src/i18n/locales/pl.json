@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Starty, na których finiszowali moi sportowcy",
-    "showMore": "Pokaż więcej"
+    "showMore": "Pokaż więcej",
+    "filter": {
+      "all": "Wszystkie",
+      "trail": "Trail",
+      "ocr": "OCR",
+      "rogaining": "Rogaining",
+      "skyrunning": "Skyrunning",
+      "ski-mountaineering": "Skialpinizm",
+      "fitness-racing": "Wyścigi fitness",
+      "adventure": "Bieg przygodowy",
+      "other": "Inne"
+    }
   },
   "formatsSection": {
     "title": "Formaty współpracy",

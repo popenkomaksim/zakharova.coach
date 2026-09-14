@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Tävlingar där mina idrottare gått i mål",
-    "showMore": "Visa fler"
+    "showMore": "Visa fler",
+    "filter": {
+      "all": "Alla",
+      "trail": "Trail",
+      "ocr": "OCR",
+      "rogaining": "Rogaining",
+      "skyrunning": "Skyrunning",
+      "ski-mountaineering": "Skialpinism",
+      "fitness-racing": "Fitnesslopp",
+      "adventure": "Äventyrslopp",
+      "other": "Övrigt"
+    }
   },
   "formatsSection": {
     "title": "Samarbetsformer",

@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Races where my athletes have finished",
-    "showMore": "Show more"
+    "showMore": "Show more",
+    "filter": {
+      "all": "All",
+      "trail": "Trail",
+      "ocr": "OCR",
+      "rogaining": "Rogaining",
+      "skyrunning": "Skyrunning",
+      "ski-mountaineering": "Ski mountaineering",
+      "fitness-racing": "Fitness racing",
+      "adventure": "Adventure racing",
+      "other": "Other"
+    }
   },
   "formatsSection": {
     "title": "Cooperation formats",

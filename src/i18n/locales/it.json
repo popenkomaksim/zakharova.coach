@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Gare in cui i miei atleti hanno tagliato il traguardo",
-    "showMore": "Mostra altro"
+    "showMore": "Mostra altro",
+    "filter": {
+      "all": "Tutte",
+      "trail": "Trail",
+      "ocr": "OCR",
+      "rogaining": "Rogaining",
+      "skyrunning": "Skyrunning",
+      "ski-mountaineering": "Sci alpinismo",
+      "fitness-racing": "Gara fitness",
+      "adventure": "Corsa d'avventura",
+      "other": "Altro"
+    }
   },
   "formatsSection": {
     "title": "Formati di collaborazione",

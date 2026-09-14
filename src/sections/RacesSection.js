@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import styled from "styled-components";
-import { Col, Row, Image, Grid } from "antd";
+import { Col, Row, Image, Grid, Tag } from "antd";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../components/SectionTitle";
 import BaseOutlineButton from "../components/OutlineButton";
+import races from "../data/races.json";
 
 const { useBreakpoint } = Grid;
+const { CheckableTag } = Tag;
 
 const MOBILE_VISIBLE_COUNT = 8;
+
+const RACE_TYPES = [
+  "rogaining",
+  "trail",
+  "ocr",
+  "skyrunning",
+  "ski-mountaineering",
+  "fitness-racing",
+  "adventure",
+  "other",
+];
 
 const StyledRaceLink = styled.a`
   display: inline-block;
@@ -58,211 +71,71 @@ const StyledShowMoreButton = styled(BaseOutlineButton)`
   }
 `;
 
-const races = [
-  {
-    href: "https://montblanc.utmb.world/races/UTMB",
-    src: "./race_utmb.png",
-    alt: "UTMB Mont-Blanc",
-  },
-  {
-    href: "https://www.adamelloskiraid.com/",
-    src: "./race_adamello.svg",
-    alt: "Adamello Ski Raid",
-  },
-  {
-    href: "https://ua.spartan.com/uk",
-    src: "./race_spartan.svg",
-    alt: "Spartan Race Ukraine",
-  },
-  {
-    href: "https://swisspeaks.ch/",
-    src: "./race_swisspeaks.svg",
-    alt: "Swiss Peaks Trail Ultra Race",
-  },
-  {
-    href: "https://www.tordesgeants.it/",
-    src: "./race_tordesgeants.png",
-    alt: "Tor des Géants",
-  },
+const StyledFilterRow = styled(Row)`
+  margin: 0 0 1em 0;
+`;
 
-  {
-    href: "https://www.cal-o-fest.com/",
-    src: "./race_cal_o_fest.svg",
-    alt: "Cal-O-Fest",
-  },
-
-  {
-    href: "https://transgrancanaria.net/",
-    src: "./race_transgrancanaria.png",
-    alt: "Transgrancanaria",
-  },
-  {
-    href: "https://lavaredo.utmb.world/",
-    src: "./race_lavaredo.png",
-    alt: "Lavaredo Ultra Trail",
-  },
-  {
-    href: "https://miutmadeira.com/",
-    src: "./race_miut.png",
-    alt: "Madeira Island Ultra Trail",
-  },
-  {
-    href: "https://www.ultratraillo.com/",
-    src: "./race_utlo.png",
-    alt: "Ultra-Trail del Lago d'Orta",
-  },
-  {
-    href: "https://mozart.utmb.world/",
-    src: "./race_mozart.png",
-    alt: "Mozart 100 by UTMB",
-  },
-  {
-    href: "https://nice.utmb.world/",
-    src: "./race_nice.png",
-    alt: "Nice Côte d'Azur by UTMB",
-  },
-  {
-    href: "https://grandraidduguillestrois-queyras.com",
-    src: "./race_grgq.png",
-    alt: "Grand Raid du Guillestrois – Queyras",
-  },
-  {
-    href: "https://kullamannen.utmb.world/",
-    src: "./race_kullamannen.png",
-    alt: "Kullamannen by UTMB",
-  },
-  {
-    href: "https://www.madrisatrail.ch",
-    src: "./race_madrisa.svg",
-    alt: "Madrisa Trail Klosters",
-  },
-  {
-    href: "https://www.humanitrail.com/rhino-26k.html",
-    src: "./race_rhino.png",
-    alt: "Rhino TRAIL 26 km / 1'600m D+ — THE Ormonts ridges",
-  },
-  {
-    href: "https://www.legendstrail.be/",
-    src: "./race_legends_trail.png",
-    alt: "Legends Trail",
-  },
-  {
-    href: "https://www.facebook.com/tvoiapryhoda/",
-    src: "./tvoya_prygoda.png",
-    alt: "Твоя Пригода",
-  },
-  {
-    href: "https://www.spartan.com/en/deka/strong",
-    src: "./race_deka_strong.png",
-    alt: "DEKA Strong (Spartan)",
-  },
-  {
-    href: "https://www.ultratourmonterosa.com/",
-    src: "./race_utmr.png",
-    alt: "Ultra Tour Monte Rosa",
-  },
-  {
-    href: "https://graubuenda.run/",
-    src: "./race_graubuenda.png",
-    alt: "Trailrun Graubünda",
-  },
-  {
-    href: "https://hyrox.com/",
-    src: "./race_hyrox.svg",
-    alt: "HYROX",
-  },
-  {
-    href: "https://www.transylvania100k.com/",
-    src: "./race_transylvania.png",
-    alt: "Transylvania 100",
-  },
-  {
-    href: "https://cn.spartan.com/zh/race/championships/ultra",
-    src: "./race_uwc.png",
-    alt: "Spartan Ultra World Championship",
-  },
-  {
-    href: "https://www.skyrunning.com/2025-skyrunning-european-championships/",
-    src: "./race_skyrunning_euro.png",
-    alt: "European Skyrunning Championships 2025",
-  },
-  {
-    href: "https://www.skymarathon.it/gare/",
-    src: "./race_skymarathon.png",
-    alt: "SkyMarathon Sentiero 4 Luglio",
-  },
-  {
-    href: "https://canfrancpirineos2025wmtrc.com/",
-    src: "./race_canfranc.png",
-    alt: "Canfranc Pirineos 2025 – World Mountain and Trail Running Championships",
-  },
-  {
-    href: "https://montblanc.utmb.world/races/OCC",
-    src: "./race_occ.png",
-    alt: "OCC (UTMB Mont-Blanc)",
-    badge: "./race_occ_badge.png",
-    badgeAlt: "50K",
-  },
-  {
-    href: "https://erc2024.rogain.ee/",
-    src: "./race_erc.png",
-    alt: "European Rogaining Championships Estonia 2024",
-  },
-  {
-    href: "https://tracktherace.com/sports-events/orienteering/world-rogaining-championship-2019",
-    src: "./race_wrc2019.png",
-    alt: "16th World Rogaining Championship 2019 – La Molina, Catalunya",
-  },
-  {
-    href: "https://wrc2025.org/",
-    src: "./race_wrc2025.png",
-    alt: "World Rogaining Championship 2025",
-  },
-  {
-    href: "https://www.o-adventure.cz/stranka.php?co=2026erc",
-    src: "./race_erc2026.png",
-    alt: "European Rogaining Championship 2026 – Orlické Záhoří, Czech Republic",
-  },
-  {
-    href: "https://tourism.saintgervais.com/i-want-to/an-event-or-animation/la-montagnhard/",
-    src: "./race_montagnhard.png",
-    alt: "La Montagn'Hard – Saint-Gervais Mont-Blanc",
-  },
-  {
-    href: "https://wildstrubel.utmb.world/races/wild-70",
-    src: "./race_wildstrubel.png",
-    alt: "Wildstrubel by UTMB – Crans-Montana",
-  },
-  {
-    href: "https://alanyaultratrail.com/",
-    src: "./race_alanya.png",
-    alt: "Alanya Ultra Trail",
-  },
-  {
-    href: "https://puglia.utmb.world/",
-    src: "./race_puglia.png",
-    alt: "Puglia Terra delle Gravine by UTMB",
-  },
-  {
-    href: "https://cappadociaultratrail.com/",
-    src: "./race_cappadocia.png",
-    alt: "Cappadocia Ultra Trail",
-  },
-];
+const StyledFilterTag = styled(CheckableTag)`
+  && {
+    font-size: 1em;
+    padding: 0.4em 0.9em;
+    border-radius: 2em;
+  }
+`;
 
 const RacesSection = () => {
   const [expanded, setExpanded] = useState(false);
+  const [selectedType, setSelectedType] = useState(null);
   const screens = useBreakpoint();
   const isMobile = !screens.sm;
-  const visibleRaces =
-    isMobile && !expanded ? races.slice(0, MOBILE_VISIBLE_COUNT) : races;
   const { t } = useTranslation();
+
+  const presentTypes = useMemo(
+    () => RACE_TYPES.filter((type) => races.some((race) => race.type === type)),
+    []
+  );
+
+  const filteredRaces = useMemo(
+    () =>
+      selectedType ? races.filter((race) => race.type === selectedType) : races,
+    [selectedType]
+  );
+
+  const visibleRaces =
+    isMobile && !expanded
+      ? filteredRaces.slice(0, MOBILE_VISIBLE_COUNT)
+      : filteredRaces;
+
+  const handleTypeChange = (type, checked) => {
+    setExpanded(false);
+    setSelectedType(checked ? type : null);
+  };
 
   return (
     <>
       <SectionTitle id="races" level={3} margin="2em 0 1em 0">
         {t("races.title")}
       </SectionTitle>
+      <StyledFilterRow justify="center" gutter={[8, 8]}>
+        <Col>
+          <StyledFilterTag
+            checked={!selectedType}
+            onChange={(checked) => handleTypeChange(null, checked)}
+          >
+            {t("races.filter.all")}
+          </StyledFilterTag>
+        </Col>
+        {presentTypes.map((type) => (
+          <Col key={type}>
+            <StyledFilterTag
+              checked={selectedType === type}
+              onChange={(checked) => handleTypeChange(type, checked)}
+            >
+              {t(`races.filter.${type}`)}
+            </StyledFilterTag>
+          </Col>
+        ))}
+      </StyledFilterRow>
       <StyledRacesRow justify="center" align="middle" gutter={[24, 24]}>
         {visibleRaces.map(({ href, src, alt, badge, badgeAlt }) => (
           <Col key={src}>
@@ -287,7 +160,7 @@ const RacesSection = () => {
           </Col>
         ))}
       </StyledRacesRow>
-      {isMobile && !expanded && (
+      {isMobile && !expanded && filteredRaces.length > MOBILE_VISIBLE_COUNT && (
         <Row justify="center">
           <StyledShowMoreButton onClick={() => setExpanded(true)}>
             {t("races.showMore")}

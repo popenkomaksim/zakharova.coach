@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Старти, на яких фінішували мої атлети",
-    "showMore": "Показати більше"
+    "showMore": "Показати більше",
+    "filter": {
+      "all": "Усі",
+      "trail": "Трейл",
+      "ocr": "OCR",
+      "rogaining": "Рогейн",
+      "skyrunning": "Скайраннінг",
+      "ski-mountaineering": "Ски-альпінізм",
+      "fitness-racing": "Фітнес-перегони",
+      "adventure": "Пригодницькі перегони",
+      "other": "Інше"
+    }
   },
   "formatsSection": {
     "title": "Формати співпраці",

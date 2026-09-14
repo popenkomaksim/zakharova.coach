@@ -1,0 +1,234 @@
+[
+  {
+    "href": "https://montblanc.utmb.world/races/UTMB",
+    "src": "./race_utmb.png",
+    "alt": "UTMB Mont-Blanc",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://www.adamelloskiraid.com/",
+    "src": "./race_adamello.svg",
+    "alt": "Adamello Ski Raid",
+    "type": "ski-mountaineering"
+  },
+  {
+    "href": "https://ua.spartan.com/uk",
+    "src": "./race_spartan.svg",
+    "alt": "Spartan Race Ukraine",
+    "type": "ocr"
+  },
+  {
+    "href": "https://swisspeaks.ch/",
+    "src": "./race_swisspeaks.svg",
+    "alt": "Swiss Peaks Trail Ultra Race",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.tordesgeants.it/",
+    "src": "./race_tordesgeants.png",
+    "alt": "Tor des Géants",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.cal-o-fest.com/",
+    "src": "./race_cal_o_fest.svg",
+    "alt": "Cal-O-Fest",
+    "type": "trail"
+  },
+  {
+    "href": "https://transgrancanaria.net/",
+    "src": "./race_transgrancanaria.png",
+    "alt": "Transgrancanaria",
+    "type": "trail"
+  },
+  {
+    "href": "https://lavaredo.utmb.world/",
+    "src": "./race_lavaredo.png",
+    "alt": "Lavaredo Ultra Trail",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://miutmadeira.com/",
+    "src": "./race_miut.png",
+    "alt": "Madeira Island Ultra Trail",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.ultratraillo.com/",
+    "src": "./race_utlo.png",
+    "alt": "Ultra-Trail del Lago d'Orta",
+    "type": "trail"
+  },
+  {
+    "href": "https://mozart.utmb.world/",
+    "src": "./race_mozart.png",
+    "alt": "Mozart 100 by UTMB",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://nice.utmb.world/",
+    "src": "./race_nice.png",
+    "alt": "Nice Côte d'Azur by UTMB",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://grandraidduguillestrois-queyras.com",
+    "src": "./race_grgq.png",
+    "alt": "Grand Raid du Guillestrois – Queyras",
+    "type": "trail"
+  },
+  {
+    "href": "https://kullamannen.utmb.world/",
+    "src": "./race_kullamannen.png",
+    "alt": "Kullamannen by UTMB",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://www.madrisatrail.ch",
+    "src": "./race_madrisa.svg",
+    "alt": "Madrisa Trail Klosters",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.humanitrail.com/rhino-26k.html",
+    "src": "./race_rhino.png",
+    "alt": "Rhino TRAIL 26 km / 1'600m D+ — THE Ormonts ridges",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.legendstrail.be/",
+    "src": "./race_legends_trail.png",
+    "alt": "Legends Trail",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.facebook.com/tvoiapryhoda/",
+    "src": "./tvoya_prygoda.png",
+    "alt": "Твоя Пригода",
+    "type": "trail"
+  },
+  {
+    "href": "https://www.spartan.com/en/deka/strong",
+    "src": "./race_deka_strong.png",
+    "alt": "DEKA Strong (Spartan)",
+    "type": "ocr"
+  },
+  {
+    "href": "https://www.ultratourmonterosa.com/",
+    "src": "./race_utmr.png",
+    "alt": "Ultra Tour Monte Rosa",
+    "type": "trail"
+  },
+  {
+    "href": "https://graubuenda.run/",
+    "src": "./race_graubuenda.png",
+    "alt": "Trailrun Graubünda",
+    "type": "trail"
+  },
+  {
+    "href": "https://hyrox.com/",
+    "src": "./race_hyrox.svg",
+    "alt": "HYROX",
+    "type": "fitness-racing"
+  },
+  {
+    "href": "https://www.transylvania100k.com/",
+    "src": "./race_transylvania.png",
+    "alt": "Transylvania 100",
+    "type": "trail"
+  },
+  {
+    "href": "https://cn.spartan.com/zh/race/championships/ultra",
+    "src": "./race_uwc.png",
+    "alt": "Spartan Ultra World Championship",
+    "type": "ocr"
+  },
+  {
+    "href": "https://www.skyrunning.com/2025-skyrunning-european-championships/",
+    "src": "./race_skyrunning_euro.png",
+    "alt": "European Skyrunning Championships 2025",
+    "type": "skyrunning"
+  },
+  {
+    "href": "https://www.skymarathon.it/gare/",
+    "src": "./race_skymarathon.png",
+    "alt": "SkyMarathon Sentiero 4 Luglio",
+    "type": "skyrunning"
+  },
+  {
+    "href": "https://canfrancpirineos2025wmtrc.com/",
+    "src": "./race_canfranc.png",
+    "alt": "Canfranc Pirineos 2025 – World Mountain and Trail Running Championships",
+    "type": "trail"
+  },
+  {
+    "href": "https://montblanc.utmb.world/races/OCC",
+    "src": "./race_occ.png",
+    "alt": "OCC (UTMB Mont-Blanc)",
+    "badge": "./race_occ_badge.png",
+    "badgeAlt": "50K",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://erc2024.rogain.ee/",
+    "src": "./race_erc.png",
+    "alt": "European Rogaining Championships Estonia 2024",
+    "type": "rogaining"
+  },
+  {
+    "href": "https://tracktherace.com/sports-events/orienteering/world-rogaining-championship-2019",
+    "src": "./race_wrc2019.png",
+    "alt": "16th World Rogaining Championship 2019 – La Molina, Catalunya",
+    "type": "rogaining"
+  },
+  {
+    "href": "https://wrc2025.org/",
+    "src": "./race_wrc2025.png",
+    "alt": "World Rogaining Championship 2025",
+    "type": "rogaining"
+  },
+  {
+    "href": "https://www.o-adventure.cz/stranka.php?co=2026erc",
+    "src": "./race_erc2026.png",
+    "alt": "European Rogaining Championship 2026 – Orlické Záhoří, Czech Republic",
+    "type": "rogaining"
+  },
+  {
+    "href": "https://tourism.saintgervais.com/i-want-to/an-event-or-animation/la-montagnhard/",
+    "src": "./race_montagnhard.png",
+    "alt": "La Montagn'Hard – Saint-Gervais Mont-Blanc",
+    "type": "trail"
+  },
+  {
+    "href": "https://wildstrubel.utmb.world/races/wild-70",
+    "src": "./race_wildstrubel.png",
+    "alt": "Wildstrubel by UTMB – Crans-Montana",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://alanyaultratrail.com/",
+    "src": "./race_alanya.png",
+    "alt": "Alanya Ultra Trail",
+    "type": "trail"
+  },
+  {
+    "href": "https://puglia.utmb.world/",
+    "src": "./race_puglia.png",
+    "alt": "Puglia Terra delle Gravine by UTMB",
+    "type": "trail",
+    "subtype": "utmb"
+  },
+  {
+    "href": "https://cappadociaultratrail.com/",
+    "src": "./race_cappadocia.png",
+    "alt": "Cappadocia Ultra Trail",
+    "type": "trail"
+  }
+]

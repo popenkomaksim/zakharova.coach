@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Kilpailut, joissa urheilijani ovat maalissa",
-    "showMore": "Näytä lisää"
+    "showMore": "Näytä lisää",
+    "filter": {
+      "all": "Kaikki",
+      "trail": "Polkujuoksu",
+      "ocr": "OCR",
+      "rogaining": "Rogaining",
+      "skyrunning": "Skyrunning",
+      "ski-mountaineering": "Vuoristohiihto",
+      "fitness-racing": "Kuntokilpailu",
+      "adventure": "Seikkailukilpailu",
+      "other": "Muu"
+    }
   },
   "formatsSection": {
     "title": "Yhteistyömuodot",

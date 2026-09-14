@@ -49,7 +49,18 @@
   },
   "races": {
     "title": "Courses où mes athlètes ont franchi la ligne d'arrivée",
-    "showMore": "Afficher plus"
+    "showMore": "Afficher plus",
+    "filter": {
+      "all": "Toutes",
+      "trail": "Trail",
+      "ocr": "OCR",
+      "rogaining": "Rogaining",
+      "skyrunning": "Skyrunning",
+      "ski-mountaineering": "Ski-alpinisme",
+      "fitness-racing": "Course fitness",
+      "adventure": "Course d'aventure",
+      "other": "Autre"
+    }
   },
   "formatsSection": {
     "title": "Formats de collaboration",
