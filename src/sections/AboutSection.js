@@ -56,7 +56,9 @@ const StyledBottomBracket = styled.div`
 
 const StyledDesktopImage = styled(Image)`
   &&& {
-    max-width: 80vw;
+    width: 100%;
+    height: calc(0.9 * ((min(1400px, 100vw) - 6em) / 2) * 1600 / 1339);
+    object-fit: cover;
   }
 `;
 
@@ -77,6 +79,9 @@ const StyledTextCol = styled(Col)`
 const StyledTextCard = styled.div`
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 42em;
   margin: 0 auto;
   border-radius: 1.5em;
@@ -161,7 +166,7 @@ const AboutSection = ({ onShowAchievements }) => {
       <StyledAboutRow justify="center" id="about">
         <StyledTopBracket />
         <StyledBottomBracket />
-        <StyledDesktopImageCol lg={6} xl={6}>
+        <StyledDesktopImageCol lg={8} xl={8}>
           <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
         </StyledDesktopImageCol>
         <StyledTextCol lg={12} xs={22} md={24}>
