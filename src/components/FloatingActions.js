@@ -7,8 +7,17 @@ const StyledMenuIcon = styled(IoMenuOutline)`
   font-size: 1em;
 `;
 
+const StyledFloatButton = styled(FloatButton)`
+  @media (max-width: 575.98px) {
+    right: 12px !important;
+    bottom: 12px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+`;
+
 const FloatingActions = ({ onMenuClick }) => (
-  <FloatButton onClick={onMenuClick} icon={<StyledMenuIcon />} />
+  <StyledFloatButton onClick={onMenuClick} icon={<StyledMenuIcon />} />
 );
 
 FloatingActions.propTypes = {
