@@ -49,6 +49,7 @@ const StyledCardTitle = styled(Typography.Title)`
 const StyledDescription = styled(Typography.Text)`
   &&& {
     font-size: 1.1em;
+    line-height: 1.5715;
     color: #5a5a5a;
   }
 `;
@@ -58,6 +59,7 @@ const StyledExpandedText = styled.div`
     display: block;
     margin-top: 0.75em;
     font-size: 1.1em;
+    line-height: 1.5715;
     color: #5a5a5a;
   }
 `;
