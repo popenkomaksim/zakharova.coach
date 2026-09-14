@@ -190,8 +190,9 @@ const TestimonialsSection = () => {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
-    const el = wrapperRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return undefined;
+    const wrapperEl = wrapperRef.current;
+    if (!wrapperEl || typeof IntersectionObserver === "undefined")
+      return undefined;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -201,7 +202,7 @@ const TestimonialsSection = () => {
       },
       { threshold: 0.4 }
     );
-    observer.observe(el);
+    observer.observe(wrapperEl);
     return () => observer.disconnect();
   }, []);
 
