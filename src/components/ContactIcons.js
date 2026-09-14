@@ -7,12 +7,24 @@ const StyledTelegram = styled(FaTelegram)`
   margin: 0 0.5em;
   top: -0.4em;
   vertical-align: middle;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
 `;
 
 const StyledWhatsapp = styled(FaWhatsapp)`
   margin: 0 0.5em;
   top: -0.4em;
   vertical-align: middle;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
 `;
 
 const ContactIcons = ({
