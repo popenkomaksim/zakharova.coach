@@ -27,8 +27,8 @@ const TOTAL_ANIMATION_BUDGET = 1.2;
 
 const StyledLetter = styled.span`
   display: inline-block;
-  animation: ${letterIn} ${LETTER_ANIMATION_DURATION}s cubic-bezier(0.16, 1, 0.3, 1)
-    both;
+  animation: ${letterIn} ${LETTER_ANIMATION_DURATION}s
+    cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: ${({ $delay }) => $delay}s;
 `;
 
@@ -47,10 +47,7 @@ const TypewriterText = ({
     });
   }, [text]);
 
-  const totalLetters = useMemo(
-    () => text.replace(/ /g, "").length,
-    [text]
-  );
+  const totalLetters = useMemo(() => text.replace(/ /g, "").length, [text]);
 
   // Cap the last letter's delay so the whole animation always finishes
   // within TOTAL_ANIMATION_BUDGET, regardless of text length.
