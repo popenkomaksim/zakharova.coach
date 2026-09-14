@@ -8,7 +8,7 @@
     "about": "Minusta",
     "achievements": "Urheilusaavutukset",
     "contact": "Yhteystiedot",
-    "races": "Oppilaiden kilpailut",
+    "races": "Urheilijoiden kilpailut",
     "formats": "Yhteistyömuodot",
     "prices": "Suunnitelmatyypit",
     "services": "Lisäpalvelut",
@@ -48,7 +48,7 @@
     "back": "← Minusta"
   },
   "races": {
-    "title": "Kilpailut, joissa oppilaani ovat maalissa",
+    "title": "Kilpailut, joissa urheilijani ovat maalissa",
     "showMore": "Näytä lisää"
   },
   "formatsSection": {
@@ -85,7 +85,7 @@
     "text": "Kuolkoon se venäläinen roskaväki"
   },
   "testimonialsSection": {
-    "title": "Oppilaideni palautteet",
+    "title": "Urheilijoideni palautteet",
     "prevAria": "Edellinen palaute",
     "nextAria": "Seuraava palaute",
     "dotAria": "Siirry palautteeseen {{index}}",
@@ -178,10 +178,10 @@
     "title": "Tietoa Polina Zakharovasta",
     "p1": "Nimeni on Polina Zakharova, olen polkujuoksun ja vuoristohiihdon valmentaja, asun Kiovassa, Ukrainassa.",
     "p2": "Matkani urheilussa alkoi jo vuonna 2008 suunnistuksesta ja rogainingista — siitä lähtien olen nähnyt tämän maailman monista eri kulmista. 18 vuoden aikana olen juossut kymmeniä tuhansia kilometrejä, vaihtanut maita, maastoja ja formaatteja, mutta pysynyt uskollisena tärkeimmälle — vapaudelle ja intohimolle.",
-    "p3": "Viime vuosina olen keskittynyt paljon vuoristohiihtoon ja autan muita amatööriurheilijoita löytämään oman rytminsä ja suuntansa TrainingPeaksiin rakennettujen henkilökohtaisten harjoitussuunnitelmien avulla.",
+    "p3": "Viime vuosina olen keskittynyt paljon vuoristohiihtoon ja autan muita urheilijoita löytämään oman rytminsä ja suuntansa TrainingPeaksiin rakennettujen henkilökohtaisten harjoitussuunnitelmien avulla.",
     "achievements": "<b>Saavutukset:</b> Chornohora Sky Marathonin voittaja (Ukraina, 2018, 2019, 2020); «Bojko Trail» 46 km:n kokonaiskilpailun voittaja (Ukraina, 2018).",
     "mission": "<b>Missio:</b> luon ohjelmia, jotka kehittävät paitsi kestävyyttä myös itsetuntemusta liikkeen kautta — läsnäoloa omassa kehossa, sen voiman ja mielen tuntemista.",
-    "p4": "Työskentelen etänä asiakkaiden kanssa TrainingPeaksin kautta, joten yhteistyön maantiede on rajaton — tärkeintä on yhteinen kieli ja valmius harjoitella."
+    "p4": "Työskentelen etänä urheilijoiden kanssa TrainingPeaksin kautta, joten yhteistyön maantiede on rajaton — tärkeintä on yhteinen kieli ja valmius harjoitella."
   },
   "contact": {
     "title": "Yhteystiedot",
@@ -189,7 +189,7 @@
     "telegram": "Telegram: @ZakharovaPolina",
     "whatsapp": "WhatsApp: +380 63 386 20 21",
     "email": "Sähköposti: polina.zakharova94@gmail.com",
-    "location": "Asun Kiovassa, Ukrainassa, mutta työskentelen asiakkaiden kanssa etänä TrainingPeaksin kautta, joten voin valmentaa urheilijoita heidän asuinpaikastaan riippumatta.",
+    "location": "Asun Kiovassa, Ukrainassa, mutta työskentelen urheilijoiden kanssa etänä TrainingPeaksin kautta, joten voin valmentaa asuinpaikastasi riippumatta.",
     "howToStart": "<b>Näin pääset alkuun:</b> kirjoita minulle muutama sana kokemuksestasi ja tavoitteistasi — ehdotan yhteistyömuotoa (BASIC, EXPERIENCED tai PRO) ja tarvittaessa sovin tutustumisvideopuhelun.",
     "responseTime": "Vastausaika: yleensä yhden arkipäivän kuluessa."
   },
@@ -199,7 +199,7 @@
     "intro": "Tämä sivusto (zakharova.coach) kuuluu Polina Zakharoville ja sitä käytetään esittelemään polkujuoksun ja vuoristohiihdon valmennuspalveluja. Sivustolla ei ole rekisteröitymis- tai tilauslomakkeita, joten emme kerää henkilötietoja suoraan sivuston kautta.",
     "analytics": "<b>Analytiikka ja mainonta.</b> Sivusto käyttää Google Analyticsia ja Google Adsia (gtag.js) liikenteen ja mainonnan tehokkuuden analysointiin. Nämä palvelut voivat asettaa evästeitä ja käsitellä anonymisoitua teknistä dataa (IP-osoite, laitetyyppi, sivun käyttö) Googlen oman tietosuojakäytännön mukaisesti.",
     "communication": "<b>Yhteydenpito.</b> Jos otat yhteyttä Telegramin, WhatsAppin tai sähköpostin kautta, viestejä käsitellään näiden palveluiden omien tietosuojakäytäntöjen mukaisesti (Telegram, WhatsApp/Meta, sähköpostipalveluntarjoaja), eikä niitä tallenneta tälle sivustolle.",
-    "trainingData": "<b>Harjoitustiedot.</b> Jos sinusta tulee asiakkaani, harjoitus-, terveys- ja tavoitekilpailutiedot pidetään TrainingPeaksissa — erillisessä palvelussa, jolla on oma tietosuojakäytäntönsä. Tällä sivustolla ei ole pääsyä näihin tietoihin, eikä se tallenna niitä.",
+    "trainingData": "<b>Harjoitustiedot.</b> Jos sinusta tulee urheilijani, harjoitus-, terveys- ja tavoitekilpailutiedot pidetään TrainingPeaksissa — erillisessä palvelussa, jolla on oma tietosuojakäytäntönsä. Tällä sivustolla ei ole pääsyä näihin tietoihin, eikä se tallenna niitä.",
     "calendar": "<b>Tapahtumakalenteri.</b> Sivu /calendar näyttää julkisen Google-kalenterin eikä kerää vierailijoista tietoja.",
     "rights": "<b>Oikeutesi.</b> Voit milloin tahansa pyytää minulle henkilökohtaisesti lähetettyjen viestien tai tietojen poistamista kirjoittamalla osoitteeseen <email>polina.zakharova94@gmail.com</email>.",
     "changes": "<b>Käytännön muutokset.</b> Tätä sivua voidaan päivittää ajan myötä; viimeisin päivityspäivä näkyy yläreunassa."

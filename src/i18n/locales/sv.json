@@ -8,7 +8,7 @@
     "about": "Om mig",
     "achievements": "Idrottsprestationer",
     "contact": "Kontakt",
-    "races": "Elevernas tävlingar",
+    "races": "Idrottarnas tävlingar",
     "formats": "Samarbetsformer",
     "prices": "Planer",
     "services": "Extra tjänster",
@@ -48,7 +48,7 @@
     "back": "← Om mig"
   },
   "races": {
-    "title": "Tävlingar där mina elever gått i mål",
+    "title": "Tävlingar där mina idrottare gått i mål",
     "showMore": "Visa fler"
   },
   "formatsSection": {
@@ -85,7 +85,7 @@
     "text": "Må den där ryska avskummet dö"
   },
   "testimonialsSection": {
-    "title": "Mina elevers omdömen",
+    "title": "Mina idrottares omdömen",
     "prevAria": "Föregående omdöme",
     "nextAria": "Nästa omdöme",
     "dotAria": "Gå till omdöme {{index}}",
@@ -178,10 +178,10 @@
     "title": "Om Polina Zakharova",
     "p1": "Jag heter Polina Zakharova, jag är coach inom trail running och skidalpinism baserad i Kiev, Ukraina.",
     "p2": "Min resa inom idrott började redan 2008 med orientering och rogaining — sedan dess har jag sett världen ur många olika perspektiv. Under 18 år har jag sprungit tiotusentals kilometer, bytt länder, terränger och format, men förblivit trogen det viktigaste — friheten och drivkraften.",
-    "p3": "De senaste åren har jag ägnat mig mycket åt skidalpinism och hjälper andra amatöridrottare att hitta sin egen rytm och riktning genom personliga träningsplaner byggda kring TrainingPeaks.",
+    "p3": "De senaste åren har jag ägnat mig mycket åt skidalpinism och hjälper andra idrottare att hitta sin egen rytm och riktning genom personliga träningsplaner byggda kring TrainingPeaks.",
     "achievements": "<b>Prestationer:</b> vinnare av Chornohora Sky Marathon (Ukraina, 2018, 2019, 2020); totalsegrare i «Bojko Trail» 46 km (Ukraina, 2018).",
     "mission": "<b>Uppdrag:</b> jag skapar program som utvecklar inte bara uthållighet utan även självmedvetenhet genom rörelse — att vara närvarande i sin egen kropp, känna dess styrka och sinne.",
-    "p4": "Jag arbetar på distans med klienter via TrainingPeaks, så samarbetets geografi är obegränsad — det viktiga är ett gemensamt språk och vilja att träna."
+    "p4": "Jag arbetar på distans med idrottare via TrainingPeaks, så samarbetets geografi är obegränsad — det viktiga är ett gemensamt språk och vilja att träna."
   },
   "contact": {
     "title": "Kontakt",
@@ -189,7 +189,7 @@
     "telegram": "Telegram: @ZakharovaPolina",
     "whatsapp": "WhatsApp: +380 63 386 20 21",
     "email": "E-post: polina.zakharova94@gmail.com",
-    "location": "Jag är baserad i Kiev, Ukraina, men arbetar med klienter på distans via TrainingPeaks, så jag kan coacha idrottare oavsett var de bor.",
+    "location": "Jag är baserad i Kiev, Ukraina, men arbetar med idrottare på distans via TrainingPeaks, så jag kan coacha oavsett var du bor.",
     "howToStart": "<b>Så här kommer du igång:</b> skriv några ord om din erfarenhet och dina mål — jag föreslår en samarbetsform (BASIC, EXPERIENCED eller PRO) och bokar vid behov ett videosamtal för att lära känna varandra.",
     "responseTime": "Svarstid: vanligtvis inom en arbetsdag."
   },
@@ -199,7 +199,7 @@
     "intro": "Den här webbplatsen (zakharova.coach) tillhör Polina Zakharova och används för att presentera coachningstjänster inom trail running och skidalpinism. Webbplatsen har inga registrerings- eller beställningsformulär, så vi samlar inte in personuppgifter direkt via den.",
     "analytics": "<b>Analys och annonsering.</b> Webbplatsen använder Google Analytics och Google Ads (gtag.js) för att analysera trafik och annonseffektivitet. Dessa tjänster kan sätta cookies och behandla anonymiserad teknisk data (IP-adress, enhetstyp, sidinteraktion) enligt Googles egen integritetspolicy.",
     "communication": "<b>Kommunikation.</b> Om du kontaktar mig via Telegram, WhatsApp eller e-post hanteras meddelandena enligt dessa tjänsters egna integritetspolicyer (Telegram, WhatsApp/Meta, din e-postleverantör) och lagras inte på den här webbplatsen.",
-    "trainingData": "<b>Träningsdata.</b> Om du blir min klient förs data om träning, hälsa och måltävlingar i TrainingPeaks — en separat tjänst med egen integritetspolicy. Den här webbplatsen har ingen tillgång till dessa data och lagrar dem inte.",
+    "trainingData": "<b>Träningsdata.</b> Om du blir min idrottare förs data om träning, hälsa och måltävlingar i TrainingPeaks — en separat tjänst med egen integritetspolicy. Den här webbplatsen har ingen tillgång till dessa data och lagrar dem inte.",
     "calendar": "<b>Evenemangskalender.</b> Sidan /calendar visar en offentlig Google-kalender och samlar inte in några besökardata.",
     "rights": "<b>Dina rättigheter.</b> Du kan när som helst begära att meddelanden eller data som skickats till mig personligen raderas genom att skriva till <email>polina.zakharova94@gmail.com</email>.",
     "changes": "<b>Ändringar av policyn.</b> Den här sidan kan uppdateras över tid; datumet för senaste uppdatering visas högst upp."

@@ -8,7 +8,7 @@
     "about": "O mnie",
     "achievements": "Osiągnięcia sportowe",
     "contact": "Kontakt",
-    "races": "Starty uczniów",
+    "races": "Starty sportowców",
     "formats": "Formaty współpracy",
     "prices": "Rodzaje planów",
     "services": "Usługi dodatkowe",
@@ -48,7 +48,7 @@
     "back": "← O mnie"
   },
   "races": {
-    "title": "Starty, na których finiszowali moi uczniowie",
+    "title": "Starty, na których finiszowali moi sportowcy",
     "showMore": "Pokaż więcej"
   },
   "formatsSection": {
@@ -85,7 +85,7 @@
     "text": "Niech ten ruski motłoch zdechnie"
   },
   "testimonialsSection": {
-    "title": "Opinie moich podopiecznych",
+    "title": "Opinie moich sportowców",
     "prevAria": "Poprzednia opinia",
     "nextAria": "Następna opinia",
     "dotAria": "Przejdź do opinii {{index}}",
@@ -178,10 +178,10 @@
     "title": "O Polinie Zakharovej",
     "p1": "Nazywam się Polina Zakharova, jestem trenerką biegów górskich i skialpinizmu z Kijowa, Ukraina.",
     "p2": "Moja droga w sporcie zaczęła się w 2008 roku od biegów na orientację i rogainingu — od tamtej pory patrzę na ten świat z wielu różnych perspektyw. Przez 18 lat przebiegłam dziesiątki tysięcy kilometrów, zmieniałam kraje, tereny i formaty, ale pozostałam wierna temu, co najważniejsze — wolności i pasji.",
-    "p3": "W ostatnich latach dużo zajmuję się skialpinizmem i pomagam innym amatorskim sportowcom znaleźć własny rytm i kierunek dzięki spersonalizowanym planom treningowym opartym na TrainingPeaks.",
+    "p3": "W ostatnich latach dużo zajmuję się skialpinizmem i pomagam innym sportowcom znaleźć własny rytm i kierunek dzięki spersonalizowanym planom treningowym opartym na TrainingPeaks.",
     "achievements": "<b>Osiągnięcia:</b> zwyciężczyni Chornohora Sky Marathon (Ukraina, 2018, 2019, 2020); zwyciężczyni open «Bojko Trail» 46 km (Ukraina, 2018).",
     "mission": "<b>Misja:</b> tworzę programy, które rozwijają nie tylko wytrzymałość, ale i świadomość siebie poprzez ruch — bycie obecnym we własnym ciele, odczuwanie jego siły i umysłu.",
-    "p4": "Pracuję zdalnie z klientami przez TrainingPeaks, więc geografia współpracy jest nieograniczona — najważniejszy jest wspólny język i gotowość do treningu."
+    "p4": "Pracuję zdalnie ze sportowcami przez TrainingPeaks, więc geografia współpracy jest nieograniczona — najważniejszy jest wspólny język i gotowość do treningu."
   },
   "contact": {
     "title": "Kontakt",
@@ -189,7 +189,7 @@
     "telegram": "Telegram: @ZakharovaPolina",
     "whatsapp": "WhatsApp: +380 63 386 20 21",
     "email": "Email: polina.zakharova94@gmail.com",
-    "location": "Mieszkam w Kijowie, na Ukrainie, ale pracuję z klientami zdalnie przez TrainingPeaks, więc mogę trenować sportowców niezależnie od miejsca ich zamieszkania.",
+    "location": "Mieszkam w Kijowie, na Ukrainie, ale pracuję ze sportowcami zdalnie przez TrainingPeaks, więc mogę trenować niezależnie od twojego miejsca zamieszkania.",
     "howToStart": "<b>Jak zacząć:</b> napisz do mnie kilka słów o swoim doświadczeniu i celach — zaproponuję format współpracy (BASIC, EXPERIENCED lub PRO) i w razie potrzeby umówię rozmowę wideo na zapoznanie.",
     "responseTime": "Czas odpowiedzi: zwykle w ciągu jednego dnia roboczego."
   },
@@ -199,7 +199,7 @@
     "intro": "Ta strona (zakharova.coach) należy do Poliny Zakharovej i służy do prezentacji usług trenerskich w biegach górskich i skialpinizmie. Na stronie nie ma formularzy rejestracji ani zamówień, więc nie zbieramy danych osobowych bezpośrednio przez stronę.",
     "analytics": "<b>Analityka i reklama.</b> Strona korzysta z Google Analytics i Google Ads (gtag.js) do analizy ruchu i skuteczności reklam. Usługi te mogą ustawiać pliki cookie i przetwarzać zanonimizowane dane techniczne (adres IP, typ urządzenia, interakcja ze stroną) zgodnie z własną polityką prywatności Google.",
     "communication": "<b>Komunikacja.</b> Jeśli piszesz do mnie przez Telegram, WhatsApp lub e-mail, wiadomości są przetwarzane zgodnie z politykami prywatności tych usług (Telegram, WhatsApp/Meta, dostawca poczty), a nie przechowywane na tej stronie.",
-    "trainingData": "<b>Dane treningowe.</b> Jeśli zostaniesz moim klientem, dane o treningach, zdrowiu i startach docelowych są prowadzone w TrainingPeaks — osobnym serwisie z własną polityką prywatności. Ta strona nie ma dostępu do tych danych i ich nie przechowuje.",
+    "trainingData": "<b>Dane treningowe.</b> Jeśli zostaniesz moim sportowcem, dane o treningach, zdrowiu i startach docelowych są prowadzone w TrainingPeaks — osobnym serwisie z własną polityką prywatności. Ta strona nie ma dostępu do tych danych i ich nie przechowuje.",
     "calendar": "<b>Kalendarz wydarzeń.</b> Strona /calendar wyświetla publiczny kalendarz Google i nie zbiera żadnych danych odwiedzających.",
     "rights": "<b>Twoje prawa.</b> W każdej chwili możesz poprosić o usunięcie wiadomości lub danych przesłanych mi osobiście, pisząc na <email>polina.zakharova94@gmail.com</email>.",
     "changes": "<b>Zmiany polityki.</b> Ta strona może być z czasem aktualizowana; data ostatniej aktualizacji jest podana na górze."

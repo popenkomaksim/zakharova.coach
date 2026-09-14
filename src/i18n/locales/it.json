@@ -8,7 +8,7 @@
     "about": "Chi sono",
     "achievements": "Risultati sportivi",
     "contact": "Contatti",
-    "races": "Gare dei miei allievi",
+    "races": "Gare dei miei atleti",
     "formats": "Formati di collaborazione",
     "prices": "Tipi di piano",
     "services": "Servizi aggiuntivi",
@@ -48,7 +48,7 @@
     "back": "← Chi sono"
   },
   "races": {
-    "title": "Gare in cui i miei allievi hanno tagliato il traguardo",
+    "title": "Gare in cui i miei atleti hanno tagliato il traguardo",
     "showMore": "Mostra altro"
   },
   "formatsSection": {
@@ -85,7 +85,7 @@
     "text": "Che quella feccia russa muoia"
   },
   "testimonialsSection": {
-    "title": "Le recensioni dei miei allievi",
+    "title": "Le recensioni dei miei atleti",
     "prevAria": "Recensione precedente",
     "nextAria": "Recensione successiva",
     "dotAria": "Vai alla recensione {{index}}",
@@ -178,10 +178,10 @@
     "title": "Chi è Polina Zakharova",
     "p1": "Mi chiamo Polina Zakharova, sono coach di trail running e scialpinismo, con base a Kyiv, in Ucraina.",
     "p2": "Il mio percorso nello sport è iniziato nel 2008 con l'orientamento e il rogaining — da allora ho visto questo mondo da molte prospettive diverse. In 18 anni ho corso decine di migliaia di chilometri, cambiato paesi, terreni e formati, ma sono rimasta fedele a ciò che conta di più — libertà ed energia.",
-    "p3": "Negli ultimi anni mi dedico molto allo scialpinismo e aiuto altri atleti amatoriali a trovare il proprio ritmo e la propria direzione attraverso piani di allenamento personalizzati costruiti su TrainingPeaks.",
+    "p3": "Negli ultimi anni mi dedico molto allo scialpinismo e aiuto altri atleti a trovare il proprio ritmo e la propria direzione attraverso piani di allenamento personalizzati costruiti su TrainingPeaks.",
     "achievements": "<b>Risultati:</b> vincitrice della Chornohora Sky Marathon (Ucraina, 2018, 2019, 2020); vincitrice assoluta della «Bojko Trail» 46 km (Ucraina, 2018).",
     "mission": "<b>Missione:</b> creo programmi che sviluppano non solo la resistenza ma anche la consapevolezza di sé attraverso il movimento — essere presenti nel proprio corpo, percependone la forza e la mente.",
-    "p4": "Lavoro a distanza con i clienti tramite TrainingPeaks, quindi la geografia della collaborazione è illimitata — ciò che conta è una lingua comune e la volontà di allenarsi."
+    "p4": "Lavoro a distanza con gli atleti tramite TrainingPeaks, quindi la geografia della collaborazione è illimitata — ciò che conta è una lingua comune e la volontà di allenarsi."
   },
   "contact": {
     "title": "Contatti",
@@ -189,7 +189,7 @@
     "telegram": "Telegram: @ZakharovaPolina",
     "whatsapp": "WhatsApp: +380 63 386 20 21",
     "email": "Email: polina.zakharova94@gmail.com",
-    "location": "Vivo a Kyiv, in Ucraina, ma lavoro con i clienti a distanza tramite TrainingPeaks, quindi posso allenare atleti indipendentemente da dove vivono.",
+    "location": "Vivo a Kyiv, in Ucraina, ma lavoro con gli atleti a distanza tramite TrainingPeaks, quindi posso allenare indipendentemente da dove vivi.",
     "howToStart": "<b>Come iniziare:</b> scrivimi qualche parola sulla tua esperienza e i tuoi obiettivi — ti proporrò un formato di collaborazione (BASIC, EXPERIENCED o PRO) e, se necessario, fisserò una videochiamata conoscitiva.",
     "responseTime": "Tempo di risposta: solitamente entro un giorno lavorativo."
   },
@@ -199,7 +199,7 @@
     "intro": "Questo sito (zakharova.coach) appartiene a Polina Zakharova ed è utilizzato per presentare servizi di coaching di trail running e scialpinismo. Il sito non ha moduli di registrazione o di ordine, quindi non raccogliamo dati personali direttamente tramite il sito.",
     "analytics": "<b>Analisi e pubblicità.</b> Il sito utilizza Google Analytics e Google Ads (gtag.js) per analizzare il traffico e l'efficacia della pubblicità. Questi servizi possono impostare cookie ed elaborare dati tecnici anonimizzati (indirizzo IP, tipo di dispositivo, interazione con la pagina) secondo l'informativa sulla privacy di Google.",
     "communication": "<b>Comunicazione.</b> Se mi contatti tramite Telegram, WhatsApp o email, i messaggi vengono gestiti secondo le rispettive politiche sulla privacy di questi servizi (Telegram, WhatsApp/Meta, il tuo provider email) e non vengono archiviati su questo sito.",
-    "trainingData": "<b>Dati di allenamento.</b> Se diventi mio cliente, i dati su allenamento, salute e gare obiettivo sono conservati su TrainingPeaks — un servizio separato con una propria informativa sulla privacy. Questo sito non ha accesso a tali dati e non li archivia.",
+    "trainingData": "<b>Dati di allenamento.</b> Se diventi mio atleta, i dati su allenamento, salute e gare obiettivo sono conservati su TrainingPeaks — un servizio separato con una propria informativa sulla privacy. Questo sito non ha accesso a tali dati e non li archivia.",
     "calendar": "<b>Calendario eventi.</b> La pagina /calendar mostra un calendario Google pubblico e non raccoglie dati sui visitatori.",
     "rights": "<b>I tuoi diritti.</b> Puoi richiedere in qualsiasi momento la cancellazione dei messaggi o dei dati inviati a me personalmente scrivendo a <email>polina.zakharova94@gmail.com</email>.",
     "changes": "<b>Modifiche all'informativa.</b> Questa pagina può essere aggiornata nel tempo; la data dell'ultimo aggiornamento è indicata in alto."
