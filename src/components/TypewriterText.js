@@ -1,9 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
+import styled, { keyframes } from "styled-components";
 
 const prefersReducedMotion = () =>
   typeof window !== "undefined" &&
   window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const StyledChar = styled.span`
+  display: inline-block;
+  white-space: pre;
+  animation: ${fadeIn} 0.25s ease-out;
+`;
 
 const TypewriterText = ({ text, speed = 18, as: Component = "span" }) => {
   const initialVisibleChars = prefersReducedMotion() ? text.length : 0;
@@ -30,7 +46,21 @@ const TypewriterText = ({ text, speed = 18, as: Component = "span" }) => {
     return () => clearInterval(intervalRef.current);
   }, [text, speed]);
 
-  return <Component>{text.slice(0, visibleChars)}</Component>;
+  if (prefersReducedMotion()) {
+    return <Component>{text}</Component>;
+  }
+
+  return (
+    <Component>
+      {text
+        .slice(0, visibleChars)
+        .split("")
+        .map((char, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <StyledChar key={index}>{char}</StyledChar>
+        ))}
+    </Component>
+  );
 };
 
 TypewriterText.propTypes = {
