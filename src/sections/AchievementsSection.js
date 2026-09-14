@@ -10,7 +10,7 @@ import StyledBackButton from "../components/OutlineButton";
 const StyledWrapper = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2em 1.5em 1em;
+  padding: 0 1.5em 1em;
 `;
 
 const StyledFlipTriggerRow = styled.div`
