@@ -57,10 +57,7 @@ const App = () => {
   return (
     <>
       <NavModal open={navOpen} onClose={() => setNavOpen(false)} />
-      <FloatingActions
-        redirectToTelegram={redirectToTelegram}
-        onMenuClick={() => setNavOpen(true)}
-      />
+      <FloatingActions onMenuClick={() => setNavOpen(true)} />
 
       <Header />
       <HeroBanner />
