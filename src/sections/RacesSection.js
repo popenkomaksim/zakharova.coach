@@ -12,11 +12,11 @@ const { CheckableTag } = Tag;
 const MOBILE_VISIBLE_COUNT = 8;
 
 const RACE_TYPES = [
-  "rogaining",
   "trail",
-  "ocr",
   "skyrunning",
+  "ocr",
   "ski-mountaineering",
+  "rogaining",
   "fitness-racing",
   "adventure",
   "other",
