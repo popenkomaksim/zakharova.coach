@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState, useRef } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Col, Row, Typography } from "antd";
 import { Trans, useTranslation } from "react-i18next";
 import Testimonial from "../components/Testimonial";
@@ -37,11 +37,30 @@ const StyledCarousel = styled.div`
   gap: 1em;
 `;
 
+const swipeHint = keyframes`
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-16px);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+`;
+
 const StyledTestimonialWrapper = styled.div`
   flex: 1;
   min-width: 0;
   display: grid;
   touch-action: pan-y;
+
+  @media (max-width: 575.98px) {
+    animation: ${swipeHint} 1.2s ease-in-out 0.8s 1;
+  }
 `;
 
 /*

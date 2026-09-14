@@ -97,6 +97,11 @@ const StyledTextCardBackground = styled.div`
   background: rgba(255, 255, 255, 0.85);
   filter: blur(4em);
   z-index: -1;
+  /* filter creates its own stacking context, which on iOS Safari can leak
+     out of the ancestor's backface-visibility:hidden 3D face (see
+     HeroSection's flip card) unless hidden explicitly here too */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 `;
 
 const StyledDesktopImageCol = styled(Col)`
