@@ -71,6 +71,7 @@ const DesignImageSection = ({ redirectToTelegram, redirectToWhatsup }) => {
         src="./design_kazbek.jpeg"
         preview={false}
         width="100%"
+        alt={t("aboutSection.ctaButton")}
       />
       <StyledCtaRow justify="center">
         <StyledCtaButton onClick={redirectToContact} danger size="large">

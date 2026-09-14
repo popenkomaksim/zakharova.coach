@@ -8,7 +8,11 @@ const StyledClickable = styled.span`
 const ClickableIcon = ({ onClick, children }) => (
   <StyledClickable
     onClick={onClick}
-    onKeyDown={onClick}
+    onKeyDown={(event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        onClick(event);
+      }
+    }}
     role="link"
     tabIndex="0"
   >

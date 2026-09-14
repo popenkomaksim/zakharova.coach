@@ -5,15 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Col, Row, Image, Typography } from "antd";
 import TypewriterText from "./TypewriterText";
 
-const StyledFooter = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1em;
-  color: #878787;
-  font-size: 0.9em;
-`;
-
 const StyledRow = styled(Row)`
   margin: 3em 0;
 
@@ -89,7 +80,6 @@ const FormatCard = ({
   description,
   expandedDescription = null,
   photo = null,
-  pagination,
   imageSide = "right",
 }) => {
   const { t } = useTranslation();
@@ -114,9 +104,6 @@ const FormatCard = ({
               : t("formatsSection.readMore")}
           </StyledToggleButton>
         )}
-        <StyledFooter>
-          <span>{pagination}</span>
-        </StyledFooter>
       </StyledTextWrapper>
     </Col>
   );
@@ -144,7 +131,6 @@ FormatCard.propTypes = {
   description: PropTypes.string.isRequired,
   expandedDescription: PropTypes.string,
   photo: PropTypes.string,
-  pagination: PropTypes.string.isRequired,
   imageSide: PropTypes.oneOf(["left", "right"]),
 };
 

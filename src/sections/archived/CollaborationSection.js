@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Typography, Image } from "antd";
-import StyledCol from "../../components/StyledCol";
+import StyledCol from "../../components/archived/StyledCol";
 import ClickableIcon from "../../components/ClickableIcon";
 
 const StyledCenteredCol = styled(Col)`

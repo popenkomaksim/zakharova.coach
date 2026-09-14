@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Col, Row, Statistic, Avatar, Image } from "antd";
 import CountUp from "react-countup";
-import StyledCol from "../../components/StyledCol";
+import StyledCol from "../../components/archived/StyledCol";
 import ClickableIcon from "../../components/ClickableIcon";
 
 function daysOfTraining() {

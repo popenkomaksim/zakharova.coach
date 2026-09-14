@@ -26,7 +26,11 @@ const About = () => {
     <PageShell>
       <StyledPageRow justify="center">
         <Col lg={8} xl={6}>
-          <StyledPhoto src="./polina.jpg" preview={false} />
+          <StyledPhoto
+            src="./polina.jpg"
+            preview={false}
+            alt={t("about.title")}
+          />
         </Col>
         <StyledPageTextCol xs={24} md={12}>
           <StyledPageTitle level={2}>{t("about.title")}</StyledPageTitle>

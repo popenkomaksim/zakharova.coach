@@ -174,7 +174,11 @@ const AboutSection = ({ onShowAchievements }) => {
         <StyledTopBracket />
         <StyledBottomBracket />
         <StyledDesktopImageCol lg={8} xl={8}>
-          <StyledDesktopImage src="./polina_casual.jpeg" preview={false} />
+          <StyledDesktopImage
+            src="./polina_casual.jpeg"
+            preview={false}
+            alt={t("aboutSection.photoAlt")}
+          />
         </StyledDesktopImageCol>
         <StyledTextCol lg={12} xs={22} md={24}>
           <StyledTextCard>

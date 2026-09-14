@@ -43,7 +43,7 @@ const Testimonial = ({ photo, quote, name, role = "", company = "" }) => (
   <StyledRow gutter={[32, 24]} align="middle">
     <Col xs={24} sm={8} md={6}>
       <StyledPhotoWrapper>
-        <Image src={photo} preview={false} loading="lazy" />
+        <Image src={photo} preview={false} loading="lazy" alt={name} />
       </StyledPhotoWrapper>
     </Col>
     <Col xs={24} sm={16} md={18}>
