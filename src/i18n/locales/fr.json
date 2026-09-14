@@ -69,7 +69,7 @@
     "individual": {
       "title": "Coaching individuel",
       "description": "Tu choisis le format et les objectifs — je veille à ce que chaque séance ait un effet maximal.",
-      "expanded": "Nous travaillons en tête-à-tête, en ligne ou en présentiel : je corrige la technique, je te guide pour bouger correctement et je t'aide à ressentir ton corps d'une nouvelle façon. Nous pouvons choisir l'axe de travail ensemble : la course — vitesse, endurance, compréhension de ton propre rythme ; la force — endurance fonctionnelle et musculaire ; la technique et la coordination — souplesse, mobilité, agilité ; l'analyse du mouvement — repérer les points faibles et travailler dessus. Ici, le mouvement devient ta force, et l'entraînement un moteur qui apporte confiance en soi et l'envie de se fixer de nouveaux objectifs."
+      "expanded": "Nous travaillons en tête-à-tête, en ligne ou en présentiel : je corrige la technique, je te guide pour bouger correctement et je t'aide à ressentir ton corps d'une nouvelle façon. Nous pouvons choisir l'axe de travail ensemble :\n\n- La course — vitesse, endurance, compréhension de ton propre rythme.\n- La force — endurance fonctionnelle et musculaire.\n- La technique et la coordination — souplesse, mobilité, agilité.\n- L'analyse du mouvement — repérer les points faibles et travailler dessus.\n\nIci, le mouvement devient ta force, et l'entraînement un moteur qui apporte confiance en soi et l'envie de se fixer de nouveaux objectifs."
     },
     "online": {
       "title": "Entraînement en ligne",
